@@ -4,4 +4,4 @@ __pycache__/
 *.log
 scratchpad/
 .DS_Store
-F13-Liste.pdf
+*.pdf
