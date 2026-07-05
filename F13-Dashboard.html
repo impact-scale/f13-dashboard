@@ -284,6 +284,18 @@ function fmtDate(iso) {
   return `${d}.${m}.${y}`;
 }
 
+function fmtDelta(d) {
+  if (d === undefined || d === null) return '–';
+  if (d > 0) return `<span style="color:#5fbf7f">▲ +${d}</span>`;
+  if (d < 0) return `<span style="color:#d9776a">▼ ${d}</span>`;
+  return '=';
+}
+
+const CHANGE_LABEL = {
+  NEU: '🟢 Neu', AUFGESTOCKT: '🔼 Auf', REDUZIERT: '🔽 Ab',
+  GEHALTEN: '', '': '',
+};
+
 function render(data) {
   const sub = document.getElementById('headerSub');
   const generated = new Date(data.generatedAt);
@@ -316,21 +328,24 @@ function render(data) {
     gleichgewichteten Investieren (Equal Weight, ca. ${(100/data.topN).toFixed(2)}% pro Aktie).
   </div>`;
 
+  const prevQ = data.investors[0] ? data.investors[0].prevReportDate : null;
   html += `<div class="section-title">F13-Liste — Top ${data.topN} nach Investoren-Konsens</div>`;
   html += `<table><thead><tr>
-    <th>Rang</th><th>Aktie</th><th>Investoren</th><th>Gehalten von</th><th>Summe Positionswert</th>
+    <th>Rang</th><th>Ticker</th><th>Aktie</th><th>Investoren</th><th>Δ Q/Q</th><th>Sektor</th><th>Summe Positionswert</th>
   </tr></thead><tbody>`;
   data.f13.forEach((r, i) => {
-    const holders = r.investors.map(inv => inv.person).join(', ');
     html += `<tr>
       <td class="rank">${i + 1}</td>
+      <td class="mono" style="color:var(--gold)">${r.ticker || '–'}</td>
       <td class="investor-name">${r.name}</td>
       <td><span class="count-badge">${r.count} / ${investorCount}</span></td>
-      <td class="weight">${holders}</td>
+      <td class="mono">${fmtDelta(r.countDelta)}</td>
+      <td class="weight">${r.sector || '–'}</td>
       <td class="value">${fmtMoney(r.combinedValue)}</td>
     </tr>`;
   });
   html += `</tbody></table>`;
+  html += `<div class="mono" style="color:var(--slate);font-size:11px;margin-top:6px;">Δ Q/Q = Veränderung der Investorenzahl ggü. Vorquartal ${prevQ || 'n/a'}</div>`;
 
   html += `<div class="section-title">Erweiterte Rangliste (Top ${data.ranking.length})</div>`;
   html += `<table><thead><tr>
@@ -351,9 +366,14 @@ function render(data) {
     <th>Investor</th><th>Portfolio (Long, gefiltert)</th><th>Filing</th><th>Positionen</th>
   </tr></thead><tbody>`;
   data.investors.forEach(inv => {
-    const holdingsHtml = inv.top.map(p =>
-      `<div>${p.name} <span class="weight">(${p.weight.toFixed(1)}%)</span></div>`
-    ).join('');
+    const holdingsHtml = inv.top.map(p => {
+      const ch = CHANGE_LABEL[p.change || ''] || '';
+      const tk = p.ticker ? `<span class="mono" style="color:var(--gold)">${p.ticker}</span> ` : '';
+      return `<div>${tk}${p.name} <span class="weight">(${p.weight.toFixed(1)}%)</span> ${ch}</div>`;
+    }).join('');
+    const soldHtml = (inv.sold && inv.sold.length)
+      ? `<div style="margin-top:6px;color:#d9776a;font-size:12px;">Verkauft: ${inv.sold.map(s => s.name).join(', ')}</div>`
+      : '';
     html += `<tr><td colspan="4" style="padding:0;border:none;">
       <details class="investor-row" style="padding:10px 12px;border-bottom:1px solid #16304d;">
         <summary>
@@ -363,6 +383,7 @@ function render(data) {
           &nbsp;·&nbsp; Filing ${fmtDate(inv.filingDate)} (${inv.form})
         </summary>
         <div class="holdings">${holdingsHtml}</div>
+        ${soldHtml}
       </details>
     </td></tr>`;
   });

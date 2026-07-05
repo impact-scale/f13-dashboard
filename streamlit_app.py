@@ -13,6 +13,7 @@ import json
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
+import io
 
 import pandas as pd
 import plotly.graph_objects as go
@@ -100,30 +101,122 @@ def fmt_money(v):
     return f"{m:.0f} Mio $"
 
 
-def compute_ranking(data, selected_investors, top_n_per_inv, include_etfs):
-    """Konsens-Rangliste dynamisch aus den holdings berechnen."""
+def df_to_excel(df, sheet="F13-Liste"):
+    buf = io.BytesIO()
+    with pd.ExcelWriter(buf, engine="openpyxl") as xl:
+        df.to_excel(xl, index=False, sheet_name=sheet)
+    return buf.getvalue()
+
+
+def f13_to_pdf(df, meta_lines):
+    """F13-Liste als CI-gestyltes PDF (reportlab)."""
+    from reportlab.lib import colors
+    from reportlab.lib.pagesizes import A4
+    from reportlab.lib.units import mm
+    from reportlab.platypus import (SimpleDocTemplate, Table, TableStyle,
+                                    Paragraph, Spacer)
+    from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+
+    navy = colors.HexColor("#0D2238")
+    gold = colors.HexColor("#C9A84C")
+    slate = colors.HexColor("#8899AA")
+    offwhite = colors.HexColor("#F4F1EB")
+
+    buf = io.BytesIO()
+    doc = SimpleDocTemplate(buf, pagesize=A4, topMargin=18*mm, bottomMargin=16*mm,
+                            leftMargin=16*mm, rightMargin=16*mm)
+    styles = getSampleStyleSheet()
+    h1 = ParagraphStyle("h1", parent=styles["Title"], textColor=navy,
+                        fontName="Helvetica-Bold", fontSize=20, spaceAfter=2)
+    tag = ParagraphStyle("tag", parent=styles["Normal"], textColor=gold,
+                         fontName="Courier-Bold", fontSize=8, spaceAfter=10)
+    meta = ParagraphStyle("meta", parent=styles["Normal"], textColor=slate,
+                          fontName="Courier", fontSize=8, leading=12)
+    story = [Paragraph("F13-LISTE · SUPER-INVESTOREN", tag),
+             Paragraph("F13-Konsensliste", h1)]
+    for ln in meta_lines:
+        story.append(Paragraph(ln, meta))
+    story.append(Spacer(1, 8*mm))
+
+    head = list(df.columns)
+    body = [head] + df.astype(str).values.tolist()
+    tbl = Table(body, repeatRows=1)
+    tbl.setStyle(TableStyle([
+        ("BACKGROUND", (0, 0), (-1, 0), navy),
+        ("TEXTCOLOR", (0, 0), (-1, 0), offwhite),
+        ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+        ("FONTSIZE", (0, 0), (-1, -1), 8),
+        ("FONTNAME", (0, 1), (-1, -1), "Helvetica"),
+        ("ROWBACKGROUNDS", (0, 1), (-1, -1),
+         [colors.HexColor("#F4F1EB"), colors.HexColor("#EDE9E0")]),
+        ("TEXTCOLOR", (0, 1), (-1, -1), navy),
+        ("LINEBELOW", (0, 0), (-1, 0), 1.2, gold),
+        ("GRID", (0, 1), (-1, -1), 0.3, slate),
+        ("TOPPADDING", (0, 0), (-1, -1), 5),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+        ("LEFTPADDING", (0, 0), (-1, -1), 6),
+    ]))
+    story.append(tbl)
+    story.append(Spacer(1, 8*mm))
+    foot = ParagraphStyle("foot", parent=styles["Normal"], textColor=slate,
+                          fontName="Courier", fontSize=7)
+    story.append(Paragraph(
+        "BS IMPACT SCALE GmbH © · Datenquelle: SEC EDGAR (13F-HR) · "
+        "Keine Anlageberatung.", foot))
+    doc.build(story)
+    return buf.getvalue()
+
+
+def compute_ranking(data, selected_investors, top_n_per_inv, include_etfs,
+                    field="holdings"):
+    """Konsens-Rangliste dynamisch aus den holdings (oder prevHoldings) berechnen."""
     overlap = {}
     for inv in data["investors"]:
         if inv["person"] not in selected_investors:
             continue
-        picks = [h for h in inv.get("holdings", []) if include_etfs or not h["isEtf"]]
+        picks = [h for h in inv.get(field, []) if include_etfs or not h["isEtf"]]
         for pos in picks[:top_n_per_inv]:
             slot = overlap.setdefault(pos["key"], {
-                "names": Counter(), "investors": [], "combined": 0.0, "isEtf": pos["isEtf"],
+                "names": Counter(), "tickers": Counter(), "investors": [],
+                "combined": 0.0, "isEtf": pos["isEtf"],
+                "sector": pos.get("sector", "Sonstige"),
+                "region": pos.get("region", "–"),
             })
             slot["names"][pos["name"]] += 1
+            if pos.get("ticker"):
+                slot["tickers"][pos["ticker"]] += 1
             slot["investors"].append({
                 "person": inv["person"], "weight": pos["weight"], "value": pos["value"],
+                "change": pos.get("change", ""),
             })
             slot["combined"] += pos["value"]
     ranking = [{
         "key": k, "name": s["names"].most_common(1)[0][0],
+        "ticker": (s["tickers"].most_common(1)[0][0] if s["tickers"] else ""),
+        "sector": s["sector"], "region": s["region"],
         "count": len(s["investors"]),
         "investors": sorted(s["investors"], key=lambda x: -x["value"]),
         "combined": s["combined"], "isEtf": s["isEtf"],
     } for k, s in overlap.items()]
     ranking.sort(key=lambda x: (-x["count"], -x["combined"]))
     return ranking
+
+
+def with_consensus_delta(data, selected, top_n, include_etfs):
+    """Aktuelle Rangliste + countPrev/countDelta ggü. Vorquartal."""
+    ranking = compute_ranking(data, selected, top_n, include_etfs, "holdings")
+    prev = {r["key"]: r["count"] for r in
+            compute_ranking(data, selected, top_n, include_etfs, "prevHoldings")}
+    for r in ranking:
+        r["countPrev"] = prev.get(r["key"], 0)
+        r["countDelta"] = r["count"] - r["countPrev"]
+    return ranking
+
+
+CHANGE_BADGE = {
+    "NEU": "🟢 Neu", "AUFGESTOCKT": "🔼 Aufgestockt",
+    "REDUZIERT": "🔽 Reduziert", "GEHALTEN": "▪ Gehalten", "": "–",
+}
 
 
 # ─── Kopf ─────────────────────────────────────────────────────────────────────
@@ -213,10 +306,11 @@ if not selected:
     st.warning("Bitte mindestens einen Investor auswählen.")
     st.stop()
 
-ranking = compute_ranking(data, selected, top_n_per_inv, include_etfs)
+ranking = with_consensus_delta(data, selected, top_n_per_inv, include_etfs)
 ranking = [r for r in ranking if r["count"] >= min_consensus]
 if search:
-    ranking = [r for r in ranking if search in r["name"].lower()]
+    ranking = [r for r in ranking
+               if search in r["name"].lower() or search in r.get("ticker", "").lower()]
 
 # ─── KPI-Zeile ────────────────────────────────────────────────────────────────
 
@@ -241,8 +335,16 @@ st.write("")
 
 # ─── Tabs ─────────────────────────────────────────────────────────────────────
 
-tab1, tab2, tab3 = st.tabs(["📊 F13-Konsensliste", "🧮 Investment-Rechner",
-                            "👤 Investoren-Details"])
+prev_quarter = data["investors"][0].get("prevReportDate") if data["investors"] else None
+
+
+def delta_str(d):
+    return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
+
+
+tab1, tab2, tab3, tab4, tab5 = st.tabs(
+    ["📊 F13-Konsensliste", "🔄 Veränderungen", "🧮 Investment-Rechner",
+     "🥧 Struktur", "👤 Investoren-Details"])
 
 # --- Tab 1: Konsens ---
 with tab1:
@@ -253,11 +355,9 @@ with tab1:
         top_chart = ranking[:20][::-1]
         fig = go.Figure(go.Bar(
             x=[r["count"] for r in top_chart],
-            y=[r["name"] for r in top_chart],
-            orientation="h",
-            marker_color=GOLD,
-            text=[f"{r['count']}" for r in top_chart],
-            textposition="outside",
+            y=[f"{r['ticker'] or r['name'][:14]}" for r in top_chart],
+            orientation="h", marker_color=GOLD,
+            text=[f"{r['count']}" for r in top_chart], textposition="outside",
             textfont=dict(color=OFFWHITE, family="Courier New"),
         ))
         fig.update_layout(
@@ -270,19 +370,112 @@ with tab1:
         )
         st.plotly_chart(fig, use_container_width=True)
 
-        rows = [{
+        df_rank = pd.DataFrame([{
             "Rang": i + 1,
+            "Ticker": r.get("ticker", "") or "–",
             "Aktie": r["name"] + ("  ⓔ" if r["isEtf"] else ""),
             "Investoren": f"{r['count']} / {len(selected)}",
+            "Δ Q/Q": delta_str(r["countDelta"]),
+            "Sektor": r.get("sector", "–"),
             "Gehalten von": ", ".join(inv["person"] for inv in r["investors"]),
             "Summe Wert": fmt_money(r["combined"]),
-        } for i, r in enumerate(ranking)]
-        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True,
-                     height=min(560, 45 + 35 * len(rows)))
-        st.caption("ⓔ = ETF / Indexfonds")
+        } for i, r in enumerate(ranking)])
+        st.dataframe(df_rank, use_container_width=True, hide_index=True,
+                     height=min(560, 45 + 35 * len(df_rank)))
+        st.caption(f"ⓔ = ETF/Indexfonds · Δ Q/Q = Veränderung der Investorenzahl "
+                   f"ggü. Vorquartal ({prev_quarter or 'n/a'})")
 
-# --- Tab 2: Rechner ---
+        # Export
+        st.markdown("**Export der aktuellen F13-Liste**")
+        e1, e2, e3 = st.columns(3)
+        fname = f"F13-Liste_{quarter}"
+        e1.download_button("⬇ CSV", df_rank.to_csv(index=False).encode("utf-8"),
+                           f"{fname}.csv", "text/csv", use_container_width=True)
+        try:
+            e2.download_button("⬇ Excel", df_to_excel(df_rank), f"{fname}.xlsx",
+                               "application/vnd.openxmlformats-officedocument."
+                               "spreadsheetml.sheet", use_container_width=True)
+        except Exception:
+            e2.caption("Excel: openpyxl fehlt")
+        try:
+            meta = [f"Meldequartal: {quarter}",
+                    f"Stand Datenimport: {generated.strftime('%d.%m.%Y %H:%M')}",
+                    f"Investoren einbezogen: {len(selected)} von {len(all_investors)}"]
+            e3.download_button("⬇ PDF", f13_to_pdf(df_rank, meta), f"{fname}.pdf",
+                               "application/pdf", use_container_width=True)
+        except Exception as ex:
+            e3.caption("PDF: reportlab fehlt")
+
+# --- Tab 2: Veränderungen ---
 with tab2:
+    if not prev_quarter:
+        st.info("Kein Vorquartal in den Daten — Veränderungen nicht berechenbar.")
+    else:
+        st.markdown(f"### Konsens-Momentum &nbsp;·&nbsp; {prev_quarter} → {quarter}")
+        st.caption("Welche Aktien gewinnen oder verlieren gerade Investoren? "
+                   "Das ist das eigentliche Signal der Strategie.")
+        movers = [r for r in ranking if r["countDelta"] != 0]
+        gainers = sorted([r for r in movers if r["countDelta"] > 0],
+                         key=lambda x: -x["countDelta"])
+        losers = sorted([r for r in movers if r["countDelta"] < 0],
+                        key=lambda x: x["countDelta"])
+        mc1, mc2 = st.columns(2)
+        with mc1:
+            st.markdown("**🟢 Gewinnt Investoren**")
+            st.dataframe(pd.DataFrame([{
+                "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
+                "Jetzt": r["count"], "Δ": f"+{r['countDelta']}",
+            } for r in gainers]) if gainers else pd.DataFrame({"—": ["keine"]}),
+                hide_index=True, use_container_width=True)
+        with mc2:
+            st.markdown("**🔴 Verliert Investoren**")
+            st.dataframe(pd.DataFrame([{
+                "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
+                "Jetzt": r["count"], "Δ": str(r["countDelta"]),
+            } for r in losers]) if losers else pd.DataFrame({"—": ["keine"]}),
+                hide_index=True, use_container_width=True)
+
+        st.markdown("---")
+        st.markdown("### Käufe & Verkäufe je Investor")
+        typ = st.selectbox("Filter", ["Alle Veränderungen", "Nur Käufe (Neu)",
+                                      "Aufgestockt", "Reduziert", "Verkäufe"])
+        change_rows = []
+        for inv in data["investors"]:
+            if inv["person"] not in selected:
+                continue
+            picks = [h for h in inv.get("holdings", [])
+                     if include_etfs or not h["isEtf"]][:top_n_per_inv]
+            for h in picks:
+                ch = h.get("change", "")
+                if ch in ("NEU", "AUFGESTOCKT", "REDUZIERT"):
+                    change_rows.append({"Investor": inv["person"],
+                                        "Ticker": h.get("ticker") or "–",
+                                        "Aktie": h["name"],
+                                        "Veränderung": CHANGE_BADGE.get(ch, ch),
+                                        "Gewicht": f"{h['weight']:.1f} %"})
+            for s in inv.get("sold", []):
+                if include_etfs or True:
+                    change_rows.append({"Investor": inv["person"],
+                                        "Ticker": s.get("ticker") or "–",
+                                        "Aktie": s["name"],
+                                        "Veränderung": "🔴 Verkauft",
+                                        "Gewicht": "–"})
+        df_ch = pd.DataFrame(change_rows)
+        if not df_ch.empty:
+            filt = {"Nur Käufe (Neu)": "🟢 Neu", "Aufgestockt": "🔼 Aufgestockt",
+                    "Reduziert": "🔽 Reduziert", "Verkäufe": "🔴 Verkauft"}
+            if typ in filt:
+                df_ch = df_ch[df_ch["Veränderung"] == filt[typ]]
+        if df_ch.empty:
+            st.info("Keine Veränderungen für diese Auswahl.")
+        else:
+            st.dataframe(df_ch, hide_index=True, use_container_width=True,
+                         height=min(600, 45 + 33 * len(df_ch)))
+            st.caption("Basis: die gespeicherten Top-Positionen je Investor "
+                       "(Verkäufe = im Vorquartal in den Top-Positionen, jetzt nicht mehr).")
+
+# --- Tab 3: Rechner ---
+with tab3:
     st.markdown("### Investment-Rechner (Equal Weight)")
     ic1, ic2 = st.columns([1, 2])
     with ic1:
@@ -311,37 +504,86 @@ with tab2:
             f'({100/n:.2f} % je Position).</div>'.replace(",", "."),
             unsafe_allow_html=True)
         st.write("")
-        rows = [{
+        df_calc = pd.DataFrame([{
             "Nr.": i + 1,
+            "Ticker": r.get("ticker") or "–",
             "Aktie": r["name"],
             "Anteil": f"{100/n:.2f} %",
             "Betrag": f"{per:,.0f} €".replace(",", "."),
             "Konsens": f"{r['count']} / {len(selected)}",
-        } for i, r in enumerate(ranking[:n])]
-        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True,
+        } for i, r in enumerate(ranking[:n])])
+        st.dataframe(df_calc, use_container_width=True, hide_index=True,
                      height=min(620, 45 + 35 * n))
+        st.download_button("⬇ Kaufliste als CSV",
+                           df_calc.to_csv(index=False).encode("utf-8"),
+                           f"F13-Kaufliste_{quarter}.csv", "text/csv")
         st.caption("Equal-Weight-Methode — kein Übergewichten, keine "
                    "Bauchentscheidungen. 13F-Daten sind bis zu 45 Tage alt (Quartalslag) "
                    "und ein Signal, kein Echtzeit-Kaufsignal.")
 
-# --- Tab 3: Investoren ---
-with tab3:
+# --- Tab 4: Struktur ---
+with tab4:
+    if not ranking:
+        st.info("Keine Titel mit diesen Filtern.")
+    else:
+        n_struct = min(data["topN"], len(ranking))
+        base = ranking[:n_struct]
+        st.markdown(f"### Struktur der F13-Liste (Top {n_struct}, gleichgewichtet)")
+        st.caption("Zeigt Klumpenrisiken: Verteilung der gleichgewichteten "
+                   "F13-Titel nach Sektor und Region.")
+        pie_colors = ["#C9A84C", "#0D2238", "#8899AA", "#5a7a9a", "#a8863a",
+                      "#3d5a75", "#c0b088", "#6b8caa", "#8a6d2f", "#d4c9b0"]
+
+        def pie(counter, title):
+            labels = list(counter.keys())
+            values = list(counter.values())
+            f = go.Figure(go.Pie(labels=labels, values=values, hole=0.45,
+                                 marker=dict(colors=pie_colors[:len(labels)]),
+                                 textinfo="label+percent",
+                                 textfont=dict(color=OFFWHITE, family="Arial", size=12)))
+            f.update_layout(title=title, paper_bgcolor=MIDNIGHT,
+                            font=dict(color=OFFWHITE), showlegend=False,
+                            height=360, margin=dict(l=10, r=10, t=50, b=10))
+            return f
+
+        sec_ct = Counter(r.get("sector", "Sonstige") for r in base)
+        reg_ct = Counter(r.get("region", "–") for r in base)
+        pc1, pc2 = st.columns(2)
+        pc1.plotly_chart(pie(sec_ct, "Nach Sektor"), use_container_width=True)
+        pc2.plotly_chart(pie(reg_ct, "Nach Region"), use_container_width=True)
+
+        biggest = sec_ct.most_common(1)[0]
+        st.markdown(
+            f'<div class="callout">Größter Block: <b>{biggest[0]}</b> mit '
+            f'<b>{biggest[1]} von {n_struct}</b> Titeln '
+            f'({100*biggest[1]/n_struct:.0f} %). Je höher ein einzelner Block, '
+            f'desto größer das Klumpenrisiko.</div>', unsafe_allow_html=True)
+
+# --- Tab 5: Investoren ---
+with tab5:
     for inv in data["investors"]:
         if inv["person"] not in selected:
             continue
         fdate = datetime.strptime(inv["filingDate"], "%Y-%m-%d").strftime("%d.%m.%Y")
+        sold_n = len(inv.get("sold", []))
         with st.expander(
             f"{inv['person']} — {inv['firm']}  ·  {fmt_money(inv['portfolioValue'])}  "
             f"·  Filing {fdate} ({inv['form']})"
+            + (f"  ·  {sold_n} Verkäufe" if sold_n else "")
         ):
             picks = [h for h in inv.get("holdings", [])
                      if include_etfs or not h["isEtf"]][:top_n_per_inv]
             df = pd.DataFrame([{
+                "Ticker": p.get("ticker") or "–",
                 "Position": p["name"] + ("  ⓔ" if p["isEtf"] else ""),
                 "Gewicht": f"{p['weight']:.1f} %",
                 "Wert": fmt_money(p["value"]),
+                "Veränderung": CHANGE_BADGE.get(p.get("change", ""), "–"),
             } for p in picks])
             st.dataframe(df, use_container_width=True, hide_index=True)
+            if sold_n:
+                st.caption("Im Vorquartal gehalten, jetzt verkauft: "
+                           + ", ".join(f"{s['name']}" for s in inv["sold"]))
 
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 st.markdown(
