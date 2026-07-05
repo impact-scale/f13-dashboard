@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T06:39:25.304918+00:00",
+  "generatedAt": "2026-07-05T06:42:08.029043+00:00",
   "topN": 15,
   "storeN": 25,
   "investors": [
@@ -109,9 +109,9 @@
         {
           "key": "H1467J",
           "name": "Chubb Ltd Switz",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CB",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 11162836215.0,
           "shares": 34249183.0,
           "weight": 4.24,
@@ -306,9 +306,9 @@
         {
           "key": "H1467J",
           "name": "Chubb Ltd Switz",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CB",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 11162836215.0,
           "shares": 34249183.0,
           "weight": 4.24,
@@ -619,9 +619,9 @@
         {
           "key": "H1467J",
           "name": "Chubb Limited",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CB",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 10689854998.0,
           "shares": 34249183.0,
           "weight": 3.9,
@@ -2618,9 +2618,9 @@
         {
           "key": "G54950",
           "name": "Linde PLC",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "LIN",
+          "sector": "Materialien",
+          "region": "USA",
           "value": 128860914.0,
           "shares": 259926.0,
           "weight": 2.33,
@@ -2815,9 +2815,9 @@
         {
           "key": "G54950",
           "name": "Linde PLC",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "LIN",
+          "sector": "Materialien",
+          "region": "USA",
           "value": 128860914.0,
           "shares": 259926.0,
           "weight": 2.33,
@@ -3823,7 +3823,7 @@
         {
           "key": "L8681T",
           "name": "Spotify Technology S A",
-          "ticker": "",
+          "ticker": "SPOT",
           "sector": "Sonstige",
           "region": "–",
           "value": 639850868.0,
@@ -4120,7 +4120,7 @@
         {
           "key": "L8681T",
           "name": "Spotify Technology S A",
-          "ticker": "",
+          "ticker": "SPOT",
           "sector": "Sonstige",
           "region": "–",
           "value": 579136857.0,
@@ -4271,7 +4271,7 @@
         {
           "key": "G25508",
           "name": "Crh PLC",
-          "ticker": "",
+          "ticker": "CRH",
           "sector": "Sonstige",
           "region": "–",
           "value": 199728000.0,
@@ -4468,7 +4468,7 @@
         {
           "key": "G25508",
           "name": "Crh PLC",
-          "ticker": "",
+          "ticker": "CRH",
           "sector": "Sonstige",
           "region": "–",
           "value": 199728000.0,
@@ -4824,7 +4824,7 @@
         {
           "key": "G25508",
           "name": "Crh PLC",
-          "ticker": "",
+          "ticker": "CRH",
           "sector": "Sonstige",
           "region": "–",
           "value": 324480000.0,
@@ -6598,7 +6598,7 @@
         {
           "key": "G25508",
           "name": "Crh PLC",
-          "ticker": "",
+          "ticker": "CRH",
           "sector": "Sonstige",
           "region": "–",
           "value": 39689000.0,
@@ -9647,7 +9647,7 @@
         {
           "key": "L8681T",
           "name": "Spotify Technology S A",
-          "ticker": "",
+          "ticker": "SPOT",
           "sector": "Sonstige",
           "region": "–",
           "value": 444234294.0,
@@ -9844,7 +9844,7 @@
         {
           "key": "L8681T",
           "name": "Spotify Technology S A",
-          "ticker": "",
+          "ticker": "SPOT",
           "sector": "Sonstige",
           "region": "–",
           "value": 444234294.0,
@@ -10149,7 +10149,7 @@
         {
           "key": "L8681T",
           "name": "Spotify Technology S A",
-          "ticker": "",
+          "ticker": "SPOT",
           "sector": "Sonstige",
           "region": "–",
           "value": 563845601.0,
@@ -11870,9 +11870,9 @@
     {
       "key": "H1467J",
       "name": "Chubb Ltd Switz",
-      "ticker": "",
-      "sector": "Sonstige",
-      "region": "–",
+      "ticker": "CB",
+      "sector": "Finanzen",
+      "region": "USA",
       "count": 1,
       "investors": [
         {
