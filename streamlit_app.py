@@ -185,10 +185,6 @@ with st.sidebar:
     )
     search = st.text_input("Aktie suchen", "").strip().lower()
 
-    st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
-    st.markdown('<div class="tag">EQUAL-WEIGHT-RECHNER</div>', unsafe_allow_html=True)
-    capital = st.number_input("Anlagebetrag (€)", min_value=0, value=15000, step=1000)
-
 if not selected:
     st.warning("Bitte mindestens einen Investor auswählen.")
     st.stop()
@@ -263,8 +259,24 @@ with tab1:
 
 # --- Tab 2: Rechner ---
 with tab2:
-    n = min(data["topN"], len(ranking))
-    st.markdown(f"### Equal-Weight-Verteilung auf die Top {n} Konsens-Titel")
+    st.markdown("### Investment-Rechner (Equal Weight)")
+    ic1, ic2 = st.columns([1, 2])
+    with ic1:
+        capital = st.number_input(
+            "Investitionsvolumen (€)", min_value=0, value=15000, step=500,
+            help="Betrag eingeben — die Verteilung berechnet sich sofort neu.",
+        )
+    with ic2:
+        n_titles = st.number_input(
+            "Anzahl Aktien", min_value=1,
+            max_value=max(1, len(ranking)) if ranking else 1,
+            value=min(data["topN"], len(ranking)) if ranking else 1, step=1,
+            help="Auf wie viele der obersten Konsens-Titel soll gleichmäßig "
+                 "verteilt werden? Standard: 15.",
+        )
+    st.write("")
+
+    n = int(min(n_titles, len(ranking)))
     if n == 0:
         st.info("Keine Titel mit diesen Filtern.")
     else:
