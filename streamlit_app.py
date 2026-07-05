@@ -394,9 +394,9 @@ def delta_str(d):
     return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
 
 
-tab1, tab2, tab6, tab3, tab4, tab5 = st.tabs(
-    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
-     "🥧 Struktur", "👤 Investoren-Details"])
+tab1, tab2, tab6, tab7, tab3, tab4, tab5 = st.tabs(
+    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🎯 Backtest",
+     "🧮 Investment-Rechner", "🥧 Struktur", "👤 Investoren-Details"])
 
 # --- Tab 1: Konsens ---
 with tab1:
@@ -569,6 +569,101 @@ with tab6:
         st.plotly_chart(fig, use_container_width=True)
         st.caption("Verfolgt die aktuell 8 stärksten Konsens-Titel rückwirkend über "
                    "die geladenen Quartale.")
+
+# --- Tab 7: Backtest ---
+with tab7:
+    history = data.get("history", [])
+    prices = data.get("prices", {})
+    prices_asof = data.get("pricesAsOf")
+    quarters_avail = [h["quarter"] for h in history if any(
+        e.get("price") for e in h["ranking"])]
+    if not quarters_avail or not prices:
+        st.info("Für den Backtest werden Quartals- und aktuelle Kurse benötigt — "
+                "bitte zuerst `python3 f13_update.py` mit aktueller Version ausführen.")
+    else:
+        st.markdown("### Backtest — F13-Liste eines Quartals bis heute")
+        st.caption("Wähle ein Meldequartal: Wir vergleichen den damaligen "
+                   "Quartals-Schlusskurs (aus 13F) mit dem aktuellen Kurs und zeigen die "
+                   "Rendite, die die F13-Liste jenes Quartals bis heute erzielt hätte.")
+
+        bc1, bc2, bc3 = st.columns([2, 2, 2])
+        sel_q = bc1.selectbox("Meldequartal", quarters_avail[::-1],
+                              help="Stand der F13-Liste, ab dem gerechnet wird.")
+        n_bt = bc2.number_input("Anzahl Titel (Top N)", 5, 20, data["topN"], 1)
+        method_bt = bc3.radio("Gewichtung", ["Equal Weight", "Conviction (Profi)"],
+                              horizontal=True)
+
+        snap = next(h for h in history if h["quarter"] == sel_q)
+        entries = [e for e in snap["ranking"] if e.get("price")][:int(n_bt)]
+
+        rows, rets = [], []
+        excluded = 0
+        counts_bt = [max(e["count"], 0) for e in entries]
+        wsum = sum(counts_bt) or 1
+        for i, e in enumerate(entries):
+            p0 = e["price"]
+            pn = prices.get(e["ticker"], {}).get("price")
+            # Plausibilitätsschutz: Kursverhältnis muss zwischen 0,1x und 10x liegen
+            # (fängt Aktienklassen-/Einheiten-Fehler wie BRK.A vs BRK.B ab)
+            valid = bool(p0 and pn and 0.1 <= (pn / p0) <= 10)
+            r = (pn - p0) / p0 * 100 if valid else None
+            w = (1 / len(entries)) if method_bt.startswith("Equal") else counts_bt[i] / wsum
+            if r is not None:
+                rets.append((r, w))
+            elif pn:
+                excluded += 1
+            rows.append({
+                "Ticker": e["ticker"] or "–", "Aktie": e["name"],
+                f"Kurs {sel_q}": f"{p0:,.2f} $".replace(",", "."),
+                "Kurs aktuell": f"{pn:,.2f} $".replace(",", ".") if pn else "–",
+                "Rendite": f"{r:+.1f} %" if r is not None else "–",
+                "Gewicht": f"{w*100:.1f} %",
+            })
+
+        # Portfolio-Rendite (gewichtet über verfügbare Titel, neu normiert)
+        if rets:
+            wtot = sum(w for _, w in rets) or 1
+            port = sum(r * w for r, w in rets) / wtot
+            colr = "#5fbf7f" if port >= 0 else "#d9776a"
+            st.markdown(
+                f'<div class="callout"><b>F13-Portfolio {sel_q} → heute'
+                f'{f" (Kurse {prices_asof})" if prices_asof else ""}:</b> '
+                f'<span style="color:{colr};font-weight:700;font-size:1.15em;">'
+                f'{port:+.1f} %</span> &nbsp; ({method_bt}, {len(rets)} Titel mit Kurs). '
+                f'Kurseffekt ohne Dividenden.</div>', unsafe_allow_html=True)
+
+        if excluded:
+            st.caption(f"⚠ {excluded} Titel wegen unplausiblem Kursverhältnis "
+                       "(z. B. Aktienklassen-Mismatch) aus der Renditeberechnung "
+                       "ausgeschlossen.")
+        df_bt = pd.DataFrame(rows)
+        st.dataframe(df_bt, use_container_width=True, hide_index=True,
+                     height=min(620, 45 + 35 * len(df_bt)))
+
+        chart = []
+        for e in entries:
+            p0 = e["price"]
+            pn = prices.get(e["ticker"], {}).get("price")
+            if p0 and pn and 0.1 <= pn / p0 <= 10:
+                chart.append((e["ticker"] or e["name"][:10], (pn - p0) / p0 * 100))
+        chart.sort(key=lambda x: x[1])
+        if chart:
+            fig_bt = go.Figure(go.Bar(
+                x=[c[1] for c in chart], y=[c[0] for c in chart], orientation="h",
+                marker_color=["#d9776a" if c[1] < 0 else "#5fbf7f" for c in chart],
+                text=[f"{c[1]:+.0f}%" for c in chart], textposition="outside",
+                textfont=dict(color=OFFWHITE, family="Courier New")))
+            fig_bt.update_layout(
+                title=f"Rendite je Titel seit {sel_q}",
+                paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                font=dict(color=OFFWHITE), xaxis=dict(gridcolor="#1a3a5c", title="Rendite %"),
+                yaxis=dict(gridcolor="#1a3a5c"),
+                height=max(300, 26 * len(chart)), margin=dict(l=10, r=40, t=50, b=10))
+            st.plotly_chart(fig_bt, use_container_width=True)
+        st.caption("Quartalskurs = Median aus 13F (Wert ÷ Aktien) der meldenden "
+                   "Investoren. Aktueller Kurs = letzter Schlusskurs (Yahoo). Reine "
+                   "Kursrendite ohne Dividenden/Gebühren. Keine Anlageberatung.")
+
 
 def compute_weights(method, titles):
     """Gibt Gewichte (0..1) je Titel für die gewählte Methode zurück."""

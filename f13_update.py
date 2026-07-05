@@ -18,6 +18,7 @@ Ausgabe: f13_data.json + f13_data.js  ·  nur Python-Standardbibliothek.
 import json
 import os
 import re
+import statistics
 import sys
 import time
 import urllib.request
@@ -28,10 +29,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 TICKER_CACHE = BASE_DIR / "ticker_cache.json"
+PRICE_CACHE = BASE_DIR / "price_cache.json"
 
 USER_AGENT = "F13-Dashboard bjoern@impact-scale.com"
 REQUEST_DELAY = 0.12
-QUARTERS = 4          # geladene Quartale pro Investor (Q/Q, YTD, Zeitreihe)
+QUARTERS = 8          # geladene Quartale pro Investor (Q/Q, YTD, Zeitreihe, Backtest)
 TOP_N = 15            # Länge der finalen F13-Liste
 STORE_N = 25          # gespeicherte Top-Positionen je Investor
 
@@ -128,6 +130,7 @@ SECTOR_REGION = {
     "AXP": ("Financial", "USA"), "V": ("Financial", "USA"), "MA": ("Financial", "USA"),
     "BRK.A": ("Financial", "USA"), "BRK.B": ("Financial", "USA"),
     "BRK/A": ("Financial", "USA"), "BRK/B": ("Financial", "USA"),
+    "BRK-A": ("Financial", "USA"), "BRK-B": ("Financial", "USA"),
     "BLK": ("Financial", "USA"), "SCHW": ("Financial", "USA"), "SPGI": ("Financial", "USA"),
     "MCO": ("Financial", "USA"), "COF": ("Financial", "USA"), "PYPL": ("Financial", "USA"),
     "PGR": ("Financial", "USA"), "CB": ("Financial", "USA"), "AON": ("Financial", "USA"),
@@ -155,6 +158,13 @@ SECTOR_REGION = {
 TICKER_FALLBACK = {
     "N07059": "ASML", "H1467J": "CB", "G5480U": "LIN", "G54950": "LIN",
     "G25508": "CRH", "L8681T": "SPOT",
+}
+
+# Ticker-Override: erzwingt einen Ticker unabhängig von OpenFIGI.
+# Berkshire A+B teilen den CUSIP-Stamm 084670; die meisten Investoren halten
+# Class B — deshalb auf BRK-B fixieren (Kurs passt dann zum Wert/Aktien-Preis).
+TICKER_OVERRIDE = {
+    "084670": "BRK-B",
 }
 
 
@@ -345,7 +355,8 @@ def resolve_tickers(cusips):
 # ── Positionsaufbau + Veränderungen ──────────────────────────────────────────
 
 def enrich(m, total, ticker_map, name_map):
-    ticker = ticker_map.get(m["cusip"], "") or TICKER_FALLBACK.get(m["key"], "")
+    ticker = (TICKER_OVERRIDE.get(m["key"])
+              or ticker_map.get(m["cusip"], "") or TICKER_FALLBACK.get(m["key"], ""))
     sector, region = sector_region(ticker)
     name = name_map.get(ticker.upper()) if ticker else None
     if not name:
@@ -375,6 +386,38 @@ def change_vs(cur_shares, base_by_key, key):
 def slim(pos):
     return {k: pos[k] for k in ("key", "name", "ticker", "sector", "region",
                                 "value", "weight", "isEtf")}
+
+
+def fetch_current_prices(tickers):
+    """Aktueller Schlusskurs je Ticker via Yahoo (kostenlos, kein Key).
+    Nutzt/aktualisiert price_cache.json; behält bei Fehlern den alten Wert."""
+    cache = {}
+    if PRICE_CACHE.exists():
+        try:
+            cache = json.loads(PRICE_CACHE.read_text("utf-8"))
+        except Exception:
+            cache = {}
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    tickers = sorted({t for t in tickers if t})
+    ok = 0
+    for t in tickers:
+        ysym = t.replace("/", "-")  # BRK/B → BRK-B
+        try:
+            url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{ysym}"
+                   f"?interval=1d&range=5d")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            j = json.loads(urllib.request.urlopen(req, timeout=20).read())
+            meta = j["chart"]["result"][0]["meta"]
+            px = meta.get("regularMarketPrice")
+            if px:
+                cache[t] = {"price": round(float(px), 2), "asOf": today}
+                ok += 1
+        except Exception:
+            pass  # alten Cache-Wert behalten
+        time.sleep(0.25)
+    PRICE_CACHE.write_text(json.dumps(cache, ensure_ascii=False, indent=0), "utf-8")
+    print(f"  Kurse: {ok}/{len(tickers)} Ticker aktuell abgerufen (Yahoo).")
+    return cache
 
 
 def consensus(investors, field, top_n):
@@ -507,30 +550,47 @@ def main():
         r["countYtd"] = ytd_ct.get(r["key"], 0)
         r["countDeltaYtd"] = r["count"] - r["countYtd"]
 
-    # Zeitreihe (#8): Konsens-Top je geladenem Quartal, über alle Investoren
+    # Zeitreihe (#8) + Backtest-Basis: Konsens-Top je geladenem Quartal,
+    # inkl. Quartals-Schlusskurs (aus 13F: Wert ÷ Aktienanzahl, Median über Investoren).
     all_quarters = sorted({d for r in raw for d in r["quarters"]}, reverse=True)[:QUARTERS]
     history = []
     for qd in sorted(all_quarters):
         snap = []
+        price_samples = {}  # key → Liste von Preisen (Wert/Aktien)
         for r in raw:
             if qd not in r["quarters"]:
                 continue
             tot = sum(m["value"] for m in r["quarters"][qd])
             picks = [enrich(m, tot, ticker_map, name_map)
                      for m in r["quarters"][qd][:STORE_N]]
+            for h in picks:
+                if h.get("shares"):
+                    price_samples.setdefault(h["key"], []).append(h["value"] / h["shares"])
             snap.append({"person": r["person"], "holdings":
                          [h for h in picks if not h["isEtf"]][:TOP_N]})
         hr = consensus(snap, "holdings", TOP_N)[:20]
+
+        def qprice(key):
+            s = price_samples.get(key)
+            return round(statistics.median(s), 2) if s else None
+
         history.append({"quarter": qd, "ranking":
-                        [{"name": x["name"], "ticker": x["ticker"], "count": x["count"]}
-                         for x in hr]})
+                        [{"key": x["key"], "name": x["name"], "ticker": x["ticker"],
+                          "count": x["count"], "price": qprice(x["key"])} for x in hr]})
+
+    # Aktuelle Kurse für alle in der Historie vorkommenden Ticker abrufen
+    hist_tickers = {e["ticker"] for h in history for e in h["ranking"] if e["ticker"]}
+    prices = fetch_current_prices(hist_tickers)
+    price_out = {t: prices[t] for t in hist_tickers if t in prices}
+    price_asof = max((v["asOf"] for v in price_out.values()), default=None)
 
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "topN": TOP_N, "storeN": STORE_N, "quartersLoaded": QUARTERS,
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
-        "history": history, "errors": errors,
+        "history": history, "prices": price_out, "pricesAsOf": price_asof,
+        "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -562,7 +622,8 @@ def git_push(repo_dir):
                           capture_output=True, timeout=5).returncode != 0:
             print("Git-Push übersprungen (kein Repo).")
             return
-        subprocess.run(git + ["add", "f13_data.json", "f13_data.js", "ticker_cache.json"],
+        subprocess.run(git + ["add", "f13_data.json", "f13_data.js",
+                               "ticker_cache.json", "price_cache.json"],
                        timeout=10, check=True)
         stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(git + ["commit", "-m", f"F13 Update {stamp}"],
