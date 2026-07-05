@@ -370,11 +370,6 @@ c4.metric("Nächste Liste", rel_deadline.strftime("%d.%m.%Y") if rel_deadline el
                f"45 Tage nach Quartalsende fällig — dann ist die F13-Liste vollständig. "
                f"Meldungen treffen aber laufend im 45-Tage-Fenster ein." if rel_deadline else "")
 
-if rel_deadline:
-    st.caption(f"📅 Nächste F13-Liste voraussichtlich bis **{rel_deadline.strftime('%d.%m.%Y')}** "
-               f"(Meldequartal {rel_label}, 13F-Frist 45 Tage nach Quartalsende "
-               f"{rel_qe.strftime('%d.%m.%Y')}).")
-
 if data.get("errors"):
     with st.expander(f"⚠ {len(data['errors'])} Investor(en) mit Ladefehlern"):
         for e in data["errors"]:
