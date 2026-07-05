@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-05T11:42:25.370623+00:00",
+  "generatedAt": "2026-07-05T12:55:25.168842+00:00",
   "topN": 15,
   "storeN": 25,
-  "quartersLoaded": 4,
+  "quartersLoaded": 8,
   "investors": [
     {
       "person": "Warren Buffett",
@@ -42606,107 +42606,727 @@
   ],
   "history": [
     {
+      "quarter": "2024-06-30",
+      "ranking": [
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "count": 22,
+          "price": 182.34
+        },
+        {
+          "key": "594918",
+          "name": "Microsoft Corp",
+          "ticker": "MSFT",
+          "count": 15,
+          "price": 446.95
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "count": 15,
+          "price": 193.25
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "count": 15,
+          "price": 504.22
+        },
+        {
+          "key": "084670",
+          "name": "Berkshire Hathaway INC Del",
+          "ticker": "BRK/B",
+          "count": 10,
+          "price": 415.64
+        },
+        {
+          "key": "037833",
+          "name": "Apple Inc.",
+          "ticker": "AAPL",
+          "count": 9,
+          "price": 210.62
+        },
+        {
+          "key": "92826C",
+          "name": "Visa Inc.",
+          "ticker": "V",
+          "count": 7,
+          "price": 262.47
+        },
+        {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "count": 6,
+          "price": 123.54
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "count": 6,
+          "price": 173.81
+        },
+        {
+          "key": "31428X",
+          "name": "Fedex Corp",
+          "ticker": "FDX",
+          "count": 5,
+          "price": 299.84
+        },
+        {
+          "key": "478160",
+          "name": "Johnson & Johnson",
+          "ticker": "JNJ",
+          "count": 5,
+          "price": 146.16
+        },
+        {
+          "key": "674599",
+          "name": "Occidental Petroleum Corp",
+          "ticker": "OXY",
+          "count": 4,
+          "price": 63.01
+        },
+        {
+          "key": "337738",
+          "name": "Fiserv Inc",
+          "ticker": "FISV",
+          "count": 4,
+          "price": 149.04
+        },
+        {
+          "key": "007903",
+          "name": "Advanced Micro Devices Inc",
+          "ticker": "AMD",
+          "count": 4,
+          "price": 162.21
+        },
+        {
+          "key": "718172",
+          "name": "Philip Morris International Inc.",
+          "ticker": "PM",
+          "count": 4,
+          "price": 101.33
+        },
+        {
+          "key": "747525",
+          "name": "Qualcomm Inc",
+          "ticker": "QCOM",
+          "count": 4,
+          "price": 199.18
+        },
+        {
+          "key": "235851",
+          "name": "Danaher Corp",
+          "ticker": "DHR",
+          "count": 4,
+          "price": 249.85
+        },
+        {
+          "key": "01609W",
+          "name": "Alibaba Group Holding Ltd",
+          "ticker": "BABA",
+          "count": 4,
+          "price": 72.0
+        },
+        {
+          "key": "143130",
+          "name": "Carmax INC",
+          "ticker": "",
+          "count": 4,
+          "price": 73.34
+        },
+        {
+          "key": "060505",
+          "name": "Bank Of America Corp",
+          "ticker": "BAC",
+          "count": 3,
+          "price": 39.77
+        }
+      ]
+    },
+    {
+      "quarter": "2024-09-30",
+      "ranking": [
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "count": 22,
+          "price": 166.05
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "count": 15,
+          "price": 572.44
+        },
+        {
+          "key": "594918",
+          "name": "Microsoft Corp",
+          "ticker": "MSFT",
+          "count": 14,
+          "price": 430.3
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "count": 11,
+          "price": 186.33
+        },
+        {
+          "key": "084670",
+          "name": "Berkshire Hathaway INC Del",
+          "ticker": "BRK/B",
+          "count": 10,
+          "price": 474.05
+        },
+        {
+          "key": "037833",
+          "name": "Apple Inc.",
+          "ticker": "AAPL",
+          "count": 9,
+          "price": 233.0
+        },
+        {
+          "key": "92826C",
+          "name": "Visa Inc.",
+          "ticker": "V",
+          "count": 8,
+          "price": 274.95
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "count": 7,
+          "price": 173.67
+        },
+        {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "count": 6,
+          "price": 121.44
+        },
+        {
+          "key": "478160",
+          "name": "Johnson & Johnson",
+          "ticker": "JNJ",
+          "count": 5,
+          "price": 162.06
+        },
+        {
+          "key": "060505",
+          "name": "Bank Of America Corp",
+          "ticker": "BAC",
+          "count": 4,
+          "price": 39.68
+        },
+        {
+          "key": "674599",
+          "name": "Occidental Petroleum Corp",
+          "ticker": "OXY",
+          "count": 4,
+          "price": 51.54
+        },
+        {
+          "key": "337738",
+          "name": "Fiserv Inc",
+          "ticker": "FISV",
+          "count": 4,
+          "price": 179.65
+        },
+        {
+          "key": "007903",
+          "name": "Advanced Micro Devices Inc",
+          "ticker": "AMD",
+          "count": 4,
+          "price": 164.08
+        },
+        {
+          "key": "11135F",
+          "name": "Broadcom Inc.",
+          "ticker": "AVGO",
+          "count": 4,
+          "price": 172.5
+        },
+        {
+          "key": "31428X",
+          "name": "Fedex Corp",
+          "ticker": "FDX",
+          "count": 4,
+          "price": 273.68
+        },
+        {
+          "key": "718172",
+          "name": "Philip Morris International Inc.",
+          "ticker": "PM",
+          "count": 4,
+          "price": 121.4
+        },
+        {
+          "key": "92840M",
+          "name": "Vistra Corp.",
+          "ticker": "VST",
+          "count": 4,
+          "price": 118.54
+        },
+        {
+          "key": "235851",
+          "name": "Danaher Corp",
+          "ticker": "DHR",
+          "count": 4,
+          "price": 278.02
+        },
+        {
+          "key": "58933Y",
+          "name": "Merck & Co., Inc.",
+          "ticker": "MRK",
+          "count": 4,
+          "price": 113.56
+        }
+      ]
+    },
+    {
+      "quarter": "2024-12-31",
+      "ranking": [
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "count": 20,
+          "price": 189.44
+        },
+        {
+          "key": "594918",
+          "name": "Microsoft Corp",
+          "ticker": "MSFT",
+          "count": 16,
+          "price": 421.5
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "count": 16,
+          "price": 219.39
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "count": 15,
+          "price": 585.51
+        },
+        {
+          "key": "084670",
+          "name": "Berkshire Hathaway INC Del",
+          "ticker": "BRK/A",
+          "count": 10,
+          "price": 467.25
+        },
+        {
+          "key": "92826C",
+          "name": "Visa Inc.",
+          "ticker": "V",
+          "count": 8,
+          "price": 316.04
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "count": 8,
+          "price": 197.49
+        },
+        {
+          "key": "037833",
+          "name": "Apple Inc.",
+          "ticker": "AAPL",
+          "count": 6,
+          "price": 250.42
+        },
+        {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "count": 6,
+          "price": 134.29
+        },
+        {
+          "key": "79466L",
+          "name": "Salesforce, Inc.",
+          "ticker": "CRM",
+          "count": 6,
+          "price": 334.33
+        },
+        {
+          "key": "674599",
+          "name": "Occidental Petroleum Corp",
+          "ticker": "OXY",
+          "count": 5,
+          "price": 49.41
+        },
+        {
+          "key": "235851",
+          "name": "Danaher Corp",
+          "ticker": "DHR",
+          "count": 5,
+          "price": 229.55
+        },
+        {
+          "key": "808513",
+          "name": "Schwab Charles Corp",
+          "ticker": "SCHW",
+          "count": 4,
+          "price": 74.01
+        },
+        {
+          "key": "337738",
+          "name": "Fiserv Inc",
+          "ticker": "FISV",
+          "count": 4,
+          "price": 205.42
+        },
+        {
+          "key": "31428X",
+          "name": "Fedex Corp",
+          "ticker": "FDX",
+          "count": 4,
+          "price": 281.33
+        },
+        {
+          "key": "G3643J",
+          "name": "Flutter Entmt PLC",
+          "ticker": "",
+          "count": 4,
+          "price": 258.45
+        },
+        {
+          "key": "722304",
+          "name": "PDD Holdings Inc.",
+          "ticker": "PDD",
+          "count": 4,
+          "price": 96.99
+        },
+        {
+          "key": "143130",
+          "name": "Carmax INC",
+          "ticker": "",
+          "count": 4,
+          "price": 81.76
+        },
+        {
+          "key": "060505",
+          "name": "Bank Of America Corp",
+          "ticker": "BAC",
+          "count": 3,
+          "price": 43.95
+        },
+        {
+          "key": "615369",
+          "name": "Moodys Corp",
+          "ticker": "MCO",
+          "count": 3,
+          "price": 473.37
+        }
+      ]
+    },
+    {
+      "quarter": "2025-03-31",
+      "ranking": [
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "count": 18,
+          "price": 155.15
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "count": 16,
+          "price": 576.36
+        },
+        {
+          "key": "594918",
+          "name": "Microsoft Corp",
+          "ticker": "MSFT",
+          "count": 14,
+          "price": 375.39
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "count": 11,
+          "price": 190.26
+        },
+        {
+          "key": "084670",
+          "name": "Berkshire Hathaway INC Del",
+          "ticker": "BRK/B",
+          "count": 11,
+          "price": 550.02
+        },
+        {
+          "key": "92826C",
+          "name": "Visa Inc.",
+          "ticker": "V",
+          "count": 8,
+          "price": 350.46
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "count": 8,
+          "price": 166.0
+        },
+        {
+          "key": "037833",
+          "name": "Apple Inc.",
+          "ticker": "AAPL",
+          "count": 6,
+          "price": 222.13
+        },
+        {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "count": 6,
+          "price": 108.38
+        },
+        {
+          "key": "G3643J",
+          "name": "Flutter Entmt PLC",
+          "ticker": "",
+          "count": 6,
+          "price": 221.55
+        },
+        {
+          "key": "337738",
+          "name": "Fiserv Inc",
+          "ticker": "FISV",
+          "count": 5,
+          "price": 220.83
+        },
+        {
+          "key": "532457",
+          "name": "ELI LILLY & Co",
+          "ticker": "LLY",
+          "count": 5,
+          "price": 825.91
+        },
+        {
+          "key": "808513",
+          "name": "Schwab Charles Corp",
+          "ticker": "SCHW",
+          "count": 4,
+          "price": 78.28
+        },
+        {
+          "key": "674599",
+          "name": "Occidental Petroleum Corp",
+          "ticker": "OXY",
+          "count": 4,
+          "price": 49.36
+        },
+        {
+          "key": "09857L",
+          "name": "Booking Holdings Inc.",
+          "ticker": "BKNG",
+          "count": 4,
+          "price": 4606.91
+        },
+        {
+          "key": "14040H",
+          "name": "Capital One Financial Corp",
+          "ticker": "COF",
+          "count": 4,
+          "price": 179.3
+        },
+        {
+          "key": "L8681T",
+          "name": "Spotify Technology S.A.",
+          "ticker": "SPOT",
+          "count": 4,
+          "price": 550.03
+        },
+        {
+          "key": "79466L",
+          "name": "Salesforce, Inc.",
+          "ticker": "CRM",
+          "count": 4,
+          "price": 268.36
+        },
+        {
+          "key": "235851",
+          "name": "Danaher Corp",
+          "ticker": "DHR",
+          "count": 4,
+          "price": 205.0
+        },
+        {
+          "key": "722304",
+          "name": "PDD Holdings Inc.",
+          "ticker": "PDD",
+          "count": 4,
+          "price": 118.35
+        }
+      ]
+    },
+    {
       "quarter": "2025-06-30",
       "ranking": [
         {
+          "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
-          "count": 18
+          "count": 18,
+          "price": 176.61
         },
         {
+          "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
-          "count": 16
+          "count": 16,
+          "price": 497.41
         },
         {
+          "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
-          "count": 15
+          "count": 15,
+          "price": 219.39
         },
         {
+          "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
-          "count": 14
+          "count": 14,
+          "price": 738.09
         },
         {
+          "key": "084670",
           "name": "Berkshire Hathaway INC Del",
           "ticker": "BRK/A",
-          "count": 10
+          "count": 10,
+          "price": 501.42
         },
         {
+          "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
-          "count": 9
+          "count": 9,
+          "price": 157.99
         },
         {
+          "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
-          "count": 9
+          "count": 9,
+          "price": 226.49
         },
         {
+          "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
-          "count": 7
+          "count": 7,
+          "price": 355.05
         },
         {
+          "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
-          "count": 6
+          "count": 6,
+          "price": 205.17
         },
         {
+          "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
-          "count": 6
+          "count": 6,
+          "price": 275.65
         },
         {
+          "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
-          "count": 6
+          "count": 6,
+          "price": 212.76
         },
         {
+          "key": "G3643J",
           "name": "Flutter Entmt PLC",
           "ticker": "",
-          "count": 6
+          "count": 6,
+          "price": 285.76
         },
         {
+          "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
-          "count": 5
+          "count": 5,
+          "price": 47.32
         },
         {
+          "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
-          "count": 5
+          "count": 5,
+          "price": 91.24
         },
         {
+          "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
-          "count": 5
+          "count": 5,
+          "price": 5789.24
         },
         {
+          "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
-          "count": 4
+          "count": 4,
+          "price": 42.01
         },
         {
+          "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
-          "count": 4
+          "count": 4,
+          "price": 561.94
         },
         {
+          "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
-          "count": 4
+          "count": 4,
+          "price": 93.3
         },
         {
+          "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
-          "count": 4
+          "count": 4,
+          "price": 80.4
         },
         {
+          "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
-          "count": 4
+          "count": 4,
+          "price": 272.69
         }
       ]
     },
@@ -42714,104 +43334,144 @@
       "quarter": "2025-09-30",
       "ranking": [
         {
+          "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
-          "count": 21
+          "count": 21,
+          "price": 243.18
         },
         {
+          "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
-          "count": 17
+          "count": 17,
+          "price": 517.95
         },
         {
+          "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
-          "count": 15
+          "count": 15,
+          "price": 734.38
         },
         {
+          "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
-          "count": 14
+          "count": 14,
+          "price": 219.57
         },
         {
+          "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
-          "count": 10
+          "count": 10,
+          "price": 186.58
         },
         {
+          "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
-          "count": 10
+          "count": 10,
+          "price": 279.29
         },
         {
+          "key": "084670",
           "name": "Berkshire Hathaway INC Del",
           "ticker": "BRK/B",
-          "count": 9
+          "count": 9,
+          "price": 519.32
         },
         {
+          "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
-          "count": 8
+          "count": 8,
+          "price": 341.38
         },
         {
+          "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
-          "count": 8
+          "count": 8,
+          "price": 329.91
         },
         {
+          "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
-          "count": 7
+          "count": 7,
+          "price": 254.63
         },
         {
+          "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
-          "count": 6
+          "count": 6,
+          "price": 212.58
         },
         {
+          "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
-          "count": 5
+          "count": 5,
+          "price": 47.25
         },
         {
+          "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
-          "count": 5
+          "count": 5,
+          "price": 95.47
         },
         {
+          "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
-          "count": 5
+          "count": 5,
+          "price": 237.0
         },
         {
+          "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
-          "count": 4
+          "count": 4,
+          "price": 51.59
         },
         {
+          "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
-          "count": 4
+          "count": 4,
+          "price": 128.93
         },
         {
+          "key": "11271J",
           "name": "BROOKFIELD Corp",
           "ticker": "BN",
-          "count": 4
+          "count": 4,
+          "price": 68.58
         },
         {
+          "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
-          "count": 4
+          "count": 4,
+          "price": 235.81
         },
         {
+          "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
-          "count": 4
+          "count": 4,
+          "price": 5399.27
         },
         {
+          "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
-          "count": 4
+          "count": 4,
+          "price": 97.97
         }
       ]
     },
@@ -42819,104 +43479,144 @@
       "quarter": "2025-12-31",
       "ranking": [
         {
+          "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
-          "count": 24
+          "count": 24,
+          "price": 313.13
         },
         {
+          "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
-          "count": 18
+          "count": 18,
+          "price": 483.62
         },
         {
+          "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
-          "count": 16
+          "count": 16,
+          "price": 230.82
         },
         {
+          "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
-          "count": 12
+          "count": 12,
+          "price": 660.09
         },
         {
+          "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
-          "count": 10
+          "count": 10,
+          "price": 303.89
         },
         {
+          "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
-          "count": 9
+          "count": 9,
+          "price": 186.5
         },
         {
+          "key": "084670",
           "name": "Berkshire Hathaway INC Del",
           "ticker": "BRK/A",
-          "count": 9
+          "count": 9,
+          "price": 519.05
         },
         {
+          "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
-          "count": 8
+          "count": 8,
+          "price": 350.71
         },
         {
+          "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
-          "count": 8
+          "count": 8,
+          "price": 346.1
         },
         {
+          "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
-          "count": 7
+          "count": 7,
+          "price": 271.86
         },
         {
+          "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
-          "count": 6
+          "count": 6,
+          "price": 570.88
         },
         {
+          "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
-          "count": 5
+          "count": 5,
+          "price": 99.91
         },
         {
+          "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
-          "count": 5
+          "count": 5,
+          "price": 264.91
         },
         {
+          "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
-          "count": 5
+          "count": 5,
+          "price": 242.36
         },
         {
+          "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
-          "count": 4
+          "count": 4,
+          "price": 510.85
         },
         {
+          "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
-          "count": 4
+          "count": 4,
+          "price": 41.12
         },
         {
+          "key": "N07059",
           "name": "Asml Holding NV",
           "ticker": "ASML",
-          "count": 4
+          "count": 4,
+          "price": 1069.86
         },
         {
+          "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
-          "count": 4
+          "count": 4,
+          "price": 288.86
         },
         {
+          "key": "11271J",
           "name": "BROOKFIELD Corp",
           "ticker": "BN",
-          "count": 4
+          "count": 4,
+          "price": 45.89
         },
         {
+          "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
-          "count": 4
+          "count": 4,
+          "price": 5355.33
         }
       ]
     },
@@ -42924,107 +43624,314 @@
       "quarter": "2026-03-31",
       "ranking": [
         {
+          "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
-          "count": 22
+          "count": 22,
+          "price": 287.45
         },
         {
+          "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
-          "count": 13
+          "count": 13,
+          "price": 208.27
         },
         {
+          "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
-          "count": 12
+          "count": 12,
+          "price": 370.17
         },
         {
+          "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
-          "count": 12
+          "count": 12,
+          "price": 337.95
         },
         {
+          "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
-          "count": 12
+          "count": 12,
+          "price": 572.13
         },
         {
+          "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
-          "count": 10
+          "count": 10,
+          "price": 174.4
         },
         {
+          "key": "084670",
           "name": "Berkshire Hathaway INC Del",
           "ticker": "BRK/A",
-          "count": 9
+          "count": 9,
+          "price": 500.05
         },
         {
+          "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
-          "count": 8
+          "count": 8,
+          "price": 253.79
         },
         {
+          "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
-          "count": 8
+          "count": 8,
+          "price": 309.51
         },
         {
+          "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
-          "count": 7
+          "count": 7,
+          "price": 302.24
         },
         {
+          "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
-          "count": 5
+          "count": 5,
+          "price": 436.25
         },
         {
+          "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
-          "count": 5
+          "count": 5,
+          "price": 93.98
         },
         {
+          "key": "N07059",
           "name": "Asml Holding NV",
           "ticker": "ASML",
-          "count": 5
+          "count": 5,
+          "price": 1320.83
         },
         {
+          "key": "512807",
           "name": "Lam Research Corp",
           "ticker": "LRCX",
-          "count": 5
+          "count": 5,
+          "price": 213.66
         },
         {
+          "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
-          "count": 5
+          "count": 5,
+          "price": 71.93
         },
         {
+          "key": "500754",
           "name": "Kraft Heinz Co",
           "ticker": "KHC",
-          "count": 4
+          "count": 4,
+          "price": 22.49
         },
         {
+          "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
-          "count": 4
+          "count": 4,
+          "price": 356.18
         },
         {
+          "key": "866966",
           "name": "Sunbelt Rentals Holdings, Inc.",
           "ticker": "SUNB",
-          "count": 4
+          "count": 4,
+          "price": 65.09
         },
         {
+          "key": "038222",
           "name": "Applied Materials Inc",
           "ticker": "AMAT",
-          "count": 4
+          "count": 4,
+          "price": 341.79
         },
         {
+          "key": "22266T",
           "name": "Coupang, Inc.",
           "ticker": "CPNG",
-          "count": 4
+          "count": 4,
+          "price": 18.88
         }
       ]
     }
   ],
+  "prices": {
+    "ASML": {
+      "price": 1769.32,
+      "asOf": "2026-07-05"
+    },
+    "SUNB": {
+      "price": 72.34,
+      "asOf": "2026-07-05"
+    },
+    "V": {
+      "price": 362.13,
+      "asOf": "2026-07-05"
+    },
+    "QCOM": {
+      "price": 176.25,
+      "asOf": "2026-07-05"
+    },
+    "TSM": {
+      "price": 434.16,
+      "asOf": "2026-07-05"
+    },
+    "UBER": {
+      "price": 74.43,
+      "asOf": "2026-07-05"
+    },
+    "BRK/B": {
+      "price": 507.78,
+      "asOf": "2026-07-05"
+    },
+    "JNJ": {
+      "price": 263.04,
+      "asOf": "2026-07-05"
+    },
+    "CRM": {
+      "price": 166.11,
+      "asOf": "2026-07-05"
+    },
+    "MA": {
+      "price": 539.39,
+      "asOf": "2026-07-05"
+    },
+    "FDX": {
+      "price": 313.0,
+      "asOf": "2026-07-05"
+    },
+    "MSFT": {
+      "price": 390.49,
+      "asOf": "2026-07-05"
+    },
+    "BABA": {
+      "price": 96.14,
+      "asOf": "2026-07-05"
+    },
+    "SCHW": {
+      "price": 97.0,
+      "asOf": "2026-07-05"
+    },
+    "NVDA": {
+      "price": 194.83,
+      "asOf": "2026-07-05"
+    },
+    "OXY": {
+      "price": 48.91,
+      "asOf": "2026-07-05"
+    },
+    "AMAT": {
+      "price": 603.04,
+      "asOf": "2026-07-05"
+    },
+    "AMD": {
+      "price": 517.82,
+      "asOf": "2026-07-05"
+    },
+    "BRK/A": {
+      "price": 761580.0,
+      "asOf": "2026-07-05"
+    },
+    "SPOT": {
+      "price": 485.97,
+      "asOf": "2026-07-05"
+    },
+    "KHC": {
+      "price": 25.37,
+      "asOf": "2026-07-05"
+    },
+    "AMZN": {
+      "price": 242.67,
+      "asOf": "2026-07-05"
+    },
+    "BN": {
+      "price": 43.43,
+      "asOf": "2026-07-05"
+    },
+    "AVGO": {
+      "price": 360.45,
+      "asOf": "2026-07-05"
+    },
+    "MRK": {
+      "price": 129.56,
+      "asOf": "2026-07-05"
+    },
+    "FISV": {
+      "price": 52.33,
+      "asOf": "2026-07-05"
+    },
+    "CPNG": {
+      "price": 18.56,
+      "asOf": "2026-07-05"
+    },
+    "PDD": {
+      "price": 82.39,
+      "asOf": "2026-07-05"
+    },
+    "VST": {
+      "price": 151.05,
+      "asOf": "2026-07-05"
+    },
+    "CSGP": {
+      "price": 30.0,
+      "asOf": "2026-07-05"
+    },
+    "AAPL": {
+      "price": 308.63,
+      "asOf": "2026-07-05"
+    },
+    "MCO": {
+      "price": 490.51,
+      "asOf": "2026-07-05"
+    },
+    "COF": {
+      "price": 205.12,
+      "asOf": "2026-07-05"
+    },
+    "PM": {
+      "price": 182.27,
+      "asOf": "2026-07-05"
+    },
+    "LLY": {
+      "price": 1213.91,
+      "asOf": "2026-07-05"
+    },
+    "LRCX": {
+      "price": 351.41,
+      "asOf": "2026-07-05"
+    },
+    "META": {
+      "price": 582.9,
+      "asOf": "2026-07-05"
+    },
+    "BKNG": {
+      "price": 184.56,
+      "asOf": "2026-07-05"
+    },
+    "DHR": {
+      "price": 197.93,
+      "asOf": "2026-07-05"
+    },
+    "BAC": {
+      "price": 58.73,
+      "asOf": "2026-07-05"
+    },
+    "GOOGL": {
+      "price": 359.91,
+      "asOf": "2026-07-05"
+    }
+  },
+  "pricesAsOf": "2026-07-05",
   "errors": []
 }
