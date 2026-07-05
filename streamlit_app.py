@@ -11,7 +11,7 @@ Lokal:  streamlit run streamlit_app.py
 
 import json
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, date, timedelta
 from pathlib import Path
 import io
 
@@ -22,7 +22,7 @@ import streamlit as st
 # ─── Konfiguration ────────────────────────────────────────────────────────────
 
 st.set_page_config(
-    page_title="F13-Liste — Super-Investoren",
+    page_title="F13-Liste Dashboard",
     page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -99,6 +99,21 @@ def fmt_money(v):
     if m >= 1000:
         return f"{m/1000:.2f} Mrd $"
     return f"{m:.0f} Mio $"
+
+
+def next_13f_release(today=None):
+    """Nächste 13F-Veröffentlichung: Quartalsende + 45 Tage Frist.
+    Gibt (Quartalslabel, Quartalsende, Frist-Datum) zurück."""
+    today = today or date.today()
+    cands = []
+    for y in (today.year - 1, today.year, today.year + 1):
+        for q, (m, d) in enumerate([(3, 31), (6, 30), (9, 30), (12, 31)], start=1):
+            qe = date(y, m, d)
+            cands.append((f"Q{q} {y}", qe, qe + timedelta(days=45)))
+    for label, qe, deadline in sorted(cands, key=lambda x: x[2]):
+        if deadline >= today:
+            return label, qe, deadline
+    return None, None, None
 
 
 def df_to_excel(df, sheet="F13-Liste"):
@@ -227,9 +242,9 @@ CHANGE_BADGE = {
 
 data = load_data()
 
-st.markdown('<div class="tag">F13-LISTE · SUPER-INVESTOREN</div>',
+st.markdown('<div class="tag">F13-LISTE · SUPER-INVESTOREN-KONSENS</div>',
             unsafe_allow_html=True)
-st.markdown("# Super-Investoren Dashboard")
+st.markdown("# F13-Liste Dashboard")
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
 if data is None:
@@ -252,6 +267,9 @@ st.markdown(
     f'&nbsp;·&nbsp; {n_ok} Investoren geladen'
     f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
     f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
+    f'&nbsp;<a href="https://www.sec.gov/edgar/search/#/forms=13F-HR" target="_blank" '
+    f'title="Zur Originalquelle: SEC EDGAR 13F-HR" '
+    f'style="text-decoration:none;color:{GOLD};font-weight:700;">ⓘ</a>'
     f'</div>',
     unsafe_allow_html=True,
 )
@@ -341,11 +359,21 @@ if search:
 
 # ─── KPI-Zeile ────────────────────────────────────────────────────────────────
 
+rel_label, rel_qe, rel_deadline = next_13f_release()
 c1, c2, c3, c4 = st.columns(4)
 c1.metric("Investoren aktiv", f"{len(selected)} / {len(all_investors)}")
 c2.metric("Meldequartal", quarter)
 c3.metric("Konsens-Titel", len(ranking))
-c4.metric("Daten-Stand", generated.strftime("%d.%m.%Y"))
+c4.metric("Nächste Liste", rel_deadline.strftime("%d.%m.%Y") if rel_deadline else "–",
+          help=f"Nächstes Meldequartal {rel_label} (Quartalsende "
+               f"{rel_qe.strftime('%d.%m.%Y')}). 13F-Berichte sind spätestens "
+               f"45 Tage nach Quartalsende fällig — dann ist die F13-Liste vollständig. "
+               f"Meldungen treffen aber laufend im 45-Tage-Fenster ein." if rel_deadline else "")
+
+if rel_deadline:
+    st.caption(f"📅 Nächste F13-Liste voraussichtlich bis **{rel_deadline.strftime('%d.%m.%Y')}** "
+               f"(Meldequartal {rel_label}, 13F-Frist 45 Tage nach Quartalsende "
+               f"{rel_qe.strftime('%d.%m.%Y')}).")
 
 if data.get("errors"):
     with st.expander(f"⚠ {len(data['errors'])} Investor(en) mit Ladefehlern"):
@@ -608,15 +636,25 @@ with tab4:
                       "#3d5a75", "#c0b088", "#6b8caa", "#8a6d2f", "#d4c9b0"]
 
         def pie(counter, title):
-            labels = list(counter.keys())
-            values = list(counter.values())
-            f = go.Figure(go.Pie(labels=labels, values=values, hole=0.45,
-                                 marker=dict(colors=pie_colors[:len(labels)]),
-                                 textinfo="label+percent",
-                                 textfont=dict(color=OFFWHITE, family="Arial", size=12)))
-            f.update_layout(title=title, paper_bgcolor=MIDNIGHT,
-                            font=dict(color=OFFWHITE), showlegend=False,
-                            height=360, margin=dict(l=10, r=10, t=50, b=10))
+            # Nach Häufigkeit sortiert, damit Legende & Farben konsistent sind
+            items = counter.most_common()
+            labels = [k for k, _ in items]
+            values = [v for _, v in items]
+            f = go.Figure(go.Pie(
+                labels=labels, values=values, hole=0.5, sort=False,
+                marker=dict(colors=pie_colors[:len(labels)],
+                            line=dict(color=MIDNIGHT, width=1)),
+                textinfo="percent", textposition="inside",
+                insidetextorientation="horizontal",
+                textfont=dict(color=OFFWHITE, family="Arial", size=13),
+                hovertemplate="%{label}: %{value} Titel (%{percent})<extra></extra>"))
+            f.update_layout(
+                title=dict(text=title, x=0.5, xanchor="center"),
+                paper_bgcolor=MIDNIGHT, font=dict(color=OFFWHITE),
+                showlegend=True,
+                legend=dict(orientation="h", yanchor="top", y=-0.05,
+                            xanchor="center", x=0.5, font=dict(size=11)),
+                height=400, margin=dict(l=10, r=10, t=50, b=10))
             return f
 
         sec_ct = Counter(r.get("sector", "Sonstige") for r in base)

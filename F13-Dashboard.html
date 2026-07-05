@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>F13-Liste — Super-Investoren Dashboard</title>
+<title>F13-Liste Dashboard</title>
 <style>
   :root {
     --midnight: #081829;
@@ -256,9 +256,9 @@
 <body>
 
 <header>
-  <div class="tag">F13-LISTE · SUPER-INVESTOREN</div>
-  <h1>Super-Investoren Dashboard</h1>
-  <div class="importbar" id="importBar"><span class="importdot"></span>Stand des Datenimports: <b id="importStamp">noch keine Daten geladen</b></div>
+  <div class="tag">F13-LISTE · SUPER-INVESTOREN-KONSENS</div>
+  <h1>F13-Liste Dashboard</h1>
+  <div class="importbar" id="importBar"><span class="importdot"></span>Stand des Datenimports: <b id="importStamp">noch keine Daten geladen</b><a href="https://www.sec.gov/edgar/search/#/forms=13F-HR" target="_blank" title="Zur Originalquelle: SEC EDGAR 13F-HR" style="text-decoration:none;color:var(--gold);font-weight:700;margin-left:8px;">ⓘ</a></div>
   <div class="sub" id="headerSub"></div>
 </header>
 
@@ -369,6 +369,22 @@ const CHANGE_LABEL = {
   GEHALTEN: '', '': '',
 };
 
+function next13fRelease() {
+  // 13F-Frist: 45 Tage nach Quartalsende. Nächste Frist >= heute.
+  const today = new Date();
+  const ends = [[2, 31], [5, 30], [8, 30], [11, 31]]; // [Monat0, Tag]
+  const cands = [];
+  for (const y of [today.getFullYear() - 1, today.getFullYear(), today.getFullYear() + 1]) {
+    ends.forEach(([m, d], i) => {
+      const qe = new Date(y, m, d);
+      const dl = new Date(qe); dl.setDate(dl.getDate() + 45);
+      cands.push({ label: `Q${i + 1} ${y}`, qe, dl });
+    });
+  }
+  cands.sort((a, b) => a.dl - b.dl);
+  return cands.find(c => c.dl >= today) || null;
+}
+
 function render(data) {
   const sub = document.getElementById('headerSub');
   const generated = new Date(data.generatedAt);
@@ -384,7 +400,11 @@ function render(data) {
     (errCount ? '  ·  ' + errCount + ' mit Fehler' : '') +
     '  ·  Quelle: SEC EDGAR (13F-HR)';
 
-  sub.innerHTML = `Meldequartal <b>${fmtDate(quarter)}</b>`;
+  const rel = next13fRelease();
+  const relTxt = rel
+    ? `  ·  Nächste F13-Liste bis <b>${rel.dl.toLocaleDateString('de-DE')}</b> (${rel.label})`
+    : '';
+  sub.innerHTML = `Meldequartal <b>${fmtDate(quarter)}</b>${relTxt}`;
 
   const app = document.getElementById('app');
   let html = '';
