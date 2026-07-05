@@ -596,6 +596,16 @@ with tab7:
         snap = next(h for h in history if h["quarter"] == sel_q)
         entries = [e for e in snap["ranking"] if e.get("price")][:int(n_bt)]
 
+        # Haltedauer in Jahren: vom Quartalsende bis zum aktuellen Kursdatum
+        def _pd(s):
+            y, m, d = map(int, s.split("-"))
+            return date(y, m, d)
+        end_d = _pd(prices_asof) if prices_asof else date.today()
+        years = max((end_d - _pd(sel_q)).days / 365.25, 1e-6)
+
+        def annualize(total_pct):
+            return ((1 + total_pct / 100) ** (1 / years) - 1) * 100
+
         rows, rets = [], []
         excluded = 0
         counts_bt = [max(e["count"], 0) for e in entries]
@@ -607,6 +617,7 @@ with tab7:
             # (fängt Aktienklassen-/Einheiten-Fehler wie BRK.A vs BRK.B ab)
             valid = bool(p0 and pn and 0.1 <= (pn / p0) <= 10)
             r = (pn - p0) / p0 * 100 if valid else None
+            pa = annualize(r) if r is not None else None
             w = (1 / len(entries)) if method_bt.startswith("Equal") else counts_bt[i] / wsum
             if r is not None:
                 rets.append((r, w))
@@ -616,7 +627,8 @@ with tab7:
                 "Ticker": e["ticker"] or "–", "Aktie": e["name"],
                 f"Kurs {sel_q}": f"{p0:,.2f} $".replace(",", "."),
                 "Kurs aktuell": f"{pn:,.2f} $".replace(",", ".") if pn else "–",
-                "Rendite": f"{r:+.1f} %" if r is not None else "–",
+                "Rendite gesamt": f"{r:+.1f} %" if r is not None else "–",
+                "Rendite p.a.": f"{pa:+.1f} %" if pa is not None else "–",
                 "Gewicht": f"{w*100:.1f} %",
             })
 
@@ -624,12 +636,17 @@ with tab7:
         if rets:
             wtot = sum(w for _, w in rets) or 1
             port = sum(r * w for r, w in rets) / wtot
+            port_pa = annualize(port)
             colr = "#5fbf7f" if port >= 0 else "#d9776a"
+            colp = "#5fbf7f" if port_pa >= 0 else "#d9776a"
             st.markdown(
                 f'<div class="callout"><b>F13-Portfolio {sel_q} → heute'
-                f'{f" (Kurse {prices_asof})" if prices_asof else ""}:</b> '
-                f'<span style="color:{colr};font-weight:700;font-size:1.15em;">'
-                f'{port:+.1f} %</span> &nbsp; ({method_bt}, {len(rets)} Titel mit Kurs). '
+                f'{f" ({prices_asof})" if prices_asof else ""}:</b> &nbsp;'
+                f'Gesamt <span style="color:{colr};font-weight:700;font-size:1.15em;">'
+                f'{port:+.1f} %</span> &nbsp;·&nbsp; '
+                f'p.a. <span style="color:{colp};font-weight:700;font-size:1.15em;">'
+                f'{port_pa:+.1f} %</span> &nbsp; '
+                f'(Haltedauer ~{years:.1f} J., {method_bt}, {len(rets)} Titel). '
                 f'Kurseffekt ohne Dividenden.</div>', unsafe_allow_html=True)
 
         if excluded:
@@ -660,9 +677,12 @@ with tab7:
                 yaxis=dict(gridcolor="#1a3a5c"),
                 height=max(300, 26 * len(chart)), margin=dict(l=10, r=40, t=50, b=10))
             st.plotly_chart(fig_bt, use_container_width=True)
-        st.caption("Quartalskurs = Median aus 13F (Wert ÷ Aktien) der meldenden "
-                   "Investoren. Aktueller Kurs = letzter Schlusskurs (Yahoo). Reine "
-                   "Kursrendite ohne Dividenden/Gebühren. Keine Anlageberatung.")
+        st.caption("Rendite gesamt = über den ganzen Zeitraum · Rendite p.a. = auf ein "
+                   "Jahr annualisiert (bei kurzen Zeiträumen unter ~1 Jahr nur bedingt "
+                   "aussagekräftig, da hochgerechnet). Quartalskurs = Median aus 13F "
+                   "(Wert ÷ Aktien) der meldenden Investoren. Aktueller Kurs = letzter "
+                   "Schlusskurs (Yahoo). Reine Kursrendite ohne Dividenden/Gebühren. "
+                   "Keine Anlageberatung.")
 
 
 def compute_weights(method, titles):
