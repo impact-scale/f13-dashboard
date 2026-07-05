@@ -330,8 +330,9 @@ function render(data) {
 
   const prevQ = data.investors[0] ? data.investors[0].prevReportDate : null;
   html += `<div class="section-title">F13-Liste — Top ${data.topN} nach Investoren-Konsens</div>`;
+  const ytdQ = data.investors[0] ? data.investors[0].ytdBaseDate : null;
   html += `<table><thead><tr>
-    <th>Rang</th><th>Ticker</th><th>Aktie</th><th>Investoren</th><th>Δ Q/Q</th><th>Sektor</th><th>Summe Positionswert</th>
+    <th>Rang</th><th>Ticker</th><th>Aktie</th><th>Investoren</th><th>Δ Q/Q</th><th>Δ YTD</th><th>Sektor</th><th>Summe Positionswert</th>
   </tr></thead><tbody>`;
   data.f13.forEach((r, i) => {
     html += `<tr>
@@ -340,12 +341,13 @@ function render(data) {
       <td class="investor-name">${r.name}</td>
       <td><span class="count-badge">${r.count} / ${investorCount}</span></td>
       <td class="mono">${fmtDelta(r.countDelta)}</td>
+      <td class="mono">${fmtDelta(r.countDeltaYtd)}</td>
       <td class="weight">${r.sector || '–'}</td>
       <td class="value">${fmtMoney(r.combinedValue)}</td>
     </tr>`;
   });
   html += `</tbody></table>`;
-  html += `<div class="mono" style="color:var(--slate);font-size:11px;margin-top:6px;">Δ Q/Q = Veränderung der Investorenzahl ggü. Vorquartal ${prevQ || 'n/a'}</div>`;
+  html += `<div class="mono" style="color:var(--slate);font-size:11px;margin-top:6px;">Δ Q/Q = ggü. Vorquartal ${prevQ || 'n/a'} · Δ YTD = ggü. Jahresbeginn ${ytdQ || 'n/a'}</div>`;
 
   html += `<div class="section-title">Erweiterte Rangliste (Top ${data.ranking.length})</div>`;
   html += `<table><thead><tr>
