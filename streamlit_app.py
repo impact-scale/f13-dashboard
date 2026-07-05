@@ -667,21 +667,43 @@ with tab7:
 
             sp, nd = bench_ret("S&P 500"), bench_ret("Nasdaq 100")
             if sp is not None or nd is not None:
-                st.markdown("**Vergleich mit dem Markt (gleicher Zeitraum)**")
-                mc = st.columns(3)
-                mc[0].metric("F13-Portfolio", f"{port:+.1f} %",
-                             delta=(f"{port - sp:+.1f} pp vs S&P 500"
-                                    if sp is not None else None))
+                st.markdown("#### Vergleich mit dem Markt (gleicher Zeitraum)")
+                comp = [("F13-Portfolio", port, GOLD)]
                 if sp is not None:
-                    mc[1].metric("S&P 500", f"{sp:+.1f} %")
+                    comp.append(("S&P 500", sp, SLATE))
                 if nd is not None:
-                    mc[2].metric("Nasdaq 100", f"{nd:+.1f} %",
-                                 delta=(f"{port - nd:+.1f} pp (F13)"
-                                        if nd is not None else None),
-                                 delta_color="off")
-                st.caption("Index = Kursindex ohne Dividenden (S&P 500 / Nasdaq 100), "
-                           "Startpunkt = Schlusskurs zum selben Quartalsende. "
-                           "pp = Prozentpunkte Mehr-/Minderrendite von F13.")
+                    comp.append(("Nasdaq 100", nd, "#6b8caa"))
+                comp_s = sorted(comp, key=lambda x: x[1])  # höchster oben (horizontal)
+                figc = go.Figure(go.Bar(
+                    x=[c[1] for c in comp_s], y=[c[0] for c in comp_s], orientation="h",
+                    marker=dict(color=[c[2] for c in comp_s],
+                                line=dict(color=MIDNIGHT, width=1)),
+                    text=[f"<b>{c[1]:+.1f} %</b>" for c in comp_s], textposition="outside",
+                    textfont=dict(color=OFFWHITE, family="Arial", size=15),
+                    hovertemplate="%{y}: %{x:+.1f} %<extra></extra>", cliponaxis=False))
+                figc.update_layout(
+                    paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                    font=dict(color=OFFWHITE, family="Arial"),
+                    xaxis=dict(gridcolor="#1a3a5c", title="Rendite gesamt (%)",
+                               zeroline=True, zerolinecolor="#33475c"),
+                    yaxis=dict(tickfont=dict(size=13)),
+                    height=180, margin=dict(l=10, r=60, t=10, b=34), showlegend=False)
+                st.plotly_chart(figc, use_container_width=True)
+
+                bits = []
+                for name, val in (("S&P 500", sp), ("Nasdaq 100", nd)):
+                    if val is not None:
+                        d = port - val
+                        word = "schlägt" if d >= 0 else "liegt hinter"
+                        col = "#5fbf7f" if d >= 0 else "#d9776a"
+                        bits.append(f'{word} den {name} um '
+                                    f'<span style="color:{col};font-weight:700;">'
+                                    f'{abs(d):.1f} pp</span>')
+                st.markdown(
+                    f'<div class="callout">Das <b>F13-Portfolio</b> ({port:+.1f} %) '
+                    f'{" und ".join(bits)}.</div>', unsafe_allow_html=True)
+                st.caption("Indizes = Kursindex ohne Dividenden, Startpunkt = Schlusskurs "
+                           "zum selben Quartalsende. pp = Prozentpunkte.")
 
         if excluded:
             st.caption(f"⚠ {excluded} Titel wegen unplausiblem Kursverhältnis "
