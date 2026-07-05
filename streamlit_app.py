@@ -570,10 +570,6 @@ with tab6:
         st.caption("Verfolgt die aktuell 8 stärksten Konsens-Titel rückwirkend über "
                    "die geladenen Quartale.")
 
-# Vereinfachte Conviction-Gewichtung aus dem Buch (Ränge 1..15, in %)
-BOOK_CONVICTION = [10, 9, 8, 8, 7, 7, 7, 6, 6, 6, 6, 5, 5, 5, 5]
-
-
 def compute_weights(method, titles):
     """Gibt Gewichte (0..1) je Titel für die gewählte Methode zurück."""
     m = len(titles)
@@ -581,14 +577,10 @@ def compute_weights(method, titles):
         return []
     if method.startswith("Equal"):
         return [1 / m] * m
-    if "Häufigkeit" in method:
-        counts = [max(t["count"], 0) for t in titles]
-        tot = sum(counts) or 1
-        return [c / tot for c in counts]
-    # Buch-Tabelle: feste %-Werte (bei >15 Titeln mit 5 % auffüllen), normiert
-    raw = (BOOK_CONVICTION + [5] * max(0, m - 15))[:m]
-    s = sum(raw) or 1
-    return [r / s for r in raw]
+    # Conviction: Gewicht proportional zur Investorenzahl (Überzeugung)
+    counts = [max(t["count"], 0) for t in titles]
+    tot = sum(counts) or 1
+    return [c / tot for c in counts]
 
 
 # --- Tab 3: Rechner ---
@@ -596,9 +588,8 @@ with tab3:
     st.markdown("### Investment-Rechner")
     method = st.radio(
         "Gewichtungsmethode",
-        ["Equal Weight (Standard)",
-         "Conviction (Profi) – nach Häufigkeit",
-         "Conviction (Profi) – Buch-Tabelle"],
+        ["Equal Weight (Standard)", "Conviction (Profi)"],
+        horizontal=True,
         help="Equal Weight: jede Aktie gleich. Conviction: mehr Gewicht für Titel, "
              "die mehr Investoren halten.")
     is_conviction = method.startswith("Conviction")
@@ -655,14 +646,10 @@ with tab3:
         } for i, t in enumerate(titles)])
         st.dataframe(df_calc, use_container_width=True, hide_index=True,
                      height=min(620, 45 + 35 * n))
-        tag = "equal" if method.startswith("Equal") else (
-            "conviction-haeufigkeit" if "Häufigkeit" in method else "conviction-buch")
+        tag = "equal" if method.startswith("Equal") else "conviction"
         st.download_button("⬇ Kaufliste als CSV",
                            df_calc.to_csv(index=False).encode("utf-8"),
                            f"F13-Kaufliste_{tag}_{quarter}.csv", "text/csv")
-        if is_conviction and "Buch" in method:
-            st.caption("Buch-Tabelle: feste Gewichte (10/9/8…5 %), definiert für 15 "
-                       "Titel. Bei abweichender Anzahl anteilig normiert.")
         st.caption("13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, "
                    "kein Echtzeit-Kaufsignal. Keine Anlageberatung.")
 
