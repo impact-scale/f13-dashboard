@@ -21,6 +21,7 @@ import re
 import statistics
 import sys
 import time
+import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from collections import Counter
@@ -420,6 +421,49 @@ def fetch_current_prices(tickers):
     return cache
 
 
+# Vergleichsindizes für den Backtest (Yahoo-Symbole)
+BENCHMARKS = {"S&P 500": "^GSPC", "Nasdaq 100": "^NDX"}
+
+
+def fetch_benchmarks(quarter_dates):
+    """Für jeden Vergleichsindex den Schlusskurs je Quartalsende (nächster
+    Handelstag ≤ Datum) plus den aktuellen Schlusskurs. Für fairen Backtest."""
+    if not quarter_dates:
+        return {}
+    qsorted = sorted(quarter_dates)
+    start = datetime(int(qsorted[0][:4]), int(qsorted[0][5:7]), 1, tzinfo=timezone.utc)
+    p1 = int((start.timestamp())) - 14 * 86400
+    p2 = int(datetime.now(timezone.utc).timestamp()) + 86400
+    out = {}
+    for name, sym in BENCHMARKS.items():
+        try:
+            url = (f"https://query1.finance.yahoo.com/v8/finance/chart/"
+                   f"{urllib.parse.quote(sym)}?period1={p1}&period2={p2}&interval=1d")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            j = json.loads(urllib.request.urlopen(req, timeout=25).read())
+            r = j["chart"]["result"][0]
+            bydate = {datetime.fromtimestamp(t, timezone.utc).strftime("%Y-%m-%d"): c
+                      for t, c in zip(r["timestamp"], r["indicators"]["quote"][0]["close"])
+                      if c}
+            if not bydate:
+                continue
+
+            def near(d):
+                ks = [k for k in bydate if k <= d]
+                return round(bydate[max(ks)], 2) if ks else None
+
+            last = max(bydate)
+            out[name] = {
+                "quarters": {qd: near(qd) for qd in quarter_dates},
+                "current": round(bydate[last], 2), "currentAsOf": last,
+            }
+            print(f"  Index {name}: aktuell {out[name]['current']} ({last})")
+        except Exception as e:
+            print(f"  Index {name} nicht geladen ({e}).")
+        time.sleep(0.3)
+    return out
+
+
 def consensus(investors, field, top_n):
     """Zählt, in wie vielen Investoren-Top-N (Einzelaktien) jede Aktie vorkommt."""
     overlap = {}
@@ -584,13 +628,16 @@ def main():
     price_out = {t: prices[t] for t in hist_tickers if t in prices}
     price_asof = max((v["asOf"] for v in price_out.values()), default=None)
 
+    # Vergleichsindizes (S&P 500, Nasdaq 100) für den Backtest
+    benchmarks = fetch_benchmarks([h["quarter"] for h in history])
+
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "topN": TOP_N, "storeN": STORE_N, "quartersLoaded": QUARTERS,
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
-        "errors": errors,
+        "benchmarks": benchmarks, "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

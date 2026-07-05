@@ -654,6 +654,35 @@ with tab7:
                 f'(Haltedauer ~{years:.1f} J., {method_bt}, {len(rets)} Titel). '
                 f'Kurseffekt ohne Dividenden.</div>', unsafe_allow_html=True)
 
+            # Vergleich mit Indizes (S&P 500, Nasdaq 100) über denselben Zeitraum
+            benchmarks = data.get("benchmarks", {})
+
+            def bench_ret(name):
+                b = benchmarks.get(name)
+                if not b:
+                    return None
+                q0 = b.get("quarters", {}).get(sel_q)
+                cur = b.get("current")
+                return (cur - q0) / q0 * 100 if (q0 and cur) else None
+
+            sp, nd = bench_ret("S&P 500"), bench_ret("Nasdaq 100")
+            if sp is not None or nd is not None:
+                st.markdown("**Vergleich mit dem Markt (gleicher Zeitraum)**")
+                mc = st.columns(3)
+                mc[0].metric("F13-Portfolio", f"{port:+.1f} %",
+                             delta=(f"{port - sp:+.1f} pp vs S&P 500"
+                                    if sp is not None else None))
+                if sp is not None:
+                    mc[1].metric("S&P 500", f"{sp:+.1f} %")
+                if nd is not None:
+                    mc[2].metric("Nasdaq 100", f"{nd:+.1f} %",
+                                 delta=(f"{port - nd:+.1f} pp (F13)"
+                                        if nd is not None else None),
+                                 delta_color="off")
+                st.caption("Index = Kursindex ohne Dividenden (S&P 500 / Nasdaq 100), "
+                           "Startpunkt = Schlusskurs zum selben Quartalsende. "
+                           "pp = Prozentpunkte Mehr-/Minderrendite von F13.")
+
         if excluded:
             st.caption(f"⚠ {excluded} Titel wegen unplausiblem Kursverhältnis "
                        "(z. B. Aktienklassen-Mismatch) aus der Renditeberechnung "
