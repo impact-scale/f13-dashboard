@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T12:55:25.168842+00:00",
+  "generatedAt": "2026-07-05T13:03:37.759180+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 8,
@@ -3020,8 +3020,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 753250.0,
@@ -3272,8 +3272,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 753250.0,
@@ -3816,8 +3816,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 63866338.0,
@@ -16592,8 +16592,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 4954449.0,
@@ -16767,8 +16767,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 5982540.0,
@@ -16949,8 +16949,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 5982540.0,
@@ -17051,8 +17051,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 430201321.0,
@@ -17222,8 +17222,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 430201321.0,
@@ -17397,8 +17397,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 451253535.0,
@@ -17479,8 +17479,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 451253535.0,
@@ -21137,8 +21137,8 @@
       "top": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Cl A",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 1580601977.0,
@@ -21334,8 +21334,8 @@
       "holdings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Cl A",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 1580601977.0,
@@ -21661,8 +21661,8 @@
       "prevHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Cl A",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 1688822197.0,
@@ -21913,8 +21913,8 @@
       "ytdHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Cl A",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 1688822197.0,
@@ -23309,8 +23309,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 150089115.0,
@@ -23506,8 +23506,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 150089115.0,
@@ -23827,8 +23827,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 157488965.0,
@@ -24079,8 +24079,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 157488965.0,
@@ -24327,8 +24327,8 @@
       "top": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 133624920.0,
@@ -24524,8 +24524,8 @@
       "holdings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 133624920.0,
@@ -24851,8 +24851,8 @@
       "prevHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 144185153.0,
@@ -25103,8 +25103,8 @@
       "ytdHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 144185153.0,
@@ -26972,8 +26972,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 189336640.0,
@@ -27169,8 +27169,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 189336640.0,
@@ -27493,8 +27493,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 262635658.0,
@@ -27745,8 +27745,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 262635658.0,
@@ -28003,8 +28003,8 @@
       "top": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 204553820.0,
@@ -28200,8 +28200,8 @@
       "holdings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 204553820.0,
@@ -28527,8 +28527,8 @@
       "prevHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 212822709.0,
@@ -28779,8 +28779,8 @@
       "ytdHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 212822709.0,
@@ -29086,8 +29086,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 25612878.0,
@@ -29205,8 +29205,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 25612878.0,
@@ -29315,8 +29315,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 24888032.0,
@@ -29457,8 +29457,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 24888032.0,
@@ -36332,8 +36332,8 @@
       "top": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 8169547277.0,
@@ -36529,8 +36529,8 @@
       "holdings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 8169547277.0,
@@ -36817,8 +36817,8 @@
       "prevHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 9754809925.0,
@@ -37049,8 +37049,8 @@
       "ytdHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 9754809925.0,
@@ -38505,8 +38505,8 @@
       "top": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 104130300.0,
@@ -38559,8 +38559,8 @@
       "holdings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 104130300.0,
@@ -38626,8 +38626,8 @@
       "prevHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 109446000.0,
@@ -38678,8 +38678,8 @@
       "ytdHoldings": [
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
           "value": 109446000.0,
@@ -39391,8 +39391,8 @@
     },
     {
       "key": "084670",
-      "name": "Berkshire Hathaway INC Del",
-      "ticker": "BRK/A",
+      "name": "Berkshire Hathaway Inc",
+      "ticker": "BRK-B",
       "sector": "Financial",
       "region": "USA",
       "count": 9,
@@ -42071,8 +42071,8 @@
     },
     {
       "key": "084670",
-      "name": "Berkshire Hathaway INC Del",
-      "ticker": "BRK/A",
+      "name": "Berkshire Hathaway Inc",
+      "ticker": "BRK-B",
       "sector": "Financial",
       "region": "USA",
       "count": 9,
@@ -42638,8 +42638,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 10,
           "price": 415.64
         },
@@ -42783,8 +42783,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 10,
           "price": 474.05
         },
@@ -42928,8 +42928,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 10,
           "price": 467.25
         },
@@ -43073,8 +43073,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 11,
           "price": 550.02
         },
@@ -43218,8 +43218,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 10,
           "price": 501.42
         },
@@ -43377,8 +43377,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/B",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 9,
           "price": 519.32
         },
@@ -43522,8 +43522,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 9,
           "price": 519.05
         },
@@ -43667,8 +43667,8 @@
         },
         {
           "key": "084670",
-          "name": "Berkshire Hathaway INC Del",
-          "ticker": "BRK/A",
+          "name": "Berkshire Hathaway Inc",
+          "ticker": "BRK-B",
           "count": 9,
           "price": 500.05
         },
@@ -43767,144 +43767,36 @@
     }
   ],
   "prices": {
-    "ASML": {
-      "price": 1769.32,
-      "asOf": "2026-07-05"
-    },
-    "SUNB": {
-      "price": 72.34,
+    "CRM": {
+      "price": 166.11,
       "asOf": "2026-07-05"
     },
     "V": {
       "price": 362.13,
       "asOf": "2026-07-05"
     },
-    "QCOM": {
-      "price": 176.25,
-      "asOf": "2026-07-05"
-    },
-    "TSM": {
-      "price": 434.16,
-      "asOf": "2026-07-05"
-    },
-    "UBER": {
-      "price": 74.43,
-      "asOf": "2026-07-05"
-    },
-    "BRK/B": {
-      "price": 507.78,
-      "asOf": "2026-07-05"
-    },
     "JNJ": {
       "price": 263.04,
-      "asOf": "2026-07-05"
-    },
-    "CRM": {
-      "price": 166.11,
-      "asOf": "2026-07-05"
-    },
-    "MA": {
-      "price": 539.39,
-      "asOf": "2026-07-05"
-    },
-    "FDX": {
-      "price": 313.0,
-      "asOf": "2026-07-05"
-    },
-    "MSFT": {
-      "price": 390.49,
-      "asOf": "2026-07-05"
-    },
-    "BABA": {
-      "price": 96.14,
-      "asOf": "2026-07-05"
-    },
-    "SCHW": {
-      "price": 97.0,
-      "asOf": "2026-07-05"
-    },
-    "NVDA": {
-      "price": 194.83,
-      "asOf": "2026-07-05"
-    },
-    "OXY": {
-      "price": 48.91,
-      "asOf": "2026-07-05"
-    },
-    "AMAT": {
-      "price": 603.04,
-      "asOf": "2026-07-05"
-    },
-    "AMD": {
-      "price": 517.82,
-      "asOf": "2026-07-05"
-    },
-    "BRK/A": {
-      "price": 761580.0,
       "asOf": "2026-07-05"
     },
     "SPOT": {
       "price": 485.97,
       "asOf": "2026-07-05"
     },
-    "KHC": {
-      "price": 25.37,
+    "ASML": {
+      "price": 1769.32,
       "asOf": "2026-07-05"
     },
-    "AMZN": {
-      "price": 242.67,
-      "asOf": "2026-07-05"
-    },
-    "BN": {
-      "price": 43.43,
-      "asOf": "2026-07-05"
-    },
-    "AVGO": {
-      "price": 360.45,
-      "asOf": "2026-07-05"
-    },
-    "MRK": {
-      "price": 129.56,
-      "asOf": "2026-07-05"
-    },
-    "FISV": {
-      "price": 52.33,
-      "asOf": "2026-07-05"
-    },
-    "CPNG": {
-      "price": 18.56,
-      "asOf": "2026-07-05"
-    },
-    "PDD": {
-      "price": 82.39,
-      "asOf": "2026-07-05"
-    },
-    "VST": {
-      "price": 151.05,
-      "asOf": "2026-07-05"
-    },
-    "CSGP": {
-      "price": 30.0,
+    "MA": {
+      "price": 539.39,
       "asOf": "2026-07-05"
     },
     "AAPL": {
       "price": 308.63,
       "asOf": "2026-07-05"
     },
-    "MCO": {
-      "price": 490.51,
-      "asOf": "2026-07-05"
-    },
-    "COF": {
-      "price": 205.12,
-      "asOf": "2026-07-05"
-    },
-    "PM": {
-      "price": 182.27,
-      "asOf": "2026-07-05"
-    },
-    "LLY": {
-      "price": 1213.91,
+    "BAC": {
+      "price": 58.73,
       "asOf": "2026-07-05"
     },
     "LRCX": {
@@ -43915,20 +43807,124 @@
       "price": 582.9,
       "asOf": "2026-07-05"
     },
-    "BKNG": {
-      "price": 184.56,
+    "GOOGL": {
+      "price": 359.91,
+      "asOf": "2026-07-05"
+    },
+    "BABA": {
+      "price": 96.14,
+      "asOf": "2026-07-05"
+    },
+    "SUNB": {
+      "price": 72.34,
+      "asOf": "2026-07-05"
+    },
+    "KHC": {
+      "price": 25.37,
+      "asOf": "2026-07-05"
+    },
+    "AMZN": {
+      "price": 242.67,
+      "asOf": "2026-07-05"
+    },
+    "AMD": {
+      "price": 517.82,
+      "asOf": "2026-07-05"
+    },
+    "AMAT": {
+      "price": 603.04,
+      "asOf": "2026-07-05"
+    },
+    "FISV": {
+      "price": 52.33,
+      "asOf": "2026-07-05"
+    },
+    "CPNG": {
+      "price": 18.56,
+      "asOf": "2026-07-05"
+    },
+    "VST": {
+      "price": 151.05,
+      "asOf": "2026-07-05"
+    },
+    "BN": {
+      "price": 43.43,
+      "asOf": "2026-07-05"
+    },
+    "COF": {
+      "price": 205.12,
+      "asOf": "2026-07-05"
+    },
+    "PM": {
+      "price": 182.27,
+      "asOf": "2026-07-05"
+    },
+    "NVDA": {
+      "price": 194.83,
+      "asOf": "2026-07-05"
+    },
+    "AVGO": {
+      "price": 360.45,
+      "asOf": "2026-07-05"
+    },
+    "BRK-B": {
+      "price": 507.78,
+      "asOf": "2026-07-05"
+    },
+    "FDX": {
+      "price": 313.0,
+      "asOf": "2026-07-05"
+    },
+    "PDD": {
+      "price": 82.39,
+      "asOf": "2026-07-05"
+    },
+    "LLY": {
+      "price": 1213.91,
+      "asOf": "2026-07-05"
+    },
+    "SCHW": {
+      "price": 97.0,
+      "asOf": "2026-07-05"
+    },
+    "TSM": {
+      "price": 434.16,
       "asOf": "2026-07-05"
     },
     "DHR": {
       "price": 197.93,
       "asOf": "2026-07-05"
     },
-    "BAC": {
-      "price": 58.73,
+    "UBER": {
+      "price": 74.43,
       "asOf": "2026-07-05"
     },
-    "GOOGL": {
-      "price": 359.91,
+    "BKNG": {
+      "price": 184.56,
+      "asOf": "2026-07-05"
+    },
+    "MRK": {
+      "price": 129.56,
+      "asOf": "2026-07-05"
+    },
+    "OXY": {
+      "price": 48.91,
+      "asOf": "2026-07-05"
+    },
+    "QCOM": {
+      "price": 176.25,
+      "asOf": "2026-07-05"
+    },
+    "MSFT": {
+      "price": 390.49,
+      "asOf": "2026-07-05"
+    },
+    "MCO": {
+      "price": 490.51,
+      "asOf": "2026-07-05"
+    },
+    "CSGP": {
+      "price": 30.0,
       "asOf": "2026-07-05"
     }
   },
