@@ -43,8 +43,30 @@
   header .sub {
     color: var(--slate);
     font-size: 13px;
+    margin-top: 6px;
   }
   header .sub b { color: var(--offwhite); }
+  .importbar {
+    display: inline-block;
+    margin-top: 10px;
+    background: var(--navy);
+    border: 1px solid #1a3a5c;
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-family: "Courier New", monospace;
+    font-size: 12.5px;
+    color: var(--offwhite);
+  }
+  .importbar b { color: var(--gold); }
+  .importdot {
+    display: inline-block;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 
   .toolbar {
     display: flex;
@@ -195,9 +217,10 @@
 <body>
 
 <header>
-  <div class="tag">F13-LISTE · REICH IN 60 MINUTEN · KAPITEL 5</div>
+  <div class="tag">F13-LISTE · SUPER-INVESTOREN</div>
   <h1>Super-Investoren Dashboard</h1>
-  <div class="sub" id="headerSub">Noch keine Daten geladen.</div>
+  <div class="importbar" id="importBar"><span class="importdot"></span>Stand des Datenimports: <b id="importStamp">noch keine Daten geladen</b></div>
+  <div class="sub" id="headerSub"></div>
 </header>
 
 <div class="toolbar">
@@ -265,9 +288,18 @@ function render(data) {
   const sub = document.getElementById('headerSub');
   const generated = new Date(data.generatedAt);
   const investorCount = data.investors.length;
+  const errCount = (data.errors || []).length;
   const quarter = data.investors[0] ? data.investors[0].reportDate : '–';
-  sub.innerHTML = `Stand: <b>${generated.toLocaleString('de-DE')}</b> &nbsp;·&nbsp; ` +
-    `<b>${investorCount}</b> Investoren &nbsp;·&nbsp; Meldequartal <b>${fmtDate(quarter)}</b>`;
+
+  const stamp = document.getElementById('importStamp');
+  stamp.textContent = generated.toLocaleString('de-DE', {
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit',
+  }) + ' Uhr  ·  ' + investorCount + ' Investoren geladen' +
+    (errCount ? '  ·  ' + errCount + ' mit Fehler' : '') +
+    '  ·  Quelle: SEC EDGAR (13F-HR)';
+
+  sub.innerHTML = `Meldequartal <b>${fmtDate(quarter)}</b>`;
 
   const app = document.getElementById('app');
   let html = '';

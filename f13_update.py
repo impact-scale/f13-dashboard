@@ -2,9 +2,9 @@
 """
 F13-Liste — Automatischer Datenabruf von SEC EDGAR
 ===================================================
-Holt für die 15 Super-Investoren (aus "Reich in 60 Minuten", Kapitel 5)
-das jeweils aktuellste 13F-HR-Filing, ermittelt die Top-15-Positionen
-pro Investor und berechnet die Schnittmengen (F13-Top-15-Liste).
+Holt für die 15 Super-Investoren das jeweils aktuellste 13F-HR-Filing,
+ermittelt die Top-15-Positionen pro Investor und berechnet die
+Schnittmengen (F13-Top-15-Liste).
 
 Ausgabe:
   - f13_data.json  (Rohdaten)
@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent
 USER_AGENT = "F13-Dashboard bjoern@impact-scale.com"
 REQUEST_DELAY = 0.15  # SEC-Limit: max. 10 Requests/Sekunde
 
-# Liste der Super-Investoren aus dem Buch (Seite 157), Stand 2026
+# Liste der Super-Investoren (Name, Firma, CIK-Nummer), Stand 2026
 INVESTORS = [
     ("Warren Buffett",        "Berkshire Hathaway Inc",                   "0001067983"),
     ("Ray Dalio",             "Bridgewater Associates, LP",               "0001350694"),
@@ -50,8 +50,8 @@ INVESTORS = [
 
 TOP_N = 15  # Top-Positionen pro Investor und Länge der finalen Liste
 
-# ETFs/Indexfonds zählen nicht als "Unternehmen" im Sinne der Buch-Strategie
-# (Kapitel 5: "die 15 besten Unternehmen der Welt") — werden aus den Top-Listen gefiltert.
+# ETFs/Indexfonds zählen nicht als Einzelunternehmen und werden aus den
+# Top-Listen gefiltert (die Strategie zielt auf einzelne Aktien).
 ETF_PATTERNS = re.compile(
     r"\bISHARES\b|\bSPDR\b|\bVANGUARD\b|\bPROSHARES\b|\bINVESCO QQQ\b"
     r"|\bSELECT SECTOR\b|INDEX FUND|\bETF\b|\bTRUST\b.*\bETF\b",

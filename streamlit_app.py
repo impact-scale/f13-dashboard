@@ -1,9 +1,9 @@
 """
 F13-Liste — Super-Investoren Dashboard (Streamlit)
 ==================================================
-Zeigt die Schnittmengen der 13F-Portfolios der 15 Super-Investoren aus
-"Reich in 60 Minuten" (Kapitel 5). Liest f13_data.json (von f13_update.py
-erzeugt) und berechnet die Konsens-Rangliste dynamisch nach Filtereinstellungen.
+Zeigt die Schnittmengen der 13F-Portfolios der 15 Super-Investoren.
+Liest f13_data.json (von f13_update.py erzeugt) und berechnet die
+Konsens-Rangliste dynamisch nach Filtereinstellungen.
 
 Deploy: https://share.streamlit.io  →  Repo verbinden  →  streamlit_app.py
 Lokal:  streamlit run streamlit_app.py
@@ -55,6 +55,16 @@ st.markdown(f"""
     }}
     div[data-testid="stMetricValue"] {{ color: {OFFWHITE}; }}
     .goldbar {{ height: 2.5px; background: {GOLD}; border: none; margin: 4px 0 14px; }}
+    .importbar {{
+        background: {NAVY}; border: 1px solid #1a3a5c; border-left: 3px solid {GOLD};
+        border-radius: 6px; padding: 9px 16px; font-size: 0.85rem; color: {OFFWHITE};
+        font-family: "Courier New",monospace;
+    }}
+    .importbar b {{ color: {GOLD}; }}
+    .importdot {{
+        display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+        background: {GOLD}; margin-right: 8px; vertical-align: middle;
+    }}
     .tag {{
         font-family: "Courier New",monospace; font-size: 0.72rem;
         letter-spacing: 0.12em; color: {GOLD}; text-transform: uppercase;
@@ -120,7 +130,7 @@ def compute_ranking(data, selected_investors, top_n_per_inv, include_etfs):
 
 data = load_data()
 
-st.markdown('<div class="tag">F13-LISTE · REICH IN 60 MINUTEN · KAPITEL 5</div>',
+st.markdown('<div class="tag">F13-LISTE · SUPER-INVESTOREN</div>',
             unsafe_allow_html=True)
 st.markdown("# Super-Investoren Dashboard")
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
@@ -131,8 +141,24 @@ if data is None:
     st.stop()
 
 all_investors = [inv["person"] for inv in data["investors"]]
-generated = datetime.fromisoformat(data["generatedAt"])
+# generatedAt ist UTC (ISO mit +00:00) → in lokale Zeit umrechnen
+generated = datetime.fromisoformat(data["generatedAt"]).astimezone()
 quarter = data["investors"][0]["reportDate"] if data["investors"] else "–"
+n_ok = len(data["investors"])
+n_err = len(data.get("errors", []))
+
+# Stand des Datenimports — prominent oben
+st.markdown(
+    f'<div class="importbar">'
+    f'<span class="importdot"></span>'
+    f'<b>Stand des Datenimports:</b>&nbsp; {generated.strftime("%d.%m.%Y · %H:%M Uhr")}'
+    f'&nbsp;·&nbsp; {n_ok} Investoren geladen'
+    f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
+    f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
+    f'</div>',
+    unsafe_allow_html=True,
+)
+st.write("")
 
 # ─── Sidebar-Filter ───────────────────────────────────────────────────────────
 
@@ -142,12 +168,12 @@ with st.sidebar:
 
     selected = st.multiselect(
         "Investoren einbeziehen", all_investors, default=all_investors,
-        help="Wähle mindestens 10 Investoren (Buch-Empfehlung).",
+        help="Empfehlung: mindestens 10 Investoren einbeziehen.",
     )
     top_n_per_inv = st.slider(
         "Positionen pro Investor", 5, 25, 15,
         help="Wie viele der größten Positionen jedes Investors zählen als "
-             "'Top-Pick'? Das Buch nutzt die Top 15.",
+             "'Top-Pick'? Standard: Top 15.",
     )
     min_consensus = st.slider(
         "Mindest-Konsens (Investoren)", 1, 10, 2,
@@ -155,7 +181,7 @@ with st.sidebar:
     )
     include_etfs = st.toggle(
         "ETFs / Indexfonds einbeziehen", value=False,
-        help="Das Buch zielt auf Einzelaktien. Standard: ETFs ausgeblendet.",
+        help="Fokus auf Einzelaktien. Standard: ETFs ausgeblendet.",
     )
     search = st.text_input("Aktie suchen", "").strip().lower()
 
@@ -258,7 +284,7 @@ with tab2:
         } for i, r in enumerate(ranking[:n])]
         st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True,
                      height=min(620, 45 + 35 * n))
-        st.caption("Equal-Weight-Methode aus Kapitel 5 — kein Übergewichten, keine "
+        st.caption("Equal-Weight-Methode — kein Übergewichten, keine "
                    "Bauchentscheidungen. 13F-Daten sind bis zu 45 Tage alt (Quartalslag) "
                    "und ein Signal, kein Echtzeit-Kaufsignal.")
 

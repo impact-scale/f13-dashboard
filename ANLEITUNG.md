@@ -1,8 +1,8 @@
 # F13-Liste — Dashboard: Einrichtung & Nutzung
 
-Streamlit-Dashboard für die „Reich in 60 Minuten"-Strategie (Kapitel 5):
-Es zieht die aktuellsten 13F-Portfolios der 15 Super-Investoren von SEC EDGAR
-und zeigt die Schnittmengen (Konsens-Aktien) mit Filtern und Equal-Weight-Rechner.
+Streamlit-Dashboard für die F13-Strategie: Es zieht die aktuellsten
+13F-Portfolios der 15 Super-Investoren von SEC EDGAR und zeigt die
+Schnittmengen (Konsens-Aktien) mit Filtern und Equal-Weight-Rechner.
 
 ---
 
@@ -106,7 +106,7 @@ lokale `F13-Dashboard.html`.
   häufiger bringt keine neuen Daten. Größter Sprung: jeweils ~45 Tage nach
   Quartalsende (Mitte Februar / Mai / August / November).
 - **Investoren ändern?** Die Liste der 15 Investoren steht oben in `f13_update.py`
-  (Name, Firma, CIK-Nummer — genau wie in der Buchtabelle S. 157).
-- **ETFs:** Standardmäßig ausgeblendet (das Buch zielt auf Einzelaktien). Im
+  (Name, Firma, CIK-Nummer).
+- **ETFs:** Standardmäßig ausgeblendet (Fokus auf Einzelaktien). Im
   Dashboard per Schalter „ETFs einbeziehen" zuschaltbar.
 - **Keine Anlageberatung** — das Tool bildet nur öffentliche 13F-Daten ab.
