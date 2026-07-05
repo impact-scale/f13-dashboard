@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T06:24:58.443095+00:00",
+  "generatedAt": "2026-07-05T06:27:21.399490+00:00",
   "topN": 15,
   "storeN": 25,
   "investors": [
@@ -69,9 +69,9 @@
         {
           "key": "166764",
           "name": "Chevron Corporation",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 17457364606.0,
           "shares": 84375856.0,
           "weight": 6.64,
@@ -121,9 +121,9 @@
         {
           "key": "615369",
           "name": "Moodys CORP",
-          "ticker": "DUT",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "MCO",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 10762190653.0,
           "shares": 24669778.0,
           "weight": 4.09,
@@ -147,9 +147,9 @@
         {
           "key": "23918K",
           "name": "Davita INC",
-          "ticker": "TRL",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "DVA",
+          "sector": "Gesundheit",
+          "region": "USA",
           "value": 4626158909.0,
           "shares": 30100585.0,
           "weight": 1.76,
@@ -266,9 +266,9 @@
         {
           "key": "166764",
           "name": "Chevron Corporation",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 17457364606.0,
           "shares": 84375856.0,
           "weight": 6.64,
@@ -318,9 +318,9 @@
         {
           "key": "615369",
           "name": "Moodys CORP",
-          "ticker": "DUT",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "MCO",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 10762190653.0,
           "shares": 24669778.0,
           "weight": 4.09,
@@ -344,9 +344,9 @@
         {
           "key": "23918K",
           "name": "Davita INC",
-          "ticker": "TRL",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "DVA",
+          "sector": "Gesundheit",
+          "region": "USA",
           "value": 4626158909.0,
           "shares": 30100585.0,
           "weight": 1.76,
@@ -500,7 +500,7 @@
         {
           "key": "21036P",
           "name": "Constellation Brands INC",
-          "ticker": "CB1A",
+          "ticker": "STZ",
           "sector": "Sonstige",
           "region": "–",
           "value": 94933500.0,
@@ -585,9 +585,9 @@
         {
           "key": "166764",
           "name": "Chevron CORP New",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 19837131131.0,
           "shares": 130156362.0,
           "weight": 7.24,
@@ -596,9 +596,9 @@
         {
           "key": "615369",
           "name": "Moodys CORP",
-          "ticker": "DUT",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "MCO",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 12602556092.0,
           "shares": 24669778.0,
           "weight": 4.6,
@@ -651,9 +651,9 @@
         {
           "key": "23918K",
           "name": "Davita INC",
-          "ticker": "TRL",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "DVA",
+          "sector": "Gesundheit",
+          "region": "USA",
           "value": 3608147375.0,
           "shares": 31759065.0,
           "weight": 1.32,
@@ -717,7 +717,7 @@
         {
           "key": "21036P",
           "name": "Constellation Brands INC",
-          "ticker": "CB1A",
+          "ticker": "STZ",
           "sector": "Sonstige",
           "region": "–",
           "value": 1793480000.0,
@@ -1717,7 +1717,7 @@
         {
           "key": "68634K",
           "name": "Orla Mining Ltd",
-          "ticker": "OLA",
+          "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
           "value": 501579333.0,
@@ -1914,7 +1914,7 @@
         {
           "key": "68634K",
           "name": "Orla Mining Ltd",
-          "ticker": "OLA",
+          "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
           "value": 501579333.0,
@@ -2161,7 +2161,7 @@
         {
           "key": "136375",
           "name": "Canadian National Railway CO",
-          "ticker": "CNR",
+          "ticker": "CNI",
           "sector": "Sonstige",
           "region": "–",
           "value": 2532690.0,
@@ -2241,7 +2241,7 @@
         {
           "key": "68634K",
           "name": "Orla Mining Ltd",
-          "ticker": "OLA",
+          "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
           "value": 423610745.0,
@@ -2472,7 +2472,7 @@
         {
           "key": "136375",
           "name": "Canadian National Railway CO",
-          "ticker": "CNR",
+          "ticker": "CNI",
           "sector": "Sonstige",
           "region": "–",
           "value": 1960139.0,
@@ -2653,7 +2653,7 @@
         {
           "key": "81211K",
           "name": "Sealed Air CORP New",
-          "ticker": "SDA",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 115713148.0,
@@ -2692,7 +2692,7 @@
         {
           "key": "03152W",
           "name": "Amicus Therapeutic",
-          "ticker": "AM6",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 83191070.0,
@@ -2718,7 +2718,7 @@
         {
           "key": "438516",
           "name": "Honeywell Intl INC",
-          "ticker": "HONGBP",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 80930494.0,
@@ -2850,7 +2850,7 @@
         {
           "key": "81211K",
           "name": "Sealed Air CORP New",
-          "ticker": "SDA",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 115713148.0,
@@ -2889,7 +2889,7 @@
         {
           "key": "03152W",
           "name": "Amicus Therapeutic",
-          "ticker": "AM6",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 83191070.0,
@@ -2915,7 +2915,7 @@
         {
           "key": "438516",
           "name": "Honeywell Intl INC",
-          "ticker": "HONGBP",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 80930494.0,
@@ -2954,7 +2954,7 @@
         {
           "key": "436440",
           "name": "Hologic INC",
-          "ticker": "HO1",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 76614396.0,
@@ -3058,7 +3058,7 @@
         {
           "key": "65339F",
           "name": "Nextera Energy INC",
-          "ticker": "NEE 7.375 02/15/29",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 60430906.0,
@@ -3172,7 +3172,7 @@
         {
           "key": "15677J",
           "name": "Dayforce INC",
-          "ticker": "DAY",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 102994524.0,
@@ -3205,7 +3205,7 @@
         {
           "key": "30063P",
           "name": "Exact Sciences CORP",
-          "ticker": "EXK",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 87748754.0,
@@ -3249,7 +3249,7 @@
         {
           "key": "644535",
           "name": "New Gold INC Cda",
-          "ticker": "NGDN",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 84417303.0,
@@ -3260,7 +3260,7 @@
         {
           "key": "20717M",
           "name": "Confluent INC",
-          "ticker": "8QR",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 81342969.0,
@@ -3315,7 +3315,7 @@
         {
           "key": "87161C",
           "name": "Synovus Finl CORP",
-          "ticker": "SYU1",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 71990969.0,
@@ -3326,7 +3326,7 @@
         {
           "key": "00912X",
           "name": "Air Lease CORP",
-          "ticker": "AL",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 71249889.0,
@@ -3337,7 +3337,7 @@
         {
           "key": "03152W",
           "name": "Amicus Therapeutics INC",
-          "ticker": "AM6",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 71200000.0,
@@ -3350,7 +3350,7 @@
         {
           "key": "15677J",
           "name": "Dayforce INC",
-          "ticker": "DAY",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 102994524.0,
@@ -3359,7 +3359,7 @@
         {
           "key": "30063P",
           "name": "Exact Sciences CORP",
-          "ticker": "EXK",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 87748754.0,
@@ -3377,7 +3377,7 @@
         {
           "key": "644535",
           "name": "New Gold INC Cda",
-          "ticker": "NGDN",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 84417303.0,
@@ -3386,7 +3386,7 @@
         {
           "key": "20717M",
           "name": "Confluent INC",
-          "ticker": "8QR",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 81342969.0,
@@ -3395,7 +3395,7 @@
         {
           "key": "87161C",
           "name": "Synovus Finl CORP",
-          "ticker": "SYU1",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 71990969.0,
@@ -3404,7 +3404,7 @@
         {
           "key": "00912X",
           "name": "Air Lease CORP",
-          "ticker": "AL",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 71249889.0,
@@ -4278,7 +4278,7 @@
         {
           "key": "88023U",
           "name": "Somnigroup International INC",
-          "ticker": "TPD",
+          "ticker": "SGI",
           "sector": "Sonstige",
           "region": "–",
           "value": 167855244.0,
@@ -4421,7 +4421,7 @@
         {
           "key": "893641",
           "name": "Transdigm Group INC",
-          "ticker": "T7D",
+          "ticker": "TDG",
           "sector": "Sonstige",
           "region": "–",
           "value": 28974000.0,
@@ -4475,7 +4475,7 @@
         {
           "key": "88023U",
           "name": "Somnigroup International INC",
-          "ticker": "TPD",
+          "ticker": "SGI",
           "sector": "Sonstige",
           "region": "–",
           "value": 167855244.0,
@@ -4592,7 +4592,7 @@
         {
           "key": "78463V",
           "name": "Spdr Gold Tr",
-          "ticker": "GQ9",
+          "ticker": "GLD",
           "sector": "Sonstige",
           "region": "–",
           "value": 40877550.0,
@@ -4631,7 +4631,7 @@
         {
           "key": "893641",
           "name": "Transdigm Group INC",
-          "ticker": "T7D",
+          "ticker": "TDG",
           "sector": "Sonstige",
           "region": "–",
           "value": 28974000.0,
@@ -4829,7 +4829,7 @@
         {
           "key": "88023U",
           "name": "Somnigroup International INC",
-          "ticker": "TPD",
+          "ticker": "SGI",
           "sector": "Sonstige",
           "region": "–",
           "value": 303552000.0,
@@ -5713,7 +5713,7 @@
         {
           "key": "12662P",
           "name": "Cvr Energy INC",
-          "ticker": "FL9",
+          "ticker": "CVI",
           "sector": "Sonstige",
           "region": "–",
           "value": 2395943093.0,
@@ -5817,7 +5817,7 @@
         {
           "key": "80007P",
           "name": "SandRidge Energy, Inc.",
-          "ticker": "SA2D",
+          "ticker": "SD",
           "sector": "Sonstige",
           "region": "–",
           "value": 80697003.0,
@@ -5871,7 +5871,7 @@
         {
           "key": "12662P",
           "name": "Cvr Energy INC",
-          "ticker": "FL9",
+          "ticker": "CVI",
           "sector": "Sonstige",
           "region": "–",
           "value": 2395943093.0,
@@ -5975,7 +5975,7 @@
         {
           "key": "80007P",
           "name": "SandRidge Energy, Inc.",
-          "ticker": "SA2D",
+          "ticker": "SD",
           "sector": "Sonstige",
           "region": "–",
           "value": 80697003.0,
@@ -6027,7 +6027,7 @@
         {
           "key": "12662P",
           "name": "Cvr Energy INC",
-          "ticker": "FL9",
+          "ticker": "CVI",
           "sector": "Sonstige",
           "region": "–",
           "value": 1791445902.0,
@@ -6126,7 +6126,7 @@
         {
           "key": "80007P",
           "name": "SandRidge Energy, Inc.",
-          "ticker": "SA2D",
+          "ticker": "SD",
           "sector": "Sonstige",
           "region": "–",
           "value": 70873874.0,
@@ -6196,7 +6196,7 @@
         {
           "key": "457669",
           "name": "Insmed INC",
-          "ticker": "IM8N",
+          "ticker": "INSM",
           "sector": "Sonstige",
           "region": "–",
           "value": 188717000.0,
@@ -6393,7 +6393,7 @@
         {
           "key": "457669",
           "name": "Insmed INC",
-          "ticker": "IM8N",
+          "ticker": "INSM",
           "sector": "Sonstige",
           "region": "–",
           "value": 188717000.0,
@@ -6729,7 +6729,7 @@
         {
           "key": "457669",
           "name": "Insmed INC",
-          "ticker": "IM8N",
+          "ticker": "INSM",
           "sector": "Sonstige",
           "region": "–",
           "value": 257884000.0,
@@ -6850,7 +6850,7 @@
         {
           "key": "58733R",
           "name": "Mercadolibre INC",
-          "ticker": "MLB1",
+          "ticker": "MELI",
           "sector": "Sonstige",
           "region": "–",
           "value": 94970000.0,
@@ -6905,7 +6905,7 @@
         {
           "key": "29362U",
           "name": "Entegris INC",
-          "ticker": "ENQ",
+          "ticker": "ENTG",
           "sector": "Sonstige",
           "region": "–",
           "value": 71120000.0,
@@ -7020,7 +7020,7 @@
         {
           "key": "29362U",
           "name": "Entegris INC",
-          "ticker": "ENQ",
+          "ticker": "ENTG",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 71120000.0,
@@ -7521,7 +7521,7 @@
         {
           "key": "46090E",
           "name": "Invesco Qqq Tr",
-          "ticker": "NDQ",
+          "ticker": "QQQ",
           "sector": "Sonstige",
           "region": "–",
           "value": 85482090.0,
@@ -7981,7 +7981,7 @@
         {
           "key": "30231G",
           "name": "Exxon Mobil CORP",
-          "ticker": "XONA",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 5477079257.0,
@@ -8033,9 +8033,9 @@
         {
           "key": "166764",
           "name": "Chevron Corporation",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 4528511351.0,
           "shares": 21887438.0,
           "weight": 1.54,
@@ -8204,7 +8204,7 @@
         {
           "key": "30231G",
           "name": "Exxon Mobil CORP",
-          "ticker": "XONA",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 5477079257.0,
@@ -8256,9 +8256,9 @@
         {
           "key": "166764",
           "name": "Chevron Corporation",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 4528511351.0,
           "shares": 21887438.0,
           "weight": 1.54,
@@ -8295,9 +8295,9 @@
         {
           "key": "617446",
           "name": "Morgan Stanley",
-          "ticker": "DWD",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "MS",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 4213003465.0,
           "shares": 25600068.0,
           "weight": 1.43,
@@ -8308,9 +8308,9 @@
         {
           "key": "172967",
           "name": "Citigroup INC",
-          "ticker": "TRVC",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "C",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 3994186506.0,
           "shares": 35218996.0,
           "weight": 1.35,
@@ -8553,9 +8553,9 @@
         {
           "key": "617446",
           "name": "Morgan Stanley",
-          "ticker": "DWD",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "MS",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 4441505244.0,
           "shares": 25018335.0,
           "weight": 1.52,
@@ -8586,9 +8586,9 @@
         {
           "key": "172967",
           "name": "Citigroup INC",
-          "ticker": "TRVC",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "C",
+          "sector": "Finanzen",
+          "region": "USA",
           "value": 3954307451.0,
           "shares": 33887285.0,
           "weight": 1.35,
@@ -8597,7 +8597,7 @@
         {
           "key": "30231G",
           "name": "Exxon Mobil CORP",
-          "ticker": "XONA",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
           "value": 3790451642.0,
@@ -8641,9 +8641,9 @@
         {
           "key": "166764",
           "name": "Chevron CORP New",
-          "ticker": "CHV",
-          "sector": "Sonstige",
-          "region": "–",
+          "ticker": "CVX",
+          "sector": "Energie",
+          "region": "USA",
           "value": 3272535462.0,
           "shares": 21471919.0,
           "weight": 1.12,
@@ -9160,7 +9160,7 @@
         {
           "key": "21036P",
           "name": "Constellation Brands INC",
-          "ticker": "CB1A",
+          "ticker": "STZ",
           "sector": "Sonstige",
           "region": "–",
           "value": 603867341.0,
@@ -10190,7 +10190,7 @@
         {
           "key": "893641",
           "name": "Transdigm Group INC",
-          "ticker": "T7D",
+          "ticker": "TDG",
           "sector": "Sonstige",
           "region": "–",
           "value": 336160813.0,
@@ -10256,7 +10256,7 @@
         {
           "key": "049468",
           "name": "Atlassian Corporation",
-          "ticker": "TEAM1EUR",
+          "ticker": "TEAM",
           "sector": "Sonstige",
           "region": "–",
           "value": 313528172.0,
@@ -10309,7 +10309,7 @@
         {
           "key": "049468",
           "name": "Atlassian Corporation",
-          "ticker": "TEAM1EUR",
+          "ticker": "TEAM",
           "sector": "Sonstige",
           "region": "–",
           "prevValue": 313528172.0,
@@ -10509,7 +10509,7 @@
         {
           "key": "465562",
           "name": "Itau Unibanco Holding SA",
-          "ticker": "BVXB",
+          "ticker": "ITUB",
           "sector": "Sonstige",
           "region": "–",
           "value": 102143786.0,
@@ -10706,7 +10706,7 @@
         {
           "key": "465562",
           "name": "Itau Unibanco Holding SA",
-          "ticker": "BVXB",
+          "ticker": "ITUB",
           "sector": "Sonstige",
           "region": "–",
           "value": 102143786.0,
@@ -10745,7 +10745,7 @@
         {
           "key": "124830",
           "name": "Cbl & Associates Properties INC",
-          "ticker": "0HQK",
+          "ticker": "CBL",
           "sector": "Sonstige",
           "region": "–",
           "value": 82767382.0,
@@ -10996,7 +10996,7 @@
         {
           "key": "465562",
           "name": "Itau Unibanco Holding SA",
-          "ticker": "BVXB",
+          "ticker": "ITUB",
           "sector": "Sonstige",
           "region": "–",
           "value": 98970875.0,
@@ -11018,7 +11018,7 @@
         {
           "key": "124830",
           "name": "Cbl & Associates Properties INC",
-          "ticker": "0HQK",
+          "ticker": "CBL",
           "sector": "Sonstige",
           "region": "–",
           "value": 93150348.0,
@@ -11579,9 +11579,9 @@
     {
       "key": "166764",
       "name": "Chevron Corporation",
-      "ticker": "CHV",
-      "sector": "Sonstige",
-      "region": "–",
+      "ticker": "CVX",
+      "sector": "Energie",
+      "region": "USA",
       "count": 2,
       "investors": [
         {
@@ -11874,9 +11874,9 @@
     {
       "key": "615369",
       "name": "Moodys CORP",
-      "ticker": "DUT",
-      "sector": "Sonstige",
-      "region": "–",
+      "ticker": "MCO",
+      "sector": "Finanzen",
+      "region": "USA",
       "count": 1,
       "investors": [
         {
@@ -11912,7 +11912,7 @@
     {
       "key": "30231G",
       "name": "Exxon Mobil CORP",
-      "ticker": "XONA",
+      "ticker": "",
       "sector": "Sonstige",
       "region": "–",
       "count": 1,
@@ -11969,9 +11969,9 @@
     {
       "key": "23918K",
       "name": "Davita INC",
-      "ticker": "TRL",
-      "sector": "Sonstige",
-      "region": "–",
+      "ticker": "DVA",
+      "sector": "Gesundheit",
+      "region": "USA",
       "count": 1,
       "investors": [
         {
@@ -12121,7 +12121,7 @@
     {
       "key": "12662P",
       "name": "Cvr Energy INC",
-      "ticker": "FL9",
+      "ticker": "CVI",
       "sector": "Sonstige",
       "region": "–",
       "count": 1,
@@ -12825,9 +12825,9 @@
     {
       "key": "166764",
       "name": "Chevron Corporation",
-      "ticker": "CHV",
-      "sector": "Sonstige",
-      "region": "–",
+      "ticker": "CVX",
+      "sector": "Energie",
+      "region": "USA",
       "count": 2,
       "investors": [
         {
