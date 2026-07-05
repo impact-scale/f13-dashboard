@@ -187,7 +187,7 @@ def compute_ranking(data, selected_investors, top_n_per_inv, include_etfs,
                 slot["tickers"][pos["ticker"]] += 1
             slot["investors"].append({
                 "person": inv["person"], "weight": pos["weight"], "value": pos["value"],
-                "change": pos.get("change", ""),
+                "change": pos.get("change", ""), "changeYtd": pos.get("changeYtd", ""),
             })
             slot["combined"] += pos["value"]
     ranking = [{
@@ -203,13 +203,17 @@ def compute_ranking(data, selected_investors, top_n_per_inv, include_etfs,
 
 
 def with_consensus_delta(data, selected, top_n, include_etfs):
-    """Aktuelle Rangliste + countPrev/countDelta ggü. Vorquartal."""
+    """Aktuelle Rangliste + Δ ggü. Vorquartal (Q/Q) und Jahresbeginn (YTD)."""
     ranking = compute_ranking(data, selected, top_n, include_etfs, "holdings")
     prev = {r["key"]: r["count"] for r in
             compute_ranking(data, selected, top_n, include_etfs, "prevHoldings")}
+    ytd = {r["key"]: r["count"] for r in
+           compute_ranking(data, selected, top_n, include_etfs, "ytdHoldings")}
     for r in ranking:
         r["countPrev"] = prev.get(r["key"], 0)
         r["countDelta"] = r["count"] - r["countPrev"]
+        r["countYtd"] = ytd.get(r["key"], 0)
+        r["countDeltaYtd"] = r["count"] - r["countYtd"]
     return ranking
 
 
@@ -256,12 +260,22 @@ st.write("")
 # ─── Sidebar-Filter ───────────────────────────────────────────────────────────
 
 INV_KEYS = {p: f"inv_{p}" for p in all_investors}
+SUPER15 = [inv["person"] for inv in data["investors"] if inv.get("group") == "super15"]
+TOP30_VOL = [inv["person"] for inv in
+             sorted(data["investors"], key=lambda x: -x.get("portfolioValue", 0))[:30]]
 
 
 def _toggle_all_investors():
     val = st.session_state["inv_all"]
     for k in INV_KEYS.values():
         st.session_state[k] = val
+
+
+def _set_investors(names):
+    sel = set(names)
+    for p, k in INV_KEYS.items():
+        st.session_state[k] = (p in sel)
+    st.session_state["inv_all"] = (len(sel) == len(INV_KEYS))
 
 
 with st.sidebar:
@@ -274,7 +288,7 @@ with st.sidebar:
              "'Top-Pick'? Standard: Top 15.",
     )
     min_consensus = st.slider(
-        "Mindest-Konsens (Investoren)", 1, 10, 2,
+        "Mindest-Konsens (Investoren)", 1, 25, 3,
         help="Zeige nur Aktien, die von mindestens so vielen Investoren gehalten werden.",
     )
     include_etfs = st.toggle(
@@ -285,7 +299,7 @@ with st.sidebar:
 
     st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
     st.markdown("**Investoren einbeziehen**")
-    # Standard beim ersten Laden: alle eingeschaltet
+    # Standard beim ersten Laden: alle eingeschaltet (vollständige F13-Liste)
     if "inv_all" not in st.session_state:
         st.session_state["inv_all"] = True
         for k in INV_KEYS.values():
@@ -293,14 +307,27 @@ with st.sidebar:
 
     st.checkbox("Alle ein-/ausschalten", key="inv_all",
                 on_change=_toggle_all_investors)
+    st.caption("Schnellauswahl:")
+    pb1, pb2 = st.columns(2)
+    pb1.button("★ Super-15", on_click=_set_investors, args=(SUPER15,),
+               use_container_width=True,
+               help="Nur die 15 Super-Investoren aus der PDF.")
+    pb2.button("Top 30 Vol.", on_click=_set_investors, args=(TOP30_VOL,),
+               use_container_width=True,
+               help="Die 30 Investoren mit dem größten Portfolio-Volumen.")
     st.markdown('<hr style="border-color:#1a3a5c;margin:2px 0 6px;">',
                 unsafe_allow_html=True)
-    for p in all_investors:
+    st.caption("★ Super-Investoren (PDF-Liste)")
+    for p in SUPER15:
         st.checkbox(p, key=INV_KEYS[p])
+    extended = [p for p in all_investors if p not in set(SUPER15)]
+    if extended:
+        st.caption("Erweitertes Universum")
+        for p in extended:
+            st.checkbox(p, key=INV_KEYS[p])
 
     selected = [p for p in all_investors if st.session_state.get(INV_KEYS[p], True)]
-    st.caption(f"{len(selected)} von {len(all_investors)} Investoren aktiv"
-               " · Empfehlung: mindestens 10.")
+    st.caption(f"{len(selected)} von {len(all_investors)} Investoren aktiv")
 
 if not selected:
     st.warning("Bitte mindestens einen Investor auswählen.")
@@ -326,9 +353,10 @@ if data.get("errors"):
             st.write(f"- {e['investor']} — {e['error']}")
 
 st.markdown(
-    '<div class="callout"><b>So liest du die Liste:</b> Je mehr Super-Investoren '
-    'dieselbe Aktie in ihren größten Positionen halten, desto stärker der Konsens. '
-    'Die obersten Titel bilden deine F13-Liste zum gleichgewichteten Investieren.</div>',
+    f'<div class="callout"><b>So liest du die Liste:</b> Je mehr Investoren dieselbe '
+    f'Aktie in ihren größten Positionen halten, desto stärker der Konsens. Aktuell aus '
+    f'<b>{len(all_investors)} Investoren</b> — über die Schnellauswahl links auf die '
+    f'<b>15 Super-Investoren (PDF)</b> oder die <b>Top 30 nach Volumen</b> eingrenzbar.</div>',
     unsafe_allow_html=True,
 )
 st.write("")
@@ -336,14 +364,15 @@ st.write("")
 # ─── Tabs ─────────────────────────────────────────────────────────────────────
 
 prev_quarter = data["investors"][0].get("prevReportDate") if data["investors"] else None
+ytd_base = data["investors"][0].get("ytdBaseDate") if data["investors"] else None
 
 
 def delta_str(d):
     return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
 
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(
-    ["📊 F13-Konsensliste", "🔄 Veränderungen", "🧮 Investment-Rechner",
+tab1, tab2, tab6, tab3, tab4, tab5 = st.tabs(
+    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
      "🥧 Struktur", "👤 Investoren-Details"])
 
 # --- Tab 1: Konsens ---
@@ -376,14 +405,16 @@ with tab1:
             "Aktie": r["name"] + ("  ⓔ" if r["isEtf"] else ""),
             "Investoren": f"{r['count']} / {len(selected)}",
             "Δ Q/Q": delta_str(r["countDelta"]),
+            "Δ YTD": delta_str(r.get("countDeltaYtd", 0)),
             "Sektor": r.get("sector", "–"),
             "Gehalten von": ", ".join(inv["person"] for inv in r["investors"]),
             "Summe Wert": fmt_money(r["combined"]),
         } for i, r in enumerate(ranking)])
         st.dataframe(df_rank, use_container_width=True, hide_index=True,
                      height=min(560, 45 + 35 * len(df_rank)))
-        st.caption(f"ⓔ = ETF/Indexfonds · Δ Q/Q = Veränderung der Investorenzahl "
-                   f"ggü. Vorquartal ({prev_quarter or 'n/a'})")
+        st.caption(f"ⓔ = ETF/Indexfonds · Δ Q/Q = Δ Investorenzahl ggü. Vorquartal "
+                   f"({prev_quarter or 'n/a'}) · Δ YTD = ggü. Jahresbeginn "
+                   f"({ytd_base or 'n/a'})")
 
         # Export
         st.markdown("**Export der aktuellen F13-Liste**")
@@ -411,27 +442,33 @@ with tab2:
     if not prev_quarter:
         st.info("Kein Vorquartal in den Daten — Veränderungen nicht berechenbar.")
     else:
-        st.markdown(f"### Konsens-Momentum &nbsp;·&nbsp; {prev_quarter} → {quarter}")
+        mode = st.radio("Vergleichszeitraum", ["Vorquartal (Q/Q)", "Jahresbeginn (YTD)"],
+                        horizontal=True)
+        ytd = mode.startswith("Jahresbeginn")
+        base_label = (ytd_base or "n/a") if ytd else (prev_quarter or "n/a")
+        dkey = "countDeltaYtd" if ytd else "countDelta"
+        chkey = "changeYtd" if ytd else "change"
+        soldkey = "soldYtd" if ytd else "sold"
+
+        st.markdown(f"### Konsens-Momentum &nbsp;·&nbsp; {base_label} → {quarter}")
         st.caption("Welche Aktien gewinnen oder verlieren gerade Investoren? "
                    "Das ist das eigentliche Signal der Strategie.")
-        movers = [r for r in ranking if r["countDelta"] != 0]
-        gainers = sorted([r for r in movers if r["countDelta"] > 0],
-                         key=lambda x: -x["countDelta"])
-        losers = sorted([r for r in movers if r["countDelta"] < 0],
-                        key=lambda x: x["countDelta"])
+        movers = [r for r in ranking if r.get(dkey, 0) != 0]
+        gainers = sorted([r for r in movers if r[dkey] > 0], key=lambda x: -x[dkey])
+        losers = sorted([r for r in movers if r[dkey] < 0], key=lambda x: x[dkey])
         mc1, mc2 = st.columns(2)
         with mc1:
             st.markdown("**🟢 Gewinnt Investoren**")
             st.dataframe(pd.DataFrame([{
                 "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
-                "Jetzt": r["count"], "Δ": f"+{r['countDelta']}",
+                "Jetzt": r["count"], "Δ": f"+{r[dkey]}",
             } for r in gainers]) if gainers else pd.DataFrame({"—": ["keine"]}),
                 hide_index=True, use_container_width=True)
         with mc2:
             st.markdown("**🔴 Verliert Investoren**")
             st.dataframe(pd.DataFrame([{
                 "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
-                "Jetzt": r["count"], "Δ": str(r["countDelta"]),
+                "Jetzt": r["count"], "Δ": str(r[dkey]),
             } for r in losers]) if losers else pd.DataFrame({"—": ["keine"]}),
                 hide_index=True, use_container_width=True)
 
@@ -446,20 +483,18 @@ with tab2:
             picks = [h for h in inv.get("holdings", [])
                      if include_etfs or not h["isEtf"]][:top_n_per_inv]
             for h in picks:
-                ch = h.get("change", "")
+                ch = h.get(chkey, "")
                 if ch in ("NEU", "AUFGESTOCKT", "REDUZIERT"):
                     change_rows.append({"Investor": inv["person"],
                                         "Ticker": h.get("ticker") or "–",
                                         "Aktie": h["name"],
                                         "Veränderung": CHANGE_BADGE.get(ch, ch),
                                         "Gewicht": f"{h['weight']:.1f} %"})
-            for s in inv.get("sold", []):
-                if include_etfs or True:
-                    change_rows.append({"Investor": inv["person"],
-                                        "Ticker": s.get("ticker") or "–",
-                                        "Aktie": s["name"],
-                                        "Veränderung": "🔴 Verkauft",
-                                        "Gewicht": "–"})
+            for s in inv.get(soldkey, []):
+                change_rows.append({"Investor": inv["person"],
+                                    "Ticker": s.get("ticker") or "–",
+                                    "Aktie": s["name"],
+                                    "Veränderung": "🔴 Verkauft", "Gewicht": "–"})
         df_ch = pd.DataFrame(change_rows)
         if not df_ch.empty:
             filt = {"Nur Käufe (Neu)": "🟢 Neu", "Aufgestockt": "🔼 Aufgestockt",
@@ -471,8 +506,46 @@ with tab2:
         else:
             st.dataframe(df_ch, hide_index=True, use_container_width=True,
                          height=min(600, 45 + 33 * len(df_ch)))
-            st.caption("Basis: die gespeicherten Top-Positionen je Investor "
-                       "(Verkäufe = im Vorquartal in den Top-Positionen, jetzt nicht mehr).")
+            st.caption(f"Basis: gespeicherte Top-Positionen je Investor · Vergleich "
+                       f"gegen {base_label} (Verkäufe = damals in Top-Positionen, "
+                       f"jetzt nicht mehr).")
+
+# --- Tab 6: Verlauf (Zeitreihe) ---
+with tab6:
+    history = data.get("history", [])
+    if len(history) < 2:
+        st.info("Noch keine ausreichende Historie (mindestens 2 Quartale nötig).")
+    else:
+        st.markdown(f"### Konsens-Verlauf über {len(history)} Quartale")
+        st.caption("Wie sich die Zahl der Investoren pro Top-Aktie über die geladenen "
+                   "Quartale entwickelt hat (Basis: alle Investoren).")
+        quarters_axis = [h["quarter"] for h in history]
+        # Aktien der aktuellen F13-Liste verfolgen
+        track = [(r.get("ticker") or r["name"], r["key"]) for r in ranking[:8]]
+        # Quartal → {Aktienname: Investorenzahl}; Match über den Namen
+        per_q = {h["quarter"]: {x["name"]: x["count"] for x in h["ranking"]}
+                 for h in history}
+        cur_names = {r["key"]: r["name"] for r in ranking}
+        fig = go.Figure()
+        palette = ["#C9A84C", "#8899AA", "#5fbf7f", "#d9776a", "#7fa8d9",
+                   "#c0b088", "#a86dcf", "#6bbfb5"]
+        for i, (lbl, key) in enumerate(track):
+            nm = cur_names.get(key)
+            ys = [per_q.get(q, {}).get(nm, 0) for q in quarters_axis]
+            fig.add_trace(go.Scatter(
+                x=quarters_axis, y=ys, mode="lines+markers", name=lbl,
+                line=dict(width=2.5, color=palette[i % len(palette)]),
+                marker=dict(size=7)))
+        fig.update_layout(
+            paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+            font=dict(color=OFFWHITE, family="Arial"),
+            xaxis=dict(gridcolor="#1a3a5c", title="Meldequartal"),
+            yaxis=dict(gridcolor="#1a3a5c", title="Anzahl Investoren"),
+            height=430, margin=dict(l=10, r=10, t=20, b=10),
+            legend=dict(orientation="h", y=-0.2))
+        st.plotly_chart(fig, use_container_width=True)
+        st.caption("Verfolgt die aktuell 8 stärksten Konsens-Titel rückwirkend über "
+                   "die geladenen Quartale.")
 
 # --- Tab 3: Rechner ---
 with tab3:
