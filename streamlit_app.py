@@ -617,7 +617,8 @@ with tab7:
             # (fängt Aktienklassen-/Einheiten-Fehler wie BRK.A vs BRK.B ab)
             valid = bool(p0 and pn and 0.1 <= (pn / p0) <= 10)
             r = (pn - p0) / p0 * 100 if valid else None
-            pa = annualize(r) if r is not None else None
+            # p.a. nur bei Haltedauer ≥ 1 Jahr (darunter überzeichnet die Hochrechnung)
+            pa = annualize(r) if (r is not None and years >= 1.0) else None
             w = (1 / len(entries)) if method_bt.startswith("Equal") else counts_bt[i] / wsum
             if r is not None:
                 rets.append((r, w))
@@ -636,16 +637,20 @@ with tab7:
         if rets:
             wtot = sum(w for _, w in rets) or 1
             port = sum(r * w for r, w in rets) / wtot
-            port_pa = annualize(port)
             colr = "#5fbf7f" if port >= 0 else "#d9776a"
-            colp = "#5fbf7f" if port_pa >= 0 else "#d9776a"
+            if years >= 1.0:
+                port_pa = annualize(port)
+                colp = "#5fbf7f" if port_pa >= 0 else "#d9776a"
+                pa_html = (f'&nbsp;·&nbsp; p.a. <span style="color:{colp};'
+                           f'font-weight:700;font-size:1.15em;">{port_pa:+.1f} %</span>')
+            else:
+                pa_html = ('&nbsp;·&nbsp; <span style="color:#8899AA;">p.a. erst ab '
+                           '~1 Jahr Haltedauer</span>')
             st.markdown(
                 f'<div class="callout"><b>F13-Portfolio {sel_q} → heute'
                 f'{f" ({prices_asof})" if prices_asof else ""}:</b> &nbsp;'
                 f'Gesamt <span style="color:{colr};font-weight:700;font-size:1.15em;">'
-                f'{port:+.1f} %</span> &nbsp;·&nbsp; '
-                f'p.a. <span style="color:{colp};font-weight:700;font-size:1.15em;">'
-                f'{port_pa:+.1f} %</span> &nbsp; '
+                f'{port:+.1f} %</span>{pa_html} &nbsp; '
                 f'(Haltedauer ~{years:.1f} J., {method_bt}, {len(rets)} Titel). '
                 f'Kurseffekt ohne Dividenden.</div>', unsafe_allow_html=True)
 
@@ -678,8 +683,8 @@ with tab7:
                 height=max(300, 26 * len(chart)), margin=dict(l=10, r=40, t=50, b=10))
             st.plotly_chart(fig_bt, use_container_width=True)
         st.caption("Rendite gesamt = über den ganzen Zeitraum · Rendite p.a. = auf ein "
-                   "Jahr annualisiert (bei kurzen Zeiträumen unter ~1 Jahr nur bedingt "
-                   "aussagekräftig, da hochgerechnet). Quartalskurs = Median aus 13F "
+                   "Jahr annualisiert (nur ab ~1 Jahr Haltedauer, da kürzere Zeiträume "
+                   "hochgerechnet überzeichnen würden). Quartalskurs = Median aus 13F "
                    "(Wert ÷ Aktien) der meldenden Investoren. Aktueller Kurs = letzter "
                    "Schlusskurs (Yahoo). Reine Kursrendite ohne Dividenden/Gebühren. "
                    "Keine Anlageberatung.")
