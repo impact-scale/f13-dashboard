@@ -394,9 +394,9 @@ def delta_str(d):
     return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
 
 
-tab1, tab2, tab6, tab7, tab3, tab4, tab5 = st.tabs(
-    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🎯 Backtest",
-     "🧮 Investment-Rechner", "🥧 Struktur", "👤 Investoren-Details"])
+tab1, tab2, tab6, tab3, tab4, tab5, tab7 = st.tabs(
+    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
+     "🥧 Struktur", "👤 Investoren-Details", "🎯 Backtest"])
 
 # --- Tab 1: Konsens ---
 with tab1:
