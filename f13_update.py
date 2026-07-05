@@ -16,6 +16,7 @@ Ausgabe: f13_data.json + f13_data.js  ·  nur Python-Standardbibliothek.
 """
 
 import json
+import os
 import re
 import sys
 import time
@@ -547,7 +548,9 @@ def main():
               f"{r['count']:2d}  Q/Q {dq:>3s}  YTD {dy:>3s}")
     print("\nGespeichert: f13_data.json + f13_data.js")
 
-    if "--push" in sys.argv or (BASE_DIR / ".git").exists():
+    if os.getenv("GITHUB_ACTIONS"):
+        pass  # In GitHub Actions übernimmt der Workflow das Committen/Pushen
+    elif "--push" in sys.argv or (BASE_DIR / ".git").exists():
         git_push(BASE_DIR)
 
 

@@ -1,0 +1,41 @@
+name: F13 Daten-Update
+
+on:
+  schedule:
+    # Täglich 06:00 UTC (~08:00 MEZ / 08:00 MESZ). GitHub-Cron ist in UTC.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}   # manueller Start per Knopf im Actions-Tab
+
+permissions:
+  contents: write         # erlaubt dem Job, die aktualisierten Daten zu pushen
+
+concurrency:
+  group: f13-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: F13-Daten von SEC EDGAR abrufen
+        run: python f13_update.py
+
+      - name: Aktualisierte Daten committen & pushen
+        run: |
+          git config user.name "F13 Auto-Update"
+          git config user.email "actions@users.noreply.github.com"
+          git add f13_data.json f13_data.js ticker_cache.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen — nichts zu committen."
+          else
+            git commit -m "F13 Auto-Update $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

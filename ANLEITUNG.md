@@ -83,20 +83,32 @@ Fertig. ✅
 
 ---
 
-## Teil B — Tägliche Nutzung
+## Teil B — Automatik (läuft von selbst) 🤖
 
-**Doppelklick auf `F13-Aktualisieren.command`** — das war's. Der Ablauf:
+Seit der Einrichtung von **GitHub Actions** aktualisiert sich alles **vollautomatisch
+täglich** — dein Mac muss dafür **nicht** an sein:
 
-1. holt die neuesten 13F-Daten von SEC EDGAR
-2. lädt sie zu GitHub hoch
-3. Streamlit Cloud aktualisiert das Dashboard automatisch (~1 Min.)
-4. öffnet dein Dashboard im Browser
+1. Jeden Tag um **06:00 UTC (~08:00 Uhr)** holt GitHub die neuesten 13F-Daten,
+2. committet sie ins Repo,
+3. Streamlit Cloud deployt automatisch neu (~1 Min.).
+
+**Manuell auslösen:** github.com → Repo `f13-dashboard` → Tab **Actions** →
+„F13 Daten-Update" → **Run workflow**.
+
+**Kosten:** keine — Actions ist für öffentliche Repos gratis, private Repos haben
+2.000 Freiminuten/Monat (Verbrauch hier ~150 Min./Monat).
+
+> **Falls der erste Auto-Push mit einem 403-Fehler fehlschlägt:** Repo →
+> **Settings → Actions → General → Workflow permissions** → **„Read and write
+> permissions"** aktivieren → speichern.
+
+### Manuelle Alternative (optional)
+**Doppelklick auf `F13-Aktualisieren.command`** holt die Daten sofort, lädt sie hoch
+und öffnet das Dashboard. Ohne Internet-Deploy öffnet es das lokale
+`F13-Dashboard.html`.
 
 > **Öffnet sich beim ersten Doppelklick nur eine Textdatei?** Rechtsklick auf die
 > Datei → **Öffnen** → **Öffnen** bestätigen (einmalige macOS-Sicherheitsabfrage).
-
-Ganz **ohne Internet-Deploy** geht auch: Doppelklick genügt, es öffnet dann das
-lokale `F13-Dashboard.html`.
 
 ---
 
