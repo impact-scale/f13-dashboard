@@ -636,14 +636,15 @@ with tab3:
                     unsafe_allow_html=True)
         st.write("")
 
-        df_calc = pd.DataFrame([{
-            "Nr.": i + 1,
-            "Ticker": t.get("ticker") or "–",
-            "Aktie": t["name"],
-            "Konsens": f"{t['count']} / {len(selected)}",
-            "Gewicht": f"{weights[i]*100:.2f} %",
-            "Betrag": f"{amounts[i]:,.0f} €".replace(",", "."),
-        } for i, t in enumerate(titles)])
+        calc_rows = []
+        for i, t in enumerate(titles):
+            row = {"Nr.": i + 1, "Ticker": t.get("ticker") or "–", "Aktie": t["name"]}
+            if is_conviction:  # Konsens treibt nur bei Conviction die Gewichtung
+                row["Konsens"] = f"{t['count']} / {len(selected)}"
+            row["Gewicht"] = f"{weights[i]*100:.2f} %"
+            row["Betrag"] = f"{amounts[i]:,.0f} €".replace(",", ".")
+            calc_rows.append(row)
+        df_calc = pd.DataFrame(calc_rows)
         st.dataframe(df_calc, use_container_width=True, hide_index=True,
                      height=min(620, 45 + 35 * n))
         tag = "equal" if method.startswith("Equal") else "conviction"
