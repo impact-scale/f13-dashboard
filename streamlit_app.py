@@ -162,14 +162,38 @@ st.write("")
 
 # ─── Sidebar-Filter ───────────────────────────────────────────────────────────
 
+INV_KEYS = {p: f"inv_{p}" for p in all_investors}
+
+
+def _toggle_all_investors():
+    val = st.session_state["inv_all"]
+    for k in INV_KEYS.values():
+        st.session_state[k] = val
+
+
 with st.sidebar:
     st.markdown('<div class="tag">FILTER</div>', unsafe_allow_html=True)
     st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
-    selected = st.multiselect(
-        "Investoren einbeziehen", all_investors, default=all_investors,
-        help="Empfehlung: mindestens 10 Investoren einbeziehen.",
-    )
+    st.markdown("**Investoren einbeziehen**")
+    # Standard beim ersten Laden: alle eingeschaltet
+    if "inv_all" not in st.session_state:
+        st.session_state["inv_all"] = True
+        for k in INV_KEYS.values():
+            st.session_state[k] = True
+
+    st.checkbox("Alle ein-/ausschalten", key="inv_all",
+                on_change=_toggle_all_investors)
+    st.markdown('<hr style="border-color:#1a3a5c;margin:2px 0 6px;">',
+                unsafe_allow_html=True)
+    for p in all_investors:
+        st.checkbox(p, key=INV_KEYS[p])
+
+    selected = [p for p in all_investors if st.session_state.get(INV_KEYS[p], True)]
+    st.caption(f"{len(selected)} von {len(all_investors)} Investoren aktiv"
+               " · Empfehlung: mindestens 10.")
+
+    st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
     top_n_per_inv = st.slider(
         "Positionen pro Investor", 5, 25, 15,
         help="Wie viele der größten Positionen jedes Investors zählen als "
@@ -322,6 +346,6 @@ with tab3:
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 st.markdown(
     f'<div class="mono" style="color:#334455;font-size:0.72rem;text-align:center;">'
-    f'IMPACT SCALE ACADEMY® · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR) · '
+    f'BS IMPACT SCALE GmbH © · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR) · '
     f'Stand {generated.strftime("%d.%m.%Y %H:%M")} · Keine Anlageberatung</div>',
     unsafe_allow_html=True)
