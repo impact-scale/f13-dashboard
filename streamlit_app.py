@@ -175,6 +175,22 @@ with st.sidebar:
     st.markdown('<div class="tag">FILTER</div>', unsafe_allow_html=True)
     st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
+    top_n_per_inv = st.slider(
+        "Positionen pro Investor", 5, 25, 15,
+        help="Wie viele der größten Positionen jedes Investors zählen als "
+             "'Top-Pick'? Standard: Top 15.",
+    )
+    min_consensus = st.slider(
+        "Mindest-Konsens (Investoren)", 1, 10, 2,
+        help="Zeige nur Aktien, die von mindestens so vielen Investoren gehalten werden.",
+    )
+    include_etfs = st.toggle(
+        "ETFs / Indexfonds einbeziehen", value=False,
+        help="Fokus auf Einzelaktien. Standard: ETFs ausgeblendet.",
+    )
+    search = st.text_input("Aktie suchen", "").strip().lower()
+
+    st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
     st.markdown("**Investoren einbeziehen**")
     # Standard beim ersten Laden: alle eingeschaltet
     if "inv_all" not in st.session_state:
@@ -192,22 +208,6 @@ with st.sidebar:
     selected = [p for p in all_investors if st.session_state.get(INV_KEYS[p], True)]
     st.caption(f"{len(selected)} von {len(all_investors)} Investoren aktiv"
                " · Empfehlung: mindestens 10.")
-
-    st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
-    top_n_per_inv = st.slider(
-        "Positionen pro Investor", 5, 25, 15,
-        help="Wie viele der größten Positionen jedes Investors zählen als "
-             "'Top-Pick'? Standard: Top 15.",
-    )
-    min_consensus = st.slider(
-        "Mindest-Konsens (Investoren)", 1, 10, 2,
-        help="Zeige nur Aktien, die von mindestens so vielen Investoren gehalten werden.",
-    )
-    include_etfs = st.toggle(
-        "ETFs / Indexfonds einbeziehen", value=False,
-        help="Fokus auf Einzelaktien. Standard: ETFs ausgeblendet.",
-    )
-    search = st.text_input("Aktie suchen", "").strip().lower()
 
 if not selected:
     st.warning("Bitte mindestens einen Investor auswählen.")
