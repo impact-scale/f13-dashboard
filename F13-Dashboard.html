@@ -190,6 +190,44 @@
     color: var(--offwhite);
     margin-bottom: 18px;
   }
+  .disclaimer {
+    margin: 30px 32px 0;
+    background: var(--navy);
+    border: 1px solid #1a3a5c;
+    border-radius: 10px;
+    padding: 22px 28px;
+  }
+  .disclaimer .tag { color: var(--gold); }
+  .disclaimer h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--offwhite);
+    margin: 6px 0 2px;
+  }
+  .disclaimer h2 span { color: var(--gold); }
+  .disc-gold {
+    border: none;
+    border-top: 1.5px solid var(--gold);
+    margin: 10px 0 4px;
+  }
+  .disc-item {
+    border-left: 3px solid var(--gold);
+    padding: 2px 0 2px 16px;
+    margin: 16px 0;
+  }
+  .disc-label {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 6px;
+  }
+  .disc-item p {
+    margin: 0;
+    color: var(--slate);
+    font-size: 13px;
+    line-height: 1.55;
+  }
   footer {
     text-align: center;
     padding: 24px;
@@ -197,6 +235,7 @@
     font-family: "Courier New", monospace;
     font-size: 11px;
     border-top: 1px solid #1a3a5c;
+    margin-top: 24px;
   }
   .empty-state {
     padding: 40px;
@@ -237,7 +276,41 @@
   </div>
 </main>
 
-<footer>BS IMPACT SCALE GmbH © · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR)</footer>
+<section class="disclaimer">
+  <div class="tag">⚠ WICHTIGER HINWEIS · PFLICHTINFORMATION</div>
+  <h2>Risikohinweis &amp; <span>Haftungsausschluss</span></h2>
+  <hr class="disc-gold">
+  <div class="disc-item">
+    <div class="disc-label">01 · BILDUNGSZWECKE</div>
+    <p>Alle Inhalte von Björn Schnare und der BS IMPACT SCALE GmbH dienen ausschließlich
+    Bildungs- und Informationszwecken. Sie stellen keine Finanz-, Anlage-, Steuer- oder
+    Rechtsberatung dar. Nichts in diesem Dashboard ist als Angebot oder Aufforderung zum
+    Kauf oder Verkauf von Aktien, Futures, Optionen oder sonstigen Finanzinstrumenten zu
+    verstehen. Alle dargestellten Daten stammen aus öffentlichen SEC-13F-Meldungen und
+    sind bis zu 45 Tage alt.</p>
+  </div>
+  <div class="disc-item">
+    <div class="disc-label">02 · RISIKOKAPITAL</div>
+    <p>Der Handel mit Wertpapieren und Finanzinstrumenten ist mit einem erheblichen
+    Verlustrisiko verbunden und eignet sich nicht für alle Anleger. Eingesetztes Kapital
+    sollte ausschließlich aus verfügbarem Risikokapital bestehen – d.h. Kapital, dessen
+    möglicher Verlust keine negativen Auswirkungen auf deinen Lebensstandard hat.
+    Vergangene Wertentwicklungen, ob real oder hypothetisch, sind kein verlässlicher
+    Indikator für zukünftige Ergebnisse. Du trägst die alleinige Verantwortung für deine
+    Anlageentscheidungen.</p>
+  </div>
+  <div class="disc-item">
+    <div class="disc-label">03 · KEINE GARANTIE</div>
+    <p>Die dargestellten Positionen und Auswertungen basieren auf öffentlich gemeldeten
+    13F-Daten und sind nicht als typische oder garantierte Resultate zu verstehen. Es
+    werden keine Garantien oder Zusicherungen hinsichtlich der Richtigkeit,
+    Vollständigkeit oder Zuverlässigkeit der bereitgestellten Informationen gegeben. Die
+    BS IMPACT SCALE GmbH lehnt jede Haftung für Verluste oder Schäden ab. Alle
+    Anlageentscheidungen erfolgen auf eigenes Risiko.</p>
+  </div>
+</section>
+
+<footer>BS IMPACT SCALE GmbH © · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR) · RISIKOHINWEIS · ALLE TRADES AUF EIGENES RISIKO · KEIN INVESTMENT-ADVICE</footer>
 
 <script>
 let dataScriptLoaded = false;

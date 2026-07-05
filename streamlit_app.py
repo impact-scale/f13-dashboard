@@ -311,13 +311,13 @@ with st.sidebar:
     pb1, pb2 = st.columns(2)
     pb1.button("★ Super-15", on_click=_set_investors, args=(SUPER15,),
                use_container_width=True,
-               help="Nur die 15 Super-Investoren aus der PDF.")
+               help="Nur die 15 Super-Investoren.")
     pb2.button("Top 30 Vol.", on_click=_set_investors, args=(TOP30_VOL,),
                use_container_width=True,
                help="Die 30 Investoren mit dem größten Portfolio-Volumen.")
     st.markdown('<hr style="border-color:#1a3a5c;margin:2px 0 6px;">',
                 unsafe_allow_html=True)
-    st.caption("★ Super-Investoren (PDF-Liste)")
+    st.caption("★ Super-Investoren")
     for p in SUPER15:
         st.checkbox(p, key=INV_KEYS[p])
     extended = [p for p in all_investors if p not in set(SUPER15)]
@@ -356,7 +356,7 @@ st.markdown(
     f'<div class="callout"><b>So liest du die Liste:</b> Je mehr Investoren dieselbe '
     f'Aktie in ihren größten Positionen halten, desto stärker der Konsens. Aktuell aus '
     f'<b>{len(all_investors)} Investoren</b> — über die Schnellauswahl links auf die '
-    f'<b>15 Super-Investoren (PDF)</b> oder die <b>Top 30 nach Volumen</b> eingrenzbar.</div>',
+    f'<b>15 Super-Investoren</b> oder die <b>Top 30 nach Volumen</b> eingrenzbar.</div>',
     unsafe_allow_html=True,
 )
 st.write("")
@@ -659,8 +659,54 @@ with tab5:
                            + ", ".join(f"{s['name']}" for s in inv["sold"]))
 
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
+
+# ── Risikohinweis & Haftungsausschluss (Pflichtinformation) ──────────────────
+DISCLAIMER = [
+    ("01 · BILDUNGSZWECKE",
+     "Alle Inhalte von Björn Schnare und der BS IMPACT SCALE GmbH dienen "
+     "ausschließlich Bildungs- und Informationszwecken. Sie stellen keine Finanz-, "
+     "Anlage-, Steuer- oder Rechtsberatung dar. Nichts in diesem Dashboard ist als "
+     "Angebot oder Aufforderung zum Kauf oder Verkauf von Aktien, Futures, Optionen "
+     "oder sonstigen Finanzinstrumenten zu verstehen. Alle dargestellten Daten "
+     "stammen aus öffentlichen SEC-13F-Meldungen und sind bis zu 45 Tage alt."),
+    ("02 · RISIKOKAPITAL",
+     "Der Handel mit Wertpapieren und Finanzinstrumenten ist mit einem erheblichen "
+     "Verlustrisiko verbunden und eignet sich nicht für alle Anleger. Eingesetztes "
+     "Kapital sollte ausschließlich aus verfügbarem Risikokapital bestehen – d.h. "
+     "Kapital, dessen möglicher Verlust keine negativen Auswirkungen auf deinen "
+     "Lebensstandard hat. Vergangene Wertentwicklungen, ob real oder hypothetisch, "
+     "sind kein verlässlicher Indikator für zukünftige Ergebnisse. Du trägst die "
+     "alleinige Verantwortung für deine Anlageentscheidungen."),
+    ("03 · KEINE GARANTIE",
+     "Die dargestellten Positionen und Auswertungen basieren auf öffentlich "
+     "gemeldeten 13F-Daten und sind nicht als typische oder garantierte Resultate zu "
+     "verstehen. Es werden keine Garantien oder Zusicherungen hinsichtlich der "
+     "Richtigkeit, Vollständigkeit oder Zuverlässigkeit der bereitgestellten "
+     "Informationen gegeben. Die BS IMPACT SCALE GmbH lehnt jede Haftung für Verluste "
+     "oder Schäden ab. Alle Anlageentscheidungen erfolgen auf eigenes Risiko."),
+]
+sections = "".join(
+    f'<div style="border-left:3px solid {GOLD};padding:2px 0 2px 16px;margin:14px 0;">'
+    f'<div style="font-family:\'Courier New\',monospace;font-size:0.72rem;'
+    f'letter-spacing:0.08em;color:{GOLD};margin-bottom:5px;">{label}</div>'
+    f'<div style="color:{SLATE};font-size:0.82rem;line-height:1.5;">{text}</div>'
+    f'</div>'
+    for label, text in DISCLAIMER)
+st.markdown(
+    f'<div style="background:{NAVY};border:1px solid #1a3a5c;border-radius:10px;'
+    f'padding:20px 26px;margin-top:8px;">'
+    f'<div style="font-family:\'Courier New\',monospace;font-size:0.72rem;'
+    f'letter-spacing:0.12em;color:{GOLD};">⚠ WICHTIGER HINWEIS · PFLICHTINFORMATION</div>'
+    f'<div style="font-size:1.5rem;font-weight:700;color:{OFFWHITE};margin:4px 0 2px;">'
+    f'Risikohinweis &amp; <span style="color:{GOLD};">Haftungsausschluss</span></div>'
+    f'<hr style="border:none;border-top:1.5px solid {GOLD};margin:8px 0 4px;">'
+    f'{sections}</div>',
+    unsafe_allow_html=True)
+
+st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 st.markdown(
     f'<div class="mono" style="color:#334455;font-size:0.72rem;text-align:center;">'
     f'BS IMPACT SCALE GmbH © · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR) · '
-    f'Stand {generated.strftime("%d.%m.%Y %H:%M")} · Keine Anlageberatung</div>',
+    f'Stand {generated.strftime("%d.%m.%Y %H:%M")} · '
+    f'Risikohinweis · Alle Trades auf eigenes Risiko · Kein Investment-Advice</div>',
     unsafe_allow_html=True)
