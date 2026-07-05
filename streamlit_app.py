@@ -672,18 +672,31 @@ with tab4:
 
 # --- Tab 5: Investoren ---
 with tab5:
+    st.caption("Veränderungen im Titel beziehen sich auf das Vorquartal "
+               f"({prev_quarter or 'n/a'}).")
     for inv in data["investors"]:
         if inv["person"] not in selected:
             continue
         fdate = datetime.strptime(inv["filingDate"], "%Y-%m-%d").strftime("%d.%m.%Y")
+        picks = [h for h in inv.get("holdings", [])
+                 if include_etfs or not h["isEtf"]][:top_n_per_inv]
+        # Zusammenfassung ALLER Veränderungen (nicht nur Verkäufe)
+        cc = Counter(h.get("change", "") for h in picks)
         sold_n = len(inv.get("sold", []))
+        parts = []
+        if cc.get("NEU"):
+            parts.append(f"🟢 {cc['NEU']} neu")
+        if cc.get("AUFGESTOCKT"):
+            parts.append(f"🔼 {cc['AUFGESTOCKT']} aufgestockt")
+        if cc.get("REDUZIERT"):
+            parts.append(f"🔽 {cc['REDUZIERT']} reduziert")
+        if sold_n:
+            parts.append(f"🔴 {sold_n} verkauft")
+        change_summary = ("  ·  " + "  ·  ".join(parts)) if parts else "  ·  unverändert"
         with st.expander(
             f"{inv['person']} — {inv['firm']}  ·  {fmt_money(inv['portfolioValue'])}  "
-            f"·  Filing {fdate} ({inv['form']})"
-            + (f"  ·  {sold_n} Verkäufe" if sold_n else "")
+            f"·  Filing {fdate} ({inv['form']}){change_summary}"
         ):
-            picks = [h for h in inv.get("holdings", [])
-                     if include_etfs or not h["isEtf"]][:top_n_per_inv]
             df = pd.DataFrame([{
                 "Ticker": p.get("ticker") or "–",
                 "Position": p["name"] + ("  ⓔ" if p["isEtf"] else ""),
