@@ -570,52 +570,101 @@ with tab6:
         st.caption("Verfolgt die aktuell 8 stärksten Konsens-Titel rückwirkend über "
                    "die geladenen Quartale.")
 
+# Vereinfachte Conviction-Gewichtung aus dem Buch (Ränge 1..15, in %)
+BOOK_CONVICTION = [10, 9, 8, 8, 7, 7, 7, 6, 6, 6, 6, 5, 5, 5, 5]
+
+
+def compute_weights(method, titles):
+    """Gibt Gewichte (0..1) je Titel für die gewählte Methode zurück."""
+    m = len(titles)
+    if m == 0:
+        return []
+    if method.startswith("Equal"):
+        return [1 / m] * m
+    if "Häufigkeit" in method:
+        counts = [max(t["count"], 0) for t in titles]
+        tot = sum(counts) or 1
+        return [c / tot for c in counts]
+    # Buch-Tabelle: feste %-Werte (bei >15 Titeln mit 5 % auffüllen), normiert
+    raw = (BOOK_CONVICTION + [5] * max(0, m - 15))[:m]
+    s = sum(raw) or 1
+    return [r / s for r in raw]
+
+
 # --- Tab 3: Rechner ---
 with tab3:
-    st.markdown("### Investment-Rechner (Equal Weight)")
+    st.markdown("### Investment-Rechner")
+    method = st.radio(
+        "Gewichtungsmethode",
+        ["Equal Weight (Standard)",
+         "Conviction (Profi) – nach Häufigkeit",
+         "Conviction (Profi) – Buch-Tabelle"],
+        help="Equal Weight: jede Aktie gleich. Conviction: mehr Gewicht für Titel, "
+             "die mehr Investoren halten.")
+    is_conviction = method.startswith("Conviction")
+
     ic1, ic2 = st.columns([1, 2])
     with ic1:
         capital = st.number_input(
             "Investitionsvolumen (€)", min_value=0, value=15000, step=500,
-            help="Betrag eingeben — die Verteilung berechnet sich sofort neu.",
-        )
+            help="Betrag eingeben — die Verteilung berechnet sich sofort neu.")
     with ic2:
         n_titles = st.number_input(
             "Anzahl Aktien", min_value=1,
             max_value=max(1, len(ranking)) if ranking else 1,
             value=min(data["topN"], len(ranking)) if ranking else 1, step=1,
-            help="Auf wie viele der obersten Konsens-Titel soll gleichmäßig "
-                 "verteilt werden? Standard: 15.",
-        )
+            help="Auf wie viele der obersten Konsens-Titel wird verteilt? Standard: 15.")
+
+    if is_conviction:
+        st.markdown(
+            '<div class="callout" style="border-left-color:#C9A84C;">'
+            '<b>Conviction (Profi):</b> Aktien mit mehr Investoren-Überzeugung '
+            'bekommen mehr Gewicht → höheres Renditepotenzial, aber <b>höheres '
+            'Klumpenrisiko</b>. Für Einsteiger empfiehlt sich Equal Weight. '
+            'Rebalancing einmal jährlich.</div>', unsafe_allow_html=True)
     st.write("")
 
     n = int(min(n_titles, len(ranking)))
     if n == 0:
         st.info("Keine Titel mit diesen Filtern.")
     else:
-        per = capital / n if n else 0
-        st.markdown(
-            f'<div class="callout">Bei <b>{capital:,.0f} €</b> auf <b>{n}</b> Aktien '
-            f'gleichgewichtet → <b>ca. {per:,.0f} €</b> pro Aktie '
-            f'({100/n:.2f} % je Position).</div>'.replace(",", "."),
-            unsafe_allow_html=True)
+        titles = ranking[:n]
+        weights = compute_weights(method, titles)
+        amounts = [capital * w for w in weights]
+
+        if method.startswith("Equal"):
+            summary = (f"Bei <b>{capital:,.0f} €</b> auf <b>{n}</b> Aktien "
+                       f"gleichgewichtet → <b>ca. {capital/n:,.0f} €</b> pro Aktie "
+                       f"({100/n:.2f} % je Position).")
+        else:
+            wmin, wmax = min(weights) * 100, max(weights) * 100
+            summary = (f"Bei <b>{capital:,.0f} €</b> auf <b>{n}</b> Aktien nach "
+                       f"Überzeugung gewichtet → Gewichte von <b>{wmin:.1f} %</b> "
+                       f"(schwächster) bis <b>{wmax:.1f} %</b> (stärkster Titel).")
+        st.markdown(f'<div class="callout">{summary}</div>'.replace(",", "."),
+                    unsafe_allow_html=True)
         st.write("")
+
         df_calc = pd.DataFrame([{
             "Nr.": i + 1,
-            "Ticker": r.get("ticker") or "–",
-            "Aktie": r["name"],
-            "Anteil": f"{100/n:.2f} %",
-            "Betrag": f"{per:,.0f} €".replace(",", "."),
-            "Konsens": f"{r['count']} / {len(selected)}",
-        } for i, r in enumerate(ranking[:n])])
+            "Ticker": t.get("ticker") or "–",
+            "Aktie": t["name"],
+            "Konsens": f"{t['count']} / {len(selected)}",
+            "Gewicht": f"{weights[i]*100:.2f} %",
+            "Betrag": f"{amounts[i]:,.0f} €".replace(",", "."),
+        } for i, t in enumerate(titles)])
         st.dataframe(df_calc, use_container_width=True, hide_index=True,
                      height=min(620, 45 + 35 * n))
+        tag = "equal" if method.startswith("Equal") else (
+            "conviction-haeufigkeit" if "Häufigkeit" in method else "conviction-buch")
         st.download_button("⬇ Kaufliste als CSV",
                            df_calc.to_csv(index=False).encode("utf-8"),
-                           f"F13-Kaufliste_{quarter}.csv", "text/csv")
-        st.caption("Equal-Weight-Methode — kein Übergewichten, keine "
-                   "Bauchentscheidungen. 13F-Daten sind bis zu 45 Tage alt (Quartalslag) "
-                   "und ein Signal, kein Echtzeit-Kaufsignal.")
+                           f"F13-Kaufliste_{tag}_{quarter}.csv", "text/csv")
+        if is_conviction and "Buch" in method:
+            st.caption("Buch-Tabelle: feste Gewichte (10/9/8…5 %), definiert für 15 "
+                       "Titel. Bei abweichender Anzahl anteilig normiert.")
+        st.caption("13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, "
+                   "kein Echtzeit-Kaufsignal. Keine Anlageberatung.")
 
 # --- Tab 4: Struktur ---
 with tab4:
