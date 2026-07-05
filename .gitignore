@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+*.log
+scratchpad/
+.DS_Store
+F13-Liste.pdf

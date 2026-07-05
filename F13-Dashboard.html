@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>F13-Liste — Super-Investoren Dashboard</title>
+<style>
+  :root {
+    --midnight: #081829;
+    --navy: #0D2238;
+    --gold: #C9A84C;
+    --offwhite: #F4F1EB;
+    --slate: #8899AA;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--midnight);
+    color: var(--offwhite);
+    font-family: Arial, "Avenir Next", sans-serif;
+    line-height: 1.5;
+  }
+  .mono {
+    font-family: "IBM Plex Mono", "DM Mono", "Courier New", monospace;
+  }
+  header {
+    padding: 28px 32px 20px;
+    border-bottom: 2.5px solid var(--gold);
+  }
+  header .tag {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+  header h1 {
+    margin: 6px 0 4px;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--offwhite);
+  }
+  header .sub {
+    color: var(--slate);
+    font-size: 13px;
+  }
+  header .sub b { color: var(--offwhite); }
+
+  .toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 32px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1a3a5c;
+  }
+  .toolbar .status {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    color: var(--slate);
+  }
+  button {
+    background: var(--navy);
+    color: var(--offwhite);
+    border: 1px solid var(--gold);
+    border-radius: 6px;
+    padding: 9px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+  }
+  button:hover { background: #123453; }
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  main {
+    padding: 28px 32px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 34px 0 14px;
+    font-family: "Courier New", monospace;
+  }
+  .section-title:first-child { margin-top: 0; }
+
+  .callout {
+    background: var(--offwhite);
+    color: var(--navy);
+    border-left: 3px solid var(--gold);
+    padding: 14px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .callout b { color: var(--navy); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+  thead th {
+    background: var(--navy);
+    color: var(--offwhite);
+    text-align: left;
+    padding: 10px 12px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+  }
+  tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #16304d;
+  }
+  tbody tr:nth-child(odd) { background: rgba(244,241,235,0.03); }
+  tbody tr:hover { background: rgba(201,168,76,0.08); }
+  .rank {
+    font-family: "Courier New", monospace;
+    color: var(--gold);
+    font-weight: 700;
+    width: 34px;
+  }
+  .count-badge {
+    display: inline-block;
+    background: var(--navy);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .weight {
+    font-family: "Courier New", monospace;
+    color: var(--slate);
+  }
+  .investor-name { color: var(--offwhite); }
+  .investor-firm { color: var(--slate); font-size: 12px; }
+  .value {
+    font-family: "Courier New", monospace;
+    color: var(--offwhite);
+  }
+  details.investor-row summary {
+    cursor: pointer;
+    color: var(--gold);
+    font-family: "Courier New", monospace;
+    font-size: 11.5px;
+  }
+  details.investor-row .holdings {
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: var(--slate);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 4px 16px;
+  }
+  .error-box {
+    background: rgba(180,60,60,0.12);
+    border-left: 3px solid #b04040;
+    padding: 12px 16px;
+    border-radius: 4px;
+    font-size: 12.5px;
+    color: var(--offwhite);
+    margin-bottom: 18px;
+  }
+  footer {
+    text-align: center;
+    padding: 24px;
+    color: #334455;
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    border-top: 1px solid #1a3a5c;
+  }
+  .empty-state {
+    padding: 40px;
+    text-align: center;
+    color: var(--slate);
+    font-size: 14px;
+  }
+  code.path {
+    background: var(--navy);
+    border: 1px solid #1a3a5c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--gold);
+    font-family: "Courier New", monospace;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="tag">F13-LISTE · REICH IN 60 MINUTEN · KAPITEL 5</div>
+  <h1>Super-Investoren Dashboard</h1>
+  <div class="sub" id="headerSub">Noch keine Daten geladen.</div>
+</header>
+
+<div class="toolbar">
+  <button id="loadBtn" onclick="loadData()">Daten laden (f13_data.js)</button>
+  <span class="status mono" id="statusLine">Bereit.</span>
+</div>
+
+<main id="app">
+  <div class="empty-state">
+    Klicke oben auf <b>„Daten laden"</b>, um die zuletzt abgerufenen 13F-Daten anzuzeigen.<br><br>
+    Zum Aktualisieren im Terminal ausführen:<br>
+    <code class="path">python3 "f13_update.py"</code><br><br>
+    Das Skript liegt im selben Ordner wie diese Datei und schreibt <code class="path">f13_data.js</code> neu.
+  </div>
+</main>
+
+<footer>IMPACT SCALE ACADEMY® · F13-DASHBOARD · Datenquelle: SEC EDGAR (13F-HR)</footer>
+
+<script>
+let dataScriptLoaded = false;
+
+function loadData() {
+  const btn = document.getElementById('loadBtn');
+  const status = document.getElementById('statusLine');
+  btn.disabled = true;
+  status.textContent = 'Lade f13_data.js …';
+
+  const existing = document.getElementById('f13-data-script');
+  if (existing) existing.remove();
+  window.F13_DATA = undefined;
+
+  const script = document.createElement('script');
+  script.id = 'f13-data-script';
+  script.src = 'f13_data.js?_=' + Date.now();
+  script.onload = () => {
+    btn.disabled = false;
+    if (window.F13_DATA) {
+      status.textContent = 'Geladen.';
+      render(window.F13_DATA);
+    } else {
+      status.textContent = 'f13_data.js enthält keine Daten.';
+    }
+  };
+  script.onerror = () => {
+    btn.disabled = false;
+    status.textContent = 'Fehler: f13_data.js nicht gefunden. Zuerst f13_update.py ausführen.';
+  };
+  document.head.appendChild(script);
+}
+
+function fmtMoney(v) {
+  if (!v) return '–';
+  const millions = v / 1e6;
+  if (millions >= 1000) return (millions / 1000).toFixed(2) + ' Mrd $';
+  return millions.toFixed(1) + ' Mio $';
+}
+
+function fmtDate(iso) {
+  if (!iso) return '–';
+  const [y, m, d] = iso.split('-');
+  return `${d}.${m}.${y}`;
+}
+
+function render(data) {
+  const sub = document.getElementById('headerSub');
+  const generated = new Date(data.generatedAt);
+  const investorCount = data.investors.length;
+  const quarter = data.investors[0] ? data.investors[0].reportDate : '–';
+  sub.innerHTML = `Stand: <b>${generated.toLocaleString('de-DE')}</b> &nbsp;·&nbsp; ` +
+    `<b>${investorCount}</b> Investoren &nbsp;·&nbsp; Meldequartal <b>${fmtDate(quarter)}</b>`;
+
+  const app = document.getElementById('app');
+  let html = '';
+
+  if (data.errors && data.errors.length) {
+    html += `<div class="error-box"><b>${data.errors.length} Investor(en) konnten nicht geladen werden:</b><br>` +
+      data.errors.map(e => `${e.investor} — ${e.error}`).join('<br>') + `</div>`;
+  }
+
+  html += `<div class="callout">
+    <b>So liest du die Liste:</b> Je häufiger eine Aktie in den Top-15-Positionen mehrerer
+    Super-Investoren auftaucht, desto stärker ist der Konsens der Profis. Die Tabelle unten
+    ist nach Häufigkeit sortiert — die ersten ${data.topN} Titel bilden deine F13-Liste zum
+    gleichgewichteten Investieren (Equal Weight, ca. ${(100/data.topN).toFixed(2)}% pro Aktie).
+  </div>`;
+
+  html += `<div class="section-title">F13-Liste — Top ${data.topN} nach Investoren-Konsens</div>`;
+  html += `<table><thead><tr>
+    <th>Rang</th><th>Aktie</th><th>Investoren</th><th>Gehalten von</th><th>Summe Positionswert</th>
+  </tr></thead><tbody>`;
+  data.f13.forEach((r, i) => {
+    const holders = r.investors.map(inv => inv.person).join(', ');
+    html += `<tr>
+      <td class="rank">${i + 1}</td>
+      <td class="investor-name">${r.name}</td>
+      <td><span class="count-badge">${r.count} / ${investorCount}</span></td>
+      <td class="weight">${holders}</td>
+      <td class="value">${fmtMoney(r.combinedValue)}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>`;
+
+  html += `<div class="section-title">Erweiterte Rangliste (Top ${data.ranking.length})</div>`;
+  html += `<table><thead><tr>
+    <th>Rang</th><th>Aktie</th><th>Investoren</th><th>Summe Positionswert</th>
+  </tr></thead><tbody>`;
+  data.ranking.forEach((r, i) => {
+    html += `<tr>
+      <td class="rank">${i + 1}</td>
+      <td class="investor-name">${r.name}</td>
+      <td><span class="count-badge">${r.count} / ${investorCount}</span></td>
+      <td class="value">${fmtMoney(r.combinedValue)}</td>
+    </tr>`;
+  });
+  html += `</tbody></table>`;
+
+  html += `<div class="section-title">Investoren im Detail</div>`;
+  html += `<table><thead><tr>
+    <th>Investor</th><th>Portfolio (Long, gefiltert)</th><th>Filing</th><th>Positionen</th>
+  </tr></thead><tbody>`;
+  data.investors.forEach(inv => {
+    const holdingsHtml = inv.top.map(p =>
+      `<div>${p.name} <span class="weight">(${p.weight.toFixed(1)}%)</span></div>`
+    ).join('');
+    html += `<tr><td colspan="4" style="padding:0;border:none;">
+      <details class="investor-row" style="padding:10px 12px;border-bottom:1px solid #16304d;">
+        <summary>
+          <span class="investor-name" style="font-family:Arial;font-size:13.5px;">${inv.person}</span>
+          <span class="investor-firm mono"> — ${inv.firm}</span>
+          &nbsp;·&nbsp; ${fmtMoney(inv.portfolioValue)}
+          &nbsp;·&nbsp; Filing ${fmtDate(inv.filingDate)} (${inv.form})
+        </summary>
+        <div class="holdings">${holdingsHtml}</div>
+      </details>
+    </td></tr>`;
+  });
+  html += `</tbody></table>`;
+
+  app.innerHTML = html;
+}
+
+// Auto-Load beim Öffnen, falls f13_data.js bereits vorhanden ist
+window.addEventListener('DOMContentLoaded', loadData);
+</script>
+
+</body>
+</html>
