@@ -55,6 +55,25 @@ st.markdown(f"""
         letter-spacing: 0.06em; font-family: "Courier New",monospace;
     }}
     div[data-testid="stMetricValue"] {{ color: {OFFWHITE}; }}
+    /* ── Tab-Leiste als Website-Menü ─────────────────────────── */
+    .stTabs [data-baseweb="tab-list"] {{
+        gap: 4px; background: {NAVY}; border: 1px solid #1a3a5c;
+        border-radius: 10px; padding: 5px; margin-bottom: 10px;
+        position: sticky; top: 0; z-index: 50;
+    }}
+    .stTabs [data-baseweb="tab"] {{
+        height: auto; padding: 7px 16px; border-radius: 7px;
+        color: {SLATE}; font-weight: 600; font-family: Arial, sans-serif;
+        background: transparent;
+    }}
+    .stTabs [data-baseweb="tab"]:hover {{ color: {OFFWHITE}; background: #12325280; }}
+    .stTabs [data-baseweb="tab"][aria-selected="true"] {{
+        background: {GOLD}; color: {MIDNIGHT}; font-weight: 700;
+    }}
+    .stTabs [data-baseweb="tab"][aria-selected="true"] p {{ color: {MIDNIGHT}; }}
+    .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"] {{
+        display: none;
+    }}
     .goldbar {{ height: 2.5px; background: {GOLD}; border: none; margin: 4px 0 14px; }}
     .importbar {{
         background: {NAVY}; border: 1px solid #1a3a5c; border-left: 3px solid {GOLD};
@@ -357,37 +376,11 @@ if search:
     ranking = [r for r in ranking
                if search in r["name"].lower() or search in r.get("ticker", "").lower()]
 
-# ─── KPI-Zeile ────────────────────────────────────────────────────────────────
-
-rel_label, rel_qe, rel_deadline = next_13f_release()
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Investoren aktiv", f"{len(selected)} / {len(all_investors)}")
-c2.metric("Meldequartal", quarter)
-c3.metric("Konsens-Titel", len(ranking))
-c4.metric("Nächste Liste", rel_deadline.strftime("%d.%m.%Y") if rel_deadline else "–",
-          help=f"Nächstes Meldequartal {rel_label} (Quartalsende "
-               f"{rel_qe.strftime('%d.%m.%Y')}). 13F-Berichte sind spätestens "
-               f"45 Tage nach Quartalsende fällig — dann ist die F13-Liste vollständig. "
-               f"Meldungen treffen aber laufend im 45-Tage-Fenster ein." if rel_deadline else "")
-
-if data.get("errors"):
-    with st.expander(f"⚠ {len(data['errors'])} Investor(en) mit Ladefehlern"):
-        for e in data["errors"]:
-            st.write(f"- {e['investor']} — {e['error']}")
-
-st.markdown(
-    f'<div class="callout"><b>So liest du die Liste:</b> Je mehr Investoren dieselbe '
-    f'Aktie in ihren größten Positionen halten, desto stärker der Konsens. Aktuell aus '
-    f'<b>{len(all_investors)} Investoren</b> — über die Schnellauswahl links auf die '
-    f'<b>15 Super-Investoren</b> oder die <b>Top 30 nach Volumen</b> eingrenzbar.</div>',
-    unsafe_allow_html=True,
-)
-st.write("")
-
-# ─── Tabs ─────────────────────────────────────────────────────────────────────
+# ─── Navigationsmenü (oben, direkt unter dem Kopf) ────────────────────────────
 
 prev_quarter = data["investors"][0].get("prevReportDate") if data["investors"] else None
 ytd_base = data["investors"][0].get("ytdBaseDate") if data["investors"] else None
+rel_label, rel_qe, rel_deadline = next_13f_release()
 
 
 def delta_str(d):
@@ -400,6 +393,29 @@ tab1, tab2, tab6, tab3, tab4, tab5, tab7 = st.tabs(
 
 # --- Tab 1: Konsens ---
 with tab1:
+    # KPI-Zeile (Kontext zur Konsensliste)
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Investoren aktiv", f"{len(selected)} / {len(all_investors)}")
+    c2.metric("Meldequartal", quarter)
+    c3.metric("Konsens-Titel", len(ranking))
+    c4.metric("Nächste Liste", rel_deadline.strftime("%d.%m.%Y") if rel_deadline else "–",
+              help=f"Nächstes Meldequartal {rel_label} (Quartalsende "
+                   f"{rel_qe.strftime('%d.%m.%Y')}). 13F-Berichte sind spätestens "
+                   f"45 Tage nach Quartalsende fällig — dann ist die F13-Liste vollständig. "
+                   f"Meldungen treffen aber laufend im 45-Tage-Fenster ein."
+                   if rel_deadline else "")
+    if data.get("errors"):
+        with st.expander(f"⚠ {len(data['errors'])} Investor(en) mit Ladefehlern"):
+            for e in data["errors"]:
+                st.write(f"- {e['investor']} — {e['error']}")
+    st.markdown(
+        f'<div class="callout"><b>So liest du die Liste:</b> Je mehr Investoren dieselbe '
+        f'Aktie in ihren größten Positionen halten, desto stärker der Konsens. Aktuell aus '
+        f'<b>{len(all_investors)} Investoren</b> — über die Schnellauswahl links auf die '
+        f'<b>15 Super-Investoren</b> oder die <b>Top 30 nach Volumen</b> eingrenzbar.</div>',
+        unsafe_allow_html=True)
+    st.write("")
+
     if not ranking:
         st.info("Keine Titel mit diesen Filtern. Konsens-Schwelle senken oder mehr "
                 "Investoren wählen.")
