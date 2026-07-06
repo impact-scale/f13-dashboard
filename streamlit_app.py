@@ -615,7 +615,7 @@ with tab7:
             pn = prices.get(e["ticker"], {}).get("price")
             # Plausibilitätsschutz: Kursverhältnis muss zwischen 0,1x und 10x liegen
             # (fängt Aktienklassen-/Einheiten-Fehler wie BRK.A vs BRK.B ab)
-            valid = bool(p0 and pn and 0.1 <= (pn / p0) <= 10)
+            valid = bool(p0 and pn and 0.02 <= (pn / p0) <= 50)
             r = (pn - p0) / p0 * 100 if valid else None
             # p.a. nur bei Haltedauer ≥ 1 Jahr (darunter überzeichnet die Hochrechnung)
             pa = annualize(r) if (r is not None and years >= 1.0) else None
@@ -717,7 +717,7 @@ with tab7:
         for e in entries:
             p0 = e["price"]
             pn = prices.get(e["ticker"], {}).get("price")
-            if p0 and pn and 0.1 <= pn / p0 <= 10:
+            if p0 and pn and 0.02 <= pn / p0 <= 50:
                 chart.append((e["ticker"] or e["name"][:10], (pn - p0) / p0 * 100))
         chart.sort(key=lambda x: x[1])
         if chart:

@@ -31,10 +31,16 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 TICKER_CACHE = BASE_DIR / "ticker_cache.json"
 PRICE_CACHE = BASE_DIR / "price_cache.json"
+# Quartals-Cache: historische 13F-Filings ändern sich nie → einmal laden, wiederverwenden.
+QUARTER_CACHE = BASE_DIR / "quarter_cache.json"
+PRICE_HIST_CACHE = BASE_DIR / "price_history_cache.json"
+CACHE_TOP = 40  # gecachte Top-Positionen je Quartal (reicht für Konsens & Backtest)
 
 USER_AGENT = "F13-Dashboard bjoern@impact-scale.com"
 REQUEST_DELAY = 0.12
-QUARTERS = 8          # geladene Quartale pro Investor (Q/Q, YTD, Zeitreihe, Backtest)
+# Historie bis zu diesem Meldequartal zurück (deckt 01/2020 voll ab).
+MIN_REPORT_DATE = "2019-12-31"
+QUARTERS = 40        # Sicherheits-Obergrenze geladener Quartale je Investor
 TOP_N = 15            # Länge der finalen F13-Liste
 STORE_N = 25          # gespeicherte Top-Positionen je Investor
 
@@ -179,12 +185,18 @@ def is_etf(name):
     return bool(ETF_PATTERNS.search(name))
 
 
-def http_get(url):
+def http_get(url, retries=3):
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(req, timeout=60) as resp:
-        data = resp.read()
-    time.sleep(REQUEST_DELAY)
-    return data
+    for attempt in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=60) as resp:
+                data = resp.read()
+            time.sleep(REQUEST_DELAY)
+            return data
+        except Exception as e:
+            if attempt == retries - 1:
+                raise
+            time.sleep(1.5 * (attempt + 1))  # Backoff bei SEC-Ratelimit/Transient
 
 
 def http_get_json(url):
@@ -276,8 +288,10 @@ def aggregate_investor(positions):
     return merged
 
 
-def norm_scale(total):
-    return 1000.0 if total < 1e7 else 1.0
+def unit_scale(report_date):
+    """13F-Werte: Filings ab Jan 2023 (erstes Quartal 2022-12-31) in vollen Dollar,
+    davor (≤ 2022-09-30) in Tausend USD. Datumsbasiert (robuster als Größen-Heuristik)."""
+    return 1000.0 if report_date < "2022-12-31" else 1.0
 
 
 # ── Namensaufbereitung ────────────────────────────────────────────────────────
@@ -355,14 +369,13 @@ def resolve_tickers(cusips):
 
 # ── Positionsaufbau + Veränderungen ──────────────────────────────────────────
 
-def enrich(m, total, ticker_map, name_map):
+def enrich(m, total, scale, ticker_map, name_map):
     ticker = (TICKER_OVERRIDE.get(m["key"])
               or ticker_map.get(m["cusip"], "") or TICKER_FALLBACK.get(m["key"], ""))
     sector, region = sector_region(ticker)
     name = name_map.get(ticker.upper()) if ticker else None
     if not name:
         name = pretty_raw(m["rawname"])
-    scale = norm_scale(total)
     return {"key": m["key"], "name": name, "ticker": ticker,
             "sector": sector, "region": region,
             "value": m["value"] * scale, "shares": m["shares"],
@@ -464,6 +477,54 @@ def fetch_benchmarks(quarter_dates):
     return out
 
 
+def fetch_price_history(tickers, quarter_dates):
+    """Split-bereinigte Quartalsend-Schlusskurse je Ticker von Yahoo (für Backtest).
+    Yahoos 'close' ist split-bereinigt → konsistent mit dem aktuellen Kurs.
+    Cache (price_history_cache.json): historische Kurse sind unveränderlich."""
+    cache = {}
+    if PRICE_HIST_CACHE.exists():
+        try:
+            cache = json.loads(PRICE_HIST_CACHE.read_text("utf-8"))
+        except Exception:
+            cache = {}
+    if not quarter_dates:
+        return cache
+    qsorted = sorted(quarter_dates)
+    start = datetime(int(qsorted[0][:4]), int(qsorted[0][5:7]), 1, tzinfo=timezone.utc)
+    p1 = int(start.timestamp()) - 14 * 86400
+    p2 = int(datetime.now(timezone.utc).timestamp()) + 86400
+    todo = [t for t in sorted({t for t in tickers if t})
+            if any(q not in cache.get(t, {}) for q in quarter_dates)]
+    print(f"  Kurshistorie: {len(todo)} Ticker neu von Yahoo (split-bereinigt) ...")
+    for t in todo:
+        ysym = t.replace("/", "-")
+        try:
+            url = (f"https://query1.finance.yahoo.com/v8/finance/chart/"
+                   f"{urllib.parse.quote(ysym)}?period1={p1}&period2={p2}&interval=1d")
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+            j = json.loads(urllib.request.urlopen(req, timeout=25).read())
+            r = j["chart"]["result"][0]
+            bydate = {datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%d"): c
+                      for ts, c in zip(r["timestamp"], r["indicators"]["quote"][0]["close"])
+                      if c}
+
+            def near(d):
+                ks = [k for k in bydate if k <= d]
+                return round(bydate[max(ks)], 2) if ks else None
+
+            have = cache.get(t, {})
+            for q in quarter_dates:
+                v = near(q)
+                if v:
+                    have[q] = v
+            cache[t] = have
+        except Exception:
+            pass
+        time.sleep(0.25)
+    PRICE_HIST_CACHE.write_text(json.dumps(cache, ensure_ascii=False), "utf-8")
+    return cache
+
+
 def consensus(investors, field, top_n):
     """Zählt, in wie vielen Investoren-Top-N (Einzelaktien) jede Aktie vorkommt."""
     overlap = {}
@@ -507,34 +568,57 @@ def main():
     print("=" * 56)
     name_map = load_company_names()
 
+    qcache = {}
+    if QUARTER_CACHE.exists():
+        try:
+            qcache = json.loads(QUARTER_CACHE.read_text("utf-8"))
+        except Exception:
+            qcache = {}
+
     raw = []
     errors = []
+    cache_hits = cache_miss = 0
     for person, firm, cik, group in INVESTORS:
         label = f"{person}"
         try:
-            filings = find_13f_filings(cik)[:QUARTERS]
+            filings = [f for f in find_13f_filings(cik)
+                       if f["reportDate"] >= MIN_REPORT_DATE][:QUARTERS]
             if not filings:
                 raise RuntimeError("kein 13F-HR-Filing")
             quarters = {}
             for f in filings:
-                pos = fetch_infotable(cik, f["accession"])
-                if pos:
-                    quarters[f["reportDate"]] = aggregate_investor(pos)
+                acc = f["accession"]
+                ce = qcache.get(acc)
+                if ce is None:
+                    pos = fetch_infotable(cik, acc)
+                    if not pos:
+                        continue
+                    merged = aggregate_investor(pos)
+                    ce = {"total": sum(m["value"] for m in merged),
+                          "count": len(merged), "m": merged[:CACHE_TOP]}
+                    qcache[acc] = ce
+                    cache_miss += 1
+                else:
+                    cache_hits += 1
+                quarters[f["reportDate"]] = ce
             if not quarters:
                 raise RuntimeError("keine Information Table")
             raw.append({"person": person, "firm": firm, "cik": cik, "group": group,
                         "filing": filings[0], "quarters": quarters})
             qdates = sorted(quarters, reverse=True)
-            print(f"  OK   {label:24s} {len(quarters)}Q  aktuell {qdates[0]}")
+            print(f"  OK   {label:24s} {len(quarters):2d}Q  aktuell {qdates[0]}")
         except Exception as exc:
             errors.append({"investor": label, "error": str(exc)})
             print(f"  FEHLER {label}: {exc}", file=sys.stderr)
+
+    QUARTER_CACHE.write_text(json.dumps(qcache, ensure_ascii=False), "utf-8")
+    print(f"  Quartals-Cache: {cache_hits} Treffer, {cache_miss} neu geladen.")
 
     # CUSIPs des jeweils aktuellen Quartals (Top STORE_N) für Ticker-Auflösung
     cusips = set()
     for r in raw:
         cur = sorted(r["quarters"], reverse=True)[0]
-        for m in r["quarters"][cur][:STORE_N]:
+        for m in r["quarters"][cur]["m"][:STORE_N]:
             cusips.add(m["cusip"])
     ticker_map = resolve_tickers(cusips)
 
@@ -546,23 +630,27 @@ def main():
         prev_d = qd[1] if len(qd) > 1 else None
         ytd_d = ytd_base_date(cur_d, set(r["quarters"]))
 
-        cur = r["quarters"][cur_d]
-        total = sum(m["value"] for m in cur)
-        prev_by = {m["key"]: m for m in r["quarters"].get(prev_d, [])} if prev_d else {}
-        ytd_by = {m["key"]: m for m in r["quarters"].get(ytd_d, [])} if ytd_d else {}
+        cur_q = r["quarters"][cur_d]
+        cur = cur_q["m"]
+        total = cur_q["total"]
+        cur_scale = unit_scale(cur_d)
+        prev_by = {m["key"]: m for m in r["quarters"][prev_d]["m"]} if prev_d else {}
+        ytd_by = {m["key"]: m for m in r["quarters"][ytd_d]["m"]} if ytd_d else {}
 
         holdings = []
         for m in cur[:STORE_N]:
-            pos = enrich(m, total, ticker_map, name_map)
+            pos = enrich(m, total, cur_scale, ticker_map, name_map)
             pos["change"] = change_vs(m["shares"], prev_by, m["key"]) if prev_d else ""
             pos["changeYtd"] = change_vs(m["shares"], ytd_by, m["key"]) if ytd_d else ""
             holdings.append(pos)
         cur_keys = {m["key"] for m in cur}
 
         def slim_holdings(dd):
-            ml = r["quarters"].get(dd, [])
-            tt = sum(m["value"] for m in ml)
-            return [slim(enrich(m, tt, ticker_map, name_map)) for m in ml[:STORE_N]]
+            q = r["quarters"].get(dd)
+            if not q:
+                return []
+            return [slim(enrich(m, q["total"], unit_scale(dd), ticker_map, name_map))
+                    for m in q["m"][:STORE_N]]
 
         prev_h = slim_holdings(prev_d) if prev_d else []
         ytd_h = slim_holdings(ytd_d) if ytd_d else []
@@ -578,7 +666,7 @@ def main():
             "group": r["group"], "form": r["filing"]["form"],
             "filingDate": r["filing"]["filingDate"], "accession": r["filing"]["accession"],
             "reportDate": cur_d, "prevReportDate": prev_d, "ytdBaseDate": ytd_d,
-            "portfolioValue": total * norm_scale(total), "positionsCount": len(cur),
+            "portfolioValue": total * cur_scale, "positionsCount": cur_q["count"],
             "top": [h for h in holdings if not h["isEtf"]][:TOP_N],
             "holdings": holdings, "prevHoldings": prev_h, "ytdHoldings": ytd_h,
             "sold": exits(prev_h), "soldYtd": exits(ytd_h),
@@ -596,17 +684,17 @@ def main():
 
     # Zeitreihe (#8) + Backtest-Basis: Konsens-Top je geladenem Quartal,
     # inkl. Quartals-Schlusskurs (aus 13F: Wert ÷ Aktienanzahl, Median über Investoren).
-    all_quarters = sorted({d for r in raw for d in r["quarters"]}, reverse=True)[:QUARTERS]
+    all_quarters = sorted({d for r in raw for d in r["quarters"]})
     history = []
-    for qd in sorted(all_quarters):
+    for qd in all_quarters:
         snap = []
         price_samples = {}  # key → Liste von Preisen (Wert/Aktien)
         for r in raw:
             if qd not in r["quarters"]:
                 continue
-            tot = sum(m["value"] for m in r["quarters"][qd])
-            picks = [enrich(m, tot, ticker_map, name_map)
-                     for m in r["quarters"][qd][:STORE_N]]
+            q = r["quarters"][qd]
+            picks = [enrich(m, q["total"], unit_scale(qd), ticker_map, name_map)
+                     for m in q["m"][:STORE_N]]
             for h in picks:
                 if h.get("shares"):
                     price_samples.setdefault(h["key"], []).append(h["value"] / h["shares"])
@@ -628,12 +716,20 @@ def main():
     price_out = {t: prices[t] for t in hist_tickers if t in prices}
     price_asof = max((v["asOf"] for v in price_out.values()), default=None)
 
+    # Split-bereinigte Quartalskurse (Yahoo) bevorzugen — Wert/Aktien bleibt Fallback
+    phist = fetch_price_history(hist_tickers, [h["quarter"] for h in history])
+    for h in history:
+        for e in h["ranking"]:
+            yp = phist.get(e["ticker"], {}).get(h["quarter"])
+            if yp:
+                e["price"] = yp
+
     # Vergleichsindizes (S&P 500, Nasdaq 100) für den Backtest
     benchmarks = fetch_benchmarks([h["quarter"] for h in history])
 
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
-        "topN": TOP_N, "storeN": STORE_N, "quartersLoaded": QUARTERS,
+        "topN": TOP_N, "storeN": STORE_N, "quartersLoaded": len(history),
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
@@ -669,8 +765,9 @@ def git_push(repo_dir):
                           capture_output=True, timeout=5).returncode != 0:
             print("Git-Push übersprungen (kein Repo).")
             return
-        subprocess.run(git + ["add", "f13_data.json", "f13_data.js",
-                               "ticker_cache.json", "price_cache.json"],
+        subprocess.run(git + ["add", "f13_data.json", "f13_data.js", "ticker_cache.json",
+                               "price_cache.json", "quarter_cache.json",
+                               "price_history_cache.json"],
                        timeout=10, check=True)
         stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(git + ["commit", "-m", f"F13 Update {stamp}"],
