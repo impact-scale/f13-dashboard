@@ -15,6 +15,12 @@ from datetime import datetime, date, timedelta
 from pathlib import Path
 import io
 
+try:
+    from zoneinfo import ZoneInfo
+    TZ_BERLIN = ZoneInfo("Europe/Berlin")
+except Exception:  # Fallback, falls tzdata fehlt
+    TZ_BERLIN = None
+
 import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
@@ -273,7 +279,10 @@ if data is None:
 
 all_investors = [inv["person"] for inv in data["investors"]]
 # generatedAt ist UTC (ISO mit +00:00) → in lokale Zeit umrechnen
-generated = datetime.fromisoformat(data["generatedAt"]).astimezone()
+# In deutsche Zeit umrechnen (fest Europe/Berlin — nicht die Server-Zeitzone,
+# da Streamlit Cloud in UTC läuft).
+generated = datetime.fromisoformat(data["generatedAt"])
+generated = generated.astimezone(TZ_BERLIN) if TZ_BERLIN else generated.astimezone()
 quarter = data["investors"][0]["reportDate"] if data["investors"] else "–"
 n_ok = len(data["investors"])
 n_err = len(data.get("errors", []))
@@ -282,7 +291,7 @@ n_err = len(data.get("errors", []))
 st.markdown(
     f'<div class="importbar">'
     f'<span class="importdot"></span>'
-    f'<b>Stand des Datenimports:</b>&nbsp; {generated.strftime("%d.%m.%Y · %H:%M Uhr")}'
+    f'<b>Stand des Datenimports:</b>&nbsp; {generated.strftime("%d.%m.%Y · %H:%M Uhr %Z")}'
     f'&nbsp;·&nbsp; {n_ok} Investoren geladen'
     f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
     f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
@@ -750,11 +759,106 @@ with tab7:
                 height=max(300, 26 * len(chart)), margin=dict(l=10, r=40, t=50, b=10))
             st.plotly_chart(fig_bt, use_container_width=True)
         st.caption("Rendite gesamt = über den ganzen Zeitraum · Rendite p.a. = auf ein "
-                   "Jahr annualisiert (nur ab ~1 Jahr Haltedauer, da kürzere Zeiträume "
-                   "hochgerechnet überzeichnen würden). Quartalskurs = Median aus 13F "
-                   "(Wert ÷ Aktien) der meldenden Investoren. Aktueller Kurs = letzter "
-                   "Schlusskurs (Yahoo). Reine Kursrendite ohne Dividenden/Gebühren. "
-                   "Keine Anlageberatung.")
+                   "Jahr annualisiert (nur ab ~1 Jahr Haltedauer). Kurse = split-bereinigte "
+                   "Schlusskurse (Yahoo), Startpunkt = Quartalsende. Reine Kursrendite ohne "
+                   "Dividenden/Gebühren. Keine Anlageberatung.")
+
+        # ── Advanced Backtest: frei wählbarer Zeitraum (Start → Ende) ──────────
+        st.markdown("---")
+        with st.expander("⚙️ Advanced Backtest — frei wählbarer Zeitraum "
+                         "(Start- → Endquartal)"):
+            qp = data.get("quarterPrices", {})
+            all_q = [h["quarter"] for h in history]  # aufsteigend
+            bench = data.get("benchmarks", {})
+            if len(all_q) < 2 or not qp:
+                st.info("Zu wenig Historie für einen Zeitraum-Backtest.")
+            else:
+                a1, a2, a3 = st.columns(3)
+                start_q = a1.selectbox("Startquartal", all_q[:-1], index=0, key="adv_s")
+                end_opts = [q for q in all_q if q > start_q]
+                end_q = a2.selectbox("Endquartal", end_opts, index=len(end_opts) - 1,
+                                     key="adv_e")
+                method_a = a3.radio("Gewichtung", ["Equal Weight", "Conviction (Profi)"],
+                                    horizontal=True, key="adv_m")
+                n_a = st.number_input("Anzahl Titel (Top N)", 5, 20, data["topN"], 1,
+                                      key="adv_n")
+
+                snap_s = next(h for h in history if h["quarter"] == start_q)
+                entries_a = list(snap_s["ranking"])[:int(n_a)]
+
+                def _pd2(s):
+                    y, m, d = map(int, s.split("-"))
+                    return date(y, m, d)
+                yrs_a = max((_pd2(end_q) - _pd2(start_q)).days / 365.25, 1e-6)
+
+                rows_a, rets_a, exc_a = [], [], 0
+                counts_a = [max(e["count"], 0) for e in entries_a]
+                csum = sum(counts_a) or 1
+                for i, e in enumerate(entries_a):
+                    t = e["ticker"]
+                    p0 = qp.get(t, {}).get(start_q) or e.get("price")
+                    p1 = qp.get(t, {}).get(end_q)
+                    ok = bool(p0 and p1 and 0.02 <= p1 / p0 <= 50)
+                    r = (p1 - p0) / p0 * 100 if ok else None
+                    w = (1 / len(entries_a) if method_a.startswith("Equal")
+                         else counts_a[i] / csum)
+                    if r is not None:
+                        rets_a.append((r, w))
+                    elif p0 and p1 is None:
+                        exc_a += 1
+                    rows_a.append({
+                        "Ticker": t or "–", "Aktie": e["name"],
+                        f"Kurs {start_q}": f"{p0:,.2f} $".replace(",", ".") if p0 else "–",
+                        f"Kurs {end_q}": f"{p1:,.2f} $".replace(",", ".") if p1 else "–",
+                        "Rendite": f"{r:+.1f} %" if r is not None else "–",
+                        "Gewicht": f"{w*100:.1f} %"})
+
+                def bwin(name):
+                    b = bench.get(name, {}).get("quarters", {})
+                    q0, q1 = b.get(start_q), b.get(end_q)
+                    return (q1 - q0) / q0 * 100 if (q0 and q1) else None
+
+                spw, ndw = bwin("S&P 500"), bwin("Nasdaq 100")
+                if rets_a:
+                    wt = sum(w for _, w in rets_a) or 1
+                    port_a = sum(r * w for r, w in rets_a) / wt
+                    pa_a = ((1 + port_a / 100) ** (1 / yrs_a) - 1) * 100 if yrs_a >= 1 else None
+                    colr = "#5fbf7f" if port_a >= 0 else "#d9776a"
+                    st.markdown(
+                        f'<div class="callout"><b>F13-Portfolio {start_q} → {end_q}:</b> '
+                        f'<span style="color:{colr};font-weight:700;font-size:1.1em;">'
+                        f'{port_a:+.1f} %</span>'
+                        f'{f" · p.a. {pa_a:+.1f} %" if pa_a is not None else ""} '
+                        f'({method_a}, ~{yrs_a:.1f} J., {len(rets_a)} Titel). '
+                        f'Kurseffekt ohne Dividenden.</div>', unsafe_allow_html=True)
+                    comp = [("F13-Portfolio", port_a, GOLD)]
+                    if spw is not None:
+                        comp.append(("S&P 500", spw, SLATE))
+                    if ndw is not None:
+                        comp.append(("Nasdaq 100", ndw, "#6b8caa"))
+                    cs = sorted(comp, key=lambda x: x[1])
+                    fc = go.Figure(go.Bar(
+                        x=[c[1] for c in cs], y=[c[0] for c in cs], orientation="h",
+                        marker=dict(color=[c[2] for c in cs],
+                                    line=dict(color=MIDNIGHT, width=1)),
+                        text=[f"<b>{c[1]:+.1f} %</b>" for c in cs], textposition="outside",
+                        textfont=dict(color=OFFWHITE, size=14), cliponaxis=False))
+                    fc.update_layout(
+                        paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                        font=dict(color=OFFWHITE),
+                        xaxis=dict(gridcolor="#1a3a5c", title="Rendite (%)",
+                                   zeroline=True, zerolinecolor="#33475c"),
+                        height=175, margin=dict(l=10, r=60, t=10, b=32), showlegend=False)
+                    st.plotly_chart(fc, use_container_width=True)
+                else:
+                    st.info("Keine Titel mit Kursdaten in diesem Zeitraum.")
+                if exc_a:
+                    st.caption(f"⚠ {exc_a} Titel ohne Kurs im Endquartal ausgeschlossen.")
+                st.dataframe(pd.DataFrame(rows_a), use_container_width=True,
+                             hide_index=True, height=min(560, 45 + 34 * len(rows_a)))
+                st.caption("Zeitraum-Backtest: F13-Liste des Startquartals, gehalten bis zum "
+                           "Endquartal (split-bereinigte Kurse). Reine Kursrendite ohne "
+                           "Dividenden.")
 
 
 def compute_weights(method, titles):

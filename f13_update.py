@@ -733,7 +733,7 @@ def main():
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
-        "benchmarks": benchmarks, "errors": errors,
+        "benchmarks": benchmarks, "quarterPrices": phist, "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
