@@ -287,22 +287,6 @@ quarter = data["investors"][0]["reportDate"] if data["investors"] else "–"
 n_ok = len(data["investors"])
 n_err = len(data.get("errors", []))
 
-# Stand des Datenimports — prominent oben
-st.markdown(
-    f'<div class="importbar">'
-    f'<span class="importdot"></span>'
-    f'<b>Stand des Datenimports:</b>&nbsp; {generated.strftime("%d.%m.%Y · %H:%M Uhr %Z")}'
-    f'&nbsp;·&nbsp; {n_ok} Investoren geladen'
-    f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
-    f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
-    f'&nbsp;<a href="https://www.sec.gov/edgar/search/#/forms=13F-HR" target="_blank" '
-    f'title="Zur Originalquelle: SEC EDGAR 13F-HR" '
-    f'style="text-decoration:none;color:{GOLD};font-weight:700;">ⓘ</a>'
-    f'</div>',
-    unsafe_allow_html=True,
-)
-st.write("")
-
 # ─── Sidebar-Filter ───────────────────────────────────────────────────────────
 
 INV_KEYS = {p: f"inv_{p}" for p in all_investors}
@@ -378,6 +362,22 @@ with st.sidebar:
 if not selected:
     st.warning("Bitte mindestens einen Investor auswählen.")
     st.stop()
+
+# Statusleiste oben — auf allen Ansichten sichtbar (inkl. aktiver Investoren)
+st.markdown(
+    f'<div class="importbar">'
+    f'<span class="importdot"></span>'
+    f'<b>Investoren aktiv:</b>&nbsp; {len(selected)} / {n_ok}'
+    f'&nbsp;·&nbsp; <b>Stand:</b> {generated.strftime("%d.%m.%Y · %H:%M Uhr %Z")}'
+    f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
+    f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
+    f'&nbsp;<a href="https://www.sec.gov/edgar/search/#/forms=13F-HR" target="_blank" '
+    f'title="Zur Originalquelle: SEC EDGAR 13F-HR" '
+    f'style="text-decoration:none;color:{GOLD};font-weight:700;">ⓘ</a>'
+    f'</div>',
+    unsafe_allow_html=True,
+)
+st.write("")
 
 ranking = with_consensus_delta(data, selected, top_n_per_inv, include_etfs)
 ranking = [r for r in ranking if r["count"] >= min_consensus]
