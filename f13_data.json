@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T19:01:40.071789+00:00",
+  "generatedAt": "2026-07-06T06:06:00.350613+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 26,
@@ -43069,7 +43069,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOG",
           "count": 19,
-          "price": 1337.41
+          "price": 66.85
         },
         {
           "key": "30303M",
@@ -43083,7 +43083,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 276.45
+          "price": 226.5
         },
         {
           "key": "594918",
@@ -43104,7 +43104,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 8,
-          "price": 1847.84
+          "price": 92.39
         },
         {
           "key": "57636Q",
@@ -43118,7 +43118,7 @@
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 7,
-          "price": 323.57
+          "price": 32.36
         },
         {
           "key": "949746",
@@ -43167,7 +43167,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 5,
-          "price": 44.97
+          "price": 42.15
         },
         {
           "key": "79466L",
@@ -43188,7 +43188,7 @@
           "name": "Apple Inc.",
           "ticker": "AAPL",
           "count": 4,
-          "price": 293.65
+          "price": 73.41
         },
         {
           "key": "025816",
@@ -43214,7 +43214,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 1162.35
+          "price": 58.1
         },
         {
           "key": "01609W",
@@ -43235,7 +43235,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 13,
-          "price": 1949.72
+          "price": 97.49
         },
         {
           "key": "594918",
@@ -43249,14 +43249,14 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 200.11
+          "price": 182.83
         },
         {
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 9,
-          "price": 375.5
+          "price": 37.55
         },
         {
           "key": "92826C",
@@ -43291,7 +43291,7 @@
           "name": "Apple Inc.",
           "ticker": "AAPL",
           "count": 5,
-          "price": 254.29
+          "price": 63.57
         },
         {
           "key": "060505",
@@ -43340,7 +43340,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 4,
-          "price": 34.38
+          "price": 32.22
         },
         {
           "key": "13645T",
@@ -43359,7 +43359,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 1415.88
+          "price": 70.9
         },
         {
           "key": "30303M",
@@ -43373,7 +43373,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 14,
-          "price": 2758.82
+          "price": 137.94
         },
         {
           "key": "01609W",
@@ -43394,7 +43394,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 241.5
+          "price": 178.51
         },
         {
           "key": "92826C",
@@ -43408,7 +43408,7 @@
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 8,
-          "price": 455.04
+          "price": 45.5
         },
         {
           "key": "70450Y",
@@ -43443,14 +43443,14 @@
           "name": "Apple Inc.",
           "ticker": "AAPL",
           "count": 5,
-          "price": 364.8
+          "price": 91.2
         },
         {
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 5,
-          "price": 38.98
+          "price": 36.53
         },
         {
           "key": "00724F",
@@ -43504,7 +43504,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 1467.53
+          "price": 73.28
         },
         {
           "key": "30303M",
@@ -43518,7 +43518,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 14,
-          "price": 3148.73
+          "price": 157.44
         },
         {
           "key": "01609W",
@@ -43539,7 +43539,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 240.61
+          "price": 212.94
         },
         {
           "key": "92826C",
@@ -43588,14 +43588,14 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 5,
-          "price": 46.26
+          "price": 43.36
         },
         {
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 5,
-          "price": 500.03
+          "price": 50.0
         },
         {
           "key": "060505",
@@ -43623,7 +43623,7 @@
           "name": "Walmart Inc.",
           "ticker": "WMT",
           "count": 4,
-          "price": 139.91
+          "price": 46.64
         },
         {
           "key": "91324P",
@@ -43649,7 +43649,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 1752.28
+          "price": 87.63
         },
         {
           "key": "30303M",
@@ -43677,14 +43677,14 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 11,
-          "price": 3256.93
+          "price": 162.85
         },
         {
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 262.79
+          "price": 231.87
         },
         {
           "key": "01609W",
@@ -43761,7 +43761,7 @@
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 4,
-          "price": 540.73
+          "price": 54.07
         },
         {
           "key": "949746",
@@ -43775,7 +43775,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 4,
-          "price": 52.4
+          "price": 49.11
         },
         {
           "key": "808513",
@@ -43794,7 +43794,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 2065.02
+          "price": 103.13
         },
         {
           "key": "30303M",
@@ -43808,7 +43808,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 11,
-          "price": 3094.08
+          "price": 154.7
         },
         {
           "key": "594918",
@@ -43822,7 +43822,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 259.84
+          "price": 255.47
         },
         {
           "key": "92826C",
@@ -43899,7 +43899,7 @@
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 4,
-          "price": 521.66
+          "price": 52.17
         },
         {
           "key": "70450Y",
@@ -43913,7 +43913,7 @@
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
           "count": 4,
-          "price": 821.89
+          "price": 82.19
         },
         {
           "key": "872590",
@@ -43939,7 +43939,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 2469.5
+          "price": 122.09
         },
         {
           "key": "30303M",
@@ -43953,7 +43953,7 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 11,
-          "price": 3440.16
+          "price": 172.01
         },
         {
           "key": "594918",
@@ -43967,7 +43967,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 282.47
+          "price": 277.92
         },
         {
           "key": "01609W",
@@ -44016,7 +44016,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 4,
-          "price": 57.02
+          "price": 53.44
         },
         {
           "key": "37045V",
@@ -44084,7 +44084,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 2670.33
+          "price": 133.68
         },
         {
           "key": "30303M",
@@ -44105,14 +44105,14 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 11,
-          "price": 3285.04
+          "price": 164.25
         },
         {
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 275.15
+          "price": 272.94
         },
         {
           "key": "92826C",
@@ -44161,7 +44161,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 4,
-          "price": 55.93
+          "price": 52.42
         },
         {
           "key": "79466L",
@@ -44196,7 +44196,7 @@
           "name": "Walmart Inc.",
           "ticker": "WMT",
           "count": 4,
-          "price": 139.38
+          "price": 46.46
         },
         {
           "key": "254687",
@@ -44229,7 +44229,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 2895.63
+          "price": 144.85
         },
         {
           "key": "30303M",
@@ -44250,14 +44250,14 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 13,
-          "price": 3334.34
+          "price": 166.72
         },
         {
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 11,
-          "price": 299.02
+          "price": 299.0
         },
         {
           "key": "92826C",
@@ -44292,7 +44292,7 @@
           "name": "Comcast Corp",
           "ticker": "CMCSA",
           "count": 5,
-          "price": 50.33
+          "price": 47.17
         },
         {
           "key": "57636Q",
@@ -44374,7 +44374,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 2786.77
+          "price": 139.07
         },
         {
           "key": "30303M",
@@ -44395,14 +44395,14 @@
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
           "count": 13,
-          "price": 3259.95
+          "price": 163.0
         },
         {
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 357.75
+          "price": 352.91
         },
         {
           "key": "92826C",
@@ -44451,7 +44451,7 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 55.36
+          "price": 56.74
         },
         {
           "key": "16119P",
@@ -44465,7 +44465,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 231.39
+          "price": 186.45
         },
         {
           "key": "79466L",
@@ -44486,7 +44486,7 @@
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 2348.45
+          "price": 93.94
         },
         {
           "key": "91324P",
@@ -44519,7 +44519,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 2183.29
+          "price": 108.96
         },
         {
           "key": "30303M",
@@ -44540,7 +44540,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 276.59
+          "price": 273.02
         },
         {
           "key": "023135",
@@ -44664,7 +44664,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 95.88
+          "price": 95.65
         },
         {
           "key": "594918",
@@ -44692,7 +44692,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 271.18
+          "price": 267.02
         },
         {
           "key": "92826C",
@@ -44762,14 +44762,14 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 60.0
+          "price": 61.45
         },
         {
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 4,
-          "price": 235.44
+          "price": 23.54
         },
         {
           "key": "478160",
@@ -44809,7 +44809,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 88.28
+          "price": 88.23
         },
         {
           "key": "594918",
@@ -44900,14 +44900,14 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 62.98
+          "price": 62.99
         },
         {
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 173.2
+          "price": 139.56
         },
         {
           "key": "478160",
@@ -44921,7 +44921,7 @@
           "name": "Netflix Inc",
           "ticker": "NFLX",
           "count": 4,
-          "price": 294.88
+          "price": 29.49
         },
         {
           "key": "143130",
@@ -44954,7 +44954,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 26,
-          "price": 103.76
+          "price": 103.73
         },
         {
           "key": "30303M",
@@ -45017,14 +45017,14 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 5,
-          "price": 228.49
+          "price": 184.12
         },
         {
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "count": 5,
-          "price": 277.77
+          "price": 27.78
         },
         {
           "key": "91324P",
@@ -45052,14 +45052,14 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 60.98
+          "price": 62.43
         },
         {
           "key": "369604",
           "name": "General Electric Co",
           "ticker": "GE",
           "count": 4,
-          "price": 95.6
+          "price": 76.3
         },
         {
           "key": "337738",
@@ -45099,7 +45099,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 119.8
+          "price": 119.7
         },
         {
           "key": "594918",
@@ -45141,7 +45141,7 @@
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "count": 8,
-          "price": 423.02
+          "price": 42.3
         },
         {
           "key": "874039",
@@ -45162,14 +45162,14 @@
           "name": "General Electric Co",
           "ticker": "GE",
           "count": 5,
-          "price": 109.85
+          "price": 87.67
         },
         {
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 5,
-          "price": 247.9
+          "price": 199.76
         },
         {
           "key": "57636Q",
@@ -45183,7 +45183,7 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 57.34
+          "price": 58.8
         },
         {
           "key": "337738",
@@ -45211,7 +45211,7 @@
           "name": "Danaher Corp",
           "ticker": "DHR",
           "count": 4,
-          "price": 240.0
+          "price": 212.77
         },
         {
           "key": "512807",
@@ -45244,7 +45244,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 23,
-          "price": 131.01
+          "price": 130.86
         },
         {
           "key": "30303M",
@@ -45272,7 +45272,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 11,
-          "price": 356.99
+          "price": 350.3
         },
         {
           "key": "92826C",
@@ -45286,7 +45286,7 @@
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "count": 7,
-          "price": 434.99
+          "price": 43.5
         },
         {
           "key": "037833",
@@ -45300,7 +45300,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 5,
-          "price": 264.92
+          "price": 213.47
         },
         {
           "key": "57636Q",
@@ -45314,7 +45314,7 @@
           "name": "General Electric Co",
           "ticker": "GE",
           "count": 4,
-          "price": 110.55
+          "price": 88.23
         },
         {
           "key": "79466L",
@@ -45335,14 +45335,14 @@
           "name": "Danaher Corp",
           "ticker": "DHR",
           "count": 4,
-          "price": 248.1
+          "price": 219.95
         },
         {
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 3083.95
+          "price": 123.36
         },
         {
           "key": "90353T",
@@ -45370,7 +45370,7 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 3,
-          "price": 61.93
+          "price": 64.88
         },
         {
           "key": "13646K",
@@ -45389,7 +45389,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 139.82
+          "price": 139.69
         },
         {
           "key": "023135",
@@ -45417,14 +45417,14 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 358.87
+          "price": 356.66
         },
         {
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "count": 7,
-          "price": 495.22
+          "price": 49.52
         },
         {
           "key": "92826C",
@@ -45445,7 +45445,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 6,
-          "price": 252.97
+          "price": 203.84
         },
         {
           "key": "037833",
@@ -45487,7 +45487,7 @@
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 3547.22
+          "price": 141.89
         },
         {
           "key": "68389X",
@@ -45534,7 +45534,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 151.07
+          "price": 150.93
         },
         {
           "key": "594918",
@@ -45562,7 +45562,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 427.0
+          "price": 420.52
         },
         {
           "key": "037833",
@@ -45576,7 +45576,7 @@
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "count": 7,
-          "price": 903.56
+          "price": 90.36
         },
         {
           "key": "92826C",
@@ -45597,7 +45597,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 6,
-          "price": 289.74
+          "price": 233.47
         },
         {
           "key": "235851",
@@ -45618,7 +45618,7 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 63.31
+          "price": 64.99
         },
         {
           "key": "007903",
@@ -45632,7 +45632,7 @@
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
           "count": 4,
-          "price": 1325.41
+          "price": 132.54
         },
         {
           "key": "478160",
@@ -45679,7 +45679,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 182.34
+          "price": 182.15
         },
         {
           "key": "594918",
@@ -45707,7 +45707,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 415.64
+          "price": 406.8
         },
         {
           "key": "037833",
@@ -45742,7 +45742,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 5,
-          "price": 299.84
+          "price": 241.61
         },
         {
           "key": "478160",
@@ -45756,7 +45756,7 @@
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
           "count": 4,
-          "price": 63.01
+          "price": 63.03
         },
         {
           "key": "337738",
@@ -45824,7 +45824,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 166.05
+          "price": 165.85
         },
         {
           "key": "30303M",
@@ -45852,7 +45852,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 474.05
+          "price": 460.26
         },
         {
           "key": "037833",
@@ -45929,7 +45929,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 273.68
+          "price": 220.53
         },
         {
           "key": "718172",
@@ -45969,7 +45969,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 20,
-          "price": 189.44
+          "price": 189.3
         },
         {
           "key": "594918",
@@ -45997,7 +45997,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 467.25
+          "price": 453.28
         },
         {
           "key": "92826C",
@@ -46067,7 +46067,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 281.33
+          "price": 226.7
         },
         {
           "key": "G3643J",
@@ -46114,7 +46114,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 18,
-          "price": 155.15
+          "price": 154.64
         },
         {
           "key": "30303M",
@@ -46142,7 +46142,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 11,
-          "price": 550.02
+          "price": 532.58
         },
         {
           "key": "92826C",
@@ -46212,7 +46212,7 @@
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 4606.91
+          "price": 184.28
         },
         {
           "key": "14040H",
@@ -46259,7 +46259,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 18,
-          "price": 176.61
+          "price": 176.23
         },
         {
           "key": "594918",
@@ -46287,7 +46287,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 10,
-          "price": 501.42
+          "price": 485.77
         },
         {
           "key": "67066G",
@@ -46357,7 +46357,7 @@
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 5,
-          "price": 5789.24
+          "price": 231.57
         },
         {
           "key": "674599",
@@ -46404,7 +46404,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 21,
-          "price": 243.18
+          "price": 243.1
         },
         {
           "key": "594918",
@@ -46446,7 +46446,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 519.32
+          "price": 502.74
         },
         {
           "key": "92826C",
@@ -46516,21 +46516,21 @@
           "name": "BROOKFIELD Corp",
           "ticker": "BN",
           "count": 4,
-          "price": 68.58
+          "price": 45.72
         },
         {
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 235.81
+          "price": 190.02
         },
         {
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 5399.27
+          "price": 215.97
         },
         {
           "key": "90353T",
@@ -46549,7 +46549,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 24,
-          "price": 313.13
+          "price": 313.0
         },
         {
           "key": "594918",
@@ -46591,7 +46591,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 519.05
+          "price": 502.65
         },
         {
           "key": "92826C",
@@ -46668,7 +46668,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 288.86
+          "price": 232.76
         },
         {
           "key": "11271J",
@@ -46682,7 +46682,7 @@
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
           "count": 4,
-          "price": 5355.33
+          "price": 214.21
         }
       ]
     },
@@ -46694,7 +46694,7 @@
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
           "count": 22,
-          "price": 287.45
+          "price": 287.56
         },
         {
           "key": "023135",
@@ -46736,7 +46736,7 @@
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
           "count": 9,
-          "price": 500.05
+          "price": 479.2
         },
         {
           "key": "037833",
@@ -46806,7 +46806,7 @@
           "name": "Fedex Corp",
           "ticker": "FDX",
           "count": 4,
-          "price": 356.18
+          "price": 287.01
         },
         {
           "key": "866966",
@@ -46833,260 +46833,260 @@
     }
   ],
   "prices": {
-    "TSM": {
-      "price": 434.16,
-      "asOf": "2026-07-05"
-    },
-    "CNI": {
-      "price": 121.56,
-      "asOf": "2026-07-05"
-    },
-    "DHR": {
-      "price": 197.93,
-      "asOf": "2026-07-05"
-    },
-    "AAPL": {
-      "price": 308.63,
-      "asOf": "2026-07-05"
-    },
-    "MCO": {
-      "price": 490.51,
-      "asOf": "2026-07-05"
-    },
-    "FISV": {
-      "price": 52.33,
-      "asOf": "2026-07-05"
-    },
-    "GOOG": {
-      "price": 356.18,
-      "asOf": "2026-07-05"
-    },
-    "ADBE": {
-      "price": 219.72,
-      "asOf": "2026-07-05"
-    },
-    "LRCX": {
-      "price": 351.41,
-      "asOf": "2026-07-05"
-    },
-    "CRM": {
-      "price": 166.11,
-      "asOf": "2026-07-05"
-    },
-    "COF": {
-      "price": 205.12,
-      "asOf": "2026-07-05"
-    },
-    "LLY": {
-      "price": 1213.91,
-      "asOf": "2026-07-05"
-    },
-    "JD": {
-      "price": 26.62,
-      "asOf": "2026-07-05"
-    },
-    "V": {
-      "price": 362.13,
-      "asOf": "2026-07-05"
-    },
-    "TDG": {
-      "price": 1348.49,
-      "asOf": "2026-07-05"
-    },
-    "AVGO": {
-      "price": 360.45,
-      "asOf": "2026-07-05"
-    },
-    "UBER": {
-      "price": 74.43,
-      "asOf": "2026-07-05"
-    },
-    "BKNG": {
-      "price": 184.56,
-      "asOf": "2026-07-05"
-    },
-    "GM": {
-      "price": 76.0,
-      "asOf": "2026-07-05"
-    },
-    "OXY": {
-      "price": 48.91,
-      "asOf": "2026-07-05"
-    },
-    "CHTR": {
-      "price": 137.2,
-      "asOf": "2026-07-05"
-    },
-    "SPOT": {
-      "price": 485.97,
-      "asOf": "2026-07-05"
-    },
-    "PDD": {
-      "price": 82.39,
-      "asOf": "2026-07-05"
-    },
-    "AXP": {
-      "price": 351.96,
-      "asOf": "2026-07-05"
-    },
-    "SUNB": {
-      "price": 72.34,
-      "asOf": "2026-07-05"
-    },
-    "AMZN": {
-      "price": 242.67,
-      "asOf": "2026-07-05"
-    },
-    "NVDA": {
-      "price": 194.83,
-      "asOf": "2026-07-05"
-    },
-    "TMUS": {
-      "price": 177.52,
-      "asOf": "2026-07-05"
-    },
-    "KO": {
-      "price": 84.14,
-      "asOf": "2026-07-05"
-    },
-    "ORCL": {
-      "price": 140.27,
-      "asOf": "2026-07-05"
-    },
-    "MRK": {
-      "price": 129.56,
-      "asOf": "2026-07-05"
-    },
-    "PYPL": {
-      "price": 45.47,
-      "asOf": "2026-07-05"
-    },
-    "JNJ": {
-      "price": 263.04,
-      "asOf": "2026-07-05"
-    },
-    "BABA": {
-      "price": 96.14,
-      "asOf": "2026-07-05"
-    },
-    "FDX": {
-      "price": 313.0,
-      "asOf": "2026-07-05"
-    },
-    "MU": {
-      "price": 975.56,
-      "asOf": "2026-07-05"
-    },
-    "PM": {
-      "price": 182.27,
-      "asOf": "2026-07-05"
-    },
-    "ASML": {
-      "price": 1769.32,
-      "asOf": "2026-07-05"
-    },
-    "UNH": {
-      "price": 425.36,
-      "asOf": "2026-07-05"
+    "AMAT": {
+      "price": 603.04,
+      "asOf": "2026-07-06"
     },
     "BAC": {
       "price": 58.73,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
     },
-    "NFLX": {
-      "price": 77.65,
-      "asOf": "2026-07-05"
+    "UBER": {
+      "price": 74.43,
+      "asOf": "2026-07-06"
     },
-    "WMT": {
-      "price": 111.84,
-      "asOf": "2026-07-05"
+    "ASML": {
+      "price": 1769.32,
+      "asOf": "2026-07-06"
     },
-    "JPM": {
-      "price": 334.47,
-      "asOf": "2026-07-05"
-    },
-    "AMAT": {
-      "price": 603.04,
-      "asOf": "2026-07-05"
-    },
-    "CMCSA": {
-      "price": 23.79,
-      "asOf": "2026-07-05"
-    },
-    "MA": {
-      "price": 539.39,
-      "asOf": "2026-07-05"
-    },
-    "BN": {
-      "price": 43.43,
-      "asOf": "2026-07-05"
-    },
-    "GOOGL": {
-      "price": 359.91,
-      "asOf": "2026-07-05"
-    },
-    "SCHW": {
-      "price": 97.0,
-      "asOf": "2026-07-05"
-    },
-    "KHC": {
-      "price": 25.37,
-      "asOf": "2026-07-05"
-    },
-    "BRK-B": {
-      "price": 507.78,
-      "asOf": "2026-07-05"
+    "GOOG": {
+      "price": 356.18,
+      "asOf": "2026-07-06"
     },
     "DHI": {
       "price": 158.57,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
     },
-    "AMD": {
-      "price": 517.82,
-      "asOf": "2026-07-05"
-    },
-    "CPNG": {
-      "price": 18.56,
-      "asOf": "2026-07-05"
-    },
-    "WFC": {
-      "price": 85.51,
-      "asOf": "2026-07-05"
-    },
-    "CSGP": {
-      "price": 30.0,
-      "asOf": "2026-07-05"
-    },
-    "MSFT": {
-      "price": 390.49,
-      "asOf": "2026-07-05"
+    "BABA": {
+      "price": 96.14,
+      "asOf": "2026-07-06"
     },
     "DIS": {
       "price": 99.5,
-      "asOf": "2026-07-05"
-    },
-    "GE": {
-      "price": 377.52,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
     },
     "CP": {
       "price": 87.79,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
+    },
+    "CRM": {
+      "price": 166.11,
+      "asOf": "2026-07-06"
+    },
+    "SUNB": {
+      "price": 72.34,
+      "asOf": "2026-07-06"
+    },
+    "CSGP": {
+      "price": 30.0,
+      "asOf": "2026-07-06"
     },
     "VST": {
       "price": 151.05,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
+    },
+    "GE": {
+      "price": 377.52,
+      "asOf": "2026-07-06"
+    },
+    "JD": {
+      "price": 26.62,
+      "asOf": "2026-07-06"
+    },
+    "OXY": {
+      "price": 48.91,
+      "asOf": "2026-07-06"
+    },
+    "COF": {
+      "price": 205.12,
+      "asOf": "2026-07-06"
+    },
+    "BN": {
+      "price": 43.43,
+      "asOf": "2026-07-06"
+    },
+    "TMUS": {
+      "price": 177.52,
+      "asOf": "2026-07-06"
+    },
+    "JPM": {
+      "price": 334.47,
+      "asOf": "2026-07-06"
+    },
+    "BKNG": {
+      "price": 184.56,
+      "asOf": "2026-07-06"
+    },
+    "GOOGL": {
+      "price": 359.91,
+      "asOf": "2026-07-06"
+    },
+    "ORCL": {
+      "price": 140.27,
+      "asOf": "2026-07-06"
+    },
+    "AAPL": {
+      "price": 308.63,
+      "asOf": "2026-07-06"
+    },
+    "MSFT": {
+      "price": 390.49,
+      "asOf": "2026-07-06"
+    },
+    "PYPL": {
+      "price": 45.47,
+      "asOf": "2026-07-06"
+    },
+    "LLY": {
+      "price": 1213.91,
+      "asOf": "2026-07-06"
+    },
+    "WMT": {
+      "price": 111.84,
+      "asOf": "2026-07-06"
+    },
+    "DHR": {
+      "price": 197.93,
+      "asOf": "2026-07-06"
+    },
+    "TDG": {
+      "price": 1348.49,
+      "asOf": "2026-07-06"
+    },
+    "CMCSA": {
+      "price": 23.79,
+      "asOf": "2026-07-06"
+    },
+    "CNI": {
+      "price": 121.56,
+      "asOf": "2026-07-06"
     },
     "META": {
       "price": 582.9,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
+    },
+    "AXP": {
+      "price": 351.96,
+      "asOf": "2026-07-06"
+    },
+    "MCO": {
+      "price": 490.51,
+      "asOf": "2026-07-06"
+    },
+    "TSM": {
+      "price": 434.16,
+      "asOf": "2026-07-06"
+    },
+    "AMD": {
+      "price": 517.82,
+      "asOf": "2026-07-06"
+    },
+    "NFLX": {
+      "price": 77.65,
+      "asOf": "2026-07-06"
+    },
+    "KO": {
+      "price": 84.14,
+      "asOf": "2026-07-06"
     },
     "QCOM": {
       "price": 176.25,
-      "asOf": "2026-07-05"
+      "asOf": "2026-07-06"
+    },
+    "MU": {
+      "price": 975.56,
+      "asOf": "2026-07-06"
+    },
+    "CHTR": {
+      "price": 137.2,
+      "asOf": "2026-07-06"
+    },
+    "BRK-B": {
+      "price": 507.78,
+      "asOf": "2026-07-06"
+    },
+    "MA": {
+      "price": 539.39,
+      "asOf": "2026-07-06"
+    },
+    "CPNG": {
+      "price": 18.56,
+      "asOf": "2026-07-06"
+    },
+    "PM": {
+      "price": 182.27,
+      "asOf": "2026-07-06"
+    },
+    "PDD": {
+      "price": 82.39,
+      "asOf": "2026-07-06"
+    },
+    "LRCX": {
+      "price": 351.41,
+      "asOf": "2026-07-06"
+    },
+    "GM": {
+      "price": 76.0,
+      "asOf": "2026-07-06"
+    },
+    "AVGO": {
+      "price": 360.45,
+      "asOf": "2026-07-06"
+    },
+    "FISV": {
+      "price": 52.33,
+      "asOf": "2026-07-06"
+    },
+    "ADBE": {
+      "price": 219.72,
+      "asOf": "2026-07-06"
+    },
+    "NVDA": {
+      "price": 194.83,
+      "asOf": "2026-07-06"
+    },
+    "SPOT": {
+      "price": 485.97,
+      "asOf": "2026-07-06"
+    },
+    "MRK": {
+      "price": 129.56,
+      "asOf": "2026-07-06"
+    },
+    "SCHW": {
+      "price": 97.0,
+      "asOf": "2026-07-06"
+    },
+    "JNJ": {
+      "price": 263.04,
+      "asOf": "2026-07-06"
+    },
+    "KHC": {
+      "price": 25.37,
+      "asOf": "2026-07-06"
+    },
+    "UNH": {
+      "price": 425.36,
+      "asOf": "2026-07-06"
+    },
+    "AMZN": {
+      "price": 242.67,
+      "asOf": "2026-07-06"
+    },
+    "WFC": {
+      "price": 85.51,
+      "asOf": "2026-07-06"
+    },
+    "FDX": {
+      "price": 313.0,
+      "asOf": "2026-07-06"
+    },
+    "V": {
+      "price": 362.13,
+      "asOf": "2026-07-06"
     }
   },
-  "pricesAsOf": "2026-07-05",
+  "pricesAsOf": "2026-07-06",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
