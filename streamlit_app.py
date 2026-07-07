@@ -396,9 +396,9 @@ def delta_str(d):
     return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
 
 
-tab1, tab2, tab6, tab3, tab4, tab5, tab7 = st.tabs(
+tab1, tab2, tab6, tab3, tab4, tab5, tab8, tab7 = st.tabs(
     ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
-     "🧩 Struktur", "👤 Investoren-Details", "🎯 Backtest"])
+     "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest"])
 
 # --- Tab 1: Konsens ---
 with tab1:
@@ -1031,6 +1031,62 @@ with tab5:
             if sold_n:
                 st.caption("Im Vorquartal gehalten, jetzt verkauft: "
                            + ", ".join(f"{s['name']}" for s in inv["sold"]))
+
+# --- Tab 8: Neue Meldungen (Filing-Tracker) ---
+with tab8:
+    invs = data["investors"]
+    target_q = rel_qe.strftime("%Y-%m-%d") if rel_qe else None
+    st.markdown("### Neue Meldungen — Filing-Tracker")
+    if not target_q or not invs:
+        st.info("Kein Meldefenster bestimmbar.")
+    else:
+        filed = [i for i in invs if i["reportDate"] >= target_q]
+        n_all = len(invs)
+        st.markdown(
+            f'<div class="callout"><b>Aktuelles Meldefenster: {rel_label}</b> '
+            f'(Quartalsende {rel_qe.strftime("%d.%m.%Y")}, Frist '
+            f'<b>{rel_deadline.strftime("%d.%m.%Y")}</b>). Bereits eingereicht: '
+            f'<b>{len(filed)} von {n_all}</b> Investoren. 13F-Meldungen treffen über das '
+            f'45-Tage-Fenster laufend ein — mit jedem Tagesimport kommen neue hinzu.</div>',
+            unsafe_allow_html=True)
+        st.progress(len(filed) / n_all if n_all else 0.0)
+
+        tc1, tc2 = st.columns(2)
+        only_open = tc1.toggle("Nur ausstehende Meldungen", value=False,
+                               help="Zeigt nur Investoren, deren aktuelle Meldung noch fehlt.")
+        only_super = tc2.toggle("Nur Super-Investoren (15)", value=False)
+
+        def _de(iso):
+            try:
+                return datetime.strptime(iso, "%Y-%m-%d").strftime("%d.%m.%Y")
+            except Exception:
+                return iso or "–"
+
+        rows = []
+        for i in invs:
+            has = i["reportDate"] >= target_q
+            is_super = i.get("group") == "super15"
+            if only_open and has:
+                continue
+            if only_super and not is_super:
+                continue
+            rows.append({
+                "Status": "✅" if has else "❌",
+                "Investor": i["person"] + (" ★" if is_super else ""),
+                "Gemeldetes Quartal": _de(i["reportDate"]),
+                "Eingereicht am": _de(i["filingDate"]),
+                "_has": has, "_fd": i["filingDate"] or "",
+            })
+        # Neu Eingereichte zuerst, dann nach jüngstem Einreichungsdatum
+        rows.sort(key=lambda r: (r["_has"], r["_fd"]), reverse=True)
+        df_new = pd.DataFrame([{k: v for k, v in r.items() if not k.startswith("_")}
+                               for r in rows])
+        st.dataframe(df_new, use_container_width=True, hide_index=True,
+                     height=min(760, 45 + 33 * len(df_new)))
+        st.caption("✅ = hat für das aktuelle Meldequartal bereits ein 13F eingereicht · "
+                   "❌ = Meldung steht noch aus · ★ = Super-Investor (PDF-15). "
+                   "Sortiert nach jüngstem Einreichungsdatum — neu eingegangene Meldungen "
+                   "rücken bei jedem Tagesimport nach oben.")
 
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
