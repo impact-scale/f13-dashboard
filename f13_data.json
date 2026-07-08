@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-07T09:39:38.798212+00:00",
+  "generatedAt": "2026-07-08T09:20:01.963254+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 26,
@@ -6466,8 +6466,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 120928500.0,
           "weight": 1.66,
           "isEtf": false
@@ -6718,8 +6718,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 120928500.0,
           "weight": 1.66,
           "isEtf": false
@@ -6820,8 +6820,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "prevValue": 120928500.0,
           "prevWeight": 1.66
         }
@@ -6921,8 +6921,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "prevValue": 120928500.0,
           "prevWeight": 1.66
         }
@@ -15142,8 +15142,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 12718500.0,
           "weight": 16.42,
           "isEtf": false
@@ -15152,8 +15152,8 @@
           "key": "056752",
           "name": "Baidu, Inc.",
           "ticker": "BIDU",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "China",
           "value": 10538750.0,
           "weight": 13.61,
           "isEtf": false
@@ -15162,8 +15162,8 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 10401000.0,
           "weight": 13.43,
           "isEtf": false
@@ -15192,8 +15192,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 7274250.0,
           "weight": 9.39,
           "isEtf": false
@@ -15312,8 +15312,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "prevValue": 12718500.0,
           "prevWeight": 16.42
         },
@@ -15321,8 +15321,8 @@
           "key": "056752",
           "name": "Baidu, Inc.",
           "ticker": "BIDU",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "China",
           "prevValue": 10538750.0,
           "prevWeight": 13.61
         },
@@ -15330,8 +15330,8 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "prevValue": 10401000.0,
           "prevWeight": 13.43
         },
@@ -15348,8 +15348,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "prevValue": 7274250.0,
           "prevWeight": 9.39
         },
@@ -15492,8 +15492,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 434718900.0,
           "shares": 3465000.0,
           "weight": 7.33,
@@ -15596,8 +15596,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 91962000.0,
           "shares": 900000.0,
           "weight": 1.55,
@@ -15689,8 +15689,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 434718900.0,
           "shares": 3465000.0,
           "weight": 7.33,
@@ -15806,8 +15806,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 91962000.0,
           "shares": 900000.0,
           "weight": 1.55,
@@ -15832,8 +15832,8 @@
           "key": "056752",
           "name": "Baidu, Inc.",
           "ticker": "BIDU",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "China",
           "value": 77113782.0,
           "shares": 692100.0,
           "weight": 1.3,
@@ -15923,8 +15923,8 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 38588850.0,
           "shares": 1305000.0,
           "weight": 0.65,
@@ -15951,8 +15951,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 753117926.0,
           "weight": 10.99,
           "isEtf": false
@@ -16061,8 +16061,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 201267250.0,
           "weight": 2.94,
           "isEtf": false
@@ -16141,8 +16141,8 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 119307220.0,
           "weight": 1.74,
           "isEtf": false
@@ -16181,8 +16181,8 @@
           "key": "056752",
           "name": "Baidu, Inc.",
           "ticker": "BIDU",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "China",
           "value": 75129500.0,
           "weight": 1.1,
           "isEtf": false
@@ -16203,8 +16203,8 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 753117926.0,
           "weight": 10.99,
           "isEtf": false
@@ -16313,8 +16313,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 201267250.0,
           "weight": 2.94,
           "isEtf": false
@@ -16393,8 +16393,8 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 119307220.0,
           "weight": 1.74,
           "isEtf": false
@@ -16433,8 +16433,8 @@
           "key": "056752",
           "name": "Baidu, Inc.",
           "ticker": "BIDU",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "China",
           "value": 75129500.0,
           "weight": 1.1,
           "isEtf": false
@@ -17404,8 +17404,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 470845440.0,
           "shares": 4608000.0,
           "weight": 14.71,
@@ -17575,8 +17575,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 470845440.0,
           "shares": 4608000.0,
           "weight": 14.71,
@@ -17753,8 +17753,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 522501120.0,
           "weight": 14.64,
           "isEtf": false
@@ -17835,8 +17835,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 522501120.0,
           "weight": 14.64,
           "isEtf": false
@@ -19807,8 +19807,8 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "USA",
           "value": 3157721879.0,
           "shares": 14627209.0,
           "weight": 1.74,
@@ -20139,8 +20139,8 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "USA",
           "value": 3049674675.0,
           "weight": 1.65,
           "isEtf": false
@@ -20391,8 +20391,8 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Communication Services",
+          "region": "USA",
           "value": 3049674675.0,
           "weight": 1.65,
           "isEtf": false
@@ -38989,8 +38989,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 42405109.0,
           "shares": 415004.0,
           "weight": 15.67,
@@ -39056,8 +39056,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 42405109.0,
           "shares": 415004.0,
           "weight": 15.67,
@@ -39114,8 +39114,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 47057304.0,
           "weight": 15.64,
           "isEtf": false
@@ -39166,8 +39166,8 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
-          "sector": "Sonstige",
-          "region": "–",
+          "sector": "Consumer Cyclical",
+          "region": "China",
           "value": 47057304.0,
           "weight": 15.64,
           "isEtf": false
@@ -41102,8 +41102,8 @@
       "key": "722304",
       "name": "PDD Holdings Inc.",
       "ticker": "PDD",
-      "sector": "Sonstige",
-      "region": "–",
+      "sector": "Consumer Cyclical",
+      "region": "China",
       "count": 3,
       "investors": [
         {
@@ -43068,6 +43068,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOG",
+          "sector": "Communication Services",
           "count": 19,
           "price": 66.85
         },
@@ -43075,6 +43076,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 12,
           "price": 205.25
         },
@@ -43082,6 +43084,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 226.5
         },
@@ -43089,6 +43092,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 10,
           "price": 157.7
         },
@@ -43096,6 +43100,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 10,
           "price": 212.1
         },
@@ -43103,6 +43108,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 8,
           "price": 92.39
         },
@@ -43110,6 +43116,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 7,
           "price": 298.59
         },
@@ -43117,6 +43124,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 7,
           "price": 32.36
         },
@@ -43124,6 +43132,7 @@
           "key": "949746",
           "name": "Wells Fargo & Company",
           "ticker": "WFC",
+          "sector": "Financial",
           "count": 6,
           "price": 53.8
         },
@@ -43131,6 +43140,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 6,
           "price": 187.9
         },
@@ -43138,6 +43148,7 @@
           "key": "00724F",
           "name": "Adobe Inc.",
           "ticker": "ADBE",
+          "sector": "Technology",
           "count": 6,
           "price": 329.81
         },
@@ -43145,6 +43156,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 6,
           "price": 293.98
         },
@@ -43152,6 +43164,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 35.22
         },
@@ -43159,6 +43172,7 @@
           "key": "46625H",
           "name": "Jpmorgan Chase & Co",
           "ticker": "JPM",
+          "sector": "Financial",
           "count": 5,
           "price": 139.4
         },
@@ -43166,6 +43180,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 5,
           "price": 42.15
         },
@@ -43173,6 +43188,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 5,
           "price": 162.64
         },
@@ -43180,6 +43196,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 53.78
         },
@@ -43187,6 +43204,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 4,
           "price": 73.41
         },
@@ -43194,6 +43212,7 @@
           "key": "025816",
           "name": "American Express Co",
           "ticker": "AXP",
+          "sector": "Financial",
           "count": 4,
           "price": 124.49
         },
@@ -43201,6 +43220,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 4,
           "price": 485.08
         }
@@ -43213,6 +43233,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 58.1
         },
@@ -43220,6 +43241,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 14,
           "price": 194.48
         },
@@ -43227,6 +43249,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 14,
           "price": 166.8
         },
@@ -43234,6 +43257,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 97.49
         },
@@ -43241,6 +43265,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 11,
           "price": 157.71
         },
@@ -43248,6 +43273,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 182.83
         },
@@ -43255,6 +43281,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 9,
           "price": 37.55
         },
@@ -43262,6 +43289,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 161.12
         },
@@ -43269,6 +43297,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 6,
           "price": 241.56
         },
@@ -43276,6 +43305,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 6,
           "price": 249.38
         },
@@ -43283,6 +43313,7 @@
           "key": "00724F",
           "name": "Adobe Inc.",
           "ticker": "ADBE",
+          "sector": "Technology",
           "count": 6,
           "price": 318.24
         },
@@ -43290,6 +43321,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 5,
           "price": 63.57
         },
@@ -43297,6 +43329,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 21.23
         },
@@ -43304,6 +43337,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 5,
           "price": 436.31
         },
@@ -43311,6 +43345,7 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 40.5
         },
@@ -43318,6 +43353,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 42.06
         },
@@ -43325,6 +43361,7 @@
           "key": "949746",
           "name": "Wells Fargo & Company",
           "ticker": "WFC",
+          "sector": "Financial",
           "count": 4,
           "price": 28.7
         },
@@ -43332,6 +43369,7 @@
           "key": "46625H",
           "name": "Jpmorgan Chase & Co",
           "ticker": "JPM",
+          "sector": "Financial",
           "count": 4,
           "price": 90.03
         },
@@ -43339,6 +43377,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 4,
           "price": 32.22
         },
@@ -43346,6 +43385,7 @@
           "key": "13645T",
           "name": "Canadian Pac Ry Ltd",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 219.59
         }
@@ -43358,6 +43398,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 70.9
         },
@@ -43365,6 +43406,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 16,
           "price": 227.07
         },
@@ -43372,6 +43414,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 14,
           "price": 137.94
         },
@@ -43379,6 +43422,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 215.7
         },
@@ -43386,6 +43430,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 10,
           "price": 203.51
         },
@@ -43393,6 +43438,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 178.51
         },
@@ -43400,6 +43446,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 193.17
         },
@@ -43407,6 +43454,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 8,
           "price": 45.5
         },
@@ -43414,6 +43462,7 @@
           "key": "70450Y",
           "name": "PayPal Holdings, Inc.",
           "ticker": "PYPL",
+          "sector": "Financial",
           "count": 8,
           "price": 174.23
         },
@@ -43421,6 +43470,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 7,
           "price": 295.7
         },
@@ -43428,6 +43478,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 6,
           "price": 510.04
         },
@@ -43435,6 +43486,7 @@
           "key": "46625H",
           "name": "Jpmorgan Chase & Co",
           "ticker": "JPM",
+          "sector": "Financial",
           "count": 6,
           "price": 94.06
         },
@@ -43442,6 +43494,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 5,
           "price": 91.2
         },
@@ -43449,6 +43502,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 5,
           "price": 36.53
         },
@@ -43456,6 +43510,7 @@
           "key": "00724F",
           "name": "Adobe Inc.",
           "ticker": "ADBE",
+          "sector": "Technology",
           "count": 5,
           "price": 435.31
         },
@@ -43463,6 +43518,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 23.75
         },
@@ -43470,6 +43526,7 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 60.18
         },
@@ -43477,6 +43534,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 33.74
         },
@@ -43484,6 +43542,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 294.95
         },
@@ -43491,6 +43550,7 @@
           "key": "893641",
           "name": "TransDigm Group INC",
           "ticker": "TDG",
+          "sector": "Sonstige",
           "count": 4,
           "price": 442.05
         }
@@ -43503,6 +43563,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 73.28
         },
@@ -43510,6 +43571,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 19,
           "price": 261.9
         },
@@ -43517,6 +43579,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 14,
           "price": 157.44
         },
@@ -43524,6 +43587,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 12,
           "price": 293.98
         },
@@ -43531,6 +43595,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 11,
           "price": 210.33
         },
@@ -43538,6 +43603,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 212.94
         },
@@ -43545,6 +43611,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 199.97
         },
@@ -43552,6 +43619,7 @@
           "key": "70450Y",
           "name": "PayPal Holdings, Inc.",
           "ticker": "PYPL",
+          "sector": "Financial",
           "count": 7,
           "price": 197.03
         },
@@ -43559,6 +43627,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 6,
           "price": 338.17
         },
@@ -43566,6 +43635,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 6,
           "price": 114.36
         },
@@ -43573,6 +43643,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 5,
           "price": 624.34
         },
@@ -43580,6 +43651,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 5,
           "price": 115.81
         },
@@ -43587,6 +43659,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 5,
           "price": 43.36
         },
@@ -43594,6 +43667,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 5,
           "price": 50.0
         },
@@ -43601,6 +43675,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 24.09
         },
@@ -43608,6 +43683,7 @@
           "key": "47215P",
           "name": "JD.com, Inc.",
           "ticker": "JD",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 77.61
         },
@@ -43615,6 +43691,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 36.23
         },
@@ -43622,6 +43699,7 @@
           "key": "931142",
           "name": "Walmart Inc.",
           "ticker": "WMT",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 46.64
         },
@@ -43629,6 +43707,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 311.77
         },
@@ -43636,6 +43715,7 @@
           "key": "254687",
           "name": "Walt Disney Co",
           "ticker": "DIS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 124.08
         }
@@ -43648,6 +43728,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 87.63
         },
@@ -43655,6 +43736,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 16,
           "price": 273.16
         },
@@ -43662,6 +43744,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 11,
           "price": 222.42
         },
@@ -43669,6 +43752,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 11,
           "price": 218.73
         },
@@ -43676,6 +43760,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 162.85
         },
@@ -43683,6 +43768,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 231.87
         },
@@ -43690,6 +43776,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 8,
           "price": 232.73
         },
@@ -43697,6 +43784,7 @@
           "key": "254687",
           "name": "Walt Disney Co",
           "ticker": "DIS",
+          "sector": "Communication Services",
           "count": 7,
           "price": 181.18
         },
@@ -43704,6 +43792,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 132.69
         },
@@ -43711,6 +43800,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 6,
           "price": 30.31
         },
@@ -43718,6 +43808,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 6,
           "price": 661.55
         },
@@ -43725,6 +43816,7 @@
           "key": "70450Y",
           "name": "PayPal Holdings, Inc.",
           "ticker": "PYPL",
+          "sector": "Financial",
           "count": 5,
           "price": 234.2
         },
@@ -43732,6 +43824,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 5,
           "price": 356.94
         },
@@ -43739,6 +43832,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 350.68
         },
@@ -43746,6 +43840,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 5,
           "price": 134.85
         },
@@ -43753,6 +43848,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 75.18
         },
@@ -43760,6 +43856,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 4,
           "price": 54.07
         },
@@ -43767,6 +43864,7 @@
           "key": "949746",
           "name": "Wells Fargo & Company",
           "ticker": "WFC",
+          "sector": "Financial",
           "count": 4,
           "price": 30.18
         },
@@ -43774,6 +43872,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 4,
           "price": 49.11
         },
@@ -43781,6 +43880,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 53.04
         }
@@ -43793,6 +43893,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 103.13
         },
@@ -43800,6 +43901,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 17,
           "price": 294.53
         },
@@ -43807,6 +43909,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 154.7
         },
@@ -43814,6 +43917,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 10,
           "price": 235.77
         },
@@ -43821,6 +43925,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 255.47
         },
@@ -43828,6 +43933,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 211.73
         },
@@ -43835,6 +43941,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 7,
           "price": 226.73
         },
@@ -43842,6 +43949,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 122.15
         },
@@ -43849,6 +43957,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 6,
           "price": 617.02
         },
@@ -43856,6 +43965,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 38.69
         },
@@ -43863,6 +43973,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 372.07
         },
@@ -43870,6 +43981,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 88.21
         },
@@ -43877,6 +43989,7 @@
           "key": "37045V",
           "name": "General Motors Co",
           "ticker": "GM",
+          "sector": "Sonstige",
           "count": 4,
           "price": 57.46
         },
@@ -43884,6 +43997,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 26.62
         },
@@ -43891,6 +44005,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 65.18
         },
@@ -43898,6 +44013,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 4,
           "price": 52.17
         },
@@ -43905,6 +44021,7 @@
           "key": "70450Y",
           "name": "PayPal Holdings, Inc.",
           "ticker": "PYPL",
+          "sector": "Financial",
           "count": 4,
           "price": 242.84
         },
@@ -43912,6 +44029,7 @@
           "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
+          "sector": "Sonstige",
           "count": 4,
           "price": 82.19
         },
@@ -43919,6 +44037,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 125.29
         },
@@ -43926,6 +44045,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 4,
           "price": 54.51
         }
@@ -43938,6 +44058,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 122.09
         },
@@ -43945,6 +44066,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 347.71
         },
@@ -43952,6 +44074,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 172.01
         },
@@ -43959,6 +44082,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 10,
           "price": 270.9
         },
@@ -43966,6 +44090,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 277.92
         },
@@ -43973,6 +44098,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 9,
           "price": 226.78
         },
@@ -43980,6 +44106,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 233.82
         },
@@ -43987,6 +44114,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 136.96
         },
@@ -43994,6 +44122,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 41.23
         },
@@ -44001,6 +44130,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 5,
           "price": 721.45
         },
@@ -44008,6 +44138,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 84.98
         },
@@ -44015,6 +44146,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 4,
           "price": 53.44
         },
@@ -44022,6 +44154,7 @@
           "key": "37045V",
           "name": "General Motors Co",
           "ticker": "GM",
+          "sector": "Sonstige",
           "count": 4,
           "price": 59.17
         },
@@ -44029,6 +44162,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 72.81
         },
@@ -44036,6 +44170,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 244.27
         },
@@ -44043,6 +44178,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 4,
           "price": 365.09
         },
@@ -44050,6 +44186,7 @@
           "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
+          "sector": "Sonstige",
           "count": 4,
           "price": 82.82
         },
@@ -44057,6 +44194,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 400.44
         },
@@ -44064,6 +44202,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 3,
           "price": 54.11
         },
@@ -44071,6 +44210,7 @@
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
+          "sector": "Financial",
           "count": 3,
           "price": 362.37
         }
@@ -44083,6 +44223,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 133.68
         },
@@ -44090,6 +44231,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 17,
           "price": 339.39
         },
@@ -44097,6 +44239,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 281.92
         },
@@ -44104,6 +44247,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 164.25
         },
@@ -44111,6 +44255,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 272.94
         },
@@ -44118,6 +44263,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 222.75
         },
@@ -44125,6 +44271,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 141.5
         },
@@ -44132,6 +44279,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 42.45
         },
@@ -44139,6 +44287,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 5,
           "price": 727.56
         },
@@ -44146,6 +44295,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 72.84
         },
@@ -44153,6 +44303,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 148.05
         },
@@ -44160,6 +44311,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 4,
           "price": 52.42
         },
@@ -44167,6 +44319,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 271.22
         },
@@ -44174,6 +44327,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 4,
           "price": 347.68
         },
@@ -44181,6 +44335,7 @@
           "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
+          "sector": "Sonstige",
           "count": 4,
           "price": 86.06
         },
@@ -44188,6 +44343,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 390.74
         },
@@ -44195,6 +44351,7 @@
           "key": "931142",
           "name": "Walmart Inc.",
           "ticker": "WMT",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 46.46
         },
@@ -44202,6 +44359,7 @@
           "key": "254687",
           "name": "Walt Disney Co",
           "ticker": "DIS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 169.17
         },
@@ -44209,6 +44367,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 127.76
         },
@@ -44216,6 +44375,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 4,
           "price": 70.98
         }
@@ -44228,6 +44388,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 144.85
         },
@@ -44235,6 +44396,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 336.35
         },
@@ -44242,6 +44404,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 336.32
         },
@@ -44249,6 +44412,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 166.72
         },
@@ -44256,6 +44420,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 11,
           "price": 299.0
         },
@@ -44263,6 +44428,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 216.71
         },
@@ -44270,6 +44436,7 @@
           "key": "37045V",
           "name": "General Motors Co",
           "ticker": "GM",
+          "sector": "Sonstige",
           "count": 7,
           "price": 58.63
         },
@@ -44277,6 +44444,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 177.57
         },
@@ -44284,6 +44452,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 5,
           "price": 59.21
         },
@@ -44291,6 +44460,7 @@
           "key": "20030N",
           "name": "Comcast Corp",
           "ticker": "CMCSA",
+          "sector": "Communication Services",
           "count": 5,
           "price": 47.17
         },
@@ -44298,6 +44468,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 5,
           "price": 359.32
         },
@@ -44305,6 +44476,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 502.14
         },
@@ -44312,6 +44484,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 93.15
         },
@@ -44319,6 +44492,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 44.49
         },
@@ -44326,6 +44500,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 4,
           "price": 651.97
         },
@@ -44333,6 +44508,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 84.1
         },
@@ -44340,6 +44516,7 @@
           "key": "76954A",
           "name": "Rivian Automotive INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 102.33
         },
@@ -44347,6 +44524,7 @@
           "key": "13645T",
           "name": "Canadian Pac Ry Ltd",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 71.94
         },
@@ -44354,6 +44532,7 @@
           "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
+          "sector": "Sonstige",
           "count": 4,
           "price": 79.03
         },
@@ -44361,6 +44540,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 171.07
         }
@@ -44373,6 +44553,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 139.07
         },
@@ -44380,6 +44561,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 14,
           "price": 222.36
         },
@@ -44387,6 +44569,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 308.31
         },
@@ -44394,6 +44577,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 163.0
         },
@@ -44401,6 +44585,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 352.91
         },
@@ -44408,6 +44593,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 10,
           "price": 221.77
         },
@@ -44415,6 +44601,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 174.61
         },
@@ -44422,6 +44609,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 84.31
         },
@@ -44429,6 +44617,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 5,
           "price": 357.38
         },
@@ -44436,6 +44625,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 5,
           "price": 77.89
         },
@@ -44443,6 +44633,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 41.22
         },
@@ -44450,6 +44641,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 56.74
         },
@@ -44457,6 +44649,7 @@
           "key": "16119P",
           "name": "Charter Communications, Inc.",
           "ticker": "CHTR",
+          "sector": "Communication Services",
           "count": 4,
           "price": 545.52
         },
@@ -44464,6 +44657,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 186.45
         },
@@ -44471,6 +44665,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 212.32
         },
@@ -44478,6 +44673,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 128.35
         },
@@ -44485,6 +44681,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 93.94
         },
@@ -44492,6 +44689,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 509.97
         },
@@ -44499,6 +44697,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 108.8
         },
@@ -44506,6 +44705,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 3,
           "price": 62.0
         }
@@ -44518,6 +44718,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 108.96
         },
@@ -44525,6 +44726,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 14,
           "price": 161.25
         },
@@ -44532,6 +44734,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 12,
           "price": 256.83
         },
@@ -44539,6 +44742,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 273.02
         },
@@ -44546,6 +44750,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 10,
           "price": 106.21
         },
@@ -44553,6 +44758,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 196.89
         },
@@ -44560,6 +44766,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 7,
           "price": 315.48
         },
@@ -44567,6 +44774,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 136.72
         },
@@ -44574,6 +44782,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 31.13
         },
@@ -44581,6 +44790,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 5,
           "price": 58.88
         },
@@ -44588,6 +44798,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 63.18
         },
@@ -44595,6 +44806,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 5,
           "price": 165.04
         },
@@ -44602,6 +44814,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 513.63
         },
@@ -44609,6 +44822,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 113.68
         },
@@ -44616,6 +44830,7 @@
           "key": "872590",
           "name": "T-Mobile US, Inc.",
           "ticker": "TMUS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 134.54
         },
@@ -44623,6 +44838,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 90.48
         },
@@ -44630,6 +44846,7 @@
           "key": "23331A",
           "name": "Horton D R Inc",
           "ticker": "DHI",
+          "sector": "Sonstige",
           "count": 4,
           "price": 66.19
         },
@@ -44637,6 +44854,7 @@
           "key": "595112",
           "name": "Micron Technology Inc",
           "ticker": "MU",
+          "sector": "Technology",
           "count": 4,
           "price": 55.28
         },
@@ -44644,6 +44862,7 @@
           "key": "29273V",
           "name": "Energy Transfer L P",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 9.98
         },
@@ -44651,6 +44870,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 3,
           "price": 62.91
         }
@@ -44663,6 +44883,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 95.65
         },
@@ -44670,6 +44891,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 232.9
         },
@@ -44677,6 +44899,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 113.0
         },
@@ -44684,6 +44907,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 12,
           "price": 135.68
         },
@@ -44691,6 +44915,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 267.02
         },
@@ -44698,6 +44923,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 10,
           "price": 177.65
         },
@@ -44705,6 +44931,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 138.2
         },
@@ -44712,6 +44939,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 6,
           "price": 284.34
         },
@@ -44719,6 +44947,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 6,
           "price": 143.84
         },
@@ -44726,6 +44955,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 30.2
         },
@@ -44733,6 +44963,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 71.87
         },
@@ -44740,6 +44971,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 505.04
         },
@@ -44747,6 +44979,7 @@
           "key": "70450Y",
           "name": "PayPal Holdings, Inc.",
           "ticker": "PYPL",
+          "sector": "Financial",
           "count": 4,
           "price": 86.07
         },
@@ -44754,6 +44987,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 56.02
         },
@@ -44761,6 +44995,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 61.45
         },
@@ -44768,6 +45003,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 4,
           "price": 23.54
         },
@@ -44775,6 +45011,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 163.36
         },
@@ -44782,6 +45019,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 4,
           "price": 26.5
         },
@@ -44789,6 +45027,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 66.02
         },
@@ -44796,6 +45035,7 @@
           "key": "29273V",
           "name": "Energy Transfer L P",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 11.03
         }
@@ -44808,6 +45048,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 88.23
         },
@@ -44815,6 +45056,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 12,
           "price": 239.82
         },
@@ -44822,6 +45064,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 12,
           "price": 84.0
         },
@@ -44829,6 +45072,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 11,
           "price": 120.34
         },
@@ -44836,6 +45080,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 308.9
         },
@@ -44843,6 +45088,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 10,
           "price": 207.76
         },
@@ -44850,6 +45096,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 7,
           "price": 347.73
         },
@@ -44857,6 +45104,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 129.93
         },
@@ -44864,6 +45112,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 6,
           "price": 530.18
         },
@@ -44871,6 +45120,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 6,
           "price": 132.59
         },
@@ -44878,6 +45128,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 83.26
         },
@@ -44885,6 +45136,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 88.09
         },
@@ -44892,6 +45144,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 33.12
         },
@@ -44899,6 +45152,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 62.99
         },
@@ -44906,6 +45160,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 139.56
         },
@@ -44913,6 +45168,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 176.65
         },
@@ -44920,6 +45176,7 @@
           "key": "64110L",
           "name": "Netflix Inc",
           "ticker": "NFLX",
+          "sector": "Communication Services",
           "count": 4,
           "price": 29.49
         },
@@ -44927,6 +45184,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 60.89
         },
@@ -44934,6 +45192,7 @@
           "key": "29273V",
           "name": "Energy Transfer L P",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 11.87
         },
@@ -44941,6 +45200,7 @@
           "key": "254687",
           "name": "Walt Disney Co",
           "ticker": "DIS",
+          "sector": "Communication Services",
           "count": 4,
           "price": 86.88
         }
@@ -44953,6 +45213,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 26,
           "price": 103.73
         },
@@ -44960,6 +45221,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 16,
           "price": 211.94
         },
@@ -44967,6 +45229,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 288.3
         },
@@ -44974,6 +45237,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 103.29
         },
@@ -44981,6 +45245,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 308.77
         },
@@ -44988,6 +45253,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 225.46
         },
@@ -44995,6 +45261,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 8,
           "price": 199.78
         },
@@ -45002,6 +45269,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 164.9
         },
@@ -45009,6 +45277,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 6,
           "price": 363.41
         },
@@ -45016,6 +45285,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 5,
           "price": 184.12
         },
@@ -45023,6 +45293,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 5,
           "price": 27.78
         },
@@ -45030,6 +45301,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 5,
           "price": 472.59
         },
@@ -45037,6 +45309,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 102.18
         },
@@ -45044,6 +45317,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 28.6
         },
@@ -45051,6 +45325,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 62.43
         },
@@ -45058,6 +45333,7 @@
           "key": "369604",
           "name": "General Electric Co",
           "ticker": "GE",
+          "sector": "Industrials",
           "count": 4,
           "price": 76.3
         },
@@ -45065,6 +45341,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 113.03
         },
@@ -45072,6 +45349,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 4,
           "price": 93.02
         },
@@ -45079,6 +45357,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 155.0
         },
@@ -45086,6 +45365,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 64.28
         }
@@ -45098,6 +45378,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 119.7
         },
@@ -45105,6 +45386,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 14,
           "price": 340.54
         },
@@ -45112,6 +45394,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 130.36
         },
@@ -45119,6 +45402,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 13,
           "price": 286.98
         },
@@ -45126,6 +45410,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 341.0
         },
@@ -45133,6 +45418,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 9,
           "price": 237.48
         },
@@ -45140,6 +45426,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 8,
           "price": 42.3
         },
@@ -45147,6 +45434,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 7,
           "price": 100.92
         },
@@ -45154,6 +45442,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 193.97
         },
@@ -45161,6 +45450,7 @@
           "key": "369604",
           "name": "General Electric Co",
           "ticker": "GE",
+          "sector": "Industrials",
           "count": 5,
           "price": 87.67
         },
@@ -45168,6 +45458,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 5,
           "price": 199.76
         },
@@ -45175,6 +45466,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 5,
           "price": 393.3
         },
@@ -45182,6 +45474,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 58.8
         },
@@ -45189,6 +45482,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 126.15
         },
@@ -45196,6 +45490,7 @@
           "key": "68389X",
           "name": "Oracle Corp",
           "ticker": "ORCL",
+          "sector": "Technology",
           "count": 4,
           "price": 119.09
         },
@@ -45203,6 +45498,7 @@
           "key": "00724F",
           "name": "Adobe Inc.",
           "ticker": "ADBE",
+          "sector": "Technology",
           "count": 4,
           "price": 488.99
         },
@@ -45210,6 +45506,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 4,
           "price": 212.77
         },
@@ -45217,6 +45514,7 @@
           "key": "512807",
           "name": "Lam Research CORP",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 642.86
         },
@@ -45224,6 +45522,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 165.52
         },
@@ -45231,6 +45530,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 83.7
         }
@@ -45243,6 +45543,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 23,
           "price": 130.86
         },
@@ -45250,6 +45551,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 16,
           "price": 300.21
         },
@@ -45257,6 +45559,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 14,
           "price": 315.75
         },
@@ -45264,6 +45567,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 127.12
         },
@@ -45271,6 +45575,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 11,
           "price": 350.3
         },
@@ -45278,6 +45583,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 9,
           "price": 230.01
         },
@@ -45285,6 +45591,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 7,
           "price": 43.5
         },
@@ -45292,6 +45599,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 5,
           "price": 171.21
         },
@@ -45299,6 +45607,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 5,
           "price": 213.47
         },
@@ -45306,6 +45615,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 5,
           "price": 395.91
         },
@@ -45313,6 +45623,7 @@
           "key": "369604",
           "name": "General Electric Co",
           "ticker": "GE",
+          "sector": "Industrials",
           "count": 4,
           "price": 88.23
         },
@@ -45320,6 +45631,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 202.78
         },
@@ -45327,6 +45639,7 @@
           "key": "91324P",
           "name": "Unitedhealth Group Inc",
           "ticker": "UNH",
+          "sector": "Healthcare",
           "count": 4,
           "price": 504.19
         },
@@ -45334,6 +45647,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 4,
           "price": 219.95
         },
@@ -45341,6 +45655,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 123.36
         },
@@ -45348,6 +45663,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 4,
           "price": 45.99
         },
@@ -45355,6 +45671,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 70.73
         },
@@ -45362,6 +45679,7 @@
           "key": "136375",
           "name": "Canadian National Railway Co",
           "ticker": "CNI",
+          "sector": "Sonstige",
           "count": 3,
           "price": 108.33
         },
@@ -45369,6 +45687,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 3,
           "price": 64.88
         },
@@ -45376,6 +45695,7 @@
           "key": "13646K",
           "name": "Canadian Pacific Kansas City Ltd",
           "ticker": "CP",
+          "sector": "Sonstige",
           "count": 3,
           "price": 74.41
         }
@@ -45388,6 +45708,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 139.69
         },
@@ -45395,6 +45716,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 15,
           "price": 151.94
         },
@@ -45402,6 +45724,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 353.96
         },
@@ -45409,6 +45732,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 13,
           "price": 376.04
         },
@@ -45416,6 +45740,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 356.66
         },
@@ -45423,6 +45748,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 7,
           "price": 49.52
         },
@@ -45430,6 +45756,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 6,
           "price": 260.35
         },
@@ -45437,6 +45764,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 6,
           "price": 263.14
         },
@@ -45444,6 +45772,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 6,
           "price": 203.84
         },
@@ -45451,6 +45780,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 5,
           "price": 192.53
         },
@@ -45458,6 +45788,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 5,
           "price": 231.34
         },
@@ -45465,6 +45796,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 5,
           "price": 156.74
         },
@@ -45472,6 +45804,7 @@
           "key": "007903",
           "name": "Advanced Micro Devices Inc",
           "ticker": "AMD",
+          "sector": "Technology",
           "count": 4,
           "price": 147.41
         },
@@ -45479,6 +45812,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 4,
           "price": 426.51
         },
@@ -45486,6 +45820,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 141.89
         },
@@ -45493,6 +45828,7 @@
           "key": "68389X",
           "name": "Oracle Corp",
           "ticker": "ORCL",
+          "sector": "Technology",
           "count": 4,
           "price": 105.43
         },
@@ -45500,6 +45836,7 @@
           "key": "136375",
           "name": "Canadian National Railway Co",
           "ticker": "CNI",
+          "sector": "Sonstige",
           "count": 3,
           "price": 125.63
         },
@@ -45507,6 +45844,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 3,
           "price": 68.8
         },
@@ -45514,6 +45852,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 3,
           "price": 132.84
         },
@@ -45521,6 +45860,7 @@
           "key": "13646K",
           "name": "Canadian Pacific Kansas City Ltd",
           "ticker": "CP",
+          "sector": "Sonstige",
           "count": 3,
           "price": 79.06
         }
@@ -45533,6 +45873,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 150.93
         },
@@ -45540,6 +45881,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 15,
           "price": 420.72
         },
@@ -45547,6 +45889,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 180.38
         },
@@ -45554,6 +45897,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 13,
           "price": 485.58
         },
@@ -45561,6 +45905,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 420.52
         },
@@ -45568,6 +45913,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 7,
           "price": 171.48
         },
@@ -45575,6 +45921,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 7,
           "price": 90.36
         },
@@ -45582,6 +45929,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 279.08
         },
@@ -45589,6 +45937,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 6,
           "price": 136.05
         },
@@ -45596,6 +45945,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 6,
           "price": 233.47
         },
@@ -45603,6 +45953,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 5,
           "price": 249.72
         },
@@ -45610,6 +45961,7 @@
           "key": "191216",
           "name": "Coca Cola Co",
           "ticker": "KO",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 61.18
         },
@@ -45617,6 +45969,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 64.99
         },
@@ -45624,6 +45977,7 @@
           "key": "007903",
           "name": "Advanced Micro Devices Inc",
           "ticker": "AMD",
+          "sector": "Technology",
           "count": 4,
           "price": 180.49
         },
@@ -45631,6 +45985,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 4,
           "price": 132.54
         },
@@ -45638,6 +45993,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 4,
           "price": 158.19
         },
@@ -45645,6 +46001,7 @@
           "key": "58933Y",
           "name": "Merck & Co., Inc.",
           "ticker": "MRK",
+          "sector": "Healthcare",
           "count": 4,
           "price": 131.95
         },
@@ -45652,6 +46009,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 3,
           "price": 37.92
         },
@@ -45659,6 +46017,7 @@
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
+          "sector": "Financial",
           "count": 3,
           "price": 393.03
         },
@@ -45666,6 +46025,7 @@
           "key": "136375",
           "name": "Canadian National Railway Co",
           "ticker": "CNI",
+          "sector": "Sonstige",
           "count": 3,
           "price": 131.71
         }
@@ -45678,6 +46038,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 182.15
         },
@@ -45685,6 +46046,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 15,
           "price": 446.95
         },
@@ -45692,6 +46054,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 15,
           "price": 193.25
         },
@@ -45699,6 +46062,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 504.22
         },
@@ -45706,6 +46070,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 406.8
         },
@@ -45713,6 +46078,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 9,
           "price": 210.62
         },
@@ -45720,6 +46086,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 262.47
         },
@@ -45727,6 +46094,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 6,
           "price": 123.54
         },
@@ -45734,6 +46102,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 6,
           "price": 173.81
         },
@@ -45741,6 +46110,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 5,
           "price": 241.61
         },
@@ -45748,6 +46118,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 5,
           "price": 146.16
         },
@@ -45755,6 +46126,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 63.03
         },
@@ -45762,6 +46134,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 149.04
         },
@@ -45769,6 +46142,7 @@
           "key": "007903",
           "name": "Advanced Micro Devices Inc",
           "ticker": "AMD",
+          "sector": "Technology",
           "count": 4,
           "price": 162.21
         },
@@ -45776,6 +46150,7 @@
           "key": "718172",
           "name": "Philip Morris International Inc.",
           "ticker": "PM",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 101.33
         },
@@ -45783,6 +46158,7 @@
           "key": "747525",
           "name": "Qualcomm Inc",
           "ticker": "QCOM",
+          "sector": "Technology",
           "count": 4,
           "price": 199.18
         },
@@ -45790,6 +46166,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 4,
           "price": 249.85
         },
@@ -45797,6 +46174,7 @@
           "key": "01609W",
           "name": "Alibaba Group Holding Ltd",
           "ticker": "BABA",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 72.0
         },
@@ -45804,6 +46182,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 73.34
         },
@@ -45811,6 +46190,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 3,
           "price": 39.77
         }
@@ -45823,6 +46203,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 165.85
         },
@@ -45830,6 +46211,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 572.44
         },
@@ -45837,6 +46219,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 14,
           "price": 430.3
         },
@@ -45844,6 +46227,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 186.33
         },
@@ -45851,6 +46235,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 460.26
         },
@@ -45858,6 +46243,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 9,
           "price": 233.0
         },
@@ -45865,6 +46251,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 274.95
         },
@@ -45872,6 +46259,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 7,
           "price": 173.67
         },
@@ -45879,6 +46267,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 6,
           "price": 121.44
         },
@@ -45886,6 +46275,7 @@
           "key": "478160",
           "name": "Johnson & Johnson",
           "ticker": "JNJ",
+          "sector": "Healthcare",
           "count": 5,
           "price": 162.06
         },
@@ -45893,6 +46283,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 39.68
         },
@@ -45900,6 +46291,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 51.54
         },
@@ -45907,6 +46299,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 179.65
         },
@@ -45914,6 +46307,7 @@
           "key": "007903",
           "name": "Advanced Micro Devices Inc",
           "ticker": "AMD",
+          "sector": "Technology",
           "count": 4,
           "price": 164.08
         },
@@ -45921,6 +46315,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 4,
           "price": 172.5
         },
@@ -45928,6 +46323,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 220.53
         },
@@ -45935,6 +46331,7 @@
           "key": "718172",
           "name": "Philip Morris International Inc.",
           "ticker": "PM",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 121.4
         },
@@ -45942,6 +46339,7 @@
           "key": "92840M",
           "name": "Vistra Corp.",
           "ticker": "VST",
+          "sector": "Sonstige",
           "count": 4,
           "price": 118.54
         },
@@ -45949,6 +46347,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 4,
           "price": 278.02
         },
@@ -45956,6 +46355,7 @@
           "key": "58933Y",
           "name": "Merck & Co., Inc.",
           "ticker": "MRK",
+          "sector": "Healthcare",
           "count": 4,
           "price": 113.56
         }
@@ -45968,6 +46368,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 20,
           "price": 189.3
         },
@@ -45975,6 +46376,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 16,
           "price": 421.5
         },
@@ -45982,6 +46384,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 16,
           "price": 219.39
         },
@@ -45989,6 +46392,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 585.51
         },
@@ -45996,6 +46400,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 453.28
         },
@@ -46003,6 +46408,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 316.04
         },
@@ -46010,6 +46416,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 8,
           "price": 197.49
         },
@@ -46017,6 +46424,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 250.42
         },
@@ -46024,6 +46432,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 6,
           "price": 134.29
         },
@@ -46031,6 +46440,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 6,
           "price": 334.33
         },
@@ -46038,6 +46448,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 5,
           "price": 49.41
         },
@@ -46045,6 +46456,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 5,
           "price": 229.55
         },
@@ -46052,6 +46464,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 74.01
         },
@@ -46059,6 +46472,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 205.42
         },
@@ -46066,6 +46480,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 226.7
         },
@@ -46073,6 +46488,7 @@
           "key": "G3643J",
           "name": "Flutter Entmt PLC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 258.45
         },
@@ -46080,6 +46496,7 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 96.99
         },
@@ -46087,6 +46504,7 @@
           "key": "143130",
           "name": "Carmax INC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 4,
           "price": 81.76
         },
@@ -46094,6 +46512,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 3,
           "price": 43.95
         },
@@ -46101,6 +46520,7 @@
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
+          "sector": "Financial",
           "count": 3,
           "price": 473.37
         }
@@ -46113,6 +46533,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 18,
           "price": 154.64
         },
@@ -46120,6 +46541,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 16,
           "price": 576.36
         },
@@ -46127,6 +46549,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 14,
           "price": 375.39
         },
@@ -46134,6 +46557,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 11,
           "price": 190.26
         },
@@ -46141,6 +46565,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 11,
           "price": 532.58
         },
@@ -46148,6 +46573,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 350.46
         },
@@ -46155,6 +46581,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 8,
           "price": 166.0
         },
@@ -46162,6 +46589,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 222.13
         },
@@ -46169,6 +46597,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 6,
           "price": 108.38
         },
@@ -46176,6 +46605,7 @@
           "key": "G3643J",
           "name": "Flutter Entmt PLC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 6,
           "price": 221.55
         },
@@ -46183,6 +46613,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 5,
           "price": 220.83
         },
@@ -46190,6 +46621,7 @@
           "key": "532457",
           "name": "ELI LILLY & Co",
           "ticker": "LLY",
+          "sector": "Healthcare",
           "count": 5,
           "price": 825.91
         },
@@ -46197,6 +46629,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 4,
           "price": 78.28
         },
@@ -46204,6 +46637,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 49.36
         },
@@ -46211,6 +46645,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 184.28
         },
@@ -46218,6 +46653,7 @@
           "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
+          "sector": "Financial",
           "count": 4,
           "price": 179.3
         },
@@ -46225,6 +46661,7 @@
           "key": "L8681T",
           "name": "Spotify Technology S.A.",
           "ticker": "SPOT",
+          "sector": "Communication Services",
           "count": 4,
           "price": 550.03
         },
@@ -46232,6 +46669,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 268.36
         },
@@ -46239,6 +46677,7 @@
           "key": "235851",
           "name": "Danaher Corp",
           "ticker": "DHR",
+          "sector": "Healthcare",
           "count": 4,
           "price": 205.0
         },
@@ -46246,6 +46685,7 @@
           "key": "722304",
           "name": "PDD Holdings Inc.",
           "ticker": "PDD",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 118.35
         }
@@ -46258,6 +46698,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 18,
           "price": 176.23
         },
@@ -46265,6 +46706,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 16,
           "price": 497.41
         },
@@ -46272,6 +46714,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 15,
           "price": 219.39
         },
@@ -46279,6 +46722,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 14,
           "price": 738.09
         },
@@ -46286,6 +46730,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 10,
           "price": 485.77
         },
@@ -46293,6 +46738,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 9,
           "price": 157.99
         },
@@ -46300,6 +46746,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 9,
           "price": 226.49
         },
@@ -46307,6 +46754,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 355.05
         },
@@ -46314,6 +46762,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 6,
           "price": 205.17
         },
@@ -46321,6 +46770,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 6,
           "price": 275.65
         },
@@ -46328,6 +46778,7 @@
           "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
+          "sector": "Financial",
           "count": 6,
           "price": 212.76
         },
@@ -46335,6 +46786,7 @@
           "key": "G3643J",
           "name": "Flutter Entmt PLC",
           "ticker": "",
+          "sector": "Sonstige",
           "count": 6,
           "price": 285.76
         },
@@ -46342,6 +46794,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 5,
           "price": 47.32
         },
@@ -46349,6 +46802,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 91.24
         },
@@ -46356,6 +46810,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 5,
           "price": 231.57
         },
@@ -46363,6 +46818,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 42.01
         },
@@ -46370,6 +46826,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 4,
           "price": 561.94
         },
@@ -46377,6 +46834,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 4,
           "price": 93.3
         },
@@ -46384,6 +46842,7 @@
           "key": "22160N",
           "name": "Costar Group, Inc.",
           "ticker": "CSGP",
+          "sector": "Sonstige",
           "count": 4,
           "price": 80.4
         },
@@ -46391,6 +46850,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 4,
           "price": 272.69
         }
@@ -46403,6 +46863,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 21,
           "price": 243.1
         },
@@ -46410,6 +46871,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 17,
           "price": 517.95
         },
@@ -46417,6 +46879,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 15,
           "price": 734.38
         },
@@ -46424,6 +46887,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 14,
           "price": 219.57
         },
@@ -46431,6 +46895,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 10,
           "price": 186.58
         },
@@ -46438,6 +46903,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 10,
           "price": 279.29
         },
@@ -46445,6 +46911,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 502.74
         },
@@ -46452,6 +46919,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 341.38
         },
@@ -46459,6 +46927,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 8,
           "price": 329.91
         },
@@ -46466,6 +46935,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 7,
           "price": 254.63
         },
@@ -46473,6 +46943,7 @@
           "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
+          "sector": "Financial",
           "count": 6,
           "price": 212.58
         },
@@ -46480,6 +46951,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 5,
           "price": 47.25
         },
@@ -46487,6 +46959,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 95.47
         },
@@ -46494,6 +46967,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 5,
           "price": 237.0
         },
@@ -46501,6 +46975,7 @@
           "key": "060505",
           "name": "Bank Of America Corp",
           "ticker": "BAC",
+          "sector": "Financial",
           "count": 4,
           "price": 51.59
         },
@@ -46508,6 +46983,7 @@
           "key": "337738",
           "name": "Fiserv Inc",
           "ticker": "FISV",
+          "sector": "Sonstige",
           "count": 4,
           "price": 128.93
         },
@@ -46515,6 +46991,7 @@
           "key": "11271J",
           "name": "BROOKFIELD Corp",
           "ticker": "BN",
+          "sector": "Sonstige",
           "count": 4,
           "price": 45.72
         },
@@ -46522,6 +46999,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 190.02
         },
@@ -46529,6 +47007,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 215.97
         },
@@ -46536,6 +47015,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 4,
           "price": 97.97
         }
@@ -46548,6 +47028,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 24,
           "price": 313.0
         },
@@ -46555,6 +47036,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 18,
           "price": 483.62
         },
@@ -46562,6 +47044,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 16,
           "price": 230.82
         },
@@ -46569,6 +47052,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 12,
           "price": 660.09
         },
@@ -46576,6 +47060,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 10,
           "price": 303.89
         },
@@ -46583,6 +47068,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 9,
           "price": 186.5
         },
@@ -46590,6 +47076,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 502.65
         },
@@ -46597,6 +47084,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 8,
           "price": 350.71
         },
@@ -46604,6 +47092,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 8,
           "price": 346.1
         },
@@ -46611,6 +47100,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 7,
           "price": 271.86
         },
@@ -46618,6 +47108,7 @@
           "key": "57636Q",
           "name": "Mastercard Inc",
           "ticker": "MA",
+          "sector": "Financial",
           "count": 6,
           "price": 570.88
         },
@@ -46625,6 +47116,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 99.91
         },
@@ -46632,6 +47124,7 @@
           "key": "79466L",
           "name": "Salesforce, Inc.",
           "ticker": "CRM",
+          "sector": "Technology",
           "count": 5,
           "price": 264.91
         },
@@ -46639,6 +47132,7 @@
           "key": "14040H",
           "name": "Capital One Financial Corp",
           "ticker": "COF",
+          "sector": "Financial",
           "count": 5,
           "price": 242.36
         },
@@ -46646,6 +47140,7 @@
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
+          "sector": "Financial",
           "count": 4,
           "price": 510.85
         },
@@ -46653,6 +47148,7 @@
           "key": "674599",
           "name": "Occidental Petroleum Corp",
           "ticker": "OXY",
+          "sector": "Energy",
           "count": 4,
           "price": 41.12
         },
@@ -46660,6 +47156,7 @@
           "key": "N07059",
           "name": "Asml Holding NV",
           "ticker": "ASML",
+          "sector": "Technology",
           "count": 4,
           "price": 1069.86
         },
@@ -46667,6 +47164,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 232.76
         },
@@ -46674,6 +47172,7 @@
           "key": "11271J",
           "name": "BROOKFIELD Corp",
           "ticker": "BN",
+          "sector": "Sonstige",
           "count": 4,
           "price": 45.89
         },
@@ -46681,6 +47180,7 @@
           "key": "09857L",
           "name": "Booking Holdings Inc.",
           "ticker": "BKNG",
+          "sector": "Consumer Cyclical",
           "count": 4,
           "price": 214.21
         }
@@ -46693,6 +47193,7 @@
           "key": "02079K",
           "name": "Alphabet Inc.",
           "ticker": "GOOGL",
+          "sector": "Communication Services",
           "count": 22,
           "price": 287.56
         },
@@ -46700,6 +47201,7 @@
           "key": "023135",
           "name": "Amazon Com Inc",
           "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "count": 13,
           "price": 208.27
         },
@@ -46707,6 +47209,7 @@
           "key": "594918",
           "name": "Microsoft Corp",
           "ticker": "MSFT",
+          "sector": "Technology",
           "count": 12,
           "price": 370.17
         },
@@ -46714,6 +47217,7 @@
           "key": "874039",
           "name": "Taiwan Semiconductor Manufacturing Co Ltd",
           "ticker": "TSM",
+          "sector": "Technology",
           "count": 12,
           "price": 337.95
         },
@@ -46721,6 +47225,7 @@
           "key": "30303M",
           "name": "Meta Platforms, Inc.",
           "ticker": "META",
+          "sector": "Communication Services",
           "count": 12,
           "price": 572.13
         },
@@ -46728,6 +47233,7 @@
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
+          "sector": "Technology",
           "count": 10,
           "price": 174.4
         },
@@ -46735,6 +47241,7 @@
           "key": "084670",
           "name": "Berkshire Hathaway Inc",
           "ticker": "BRK-B",
+          "sector": "Financial",
           "count": 9,
           "price": 479.2
         },
@@ -46742,6 +47249,7 @@
           "key": "037833",
           "name": "Apple Inc.",
           "ticker": "AAPL",
+          "sector": "Technology",
           "count": 8,
           "price": 253.79
         },
@@ -46749,6 +47257,7 @@
           "key": "11135F",
           "name": "Broadcom Inc.",
           "ticker": "AVGO",
+          "sector": "Technology",
           "count": 8,
           "price": 309.51
         },
@@ -46756,6 +47265,7 @@
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
+          "sector": "Financial",
           "count": 7,
           "price": 302.24
         },
@@ -46763,6 +47273,7 @@
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
+          "sector": "Financial",
           "count": 5,
           "price": 436.25
         },
@@ -46770,6 +47281,7 @@
           "key": "808513",
           "name": "Schwab Charles Corp",
           "ticker": "SCHW",
+          "sector": "Financial",
           "count": 5,
           "price": 93.98
         },
@@ -46777,6 +47289,7 @@
           "key": "N07059",
           "name": "Asml Holding NV",
           "ticker": "ASML",
+          "sector": "Technology",
           "count": 5,
           "price": 1320.83
         },
@@ -46784,6 +47297,7 @@
           "key": "512807",
           "name": "Lam Research Corp",
           "ticker": "LRCX",
+          "sector": "Technology",
           "count": 5,
           "price": 213.66
         },
@@ -46791,6 +47305,7 @@
           "key": "90353T",
           "name": "Uber Technologies, Inc",
           "ticker": "UBER",
+          "sector": "Technology",
           "count": 5,
           "price": 71.93
         },
@@ -46798,6 +47313,7 @@
           "key": "500754",
           "name": "Kraft Heinz Co",
           "ticker": "KHC",
+          "sector": "Consumer Defensive",
           "count": 4,
           "price": 22.49
         },
@@ -46805,6 +47321,7 @@
           "key": "31428X",
           "name": "Fedex Corp",
           "ticker": "FDX",
+          "sector": "Sonstige",
           "count": 4,
           "price": 287.01
         },
@@ -46812,6 +47329,7 @@
           "key": "866966",
           "name": "Sunbelt Rentals Holdings, Inc.",
           "ticker": "SUNB",
+          "sector": "Sonstige",
           "count": 4,
           "price": 65.09
         },
@@ -46819,6 +47337,7 @@
           "key": "038222",
           "name": "Applied Materials Inc",
           "ticker": "AMAT",
+          "sector": "Technology",
           "count": 4,
           "price": 341.79
         },
@@ -46826,6 +47345,7 @@
           "key": "22266T",
           "name": "Coupang, Inc.",
           "ticker": "CPNG",
+          "sector": "Sonstige",
           "count": 4,
           "price": 18.88
         }
@@ -46833,260 +47353,260 @@
     }
   ],
   "prices": {
-    "AMZN": {
-      "price": 244.16,
-      "asOf": "2026-07-07"
-    },
-    "BABA": {
-      "price": 97.91,
-      "asOf": "2026-07-07"
-    },
-    "META": {
-      "price": 600.29,
-      "asOf": "2026-07-07"
-    },
-    "NFLX": {
-      "price": 76.02,
-      "asOf": "2026-07-07"
-    },
     "UBER": {
-      "price": 72.42,
-      "asOf": "2026-07-07"
-    },
-    "V": {
-      "price": 357.25,
-      "asOf": "2026-07-07"
-    },
-    "MCO": {
-      "price": 498.78,
-      "asOf": "2026-07-07"
-    },
-    "AAPL": {
-      "price": 312.66,
-      "asOf": "2026-07-07"
-    },
-    "ADBE": {
-      "price": 218.07,
-      "asOf": "2026-07-07"
-    },
-    "SUNB": {
-      "price": 73.19,
-      "asOf": "2026-07-07"
-    },
-    "MU": {
-      "price": 984.75,
-      "asOf": "2026-07-07"
-    },
-    "VST": {
-      "price": 157.22,
-      "asOf": "2026-07-07"
-    },
-    "CPNG": {
-      "price": 19.15,
-      "asOf": "2026-07-07"
-    },
-    "NVDA": {
-      "price": 195.55,
-      "asOf": "2026-07-07"
-    },
-    "ASML": {
-      "price": 1825.07,
-      "asOf": "2026-07-07"
-    },
-    "WMT": {
-      "price": 110.65,
-      "asOf": "2026-07-07"
-    },
-    "PM": {
-      "price": 184.76,
-      "asOf": "2026-07-07"
-    },
-    "JPM": {
-      "price": 337.72,
-      "asOf": "2026-07-07"
-    },
-    "OXY": {
-      "price": 48.81,
-      "asOf": "2026-07-07"
-    },
-    "AVGO": {
-      "price": 373.9,
-      "asOf": "2026-07-07"
-    },
-    "GOOG": {
-      "price": 364.9,
-      "asOf": "2026-07-07"
-    },
-    "COF": {
-      "price": 206.5,
-      "asOf": "2026-07-07"
-    },
-    "BRK-B": {
-      "price": 506.58,
-      "asOf": "2026-07-07"
-    },
-    "GE": {
-      "price": 378.68,
-      "asOf": "2026-07-07"
-    },
-    "MRK": {
-      "price": 126.78,
-      "asOf": "2026-07-07"
-    },
-    "SCHW": {
-      "price": 100.62,
-      "asOf": "2026-07-07"
-    },
-    "CMCSA": {
-      "price": 23.38,
-      "asOf": "2026-07-07"
-    },
-    "TDG": {
-      "price": 1346.12,
-      "asOf": "2026-07-07"
-    },
-    "QCOM": {
-      "price": 186.48,
-      "asOf": "2026-07-07"
-    },
-    "DHI": {
-      "price": 156.88,
-      "asOf": "2026-07-07"
-    },
-    "KHC": {
-      "price": 24.82,
-      "asOf": "2026-07-07"
-    },
-    "ORCL": {
-      "price": 143.76,
-      "asOf": "2026-07-07"
-    },
-    "UNH": {
-      "price": 417.99,
-      "asOf": "2026-07-07"
-    },
-    "MSFT": {
-      "price": 386.74,
-      "asOf": "2026-07-07"
+      "price": 74.33,
+      "asOf": "2026-07-08"
     },
     "TMUS": {
-      "price": 181.79,
-      "asOf": "2026-07-07"
+      "price": 184.73,
+      "asOf": "2026-07-08"
     },
-    "DHR": {
-      "price": 193.62,
-      "asOf": "2026-07-07"
+    "NFLX": {
+      "price": 76.18,
+      "asOf": "2026-07-08"
     },
-    "MA": {
-      "price": 533.1,
-      "asOf": "2026-07-07"
+    "QCOM": {
+      "price": 182.97,
+      "asOf": "2026-07-08"
     },
-    "FISV": {
-      "price": 51.78,
-      "asOf": "2026-07-07"
-    },
-    "JD": {
-      "price": 26.78,
-      "asOf": "2026-07-07"
-    },
-    "CSGP": {
-      "price": 28.7,
-      "asOf": "2026-07-07"
-    },
-    "PDD": {
-      "price": 83.74,
-      "asOf": "2026-07-07"
+    "ADBE": {
+      "price": 221.54,
+      "asOf": "2026-07-08"
     },
     "JNJ": {
-      "price": 259.33,
-      "asOf": "2026-07-07"
+      "price": 267.24,
+      "asOf": "2026-07-08"
     },
-    "TSM": {
-      "price": 451.79,
-      "asOf": "2026-07-07"
+    "SCHW": {
+      "price": 101.93,
+      "asOf": "2026-07-08"
     },
-    "CHTR": {
-      "price": 135.44,
-      "asOf": "2026-07-07"
+    "DHI": {
+      "price": 155.72,
+      "asOf": "2026-07-08"
     },
-    "BKNG": {
-      "price": 181.03,
-      "asOf": "2026-07-07"
+    "FISV": {
+      "price": 52.71,
+      "asOf": "2026-07-08"
     },
     "AMD": {
-      "price": 552.05,
-      "asOf": "2026-07-07"
+      "price": 516.11,
+      "asOf": "2026-07-08"
+    },
+    "BRK-B": {
+      "price": 504.0,
+      "asOf": "2026-07-08"
+    },
+    "MU": {
+      "price": 938.38,
+      "asOf": "2026-07-08"
     },
     "CRM": {
-      "price": 165.65,
-      "asOf": "2026-07-07"
-    },
-    "WFC": {
-      "price": 87.45,
-      "asOf": "2026-07-07"
-    },
-    "CP": {
-      "price": 88.0,
-      "asOf": "2026-07-07"
-    },
-    "DIS": {
-      "price": 97.41,
-      "asOf": "2026-07-07"
-    },
-    "BAC": {
-      "price": 59.9,
-      "asOf": "2026-07-07"
-    },
-    "GM": {
-      "price": 77.85,
-      "asOf": "2026-07-07"
-    },
-    "FDX": {
-      "price": 309.93,
-      "asOf": "2026-07-07"
-    },
-    "LLY": {
-      "price": 1200.06,
-      "asOf": "2026-07-07"
-    },
-    "SPOT": {
-      "price": 483.01,
-      "asOf": "2026-07-07"
-    },
-    "PYPL": {
-      "price": 45.09,
-      "asOf": "2026-07-07"
-    },
-    "KO": {
-      "price": 82.96,
-      "asOf": "2026-07-07"
-    },
-    "AMAT": {
-      "price": 592.79,
-      "asOf": "2026-07-07"
-    },
-    "BN": {
-      "price": 43.96,
-      "asOf": "2026-07-07"
-    },
-    "CNI": {
-      "price": 121.66,
-      "asOf": "2026-07-07"
-    },
-    "LRCX": {
-      "price": 350.2,
-      "asOf": "2026-07-07"
+      "price": 169.52,
+      "asOf": "2026-07-08"
     },
     "AXP": {
-      "price": 356.03,
-      "asOf": "2026-07-07"
+      "price": 349.58,
+      "asOf": "2026-07-08"
+    },
+    "MRK": {
+      "price": 128.86,
+      "asOf": "2026-07-08"
+    },
+    "UNH": {
+      "price": 428.19,
+      "asOf": "2026-07-08"
+    },
+    "GM": {
+      "price": 76.03,
+      "asOf": "2026-07-08"
+    },
+    "GOOG": {
+      "price": 363.62,
+      "asOf": "2026-07-08"
+    },
+    "DIS": {
+      "price": 97.48,
+      "asOf": "2026-07-08"
+    },
+    "CSGP": {
+      "price": 29.87,
+      "asOf": "2026-07-08"
+    },
+    "CNI": {
+      "price": 122.78,
+      "asOf": "2026-07-08"
+    },
+    "SPOT": {
+      "price": 493.95,
+      "asOf": "2026-07-08"
+    },
+    "KHC": {
+      "price": 25.3,
+      "asOf": "2026-07-08"
+    },
+    "ORCL": {
+      "price": 141.6,
+      "asOf": "2026-07-08"
+    },
+    "WMT": {
+      "price": 111.54,
+      "asOf": "2026-07-08"
+    },
+    "KO": {
+      "price": 84.05,
+      "asOf": "2026-07-08"
+    },
+    "JD": {
+      "price": 26.49,
+      "asOf": "2026-07-08"
+    },
+    "BABA": {
+      "price": 98.14,
+      "asOf": "2026-07-08"
+    },
+    "BAC": {
+      "price": 59.86,
+      "asOf": "2026-07-08"
+    },
+    "TDG": {
+      "price": 1329.63,
+      "asOf": "2026-07-08"
+    },
+    "CP": {
+      "price": 88.72,
+      "asOf": "2026-07-08"
+    },
+    "V": {
+      "price": 352.2,
+      "asOf": "2026-07-08"
+    },
+    "PYPL": {
+      "price": 45.65,
+      "asOf": "2026-07-08"
+    },
+    "GE": {
+      "price": 366.98,
+      "asOf": "2026-07-08"
+    },
+    "AMZN": {
+      "price": 245.98,
+      "asOf": "2026-07-08"
+    },
+    "TSM": {
+      "price": 432.57,
+      "asOf": "2026-07-08"
+    },
+    "ASML": {
+      "price": 1747.28,
+      "asOf": "2026-07-08"
+    },
+    "FDX": {
+      "price": 312.88,
+      "asOf": "2026-07-08"
+    },
+    "AVGO": {
+      "price": 370.78,
+      "asOf": "2026-07-08"
     },
     "GOOGL": {
-      "price": 366.46,
-      "asOf": "2026-07-07"
+      "price": 367.03,
+      "asOf": "2026-07-08"
+    },
+    "LLY": {
+      "price": 1235.56,
+      "asOf": "2026-07-08"
+    },
+    "CHTR": {
+      "price": 138.02,
+      "asOf": "2026-07-08"
+    },
+    "JPM": {
+      "price": 339.22,
+      "asOf": "2026-07-08"
+    },
+    "MCO": {
+      "price": 500.49,
+      "asOf": "2026-07-08"
+    },
+    "CMCSA": {
+      "price": 23.41,
+      "asOf": "2026-07-08"
+    },
+    "AAPL": {
+      "price": 310.66,
+      "asOf": "2026-07-08"
+    },
+    "SUNB": {
+      "price": 69.61,
+      "asOf": "2026-07-08"
+    },
+    "BKNG": {
+      "price": 181.95,
+      "asOf": "2026-07-08"
+    },
+    "COF": {
+      "price": 202.89,
+      "asOf": "2026-07-08"
+    },
+    "DHR": {
+      "price": 194.19,
+      "asOf": "2026-07-08"
+    },
+    "NVDA": {
+      "price": 196.93,
+      "asOf": "2026-07-08"
+    },
+    "PDD": {
+      "price": 82.53,
+      "asOf": "2026-07-08"
+    },
+    "META": {
+      "price": 615.58,
+      "asOf": "2026-07-08"
+    },
+    "PM": {
+      "price": 187.79,
+      "asOf": "2026-07-08"
+    },
+    "MSFT": {
+      "price": 388.84,
+      "asOf": "2026-07-08"
+    },
+    "WFC": {
+      "price": 87.18,
+      "asOf": "2026-07-08"
+    },
+    "VST": {
+      "price": 155.73,
+      "asOf": "2026-07-08"
+    },
+    "LRCX": {
+      "price": 326.13,
+      "asOf": "2026-07-08"
+    },
+    "AMAT": {
+      "price": 554.5,
+      "asOf": "2026-07-08"
+    },
+    "MA": {
+      "price": 531.62,
+      "asOf": "2026-07-08"
+    },
+    "CPNG": {
+      "price": 18.53,
+      "asOf": "2026-07-08"
+    },
+    "BN": {
+      "price": 43.79,
+      "asOf": "2026-07-08"
+    },
+    "OXY": {
+      "price": 51.68,
+      "asOf": "2026-07-08"
     }
   },
-  "pricesAsOf": "2026-07-07",
+  "pricesAsOf": "2026-07-08",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -47117,8 +47637,8 @@
         "2025-12-31": 6845.5,
         "2026-03-31": 6528.52
       },
-      "current": 7537.43,
-      "currentAsOf": "2026-07-06"
+      "current": 7503.85,
+      "currentAsOf": "2026-07-07"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -47149,8 +47669,8 @@
         "2025-12-31": 25249.85,
         "2026-03-31": 23740.19
       },
-      "current": 29697.87,
-      "currentAsOf": "2026-07-06"
+      "current": 29173.02,
+      "currentAsOf": "2026-07-07"
     }
   },
   "quarterPrices": {
