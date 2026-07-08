@@ -133,6 +133,30 @@ def fmt_money(v):
     return f"{m:.0f} Mio $"
 
 
+PIE_COLORS = ["#C9A84C", "#0D2238", "#8899AA", "#5a7a9a", "#a8863a",
+              "#3d5a75", "#c0b088", "#6b8caa", "#8a6d2f", "#d4c9b0"]
+
+
+def make_donut(counter, title):
+    """Sektor-/Kategorie-Donut im CI (Prozent innen, Legende unten)."""
+    items = counter.most_common()
+    labels = [k for k, _ in items]
+    values = [v for _, v in items]
+    f = go.Figure(go.Pie(
+        labels=labels, values=values, hole=0.5, sort=False,
+        marker=dict(colors=PIE_COLORS[:len(labels)], line=dict(color=MIDNIGHT, width=1)),
+        textinfo="percent", textposition="inside", insidetextorientation="horizontal",
+        textfont=dict(color=OFFWHITE, family="Arial", size=13),
+        hovertemplate="%{label}: %{value} Titel (%{percent})<extra></extra>"))
+    f.update_layout(
+        title=dict(text=title, x=0.5, xanchor="center"),
+        paper_bgcolor=MIDNIGHT, font=dict(color=OFFWHITE), showlegend=True,
+        legend=dict(orientation="h", yanchor="top", y=-0.05, xanchor="center",
+                    x=0.5, font=dict(size=11)),
+        height=380, margin=dict(l=10, r=10, t=50, b=10))
+    return f
+
+
 def next_13f_release(today=None):
     """Nächste 13F-Veröffentlichung: Quartalsende + 45 Tage Frist.
     Gibt (Quartalslabel, Quartalsende, Frist-Datum) zurück."""
@@ -768,6 +792,28 @@ if page == "🎯 Backtest":
                 yaxis=dict(gridcolor="#1a3a5c"),
                 height=max(300, 26 * len(chart)), margin=dict(l=10, r=40, t=50, b=10))
             st.plotly_chart(fig_bt, use_container_width=True)
+
+        # Sektor-Zusammensetzung der F13-Liste ZU DIESEM Quartal
+        tsec = {}
+        for r in data.get("ranking", []):
+            if r.get("ticker"):
+                tsec.setdefault(r["ticker"], r.get("sector", "Sonstige"))
+        for _inv in data["investors"]:
+            for _h in _inv.get("holdings", []):
+                if _h.get("ticker"):
+                    tsec.setdefault(_h["ticker"], _h.get("sector", "Sonstige"))
+        sec_ct = Counter(
+            (e.get("sector") or tsec.get(e["ticker"], "Sonstige")) for e in entries)
+        if sec_ct:
+            st.markdown(f"#### Sektor-Zusammensetzung der F13-Liste zum {sel_q}")
+            st.plotly_chart(make_donut(sec_ct, f"Nach Sektor · {sel_q}"),
+                            use_container_width=True)
+            biggest = sec_ct.most_common(1)[0]
+            st.caption(f"So war die F13-Konsensliste zum Meldequartal {sel_q} nach "
+                       f"Sektoren zusammengesetzt (größter Block: {biggest[0]}, "
+                       f"{biggest[1]} von {len(entries)} Titeln). Vergleiche das mit der "
+                       "aktuellen „Struktur\"-Ansicht, um Verschiebungen über die Zeit zu sehen.")
+
         st.caption("Rendite gesamt = über den ganzen Zeitraum · Rendite p.a. = auf ein "
                    "Jahr annualisiert (nur ab ~1 Jahr Haltedauer). Kurse = split-bereinigte "
                    "Schlusskurse (Yahoo), Startpunkt = Quartalsende. Reine Kursrendite ohne "

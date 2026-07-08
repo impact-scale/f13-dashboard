@@ -126,6 +126,9 @@ SECTOR_REGION = {
     "BKNG": ("Consumer Cyclical", "USA"), "LOW": ("Consumer Cyclical", "USA"),
     "TJX": ("Consumer Cyclical", "USA"), "DPZ": ("Consumer Cyclical", "USA"),
     "LVMUY": ("Consumer Cyclical", "Frankreich"), "RACE": ("Consumer Cyclical", "Italien"),
+    "BABA": ("Consumer Cyclical", "China"), "JD": ("Consumer Cyclical", "China"),
+    "PDD": ("Consumer Cyclical", "China"), "CHTR": ("Communication Services", "USA"),
+    "BIDU": ("Communication Services", "China"), "NIO": ("Consumer Cyclical", "China"),
     "KO": ("Consumer Defensive", "USA"), "PEP": ("Consumer Defensive", "USA"),
     "PG": ("Consumer Defensive", "USA"), "COST": ("Consumer Defensive", "USA"),
     "WMT": ("Consumer Defensive", "USA"), "KHC": ("Consumer Defensive", "USA"),
@@ -708,6 +711,7 @@ def main():
 
         history.append({"quarter": qd, "ranking":
                         [{"key": x["key"], "name": x["name"], "ticker": x["ticker"],
+                          "sector": x.get("sector", "Sonstige"),
                           "count": x["count"], "price": qprice(x["key"])} for x in hr]})
 
     # Aktuelle Kurse für alle in der Historie vorkommenden Ticker abrufen
