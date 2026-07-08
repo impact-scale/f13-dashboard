@@ -61,23 +61,30 @@ st.markdown(f"""
         letter-spacing: 0.06em; font-family: "Courier New",monospace;
     }}
     div[data-testid="stMetricValue"] {{ color: {OFFWHITE}; }}
-    /* ── Tab-Leiste als Website-Menü ─────────────────────────── */
-    .stTabs [data-baseweb="tab-list"] {{
-        gap: 4px; background: {NAVY}; border: 1px solid #1a3a5c;
-        border-radius: 10px; padding: 5px; margin-bottom: 10px;
-        position: sticky; top: 0; z-index: 50;
+    /* ── Navigationsmenü (st.radio als Website-Menü) ──────────── */
+    div[data-testid="stRadio"] > div[role="radiogroup"] {{
+        flex-direction: row; flex-wrap: wrap; gap: 4px;
+        background: {NAVY}; border: 1px solid #1a3a5c;
+        border-radius: 10px; padding: 5px; margin-bottom: 4px;
     }}
-    .stTabs [data-baseweb="tab"] {{
-        height: auto; padding: 7px 16px; border-radius: 7px;
-        color: {SLATE}; font-weight: 600; font-family: Arial, sans-serif;
-        background: transparent;
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label {{
+        margin: 0; padding: 7px 15px; border-radius: 7px; cursor: pointer;
+        color: {SLATE}; font-weight: 600; background: transparent;
+        transition: background .12s;
     }}
-    .stTabs [data-baseweb="tab"]:hover {{ color: {OFFWHITE}; background: #12325280; }}
-    .stTabs [data-baseweb="tab"][aria-selected="true"] {{
-        background: {GOLD}; color: {MIDNIGHT}; font-weight: 700;
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label:hover {{
+        color: {OFFWHITE}; background: #12325280;
     }}
-    .stTabs [data-baseweb="tab"][aria-selected="true"] p {{ color: {MIDNIGHT}; }}
-    .stTabs [data-baseweb="tab-highlight"], .stTabs [data-baseweb="tab-border"] {{
+    /* aktives Element in Gold hervorheben */
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label:has(input:checked) {{
+        background: {GOLD};
+    }}
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label:has(input:checked) div,
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label:has(input:checked) p {{
+        color: {MIDNIGHT} !important; font-weight: 700;
+    }}
+    /* den Radio-Kreis ausblenden */
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label > div:first-child {{
         display: none;
     }}
     .goldbar {{ height: 2.5px; background: {GOLD}; border: none; margin: 4px 0 14px; }}
@@ -396,12 +403,15 @@ def delta_str(d):
     return f"▲ +{d}" if d > 0 else (f"▼ {d}" if d < 0 else "=")
 
 
-tab1, tab2, tab6, tab3, tab4, tab5, tab8, tab7 = st.tabs(
-    ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
-     "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest"])
+PAGES = ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
+         "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest"]
+# Serverseitige Navigation: es wird NUR die gewählte Kategorie gerendert
+# (im Gegensatz zu st.tabs, das alle Inhalte ins DOM legt).
+page = st.radio("Navigation", PAGES, horizontal=True,
+                label_visibility="collapsed", key="nav_page")
 
 # --- Tab 1: Konsens ---
-with tab1:
+if page == "📊 F13-Konsensliste":
     # KPI-Zeile (Kontext zur Konsensliste)
     c1, c2, c3, c4 = st.columns(4)
     c1.metric("Investoren aktiv", f"{len(selected)} / {len(all_investors)}")
@@ -486,7 +496,7 @@ with tab1:
             e3.caption("PDF: reportlab fehlt")
 
 # --- Tab 2: Veränderungen ---
-with tab2:
+if page == "🔄 Veränderungen":
     if not prev_quarter:
         st.info("Kein Vorquartal in den Daten — Veränderungen nicht berechenbar.")
     else:
@@ -559,7 +569,7 @@ with tab2:
                        f"jetzt nicht mehr).")
 
 # --- Tab 6: Verlauf (Zeitreihe) ---
-with tab6:
+if page == "📈 Verlauf":
     history = data.get("history", [])
     if len(history) < 2:
         st.info("Noch keine ausreichende Historie (mindestens 2 Quartale nötig).")
@@ -596,7 +606,7 @@ with tab6:
                    "die geladenen Quartale.")
 
 # --- Tab 7: Backtest ---
-with tab7:
+if page == "🎯 Backtest":
     history = data.get("history", [])
     prices = data.get("prices", {})
     prices_asof = data.get("pricesAsOf")
@@ -875,7 +885,7 @@ def compute_weights(method, titles):
 
 
 # --- Tab 3: Rechner ---
-with tab3:
+if page == "🧮 Investment-Rechner":
     st.markdown("### Investment-Rechner")
     method = st.radio(
         "Gewichtungsmethode",
@@ -946,7 +956,7 @@ with tab3:
                    "kein Echtzeit-Kaufsignal. Keine Anlageberatung.")
 
 # --- Tab 4: Struktur ---
-with tab4:
+if page == "🧩 Struktur":
     if not ranking:
         st.info("Keine Titel mit diesen Filtern.")
     else:
@@ -994,7 +1004,7 @@ with tab4:
             f'desto größer das Klumpenrisiko.</div>', unsafe_allow_html=True)
 
 # --- Tab 5: Investoren ---
-with tab5:
+if page == "👤 Investoren-Details":
     st.caption("Veränderungen im Titel beziehen sich auf das Vorquartal "
                f"({prev_quarter or 'n/a'}).")
     for inv in data["investors"]:
@@ -1033,7 +1043,7 @@ with tab5:
                            + ", ".join(f"{s['name']}" for s in inv["sold"]))
 
 # --- Tab 8: Neue Meldungen (Filing-Tracker) ---
-with tab8:
+if page == "🆕 Neue Meldungen":
     invs = data["investors"]
     target_q = rel_qe.strftime("%Y-%m-%d") if rel_qe else None
     st.markdown("### Neue Meldungen — Filing-Tracker")
