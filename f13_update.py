@@ -652,7 +652,7 @@ def fetch_public_cash():
                        "tbills": tbills.get(d),
                        "total": cash_by_date[d] + (tbills.get(d) or 0)}
                       for d in sorted(cash_by_date)]
-            out[person] = {"label": label,
+            out[person] = {"label": label, "cik": cik,
                            "source": "SEC 10-Q/10-K (XBRL + Bilanz)",
                            "series": series}
             print(f"  Cash {person}: {len(series)} Stichtage, aktuell "

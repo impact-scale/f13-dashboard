@@ -1161,6 +1161,17 @@ if page == "💰 Cash & Flows":
         except Exception:
             return iso or "–"
 
+    def source_line(quelle_html, stand):
+        st.markdown(
+            f'<div class="mono" style="color:{SLATE};font-size:0.78rem;'
+            f'margin:-4px 0 12px;"><b>Quelle:</b> {quelle_html}'
+            f'&nbsp;·&nbsp; <b>Stand der Daten:</b> {stand}</div>',
+            unsafe_allow_html=True)
+
+    def info_link(url, title):
+        return (f'<a href="{url}" target="_blank" title="{title}" '
+                f'style="text-decoration:none;color:{GOLD};font-weight:700;">ⓘ</a>')
+
     st.markdown(
         f'<div class="callout"><b>Warum zwei Datenarten?</b> 13F-Meldungen enthalten '
         f'<b>kein Cash</b> — nur US-Long-Aktienpositionen. Echte Cash-Bestände gibt es '
@@ -1177,6 +1188,16 @@ if page == "💰 Cash & Flows":
         st.info("Noch keine Cash-Daten im Datenbestand — bitte das Daten-Update "
                 "(f13_update.py) einmal ausführen.")
     else:
+        links = " · ".join(
+            f'{c["label"].split(" (")[0]} ' + info_link(
+                "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany"
+                f"&CIK={c.get('cik', '')}&type=10&dateb=&owner=include&count=20",
+                f"Zur Originalquelle: SEC EDGAR Quartals-/Jahresberichte — {c['label']}")
+            for c in cash_data.values() if c.get("series"))
+        cash_asof = max(c["series"][-1]["date"]
+                        for c in cash_data.values() if c.get("series"))
+        source_line(f"SEC EDGAR 10-Q/10-K &nbsp;{links}",
+                    f"Bilanzstichtag {_dd(cash_asof)}")
         cols = st.columns(max(2, len(cash_data)))
         for col, (person, c) in zip(cols, cash_data.items()):
             s = c.get("series") or []
@@ -1222,6 +1243,14 @@ if page == "💰 Cash & Flows":
 
     # ── 2) Netto-Flow-Proxy (alle Investoren) ─────────────────────────────────
     st.subheader("Netto-Käufe / -Verkäufe je Investor — Proxy aus 13F")
+    flow_asof = max((s[-1]["to"] for s in flows_data.values() if s), default=None)
+    if flow_asof:
+        source_line(
+            "SEC EDGAR 13F-HR (eigene Berechnung) " + info_link(
+                "https://www.sec.gov/edgar/search/#/forms=13F-HR",
+                "Zur Originalquelle: SEC EDGAR 13F-HR"),
+            f"Meldequartale bis {_dd(flow_asof)} (13F-Meldeverzug bis 45 Tage) · "
+            f"Import {generated.strftime('%d.%m.%Y %H:%M')}")
     latest = []
     for person in selected:
         series = flows_data.get(person) or []
