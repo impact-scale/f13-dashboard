@@ -1264,6 +1264,12 @@ if page == "💰 Cash & Flows":
         return (f'<a href="{url}" target="_blank" title="{title}" '
                 f'style="text-decoration:none;color:{GOLD};font-weight:700;">ⓘ</a>')
 
+    def section_desc(html):
+        st.markdown(
+            f'<div style="color:{SLATE};font-size:0.9rem;line-height:1.55;'
+            f'margin:-2px 0 14px;max-width:920px;">{html}</div>',
+            unsafe_allow_html=True)
+
     st.markdown(
         f'<div class="callout"><b>Warum zwei Datenarten?</b> 13F-Meldungen enthalten '
         f'<b>kein Cash</b> — nur US-Long-Aktienpositionen. Echte Cash-Bestände gibt es '
@@ -1290,6 +1296,13 @@ if page == "💰 Cash & Flows":
                         for c in cash_data.values() if c.get("series"))
         source_line(f"SEC EDGAR 10-Q/10-K &nbsp;{links}",
                     f"Bilanzstichtag {_dd(cash_asof)}")
+        section_desc(
+            "Echte, bilanzierte Kriegskassen: Berkshire Hathaway und Icahn "
+            "Enterprises veröffentlichen Cash und T-Bills quartalsweise im "
+            "Geschäftsbericht — hier wird nichts geschätzt. Der wichtigste Wert ist "
+            "die <b>Cash-Quote</b> (weiße Linie): der Anteil der investierbaren "
+            "Mittel, der <i>nicht</i> im Aktienmarkt steckt. Steigt sie deutlich, "
+            "findet Buffett zu aktuellen Preisen zu wenig Kaufenswertes.")
 
         # Berkshire-Cash-Quote: Cash+T-Bills ÷ (Cash+T-Bills + 13F-Aktienportfolio).
         # Erst die Quote macht den Cash-Berg über die Zeit vergleichbar — absolute
@@ -1384,6 +1397,13 @@ if page == "💰 Cash & Flows":
                 "https://www.sec.gov/edgar/search/#/forms=NPORT-P",
                 "Zur Originalquelle: SEC EDGAR N-PORT"),
             f"Stichtage bis {_dd(np_asof)} · je Fonds unten · ~60 Tage Meldeverzug")
+        section_desc(
+            "Publikumsfonds müssen ihre Kasse vollständig offenlegen. Für neun "
+            "Manager des Universums zeigt dieser Abschnitt die <b>echte Cash-Quote</b> "
+            "ihres Flaggschiff-Fonds — inklusive Geldmarktpositionen und T-Bills, in "
+            "denen viele Fonds ihre Liquidität parken. Hohe oder steigende Quoten "
+            "heißen: Der Manager hält bewusst Pulver trocken, weil ihm Kaufgelegenheiten "
+            "fehlen.")
 
         palette_np = [GOLD, "#5FA97C", "#C25E5E", "#8899AA", "#6b8caa",
                       "#a8863a", "#d4c9b0", "#3d7a9a", "#b085c9"]
@@ -1443,6 +1463,14 @@ if page == "💰 Cash & Flows":
                 "Zur Originalquelle: SEC EDGAR 13F-HR"),
             f"Meldequartale bis {_dd(flow_asof)} (13F-Meldeverzug bis 45 Tage) · "
             f"Import {generated.strftime('%d.%m.%Y %H:%M')}")
+    section_desc(
+        "Hedgefonds und Family Offices melden kein Cash — aber ihre 13F-Portfolios "
+        "verraten, ob sie per Saldo Aktien abgebaut haben. <b>Rot</b> = im jüngsten "
+        "Quartal netto verkauft (mögliches Indiz für Cash-Aufbau — oder "
+        "Anleger-Abflüsse), <b>grün</b> = netto zugekauft; jeweils bereinigt um die "
+        "reine Kursentwicklung. Die <b>Verkäuferquote</b> darunter verdichtet das "
+        "über alle Investoren und Quartale zu einem Stimmungs-Indikator: Je höher "
+        "der Balken, desto breiter der Rückzug aus US-Aktien.")
 
     # Diskretionäre = Eigenkapital/Family Offices/Permanent Capital: Sie KÖNNEN
     # Cash aufbauen — ihre Netto-Verkäufe sind Marktmeinung. Mandatsgebundene
