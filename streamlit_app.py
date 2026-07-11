@@ -1549,6 +1549,58 @@ if page == "💰 Cash & Flows":
             "gemeldete US-Long-Positionen; Optionen, Shorts, Anleihen und "
             "Nicht-US-Aktien bleiben unsichtbar. Kein gemessener Wert — eine Schätzung.")
 
+    # ── Methodik-Disclaimer: Logik, Annahmen, Datenquellen ────────────────────
+    CASH_METHODIK = [
+        ("01 · DATENQUELLEN",
+         "Alle Daten stammen aus öffentlichen Pflichtveröffentlichungen und werden "
+         "täglich um 06:00 UTC automatisch aktualisiert: <b>SEC EDGAR 13F-HR</b> "
+         "(US-Long-Aktienpositionen aller 42 Investoren; Meldeverzug bis 45 Tage), "
+         "<b>SEC 10-Q/10-K</b> (Cash und T-Bills von Berkshire Hathaway und Icahn "
+         "Enterprises aus XBRL-Daten und Konzernbilanz; ~5 Wochen Verzug), "
+         "<b>SEC N-PORT</b> (Positions- und Cash-Daten der Publikumsfonds; quartalsweise "
+         "öffentlich mit ~60 Tagen Verzug) sowie Yahoo Finance (S&P 500 als "
+         "Vergleichsmaßstab). Fiskalquartale einzelner Fonds weichen vom "
+         "Kalenderquartal ab — maßgeblich ist der je Abschnitt angezeigte Stichtag."),
+        ("02 · LOGIK & ANNAHMEN",
+         "<b>13F-Meldungen enthalten kein Cash.</b> Gemessene Werte gibt es daher nur, "
+         "wo Vehikel selbst berichten: Berkshire/IEP (Bilanz) und Publikumsfonds "
+         "(N-PORT). <b>Berkshire-Cash-Quote</b> = Cash + T-Bills ÷ (Cash + T-Bills + "
+         "13F-Aktienportfolio). <b>N-PORT-Cash-Quote</b> = nicht angelegtes Cash + "
+         "Geldmarkt-/Repo-Positionen + US-Staatsanleihen in % des Fondsvermögens; der "
+         "Flaggschiff-Fonds dient als Näherung für den Manager. <b>Netto-Flow-Proxy</b> "
+         "= Portfoliowert-Änderung minus geschätztem Kurs-Effekt (aus Positionen mit "
+         "unveränderter Stückzahl; unter 15 % Abdeckung: S&P 500 als Näherung) — eine "
+         "Schätzung, die Verkäufe nicht von Anleger-Abflüssen unterscheiden kann und "
+         "nur gemeldete US-Long-Positionen sieht (keine Optionen, Shorts, Anleihen, "
+         "Nicht-US-Aktien). Der Filter „diskretionäre Investoren“ ist eine kuratierte "
+         "Zuordnung (Eigenkapital/Family Offices/Permanent Capital)."),
+        ("03 · GRENZEN DER AUSSAGEKRAFT",
+         "Hohe oder steigende Cash-Quoten sind ein <b>Bewertungssignal</b> („die "
+         "erfahrensten Käufer finden wenig Kaufenswertes“), aber <b>kein "
+         "Timing-Signal</b>: Quoten können jahrelang erhöht bleiben, bevor der Markt "
+         "korrigiert — und hohe Cash-Bestände markieren historisch teils eher Böden "
+         "als Tops. Mandatsgebundene Verwalter sind konstruktionsbedingt fast immer "
+         "voll investiert. Alle Angaben ohne Gewähr; keine Anlageberatung — siehe "
+         "Risikohinweis am Seitenende."),
+    ]
+    meth_sections = "".join(
+        f'<div style="border-left:3px solid {GOLD};padding:2px 0 2px 16px;margin:14px 0;">'
+        f'<div style="font-family:\'Courier New\',monospace;font-size:0.72rem;'
+        f'letter-spacing:0.08em;color:{GOLD};margin-bottom:5px;">{label}</div>'
+        f'<div style="color:{SLATE};font-size:0.82rem;line-height:1.5;">{text}</div>'
+        f'</div>'
+        for label, text in CASH_METHODIK)
+    st.markdown(
+        f'<div style="background:{NAVY};border:1px solid #1a3a5c;border-radius:10px;'
+        f'padding:20px 26px;margin-top:24px;">'
+        f'<div style="font-family:\'Courier New\',monospace;font-size:0.72rem;'
+        f'letter-spacing:0.12em;color:{GOLD};">ⓘ METHODIK · CASH &amp; FLOWS</div>'
+        f'<div style="font-size:1.5rem;font-weight:700;color:{OFFWHITE};margin:4px 0 2px;">'
+        f'Logik, Annahmen &amp; <span style="color:{GOLD};">Datenquellen</span></div>'
+        f'<hr style="border:none;border-top:1.5px solid {GOLD};margin:8px 0 4px;">'
+        f'{meth_sections}</div>',
+        unsafe_allow_html=True)
+
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
 # ── Risikohinweis & Haftungsausschluss (Pflichtinformation) ──────────────────
