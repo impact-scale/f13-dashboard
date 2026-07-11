@@ -4,8 +4,25 @@
     {
       "name": "f13-dashboard",
       "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8731"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8731"
+      ],
       "port": 8731
+    },
+    {
+      "name": "f13-streamlit",
+      "runtimeExecutable": "/Users/bjorn/Documents/Trading-Tools/F13 Liste/venv/bin/streamlit",
+      "runtimeArgs": [
+        "run",
+        "/Users/bjorn/Documents/Trading-Tools/F13 Liste/streamlit_app.py",
+        "--server.port",
+        "8601",
+        "--server.headless",
+        "true"
+      ],
+      "port": 8601
     }
   ]
 }

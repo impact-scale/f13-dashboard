@@ -428,7 +428,8 @@ def delta_str(d):
 
 
 PAGES = ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
-         "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest"]
+         "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest",
+         "💰 Cash & Flows"]
 # Serverseitige Navigation: es wird NUR die gewählte Kategorie gerendert
 # (im Gegensatz zu st.tabs, das alle Inhalte ins DOM legt).
 page = st.radio("Navigation", PAGES, horizontal=True,
@@ -1143,6 +1144,171 @@ if page == "🆕 Neue Meldungen":
                    "❌ = Meldung steht noch aus · ★ = Super-Investor (PDF-15). "
                    "Sortiert nach jüngstem Einreichungsdatum — neu eingegangene Meldungen "
                    "rücken bei jedem Tagesimport nach oben.")
+
+# --- Tab 9: Cash & Flows ---
+if page == "💰 Cash & Flows":
+    cash_data = data.get("cash", {}) or {}
+    flows_data = data.get("flows", {}) or {}
+    POS_GREEN, NEG_RED = "#5FA97C", "#C25E5E"
+
+    def mrd(v):
+        return (f"{v/1e9:,.1f}".replace(",", "X").replace(".", ",")
+                .replace("X", ".") + " Mrd $")
+
+    def _dd(iso):
+        try:
+            return datetime.strptime(iso, "%Y-%m-%d").strftime("%d.%m.%Y")
+        except Exception:
+            return iso or "–"
+
+    st.markdown(
+        f'<div class="callout"><b>Warum zwei Datenarten?</b> 13F-Meldungen enthalten '
+        f'<b>kein Cash</b> — nur US-Long-Aktienpositionen. Echte Cash-Bestände gibt es '
+        f'nur für börsennotierte Vehikel aus deren Quartalsberichten (unten: Berkshire, '
+        f'Icahn Enterprises). Für alle übrigen Investoren zeigt der <b>Netto-Flow-Proxy</b>, '
+        f'ob im Quartal per Saldo Aktien ge- oder verkauft wurden: Netto-Verkäufe deuten '
+        f'auf Cash-Aufbau hin, sind aber von Anleger-Abflüssen nicht unterscheidbar.</div>',
+        unsafe_allow_html=True)
+    st.write("")
+
+    # ── 1) Gemessene Cash-Bestände (börsennotierte Vehikel) ──────────────────
+    st.subheader("Gemessene Cash-Bestände — Quartalsberichte (10-Q/10-K)")
+    if not cash_data:
+        st.info("Noch keine Cash-Daten im Datenbestand — bitte das Daten-Update "
+                "(f13_update.py) einmal ausführen.")
+    else:
+        cols = st.columns(max(2, len(cash_data)))
+        for col, (person, c) in zip(cols, cash_data.items()):
+            s = c.get("series") or []
+            if not s:
+                continue
+            last = s[-1]
+            prev = s[-2] if len(s) > 1 else None
+            delta_txt = None
+            if prev:
+                d = last["total"] - prev["total"]
+                delta_txt = ("+" if d >= 0 else "−") + mrd(abs(d)) + " Q/Q"
+            col.metric(f"{c['label']}", mrd(last["total"]), delta=delta_txt,
+                       help=f"Stichtag {_dd(last['date'])} · Quelle: {c['source']}" +
+                            (" · Summe aus Cash + US-T-Bills" if last.get("tbills") else ""))
+        st.write("")
+
+        brk = cash_data.get("Warren Buffett")
+        if brk and brk.get("series"):
+            s = brk["series"]
+            dates = [x["date"] for x in s]
+            fig = go.Figure()
+            fig.add_bar(x=dates, y=[(x["cash"] or 0) / 1e9 for x in s],
+                        name="Cash & Äquivalente", marker_color=SLATE)
+            fig.add_bar(x=dates, y=[(x["tbills"] or 0) / 1e9 for x in s],
+                        name="US Treasury Bills", marker_color=GOLD)
+            fig.update_layout(
+                barmode="stack",
+                title="Berkshire Hathaway — der Cash-Berg (Mrd USD)",
+                paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                font=dict(color=OFFWHITE, family="Arial"),
+                xaxis=dict(gridcolor="#1a3a5c"),
+                yaxis=dict(gridcolor="#1a3a5c", title="Mrd USD"),
+                legend=dict(orientation="h", yanchor="bottom", y=1.02),
+                height=380, margin=dict(l=10, r=10, t=70, b=10),
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            st.caption("Quelle: SEC EDGAR 10-Q/10-K (XBRL-Cash + T-Bills aus der "
+                       "Konzernbilanz). Buffetts 'Cash-Berg' besteht überwiegend aus "
+                       "kurzlaufenden US-Staatsanleihen (T-Bills) — beides zusammen ist "
+                       "die investierbare Reserve.")
+
+    st.divider()
+
+    # ── 2) Netto-Flow-Proxy (alle Investoren) ─────────────────────────────────
+    st.subheader("Netto-Käufe / -Verkäufe je Investor — Proxy aus 13F")
+    latest = []
+    for person in selected:
+        series = flows_data.get(person) or []
+        if series:
+            latest.append((person, series[-1]))
+    if not latest:
+        st.info("Keine Flow-Daten für die aktuelle Auswahl — bitte das Daten-Update "
+                "(f13_update.py) einmal ausführen.")
+    else:
+        latest.sort(key=lambda t: t[1]["flowPct"])
+        n_sell = sum(1 for _, s in latest if s["flowPct"] < -2)
+        n_buy = sum(1 for _, s in latest if s["flowPct"] > 2)
+        k1, k2, k3 = st.columns(3)
+        k1.metric("Netto-Verkäufer", f"{n_sell} / {len(latest)}",
+                  help="Investoren mit implizitem Netto-Verkauf > 2 % des Portfolios "
+                       "im jüngsten gemeldeten Quartal.")
+        k2.metric("Netto-Käufer", f"{n_buy} / {len(latest)}",
+                  help="Investoren mit implizitem Netto-Zukauf > 2 % des Portfolios.")
+        k3.metric("Neutral", f"{len(latest) - n_sell - n_buy} / {len(latest)}")
+
+        chart = latest[::-1]
+        fig = go.Figure(go.Bar(
+            x=[s["flowPct"] for _, s in chart],
+            y=[p for p, _ in chart],
+            orientation="h",
+            marker_color=[NEG_RED if s["flowPct"] < 0 else POS_GREEN for _, s in chart],
+            customdata=[[mrd(s["flowUsd"]), _dd(s["from"]), _dd(s["to"])] for _, s in chart],
+            hovertemplate="<b>%{y}</b><br>Netto-Flow: %{x:.1f} % (%{customdata[0]})"
+                          "<br>Zeitraum: %{customdata[1]} → %{customdata[2]}"
+                          "<extra></extra>",
+        ))
+        fig.update_layout(
+            title="Impliziter Netto-Flow im jüngsten Meldequartal (% des Portfolios)",
+            paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+            font=dict(color=OFFWHITE, family="Arial"),
+            xaxis=dict(gridcolor="#1a3a5c", title="% des Portfoliowerts",
+                       zerolinecolor=GOLD),
+            yaxis=dict(gridcolor="#1a3a5c", tickfont=dict(size=11)),
+            height=max(420, 20 * len(chart)), margin=dict(l=10, r=30, t=50, b=10),
+        )
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Aggregat über die Zeit: Verkäuferquote je Quartal
+        by_q = {}
+        for person in selected:
+            for s in flows_data.get(person) or []:
+                by_q.setdefault(s["to"], []).append(s["flowPct"])
+        agg = [(q, sum(1 for v in vals if v < -2) / len(vals) * 100.0, len(vals))
+               for q, vals in sorted(by_q.items()) if len(vals) >= 10]
+        if agg:
+            fig2 = go.Figure(go.Bar(
+                x=[a[0] for a in agg], y=[a[1] for a in agg], marker_color=NEG_RED,
+                customdata=[[a[2]] for a in agg],
+                hovertemplate="Quartal %{x}<br>Verkäuferquote: %{y:.0f} %"
+                              "<br>Investoren: %{customdata[0]}<extra></extra>",
+            ))
+            fig2.update_layout(
+                title="Verkäuferquote je Quartal (Anteil Investoren mit Netto-Verkauf > 2 %)",
+                paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                font=dict(color=OFFWHITE, family="Arial"),
+                xaxis=dict(gridcolor="#1a3a5c"),
+                yaxis=dict(gridcolor="#1a3a5c", title="% der Investoren", range=[0, 100]),
+                height=320, margin=dict(l=10, r=10, t=50, b=10),
+            )
+            st.plotly_chart(fig2, use_container_width=True)
+
+        with st.expander("Details je Investor (jüngstes Quartal)"):
+            df_flows = pd.DataFrame([{
+                "Investor": p,
+                "Zeitraum": f"{_dd(s['from'])} → {_dd(s['to'])}",
+                "Portfolio": fmt_money(s["totalUsd"]),
+                "Netto-Flow": ("+" if s["flowUsd"] >= 0 else "−") + fmt_money(abs(s["flowUsd"])),
+                "Flow %": f"{s['flowPct']:+.1f} %".replace(".", ","),
+                "Kurs-Effekt %": f"{s['ret']:+.1f} %".replace(".", ","),
+                "Schätzbasis": ("eigene Positionen" if s["basis"] == "portfolio"
+                                 else "S&P 500"),
+            } for p, s in latest])
+            st.dataframe(df_flows, use_container_width=True, hide_index=True,
+                         height=min(700, 45 + 35 * len(df_flows)))
+        st.caption(
+            "Methodik: Netto-Flow = Portfoliowert-Änderung abzüglich des geschätzten "
+            "Kurs-Effekts. Der Kurs-Effekt wird aus Positionen mit unveränderter "
+            "Stückzahl geschätzt; reicht deren Abdeckung nicht (< 15 % des Portfolios), "
+            "dient der S&P 500 als Näherung. Negativ = netto verkauft (Cash-Aufbau "
+            "oder Anleger-Abflüsse — aus 13F nicht unterscheidbar). Erfasst nur "
+            "gemeldete US-Long-Positionen; Optionen, Shorts, Anleihen und "
+            "Nicht-US-Aktien bleiben unsichtbar. Kein gemessener Wert — eine Schätzung.")
 
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 

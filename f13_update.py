@@ -35,6 +35,8 @@ PRICE_CACHE = BASE_DIR / "price_cache.json"
 QUARTER_CACHE = BASE_DIR / "quarter_cache.json"
 PRICE_HIST_CACHE = BASE_DIR / "price_history_cache.json"
 CACHE_TOP = 40  # gecachte Top-Positionen je Quartal (reicht für Konsens & Backtest)
+# Cash-Cache: T-Bill-Werte je 10-Q/10-K-Filing (Filings ändern sich nie).
+CASH_CACHE = BASE_DIR / "cash_cache.json"
 
 USER_AGENT = "F13-Dashboard bjoern@impact-scale.com"
 REQUEST_DELAY = 0.12
@@ -211,7 +213,13 @@ def localname(tag):
 
 
 def find_13f_filings(cik):
-    """Alle 13F-HR(/A)-Filings, neuestes Quartal zuerst, je Quartal jüngstes Doc."""
+    """Alle 13F-HR(/A)-Filings, neuestes Quartal zuerst, je Quartal jüngstes Doc.
+
+    Ist das jüngste Filing eines Quartals ein Amendment (13F-HR/A), wird
+    zusätzlich das jüngste Original (13F-HR) als "accessionOrig" mitgegeben:
+    Manche Amendments enthalten nur nachgemeldete Positionen (amendmentType
+    NEW HOLDINGS, z.B. nach vertraulicher Behandlung) statt des Gesamtportfolios.
+    """
     subs = http_get_json(f"https://data.sec.gov/submissions/CIK{cik}.json")
     recent = subs["filings"]["recent"]
     by_period = {}
@@ -221,11 +229,21 @@ def find_13f_filings(cik):
     ):
         if form not in ("13F-HR", "13F-HR/A"):
             continue
-        prev = by_period.get(rdate)
         cand = {"form": form, "filingDate": fdate, "reportDate": rdate, "accession": acc}
-        if prev is None or fdate > prev["filingDate"]:
-            by_period[rdate] = cand
-    return [by_period[p] for p in sorted(by_period, reverse=True)]
+        slot = by_period.setdefault(rdate, {})
+        if "best" not in slot or fdate > slot["best"]["filingDate"]:
+            slot["best"] = cand
+        if form == "13F-HR" and (
+                "orig" not in slot or fdate > slot["orig"]["filingDate"]):
+            slot["orig"] = cand
+    out = []
+    for p in sorted(by_period, reverse=True):
+        f = dict(by_period[p]["best"])
+        orig = by_period[p].get("orig")
+        if orig and orig["accession"] != f["accession"]:
+            f["accessionOrig"] = orig["accession"]
+        out.append(f)
+    return out
 
 
 def fetch_infotable(cik, accession):
@@ -528,6 +546,178 @@ def fetch_price_history(tickers, quarter_dates):
     return cache
 
 
+# ── Cash-Bestände & Netto-Flow-Proxy ─────────────────────────────────────────
+# 13F-Filings enthalten kein Cash (nur US-Long-Aktienpositionen). Zwei Wege:
+#   1. Börsennotierte Vehikel (Berkshire, Icahn Enterprises) melden echte
+#      Cash-Bestände quartalsweise im 10-Q/10-K → SEC-XBRL-API + Bilanz-Parse.
+#   2. Für alle übrigen nur ein Proxy: implizite Netto-Käufe/-Verkäufe aus der
+#      13F-Portfoliowertänderung abzüglich des geschätzten Kurs-Effekts.
+
+# (Person aus INVESTORS, Issuer-CIK, Anzeige-Label, T-Bills aus Bilanz parsen?)
+# Icahn: 13F filed als Person (CIK 921669), die Bilanz liegt bei IEP (813762).
+CASH_SOURCES = [
+    ("Warren Buffett", "0001067983", "Berkshire Hathaway (10-Q/10-K)", True),
+    ("Carl Icahn",     "0000813762", "Icahn Enterprises (10-Q/10-K)",  False),
+]
+
+# Bilanzzeile "Short-term investments in U.S. Treasury Bills** 339,261 ..."
+# (Angabe in Mio. USD; erstes Vorkommen im Dokument = konsolidierte Bilanz)
+_TBILL_RE = re.compile(
+    r"short[-\s]?term investments in u\.?s\.?\s*treasury bills[^\d]{0,30}([\d,]{4,})",
+    re.IGNORECASE)
+
+
+def find_financial_filings(cik):
+    """10-Q/10-K-Filings seit MIN_REPORT_DATE (je Stichtag das jüngste), älteste zuerst."""
+    subs = http_get_json(f"https://data.sec.gov/submissions/CIK{cik}.json")
+    batches = [subs["filings"]["recent"]]
+    for extra in subs["filings"].get("files", []):
+        if extra.get("filingTo", "") >= MIN_REPORT_DATE:
+            batches.append(http_get_json(
+                f"https://data.sec.gov/submissions/{extra['name']}"))
+    by_date = {}
+    for b in batches:
+        for form, rdate, acc, doc in zip(b["form"], b["reportDate"],
+                                         b["accessionNumber"], b["primaryDocument"]):
+            if form in ("10-Q", "10-K") and rdate >= MIN_REPORT_DATE:
+                prev = by_date.get(rdate)
+                if prev is None or acc > prev["accession"]:
+                    by_date[rdate] = {"form": form, "reportDate": rdate,
+                                      "accession": acc, "primaryDocument": doc}
+    return [by_date[d] for d in sorted(by_date)]
+
+
+def xbrl_cash_series(cik):
+    """Quartalsend-Cash aus der XBRL-Companyfacts-API ({Stichtag: USD}).
+    Nimmt das Konzept mit der besten Abdeckung seit MIN_REPORT_DATE."""
+    best = {}
+    for concept in ("CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+                    "CashAndCashEquivalentsAtCarryingValue"):
+        try:
+            d = http_get_json(f"https://data.sec.gov/api/xbrl/companyconcept/"
+                              f"CIK{cik}/us-gaap/{concept}.json")
+        except Exception:
+            continue
+        vals = {u["end"]: u["val"] for u in d.get("units", {}).get("USD", [])
+                if u.get("form") in ("10-Q", "10-K")
+                and u.get("end", "") >= MIN_REPORT_DATE}
+        if len(vals) > len(best):
+            best = vals
+    return best
+
+
+def parse_tbills_from_filing(cik, accession, primary_doc):
+    """T-Bill-Bestand (USD) aus der Bilanz eines 10-Q/10-K-HTML-Dokuments."""
+    acc_nodash = accession.replace("-", "")
+    url = (f"https://www.sec.gov/Archives/edgar/data/"
+           f"{int(cik)}/{acc_nodash}/{primary_doc}")
+    text = http_get(url).decode("utf-8", "ignore")
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = text.replace("&#160;", " ").replace("&nbsp;", " ")
+    text = re.sub(r"\s+", " ", text)
+    m = _TBILL_RE.search(text)
+    if not m:
+        return None
+    val = float(m.group(1).replace(",", "")) * 1e6
+    return val if val > 1e10 else None  # Plausibilität: BRK-T-Bills stets > 10 Mrd
+
+
+def fetch_public_cash():
+    """Echte Cash-Bestände börsennotierter Vehikel, je Quartal seit MIN_REPORT_DATE.
+    Rückgabe: {Person: {label, source, series: [{date, cash, tbills, total}]}}"""
+    ccache = {}
+    if CASH_CACHE.exists():
+        try:
+            ccache = json.loads(CASH_CACHE.read_text("utf-8"))
+        except Exception:
+            ccache = {}
+    out = {}
+    for person, cik, label, want_tbills in CASH_SOURCES:
+        try:
+            cash_by_date = xbrl_cash_series(cik)
+            if not cash_by_date:
+                raise RuntimeError("keine XBRL-Cash-Daten")
+            tbills = {}
+            if want_tbills:
+                for f in find_financial_filings(cik):
+                    ce = ccache.get(f["accession"])
+                    if ce is None:
+                        ce = {"reportDate": f["reportDate"],
+                              "tbills": parse_tbills_from_filing(
+                                  cik, f["accession"], f["primaryDocument"])}
+                        ccache[f["accession"]] = ce
+                    if ce.get("tbills"):
+                        tbills[f["reportDate"]] = ce["tbills"]
+            series = [{"date": d, "cash": cash_by_date[d],
+                       "tbills": tbills.get(d),
+                       "total": cash_by_date[d] + (tbills.get(d) or 0)}
+                      for d in sorted(cash_by_date)]
+            out[person] = {"label": label,
+                           "source": "SEC 10-Q/10-K (XBRL + Bilanz)",
+                           "series": series}
+            print(f"  Cash {person}: {len(series)} Stichtage, aktuell "
+                  f"{series[-1]['total']/1e9:,.1f} Mrd USD ({series[-1]['date']})")
+        except Exception as exc:
+            print(f"  Cash-Fehler {person}: {exc}", file=sys.stderr)
+    CASH_CACHE.write_text(json.dumps(ccache, ensure_ascii=False), "utf-8")
+    return out
+
+
+def bench_quarter_return(benchmarks, d_from, d_to):
+    q = benchmarks.get("S&P 500", {}).get("quarters", {})
+    a, b = q.get(d_from), q.get(d_to)
+    return (b / a - 1.0) if a and b else None
+
+
+def compute_flows(raw, benchmarks):
+    """Impliziter Netto-Kauf/-Verkauf je Investor & Quartalspaar (Cash-Proxy).
+
+    Der Kurs-Effekt wird aus Positionen geschätzt, deren Stückzahl unverändert
+    blieb (kein Trade; splitrobust, da Wertverhältnis statt Stückpreis).
+    flow = total_cur − total_prev·(1+r): negativ = netto verkauft (Cash-Aufbau
+    oder Anleger-Abflüsse — aus 13F nicht unterscheidbar), positiv = zugekauft.
+    Deckt nur die gemeldeten US-Long-Positionen ab.
+    """
+    out = {}
+    for r in raw:
+        qd = sorted(r["quarters"])
+        series = []
+        for prev_d, cur_d in zip(qd, qd[1:]):
+            qp, qc = r["quarters"][prev_d], r["quarters"][cur_d]
+            sp, sc = unit_scale(prev_d), unit_scale(cur_d)
+            total_prev, total_cur = qp["total"] * sp, qc["total"] * sc
+            if total_prev <= 0 or total_cur <= 0:
+                continue
+            prev_by = {m["key"]: m for m in qp["m"]}
+            wsum = rsum = 0.0
+            for m in qc["m"]:
+                p = prev_by.get(m["key"])
+                if not p or not p.get("shares") or not m.get("shares"):
+                    continue
+                if abs(m["shares"] - p["shares"]) > 0.005 * p["shares"]:
+                    continue  # gehandelt → nicht als Kurs-Referenz nutzbar
+                w = p["value"] * sp
+                rsum += w * ((m["value"] * sc) / w - 1.0)
+                wsum += w
+            coverage = wsum / total_prev
+            if wsum > 0 and coverage >= 0.15:
+                r_est, basis = rsum / wsum, "portfolio"
+            else:
+                r_est, basis = bench_quarter_return(benchmarks, prev_d, cur_d), "benchmark"
+                if r_est is None:
+                    continue
+            flow = total_cur - total_prev * (1.0 + r_est)
+            series.append({"from": prev_d, "to": cur_d,
+                           "flowUsd": round(flow),
+                           "flowPct": round(100.0 * flow / total_prev, 2),
+                           "ret": round(100.0 * r_est, 2),
+                           "coverage": round(100.0 * coverage, 1),
+                           "basis": basis,
+                           "totalUsd": round(total_cur)})
+        out[r["person"]] = series
+    return out
+
+
 def consensus(investors, field, top_n):
     """Zählt, in wie vielen Investoren-Top-N (Einzelaktien) jede Aktie vorkommt."""
     overlap = {}
@@ -580,7 +770,23 @@ def main():
 
     raw = []
     errors = []
-    cache_hits = cache_miss = 0
+    stats = {"hit": 0, "miss": 0}
+
+    def load_quarter(cik, acc):
+        ce = qcache.get(acc)
+        if ce is not None:
+            stats["hit"] += 1
+            return ce
+        pos = fetch_infotable(cik, acc)
+        if not pos:
+            return None
+        merged = aggregate_investor(pos)
+        ce = {"total": sum(m["value"] for m in merged),
+              "count": len(merged), "m": merged[:CACHE_TOP]}
+        qcache[acc] = ce
+        stats["miss"] += 1
+        return ce
+
     for person, firm, cik, group in INVESTORS:
         label = f"{person}"
         try:
@@ -590,19 +796,15 @@ def main():
                 raise RuntimeError("kein 13F-HR-Filing")
             quarters = {}
             for f in filings:
-                acc = f["accession"]
-                ce = qcache.get(acc)
+                ce = load_quarter(cik, f["accession"])
+                # Teil-Amendment (nur Nachmeldungen)? Dann das Original nehmen,
+                # falls es das größere Gesamtportfolio enthält.
+                if f.get("accessionOrig"):
+                    co = load_quarter(cik, f["accessionOrig"])
+                    if co is not None and (ce is None or co["total"] > ce["total"]):
+                        ce = co
                 if ce is None:
-                    pos = fetch_infotable(cik, acc)
-                    if not pos:
-                        continue
-                    merged = aggregate_investor(pos)
-                    ce = {"total": sum(m["value"] for m in merged),
-                          "count": len(merged), "m": merged[:CACHE_TOP]}
-                    qcache[acc] = ce
-                    cache_miss += 1
-                else:
-                    cache_hits += 1
+                    continue
                 quarters[f["reportDate"]] = ce
             if not quarters:
                 raise RuntimeError("keine Information Table")
@@ -615,7 +817,7 @@ def main():
             print(f"  FEHLER {label}: {exc}", file=sys.stderr)
 
     QUARTER_CACHE.write_text(json.dumps(qcache, ensure_ascii=False), "utf-8")
-    print(f"  Quartals-Cache: {cache_hits} Treffer, {cache_miss} neu geladen.")
+    print(f"  Quartals-Cache: {stats['hit']} Treffer, {stats['miss']} neu geladen.")
 
     # CUSIPs des jeweils aktuellen Quartals (Top STORE_N) für Ticker-Auflösung
     cusips = set()
@@ -731,13 +933,19 @@ def main():
     # Vergleichsindizes (S&P 500, Nasdaq 100) für den Backtest
     benchmarks = fetch_benchmarks([h["quarter"] for h in history])
 
+    # Cash-Bestände (echt, börsennotierte Vehikel) + Netto-Flow-Proxy (alle)
+    print("Cash-Bestände & Netto-Flow-Proxy ...")
+    cash = fetch_public_cash()
+    flows = compute_flows(raw, benchmarks)
+
     data = {
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "topN": TOP_N, "storeN": STORE_N, "quartersLoaded": len(history),
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
-        "benchmarks": benchmarks, "quarterPrices": phist, "errors": errors,
+        "benchmarks": benchmarks, "quarterPrices": phist,
+        "cash": cash, "flows": flows, "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -771,7 +979,7 @@ def git_push(repo_dir):
             return
         subprocess.run(git + ["add", "f13_data.json", "f13_data.js", "ticker_cache.json",
                                "price_cache.json", "quarter_cache.json",
-                               "price_history_cache.json"],
+                               "price_history_cache.json", "cash_cache.json"],
                        timeout=10, check=True)
         stamp = datetime.now().strftime("%Y-%m-%d %H:%M")
         subprocess.run(git + ["commit", "-m", f"F13 Update {stamp}"],
