@@ -1486,6 +1486,9 @@ if page == "💰 Cash & Flows":
             y=[p for p, _ in chart],
             orientation="h",
             marker_color=[NEG_RED if s["flowPct"] < 0 else POS_GREEN for _, s in chart],
+            text=[f"{s['flowPct']:+.1f} %".replace(".", ",") for _, s in chart],
+            textposition="outside", cliponaxis=False,
+            textfont=dict(color=OFFWHITE, family="Courier New", size=11),
             customdata=[[mrd(s["flowUsd"]), _dd(s["from"]), _dd(s["to"])] for _, s in chart],
             hovertemplate="<b>%{y}</b><br>Netto-Flow: %{x:.1f} % (%{customdata[0]})"
                           "<br>Zeitraum: %{customdata[1]} → %{customdata[2]}"
@@ -1496,9 +1499,9 @@ if page == "💰 Cash & Flows":
             paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
             font=dict(color=OFFWHITE, family="Arial"),
             xaxis=dict(gridcolor="#1a3a5c", title="% des Portfoliowerts",
-                       zerolinecolor=GOLD),
+                       zerolinecolor=GOLD, automargin=True),
             yaxis=dict(gridcolor="#1a3a5c", tickfont=dict(size=11)),
-            height=max(420, 20 * len(chart)), margin=dict(l=10, r=30, t=50, b=10),
+            height=max(420, 20 * len(chart)), margin=dict(l=10, r=70, t=50, b=10),
         )
         st.plotly_chart(fig, use_container_width=True)
 
