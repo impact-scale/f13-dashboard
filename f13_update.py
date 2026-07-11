@@ -246,6 +246,50 @@ def find_13f_filings(cik):
     return out
 
 
+def fetch_amendment_type(cik, accession):
+    """Amendment-Typ eines 13F-HR/A aus dem Deckblatt (primary_doc.xml):
+    'RESTATEMENT' ersetzt das komplette Original, 'NEW HOLDINGS' ergänzt nur
+    nachgemeldete Positionen (z.B. nach vertraulicher Behandlung)."""
+    try:
+        acc_nodash = accession.replace("-", "")
+        cik_int = int(cik)
+        index = http_get_json(
+            f"https://www.sec.gov/Archives/edgar/data/{cik_int}/{acc_nodash}/index.json")
+        prim = [f["name"] for f in index["directory"]["item"]
+                if "primary_doc" in f["name"].lower()
+                and f["name"].lower().endswith(".xml")]
+        if not prim:
+            return None
+        root = ET.fromstring(http_get(
+            f"https://www.sec.gov/Archives/edgar/data/{cik_int}/{acc_nodash}/{prim[0]}"))
+        for el in root.iter():
+            if localname(el.tag) == "amendmentType":
+                return (el.text or "").strip().upper() or None
+    except Exception:
+        pass
+    return None
+
+
+def merge_amendment(orig, amd):
+    """NEW-HOLDINGS-Amendment mit dem Original zusammenführen:
+    Das /A enthält nur die nachgemeldeten Positionen → Summen addieren."""
+    if amd is None:
+        return orig
+    if orig is None:
+        return amd
+    by_key = {m["key"]: dict(m) for m in orig["m"]}
+    for m in amd["m"]:
+        if m["key"] in by_key:
+            by_key[m["key"]]["value"] += m["value"]
+            by_key[m["key"]]["shares"] += m["shares"]
+        else:
+            by_key[m["key"]] = dict(m)
+    merged = sorted(by_key.values(), key=lambda x: -x["value"])
+    return {"total": orig["total"] + amd["total"],
+            "count": orig["count"] + amd["count"],
+            "m": merged[:CACHE_TOP]}
+
+
 def fetch_infotable(cik, accession):
     """Lädt die Information Table (XML) und parst Long-Aktienpositionen."""
     acc_nodash = accession.replace("-", "")
@@ -937,12 +981,24 @@ def main():
             quarters = {}
             for f in filings:
                 ce = load_quarter(cik, f["accession"])
-                # Teil-Amendment (nur Nachmeldungen)? Dann das Original nehmen,
-                # falls es das größere Gesamtportfolio enthält.
+                # Amendments typgerecht behandeln (SEC-Deckblatt entscheidet):
+                # RESTATEMENT ersetzt das Original komplett (z.B. Korrektur einer
+                # fehlerhaften Meldung), NEW HOLDINGS ergänzt es nur (z.B. nach
+                # vertraulicher Behandlung). Typ wird je Accession gecacht.
+                # Grenzfall: Bei mehreren /A je Quartal zählt nur das jüngste.
                 if f.get("accessionOrig"):
                     co = load_quarter(cik, f["accessionOrig"])
-                    if co is not None and (ce is None or co["total"] > ce["total"]):
-                        ce = co
+                    atype = (qcache.get(f["accession"]) or {}).get("amdType")
+                    if not atype:
+                        atype = fetch_amendment_type(cik, f["accession"]) or "?"
+                        if f["accession"] in qcache:
+                            qcache[f["accession"]]["amdType"] = atype
+                    if atype == "NEW HOLDINGS":
+                        ce = merge_amendment(co, ce)
+                    elif atype == "RESTATEMENT":
+                        ce = ce if ce is not None else co
+                    elif co is not None and (ce is None or co["total"] > ce["total"]):
+                        ce = co  # Typ unbekannt: konservativ das vollständigere
                 if ce is None:
                     continue
                 quarters[f["reportDate"]] = ce
