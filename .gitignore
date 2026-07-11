@@ -5,3 +5,4 @@ __pycache__/
 scratchpad/
 .DS_Store
 *.pdf
+graphify-out/
