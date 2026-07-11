@@ -1077,17 +1077,109 @@ if page == "👤 Investoren-Details":
             f"{inv['person']} — {inv['firm']}  ·  {fmt_money(inv['portfolioValue'])}  "
             f"·  Filing {fdate} ({inv['form']}){change_summary}"
         ):
-            df = pd.DataFrame([{
-                "Ticker": p.get("ticker") or "–",
-                "Position": p["name"] + ("  ⓔ" if p["isEtf"] else ""),
-                "Gewicht": f"{p['weight']:.1f} %",
-                "Wert": fmt_money(p["value"]),
-                "Veränderung": CHANGE_BADGE.get(p.get("change", ""), "–"),
-            } for p in picks])
-            st.dataframe(df, use_container_width=True, hide_index=True)
-            if sold_n:
-                st.caption("Im Vorquartal gehalten, jetzt verkauft: "
-                           + ", ".join(f"{s['name']}" for s in inv["sold"]))
+            qh = inv.get("quartersHist") or []
+            qdates = [q["d"] for q in qh][::-1]  # neueste zuerst
+
+            # Quartalsfilter: Standard = aktuelles Meldequartal
+            sel_q = inv["reportDate"]
+            if len(qdates) > 1:
+                sel_q = st.selectbox(
+                    "Quartal", qdates, index=0,
+                    format_func=lambda d: datetime.strptime(d, "%Y-%m-%d")
+                    .strftime("%d.%m.%Y") + ("  (aktuell)" if d == inv["reportDate"] else ""),
+                    key=f"qsel_{inv['cik']}")
+
+            if sel_q == inv["reportDate"] or not qh:
+                df = pd.DataFrame([{
+                    "Ticker": p.get("ticker") or "–",
+                    "Position": p["name"] + ("  ⓔ" if p["isEtf"] else ""),
+                    "Gewicht": f"{p['weight']:.1f} %",
+                    "Wert": fmt_money(p["value"]),
+                    "Veränderung": CHANGE_BADGE.get(p.get("change", ""), "–"),
+                } for p in picks])
+                st.dataframe(df, use_container_width=True, hide_index=True)
+                if sold_n:
+                    st.caption("Im Vorquartal gehalten, jetzt verkauft: "
+                               + ", ".join(f"{s['name']}" for s in inv["sold"]))
+            else:
+                qsnap = next(q for q in qh if q["d"] == sel_q)
+                df = pd.DataFrame([{
+                    "Ticker": p.get("t") or "–",
+                    "Position": p["n"],
+                    "Gewicht": f"{p['w']:.1f} %",
+                    "Wert": fmt_money(p["v"]),
+                } for p in qsnap["top"]])
+                st.dataframe(df, use_container_width=True, hide_index=True)
+                st.caption(f"Top 10 zum {datetime.strptime(sel_q, '%Y-%m-%d').strftime('%d.%m.%Y')} "
+                           f"· Portfoliowert damals: {fmt_money(qsnap['total'])} · "
+                           f"Veränderungs-Badges gibt es nur im aktuellen Quartal.")
+
+            # Verlaufs-Charts nur auf Wunsch rendern: st.expander legt Inhalte
+            # IMMER ins DOM — 84 Plotly-Charts würden den Tab ausbremsen.
+            show_viz = st.toggle("📈 Bestandsentwicklung & Netto-Flows anzeigen",
+                                 key=f"hviz_{inv['cik']}")
+
+            # Bestandsentwicklung: Top-Positionen über die Zeit
+            if show_viz and len(qh) >= 2:
+                series, names_by_key = {}, {}
+                for q in qh:
+                    for p in q["top"]:
+                        series.setdefault(p["k"], {})[q["d"]] = p["v"]
+                        names_by_key[p["k"]] = p["t"] or p["n"][:18]
+                top_keys = sorted(series, key=lambda k: -max(series[k].values()))[:8]
+                dates = [q["d"] for q in qh]
+                unit, ulabel = (1e9, "Mrd USD") if max(
+                    q["total"] for q in qh) >= 2e9 else (1e6, "Mio USD")
+                palette = [GOLD, "#8899AA", "#5FA97C", "#C25E5E", "#6b8caa",
+                           "#a8863a", "#d4c9b0", "#3d7a9a"]
+                fig_h = go.Figure()
+                for i, k in enumerate(top_keys):
+                    fig_h.add_scatter(
+                        x=dates, y=[(series[k][d] / unit if d in series[k] else None)
+                                    for d in dates],
+                        mode="lines+markers", name=names_by_key[k],
+                        connectgaps=False,
+                        line=dict(color=palette[i % len(palette)], width=2),
+                        marker=dict(size=5))
+                fig_h.update_layout(
+                    title=f"Bestandsentwicklung der größten Positionen ({ulabel})",
+                    paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                    font=dict(color=OFFWHITE, family="Arial"),
+                    xaxis=dict(gridcolor="#1a3a5c"),
+                    yaxis=dict(gridcolor="#1a3a5c", title=ulabel),
+                    legend=dict(orientation="h", yanchor="bottom", y=1.02,
+                                font=dict(size=10)),
+                    height=380, margin=dict(l=10, r=10, t=90, b=10),
+                )
+                st.plotly_chart(fig_h, use_container_width=True,
+                                key=f"hist_{inv['cik']}")
+                st.caption("Wert der jeweiligen Position zum Quartalsende (13F). "
+                           "Lücken/Enden = Position war nicht (mehr) unter den Top 10 "
+                           "des Quartals — ein endender Verlauf zeigt Verkauf oder Abstieg.")
+
+            # Netto-Flow je Quartal (Proxy) — kauft oder verkauft dieser Investor?
+            inv_flows = (data.get("flows") or {}).get(inv["person"]) or []
+            if show_viz and inv_flows:
+                fig_f = go.Figure(go.Bar(
+                    x=[s["to"] for s in inv_flows],
+                    y=[s["flowPct"] for s in inv_flows],
+                    marker_color=["#C25E5E" if s["flowPct"] < 0 else "#5FA97C"
+                                  for s in inv_flows],
+                    hovertemplate="Quartal bis %{x}<br>Netto-Flow: %{y:.1f} %"
+                                  "<extra></extra>",
+                ))
+                fig_f.update_layout(
+                    title="Netto-Käufe / -Verkäufe je Quartal (% des Portfolios, Proxy)",
+                    paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+                    font=dict(color=OFFWHITE, family="Arial"),
+                    xaxis=dict(gridcolor="#1a3a5c"),
+                    yaxis=dict(gridcolor="#1a3a5c", title="%", zerolinecolor=GOLD),
+                    height=260, margin=dict(l=10, r=10, t=50, b=10),
+                )
+                st.plotly_chart(fig_f, use_container_width=True,
+                                key=f"flow_{inv['cik']}")
+                st.caption("Schätzung aus 13F-Daten (Details & Methodik im Bereich "
+                           "„💰 Cash & Flows“). Rot = netto verkauft, grün = netto gekauft.")
 
 # --- Tab 8: Neue Meldungen (Filing-Tracker) ---
 if page == "🆕 Neue Meldungen":

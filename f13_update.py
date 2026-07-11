@@ -860,6 +860,21 @@ def main():
         prev_h = slim_holdings(prev_d) if prev_d else []
         ytd_h = slim_holdings(ytd_d) if ytd_d else []
 
+        # Kompakte Quartals-Historie (Top 10 je Quartal) für Bestandsentwicklung
+        # und Quartalsfilter im Investoren-Detail. Kurze Keys halten die JSON klein.
+        quarters_hist = []
+        for dd in sorted(r["quarters"]):
+            q = r["quarters"][dd]
+            sc = unit_scale(dd)
+            top10 = []
+            for m in q["m"][:10]:
+                e = enrich(m, q["total"], sc, ticker_map, name_map)
+                top10.append({"k": e["key"], "n": e["name"], "t": e["ticker"],
+                              "v": round(e["value"]), "s": round(m["shares"]),
+                              "w": e["weight"]})
+            quarters_hist.append({"d": dd, "total": round(q["total"] * sc),
+                                  "top": top10})
+
         def exits(slimlist):
             return [{"key": h["key"], "name": h["name"], "ticker": h["ticker"],
                      "sector": h["sector"], "region": h["region"],
@@ -875,6 +890,7 @@ def main():
             "top": [h for h in holdings if not h["isEtf"]][:TOP_N],
             "holdings": holdings, "prevHoldings": prev_h, "ytdHoldings": ytd_h,
             "sold": exits(prev_h), "soldYtd": exits(ytd_h),
+            "quartersHist": quarters_hist,
         })
 
     # Aktuelle Konsens-Rangliste + Q/Q- und YTD-Delta (alle Investoren)
