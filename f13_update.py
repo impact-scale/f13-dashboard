@@ -560,6 +560,35 @@ CASH_SOURCES = [
     ("Carl Icahn",     "0000813762", "Icahn Enterprises (10-Q/10-K)",  False),
 ]
 
+# Investoren mit Eigenkapital / geschlossenem Kapital (Family Offices, eigene
+# Bilanz, Permanent-Capital-Vehikel): Deren Netto-Verkäufe sind echte Markt-
+# meinung — sie KÖNNEN Cash aufbauen und haben keine täglichen Anlegerflüsse.
+# Mandatsgebundene Verwalter (SMA/Publikumsfonds, i.d.R. voll investiert)
+# verwässern das Signal. Kuratierte Zuordnung.
+DISCRETIONARY = {
+    "Warren Buffett", "Prem Watsa", "Carl Icahn", "George Soros",
+    "Stanley Druckenmiller", "David Tepper", "Michael Burry", "Mohnish Pabrai",
+    "David Abrams", "Li Lu", "Norbert Lou", "Gates Foundation",
+    "Bill Ackman", "Daniel Loeb",
+}
+
+# ── N-PORT: echte Cash-Quoten der Fondsmanager (Stufe 2) ─────────────────────
+# Publikumsfonds melden monatlich Formular N-PORT (öffentlich je drittem
+# Quartalsmonat, ~60 Tage Verzug) inkl. Cash und aller Positionen. Je Manager
+# das Flaggschiff: (Person, Trust-CIK, Series-ID, Anzeige-Label).
+# Series-IDs verifiziert über https://www.sec.gov/files/company_tickers_mf.json
+NPORT_SOURCES = [
+    ("Ron Baron",       "1217673", "S000000588", "Baron Partners Fund (BPTRX)"),
+    ("Bill Nygren",     "872323",  "S000002758", "Oakmark Fund (OAKMX)"),
+    ("Dodge & Cox",     "29440",   "S000011202", "Dodge & Cox Stock Fund (DODGX)"),
+    ("Jeremy Grantham", "772129",  "S000004084", "GMO Quality Fund (GQETX)"),
+    ("Tweedy Browne",   "896975",  "S000001302", "Tweedy Browne Global Value (TBGVX)"),
+    ("Wallace Weitz",   "1257927", "S000003481", "Weitz Partners Value (WPVLX)"),
+    ("Bruce Berkowitz", "1096344", "S000008484", "Fairholme Fund (FAIRX)"),
+    ("Mason Hawkins",   "806636",  "S000009311", "Longleaf Partners Fund (LLPFX)"),
+    ("Chuck Akre",      "811030",  "S000026760", "Akre Focus Fund (AKREX)"),
+]
+
 # Bilanzzeile "Short-term investments in U.S. Treasury Bills** 339,261 ..."
 # (Angabe in Mio. USD; erstes Vorkommen im Dokument = konsolidierte Bilanz)
 _TBILL_RE = re.compile(
@@ -659,6 +688,117 @@ def fetch_public_cash():
                   f"{series[-1]['total']/1e9:,.1f} Mrd USD ({series[-1]['date']})")
         except Exception as exc:
             print(f"  Cash-Fehler {person}: {exc}", file=sys.stderr)
+    CASH_CACHE.write_text(json.dumps(ccache, ensure_ascii=False), "utf-8")
+    return out
+
+
+def find_nport_filings(series_id):
+    """Öffentliche NPORT-P-Filings einer Fonds-Serie (Accession + Filing-Datum).
+    EDGARs browse-Endpoint akzeptiert Series-IDs im CIK-Parameter."""
+    raw = http_get("https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany"
+                   f"&CIK={series_id}&type=NPORT-P&dateb=&owner=include"
+                   "&count=100&output=atom")
+    root = ET.fromstring(raw)
+    out = []
+    for entry in root.iter():
+        if localname(entry.tag) != "entry":
+            continue
+        acc = fdate = None
+        for el in entry.iter():
+            t = localname(el.tag)
+            if t == "accession-number":
+                acc = (el.text or "").strip()
+            elif t == "filing-date":
+                fdate = (el.text or "").strip()
+        if acc and fdate and fdate >= "2020-01-01":
+            out.append({"accession": acc, "filingDate": fdate})
+    return out
+
+
+def parse_nport(cik, accession):
+    """Stichtag, Nettovermögen und Cash-Quote (%) aus einem NPORT-P-XML.
+
+    Cash-Quote = nicht angelegtes Cash (cshNotRptdInCorD) + Geldmarkt-/
+    Repo-Positionen (assetCat STIV/RA) + US-Treasuries (issuerCat UST) —
+    viele Fonds (z.B. Fairholme) parken Liquidität in T-Bills statt Cash.
+    """
+    acc_nodash = accession.replace("-", "")
+    raw = http_get(f"https://www.sec.gov/Archives/edgar/data/"
+                   f"{int(cik)}/{acc_nodash}/primary_doc.xml")
+    root = ET.fromstring(raw)
+    rep, net, csh, liq_pct = None, None, 0.0, 0.0
+    for el in root.iter():
+        t = localname(el.tag)
+        if t == "repPdDate":
+            rep = (el.text or "").strip()
+        elif t == "netAssets":
+            try:
+                net = float(el.text)
+            except (TypeError, ValueError):
+                pass
+        elif t == "cshNotRptdInCorD":
+            try:
+                csh = float(el.text)
+            except (TypeError, ValueError):
+                pass
+        elif t == "invstOrSec":
+            asset = issuer = ""
+            pct = 0.0
+            for ch in el:
+                ct = localname(ch.tag)
+                if ct == "assetCat":
+                    asset = (ch.text or "").strip()
+                elif ct == "issuerCat":
+                    issuer = (ch.text or "").strip()
+                elif ct == "pctVal":
+                    try:
+                        pct = float(ch.text)
+                    except (TypeError, ValueError):
+                        pct = 0.0
+            if asset in ("STIV", "RA") or issuer == "UST":
+                liq_pct += pct
+    if not rep or not net or net <= 0:
+        return None
+    return {"d": rep, "cashPct": round(liq_pct + 100.0 * csh / net, 2),
+            "netAssets": round(net)}
+
+
+def fetch_nport_cash():
+    """Echte Cash-Quoten je Fondsmanager aus N-PORT ({Person: {…, series}}).
+    Ein Filing ändert sich nie → Ergebnis je Accession im Cash-Cache."""
+    ccache = {}
+    if CASH_CACHE.exists():
+        try:
+            ccache = json.loads(CASH_CACHE.read_text("utf-8"))
+        except Exception:
+            ccache = {}
+    out = {}
+    for person, cik, series_id, label in NPORT_SOURCES:
+        try:
+            by_date = {}
+            for f in find_nport_filings(series_id):
+                ce = ccache.get(f["accession"])
+                if ce is None or "cashPct" not in ce:
+                    ce = parse_nport(cik, f["accession"]) or {}
+                    ccache[f["accession"]] = ce
+                d = ce.get("d")
+                if d:  # jüngstes Filing je Stichtag gewinnt (Amendments)
+                    prev = by_date.get(d)
+                    if prev is None or f["filingDate"] > prev.get("_fd", ""):
+                        by_date[d] = dict(ce, _fd=f["filingDate"])
+            series = [{"d": d, "cashPct": by_date[d]["cashPct"],
+                       "netAssets": by_date[d]["netAssets"]}
+                      for d in sorted(by_date)]
+            if not series:
+                raise RuntimeError("keine auswertbaren NPORT-P-Filings")
+            out[person] = {"label": label, "cik": cik, "seriesId": series_id,
+                           "source": "SEC N-PORT (Monatsdaten, quartalsweise "
+                                     "öffentlich, ~60 Tage Verzug)",
+                           "series": series}
+            print(f"  N-PORT {person}: {len(series)} Stichtage, aktuell "
+                  f"{series[-1]['cashPct']:.1f} % Cash ({series[-1]['d']})")
+        except Exception as exc:
+            print(f"  N-PORT-Fehler {person}: {exc}", file=sys.stderr)
     CASH_CACHE.write_text(json.dumps(ccache, ensure_ascii=False), "utf-8")
     return out
 
@@ -891,6 +1031,7 @@ def main():
             "holdings": holdings, "prevHoldings": prev_h, "ytdHoldings": ytd_h,
             "sold": exits(prev_h), "soldYtd": exits(ytd_h),
             "quartersHist": quarters_hist,
+            "discretionary": r["person"] in DISCRETIONARY,
         })
 
     # Aktuelle Konsens-Rangliste + Q/Q- und YTD-Delta (alle Investoren)
@@ -949,9 +1090,11 @@ def main():
     # Vergleichsindizes (S&P 500, Nasdaq 100) für den Backtest
     benchmarks = fetch_benchmarks([h["quarter"] for h in history])
 
-    # Cash-Bestände (echt, börsennotierte Vehikel) + Netto-Flow-Proxy (alle)
+    # Cash-Bestände (echt, börsennotierte Vehikel) + N-PORT-Cash-Quoten
+    # (echt, Publikumsfonds) + Netto-Flow-Proxy (alle)
     print("Cash-Bestände & Netto-Flow-Proxy ...")
     cash = fetch_public_cash()
+    nport_cash = fetch_nport_cash()
     flows = compute_flows(raw, benchmarks)
 
     data = {
@@ -961,7 +1104,7 @@ def main():
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
         "benchmarks": benchmarks, "quarterPrices": phist,
-        "cash": cash, "flows": flows, "errors": errors,
+        "cash": cash, "nportCash": nport_cash, "flows": flows, "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(
         json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")

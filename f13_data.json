@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-11T09:34:55.645629+00:00",
+  "generatedAt": "2026-07-11T17:52:24.399363+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 26,
@@ -3376,7 +3376,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Ray Dalio",
@@ -6804,7 +6805,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Prem Watsa",
@@ -10106,7 +10108,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "George Soros",
@@ -13570,7 +13573,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Ron Baron",
@@ -16872,7 +16876,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Daniel Loeb",
@@ -20354,7 +20359,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Bill Ackman",
@@ -22632,7 +22638,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Mohnish Pabrai",
@@ -23648,7 +23655,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Carl Icahn",
@@ -26502,7 +26510,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Stanley Druckenmiller",
@@ -29912,7 +29921,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Joel Greenblatt",
@@ -33214,7 +33224,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Ken Fisher",
@@ -36496,7 +36507,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Jeremy Grantham",
@@ -39778,7 +39790,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Steven Cohen",
@@ -43278,7 +43291,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Howard Marks",
@@ -46634,7 +46648,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Michael Burry",
@@ -48795,7 +48810,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "David Tepper",
@@ -52133,7 +52149,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Chuck Akre",
@@ -55235,7 +55252,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Li Lu",
@@ -57123,7 +57141,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Chris Hohn",
@@ -59695,7 +59714,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Bill Nygren",
@@ -62997,7 +63017,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Dodge & Cox",
@@ -66279,7 +66300,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Bill Miller",
@@ -69581,7 +69603,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Thomas Russo",
@@ -72883,7 +72906,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Mason Hawkins",
@@ -76221,7 +76245,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Tweedy Browne",
@@ -79503,7 +79528,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Wallace Weitz",
@@ -82785,7 +82811,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Glenn Greenberg",
@@ -86087,7 +86114,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "David Abrams",
@@ -88849,7 +88877,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Francois Rochon",
@@ -92131,7 +92160,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Chris Bloomstran",
@@ -95413,7 +95443,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Bruce Berkowitz",
@@ -98037,7 +98068,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Andrew Brenton",
@@ -101319,7 +101351,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Chase Coleman",
@@ -104657,7 +104690,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Philippe Laffont",
@@ -107995,7 +108029,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Stephen Mandel",
@@ -111405,7 +111440,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Andreas Halvorsen",
@@ -114779,7 +114815,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "John Armitage",
@@ -118118,7 +118155,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Gates Foundation",
@@ -121341,7 +121379,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     },
     {
       "person": "Robert Vinall",
@@ -123593,7 +123632,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Pat Dorsey",
@@ -126301,7 +126341,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": false
     },
     {
       "person": "Norbert Lou",
@@ -127532,7 +127573,8 @@
             }
           ]
         }
-      ]
+      ],
+      "discretionary": true
     }
   ],
   "ranking": [
@@ -135701,36 +135743,116 @@
     }
   ],
   "prices": {
-    "WMT": {
-      "price": 113.9,
+    "CRM": {
+      "price": 163.32,
       "asOf": "2026-07-11"
     },
-    "OXY": {
-      "price": 52.89,
+    "FISV": {
+      "price": 50.45,
       "asOf": "2026-07-11"
     },
-    "WFC": {
-      "price": 87.16,
+    "V": {
+      "price": 348.97,
       "asOf": "2026-07-11"
     },
-    "NFLX": {
-      "price": 73.37,
+    "AXP": {
+      "price": 350.58,
+      "asOf": "2026-07-11"
+    },
+    "MRK": {
+      "price": 123.54,
+      "asOf": "2026-07-11"
+    },
+    "SCHW": {
+      "price": 103.12,
       "asOf": "2026-07-11"
     },
     "PDD": {
       "price": 85.13,
       "asOf": "2026-07-11"
     },
+    "QCOM": {
+      "price": 189.16,
+      "asOf": "2026-07-11"
+    },
+    "GOOG": {
+      "price": 355.03,
+      "asOf": "2026-07-11"
+    },
+    "KO": {
+      "price": 83.49,
+      "asOf": "2026-07-11"
+    },
+    "TMUS": {
+      "price": 187.61,
+      "asOf": "2026-07-11"
+    },
+    "DHI": {
+      "price": 151.58,
+      "asOf": "2026-07-11"
+    },
+    "UBER": {
+      "price": 74.54,
+      "asOf": "2026-07-11"
+    },
+    "DHR": {
+      "price": 199.05,
+      "asOf": "2026-07-11"
+    },
     "SUNB": {
       "price": 74.84,
       "asOf": "2026-07-11"
     },
-    "BABA": {
-      "price": 112.33,
+    "CMCSA": {
+      "price": 23.57,
       "asOf": "2026-07-11"
     },
-    "META": {
-      "price": 669.21,
+    "DIS": {
+      "price": 95.62,
+      "asOf": "2026-07-11"
+    },
+    "VST": {
+      "price": 158.86,
+      "asOf": "2026-07-11"
+    },
+    "ADBE": {
+      "price": 223.64,
+      "asOf": "2026-07-11"
+    },
+    "WFC": {
+      "price": 87.16,
+      "asOf": "2026-07-11"
+    },
+    "MSFT": {
+      "price": 385.1,
+      "asOf": "2026-07-11"
+    },
+    "GM": {
+      "price": 77.85,
+      "asOf": "2026-07-11"
+    },
+    "TDG": {
+      "price": 1291.35,
+      "asOf": "2026-07-11"
+    },
+    "MCO": {
+      "price": 487.28,
+      "asOf": "2026-07-11"
+    },
+    "NVDA": {
+      "price": 210.96,
+      "asOf": "2026-07-11"
+    },
+    "CPNG": {
+      "price": 18.8,
+      "asOf": "2026-07-11"
+    },
+    "GE": {
+      "price": 359.27,
+      "asOf": "2026-07-11"
+    },
+    "CHTR": {
+      "price": 130.73,
       "asOf": "2026-07-11"
     },
     "PYPL": {
@@ -135741,216 +135863,136 @@
       "price": 181.62,
       "asOf": "2026-07-11"
     },
-    "AVGO": {
-      "price": 399.97,
+    "WMT": {
+      "price": 113.9,
       "asOf": "2026-07-11"
     },
-    "JPM": {
-      "price": 336.47,
-      "asOf": "2026-07-11"
-    },
-    "TMUS": {
-      "price": 187.61,
-      "asOf": "2026-07-11"
-    },
-    "MU": {
-      "price": 979.3,
-      "asOf": "2026-07-11"
-    },
-    "CPNG": {
-      "price": 18.8,
-      "asOf": "2026-07-11"
-    },
-    "CMCSA": {
-      "price": 23.57,
-      "asOf": "2026-07-11"
-    },
-    "APP": {
-      "price": 506.98,
-      "asOf": "2026-07-11"
-    },
-    "TSM": {
-      "price": 434.11,
-      "asOf": "2026-07-11"
-    },
-    "GM": {
-      "price": 77.85,
-      "asOf": "2026-07-11"
-    },
-    "ASML": {
-      "price": 1797.32,
-      "asOf": "2026-07-11"
-    },
-    "AMAT": {
-      "price": 602.5,
-      "asOf": "2026-07-11"
-    },
-    "CRM": {
-      "price": 163.32,
-      "asOf": "2026-07-11"
-    },
-    "JD": {
-      "price": 28.2,
-      "asOf": "2026-07-11"
-    },
-    "UNH": {
-      "price": 424.62,
-      "asOf": "2026-07-11"
-    },
-    "UBER": {
-      "price": 74.54,
-      "asOf": "2026-07-11"
-    },
-    "BN": {
-      "price": 43.73,
-      "asOf": "2026-07-11"
-    },
-    "JNJ": {
-      "price": 256.98,
-      "asOf": "2026-07-11"
-    },
-    "PCG": {
-      "price": 17.17,
-      "asOf": "2026-07-11"
-    },
-    "DIS": {
-      "price": 95.62,
-      "asOf": "2026-07-11"
-    },
-    "GOOGL": {
-      "price": 357.18,
-      "asOf": "2026-07-11"
-    },
-    "AXP": {
-      "price": 350.58,
-      "asOf": "2026-07-11"
-    },
-    "KO": {
-      "price": 83.49,
-      "asOf": "2026-07-11"
-    },
-    "FDX": {
-      "price": 314.69,
-      "asOf": "2026-07-11"
-    },
-    "GOOG": {
-      "price": 355.03,
-      "asOf": "2026-07-11"
-    },
-    "MSFT": {
-      "price": 385.1,
-      "asOf": "2026-07-11"
-    },
-    "AMZN": {
-      "price": 245.34,
-      "asOf": "2026-07-11"
-    },
-    "COF": {
-      "price": 201.52,
-      "asOf": "2026-07-11"
-    },
-    "AMD": {
-      "price": 557.89,
-      "asOf": "2026-07-11"
-    },
-    "ORCL": {
-      "price": 140.64,
-      "asOf": "2026-07-11"
-    },
-    "DHI": {
-      "price": 151.58,
-      "asOf": "2026-07-11"
-    },
-    "SCHW": {
-      "price": 103.12,
-      "asOf": "2026-07-11"
-    },
-    "MRK": {
-      "price": 123.54,
-      "asOf": "2026-07-11"
-    },
-    "QCOM": {
-      "price": 189.16,
-      "asOf": "2026-07-11"
-    },
-    "ADBE": {
-      "price": 223.64,
-      "asOf": "2026-07-11"
-    },
-    "LRCX": {
-      "price": 350.33,
+    "META": {
+      "price": 669.21,
       "asOf": "2026-07-11"
     },
     "MA": {
       "price": 526.74,
       "asOf": "2026-07-11"
     },
-    "AAPL": {
-      "price": 315.32,
+    "JD": {
+      "price": 28.2,
       "asOf": "2026-07-11"
     },
-    "TDG": {
-      "price": 1291.35,
+    "BABA": {
+      "price": 112.33,
       "asOf": "2026-07-11"
     },
-    "GE": {
-      "price": 359.27,
+    "LRCX": {
+      "price": 350.33,
       "asOf": "2026-07-11"
     },
-    "BRK-B": {
-      "price": 493.71,
+    "PCG": {
+      "price": 17.17,
       "asOf": "2026-07-11"
     },
-    "MCO": {
-      "price": 487.28,
+    "OXY": {
+      "price": 52.89,
       "asOf": "2026-07-11"
     },
-    "CHTR": {
-      "price": 130.73,
+    "FDX": {
+      "price": 314.69,
       "asOf": "2026-07-11"
     },
-    "V": {
-      "price": 348.97,
+    "GOOGL": {
+      "price": 357.18,
       "asOf": "2026-07-11"
     },
-    "SPOT": {
-      "price": 479.77,
+    "JNJ": {
+      "price": 256.98,
       "asOf": "2026-07-11"
     },
-    "KHC": {
-      "price": 24.85,
+    "UNH": {
+      "price": 424.62,
       "asOf": "2026-07-11"
     },
-    "BAC": {
-      "price": 59.67,
-      "asOf": "2026-07-11"
-    },
-    "LLY": {
-      "price": 1188.58,
+    "JPM": {
+      "price": 336.47,
       "asOf": "2026-07-11"
     },
     "BKNG": {
       "price": 178.39,
       "asOf": "2026-07-11"
     },
-    "FISV": {
-      "price": 50.45,
+    "APP": {
+      "price": 506.98,
       "asOf": "2026-07-11"
     },
-    "VST": {
-      "price": 158.86,
+    "SPOT": {
+      "price": 479.77,
+      "asOf": "2026-07-11"
+    },
+    "LLY": {
+      "price": 1188.58,
+      "asOf": "2026-07-11"
+    },
+    "TSM": {
+      "price": 434.11,
+      "asOf": "2026-07-11"
+    },
+    "AAPL": {
+      "price": 315.32,
       "asOf": "2026-07-11"
     },
     "CSGP": {
       "price": 28.39,
       "asOf": "2026-07-11"
     },
-    "DHR": {
-      "price": 199.05,
+    "AMD": {
+      "price": 557.89,
       "asOf": "2026-07-11"
     },
-    "NVDA": {
-      "price": 210.96,
+    "AMZN": {
+      "price": 245.34,
+      "asOf": "2026-07-11"
+    },
+    "BN": {
+      "price": 43.73,
+      "asOf": "2026-07-11"
+    },
+    "ORCL": {
+      "price": 140.64,
+      "asOf": "2026-07-11"
+    },
+    "AVGO": {
+      "price": 399.97,
+      "asOf": "2026-07-11"
+    },
+    "KHC": {
+      "price": 24.85,
+      "asOf": "2026-07-11"
+    },
+    "AMAT": {
+      "price": 602.5,
+      "asOf": "2026-07-11"
+    },
+    "NFLX": {
+      "price": 73.37,
+      "asOf": "2026-07-11"
+    },
+    "MU": {
+      "price": 979.3,
+      "asOf": "2026-07-11"
+    },
+    "BAC": {
+      "price": 59.67,
+      "asOf": "2026-07-11"
+    },
+    "COF": {
+      "price": 201.52,
+      "asOf": "2026-07-11"
+    },
+    "BRK-B": {
+      "price": 493.71,
+      "asOf": "2026-07-11"
+    },
+    "ASML": {
+      "price": 1797.32,
       "asOf": "2026-07-11"
     }
   },
@@ -138131,6 +138173,1235 @@
           "cash": 3294000000,
           "tbills": null,
           "total": 3294000000
+        }
+      ]
+    }
+  },
+  "nportCash": {
+    "Ron Baron": {
+      "label": "Baron Partners Fund (BPTRX)",
+      "cik": "1217673",
+      "seriesId": "S000000588",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 0.01,
+          "netAssets": 2727726588
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 0.01,
+          "netAssets": 2220930795
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 0.01,
+          "netAssets": 3303466967
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 0.01,
+          "netAssets": 4796329635
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 0.0,
+          "netAssets": 6869810633
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 0.01,
+          "netAssets": 6715300576
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 0.07,
+          "netAssets": 6893701636
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 0.0,
+          "netAssets": 7145678950
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 0.0,
+          "netAssets": 8656460674
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 0.0,
+          "netAssets": 8039216164
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 0.0,
+          "netAssets": 5529982562
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 0.0,
+          "netAssets": 6172099817
+        },
+        {
+          "d": "2022-12-31",
+          "cashPct": 0.01,
+          "netAssets": 4827608003
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 0.01,
+          "netAssets": 5956197518
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 0.09,
+          "netAssets": 6916831127
+        },
+        {
+          "d": "2023-09-30",
+          "cashPct": 0.0,
+          "netAssets": 6463377655
+        },
+        {
+          "d": "2023-12-31",
+          "cashPct": 0.01,
+          "netAssets": 6947179357
+        },
+        {
+          "d": "2024-03-31",
+          "cashPct": 0.0,
+          "netAssets": 6051534185
+        },
+        {
+          "d": "2024-06-30",
+          "cashPct": 0.01,
+          "netAssets": 5865701796
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 0.0,
+          "netAssets": 6478659616
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 0.0,
+          "netAssets": 8084224446
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 0.0,
+          "netAssets": 6564166683
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 0.0,
+          "netAssets": 7317286854
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 0.0,
+          "netAssets": 8128207596
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 0.0,
+          "netAssets": 9682175911
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 0.01,
+          "netAssets": 10360633779
+        }
+      ]
+    },
+    "Bill Nygren": {
+      "label": "Oakmark Fund (OAKMX)",
+      "cik": "872323",
+      "seriesId": "S000002758",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 3.86,
+          "netAssets": 16792512124
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 6.56,
+          "netAssets": 10225878040
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 4.76,
+          "netAssets": 11466910226
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 7.77,
+          "netAssets": 11322283486
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 1.45,
+          "netAssets": 13351493336
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 2.22,
+          "netAssets": 15213403176
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 3.35,
+          "netAssets": 16959648240
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 4.45,
+          "netAssets": 16969684743
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 5.16,
+          "netAssets": 18046005251
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 6.4,
+          "netAssets": 17950667582
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 7.77,
+          "netAssets": 14256201053
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 5.44,
+          "netAssets": 13721364537
+        },
+        {
+          "d": "2022-12-31",
+          "cashPct": 4.35,
+          "netAssets": 14450751450
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 4.53,
+          "netAssets": 15521041748
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 6.91,
+          "netAssets": 16942032183
+        },
+        {
+          "d": "2023-09-30",
+          "cashPct": 5.75,
+          "netAssets": 16847831637
+        },
+        {
+          "d": "2023-12-31",
+          "cashPct": 5.42,
+          "netAssets": 19347697391
+        },
+        {
+          "d": "2024-03-31",
+          "cashPct": 7.93,
+          "netAssets": 22118829312
+        },
+        {
+          "d": "2024-06-30",
+          "cashPct": 6.32,
+          "netAssets": 21557397881
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 4.85,
+          "netAssets": 23090147365
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 6.78,
+          "netAssets": 23473233292
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 5.39,
+          "netAssets": 23660994530
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 5.92,
+          "netAssets": 24291213666
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 4.24,
+          "netAssets": 24746166305
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 5.75,
+          "netAssets": 25707911789
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 4.07,
+          "netAssets": 24443442023
+        }
+      ]
+    },
+    "Dodge & Cox": {
+      "label": "Dodge & Cox Stock Fund (DODGX)",
+      "cik": "29440",
+      "seriesId": "S000011202",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 1.27,
+          "netAssets": 74680743362
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 1.16,
+          "netAssets": 51744481463
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 0.59,
+          "netAssets": 59906669457
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 0.63,
+          "netAssets": 60862698655
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 0.68,
+          "netAssets": 70814910923
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 2.97,
+          "netAssets": 81128717580
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 1.7,
+          "netAssets": 89265232259
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 1.03,
+          "netAssets": 91246053141
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 1.17,
+          "netAssets": 96868802155
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 2.71,
+          "netAssets": 98948096735
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 1.52,
+          "netAssets": 85330772103
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 1.1,
+          "netAssets": 79245358561
+        },
+        {
+          "d": "2022-12-31",
+          "cashPct": 1.39,
+          "netAssets": 88404927992
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 0.96,
+          "netAssets": 89074556940
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 1.36,
+          "netAssets": 92902001496
+        },
+        {
+          "d": "2023-09-30",
+          "cashPct": 1.21,
+          "netAssets": 92452871303
+        },
+        {
+          "d": "2023-12-31",
+          "cashPct": 3.36,
+          "netAssets": 101090907827
+        },
+        {
+          "d": "2024-03-31",
+          "cashPct": 0.65,
+          "netAssets": 109762979783
+        },
+        {
+          "d": "2024-06-30",
+          "cashPct": 2.64,
+          "netAssets": 109186029644
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 2.47,
+          "netAssets": 115784256880
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 1.17,
+          "netAssets": 111687172570
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 0.9,
+          "netAssets": 113917176875
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 3.38,
+          "netAssets": 117406264829
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 1.43,
+          "netAssets": 120340776191
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 1.2,
+          "netAssets": 119768866113
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 0.96,
+          "netAssets": 114749295727
+        }
+      ]
+    },
+    "Jeremy Grantham": {
+      "label": "GMO Quality Fund (GQETX)",
+      "cik": "772129",
+      "seriesId": "S000004084",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-11-30",
+          "cashPct": 2.45,
+          "netAssets": 6803155230
+        },
+        {
+          "d": "2020-02-29",
+          "cashPct": 1.66,
+          "netAssets": 6267746627
+        },
+        {
+          "d": "2020-05-31",
+          "cashPct": 3.13,
+          "netAssets": 6534049891
+        },
+        {
+          "d": "2020-08-31",
+          "cashPct": 1.39,
+          "netAssets": 7147611630
+        },
+        {
+          "d": "2020-11-30",
+          "cashPct": 1.41,
+          "netAssets": 7102730475
+        },
+        {
+          "d": "2021-02-28",
+          "cashPct": 1.96,
+          "netAssets": 7368127205
+        },
+        {
+          "d": "2021-05-31",
+          "cashPct": 2.22,
+          "netAssets": 8339424908
+        },
+        {
+          "d": "2021-08-31",
+          "cashPct": 3.09,
+          "netAssets": 9206699023
+        },
+        {
+          "d": "2021-11-30",
+          "cashPct": 0.72,
+          "netAssets": 8691480894
+        },
+        {
+          "d": "2022-02-28",
+          "cashPct": 0.95,
+          "netAssets": 8355672927
+        },
+        {
+          "d": "2022-05-31",
+          "cashPct": 0.54,
+          "netAssets": 7419338706
+        },
+        {
+          "d": "2022-08-31",
+          "cashPct": 3.02,
+          "netAssets": 7092927967
+        },
+        {
+          "d": "2022-11-30",
+          "cashPct": 1.55,
+          "netAssets": 7156011532
+        },
+        {
+          "d": "2023-02-28",
+          "cashPct": 1.76,
+          "netAssets": 6834053941
+        },
+        {
+          "d": "2023-05-31",
+          "cashPct": 1.73,
+          "netAssets": 7476572087
+        },
+        {
+          "d": "2023-08-31",
+          "cashPct": 0.04,
+          "netAssets": 7860149584
+        },
+        {
+          "d": "2023-11-30",
+          "cashPct": 0.04,
+          "netAssets": 8195223132
+        },
+        {
+          "d": "2024-02-29",
+          "cashPct": 0.08,
+          "netAssets": 9517860812
+        },
+        {
+          "d": "2024-05-31",
+          "cashPct": 0.05,
+          "netAssets": 9850881103
+        },
+        {
+          "d": "2024-08-31",
+          "cashPct": 0.06,
+          "netAssets": 10791151491
+        },
+        {
+          "d": "2024-11-30",
+          "cashPct": 0.0,
+          "netAssets": 10841322718
+        },
+        {
+          "d": "2025-02-28",
+          "cashPct": 0.06,
+          "netAssets": 11089926944
+        },
+        {
+          "d": "2025-05-31",
+          "cashPct": 0.02,
+          "netAssets": 10624532174
+        },
+        {
+          "d": "2025-08-31",
+          "cashPct": 0.01,
+          "netAssets": 10985006005
+        },
+        {
+          "d": "2025-11-30",
+          "cashPct": 0.01,
+          "netAssets": 12231294038
+        },
+        {
+          "d": "2026-02-28",
+          "cashPct": 0.46,
+          "netAssets": 12109898385
+        }
+      ]
+    },
+    "Tweedy Browne": {
+      "label": "Tweedy Browne Global Value (TBGVX)",
+      "cik": "896975",
+      "seriesId": "S000001302",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 13.6,
+          "netAssets": 8135962355
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 11.25,
+          "netAssets": 6009748882
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 5.15,
+          "netAssets": 6118020316
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 4.99,
+          "netAssets": 5759503031
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 5.06,
+          "netAssets": 6134829447
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 5.45,
+          "netAssets": 6421172631
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 3.67,
+          "netAssets": 6638146445
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 3.59,
+          "netAssets": 6422602725
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 3.59,
+          "netAssets": 6493944220
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 3.39,
+          "netAssets": 6306978591
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 3.32,
+          "netAssets": 5722831328
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 4.13,
+          "netAssets": 5323393961
+        },
+        {
+          "d": "2022-12-30",
+          "cashPct": 4.08,
+          "netAssets": 5608943109
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 5.24,
+          "netAssets": 6008116360
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 2.99,
+          "netAssets": 5983704508
+        },
+        {
+          "d": "2023-09-29",
+          "cashPct": 2.7,
+          "netAssets": 5769851618
+        },
+        {
+          "d": "2023-12-29",
+          "cashPct": 2.22,
+          "netAssets": 5841567403
+        },
+        {
+          "d": "2024-03-28",
+          "cashPct": 5.79,
+          "netAssets": 5943718895
+        },
+        {
+          "d": "2024-06-28",
+          "cashPct": 2.15,
+          "netAssets": 5744069689
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 2.47,
+          "netAssets": 5656038715
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 2.69,
+          "netAssets": 4772869910
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 4.04,
+          "netAssets": 4535272581
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 6.69,
+          "netAssets": 4546452300
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 4.67,
+          "netAssets": 4429858386
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 4.13,
+          "netAssets": 4189382404
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 6.73,
+          "netAssets": 4130979026
+        }
+      ]
+    },
+    "Wallace Weitz": {
+      "label": "Weitz Partners Value (WPVLX)",
+      "cik": "1257927",
+      "seriesId": "S000003481",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 2.8,
+          "netAssets": 603796865
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 3.21,
+          "netAssets": 402563584
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 3.33,
+          "netAssets": 435548577
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 3.38,
+          "netAssets": 442954037
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 2.37,
+          "netAssets": 485354265
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 3.24,
+          "netAssets": 508634525
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 1.85,
+          "netAssets": 541195045
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 2.4,
+          "netAssets": 534058069
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 2.08,
+          "netAssets": 547816908
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 3.65,
+          "netAssets": 494225158
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 2.33,
+          "netAssets": 412355453
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 1.93,
+          "netAssets": 379284395
+        },
+        {
+          "d": "2022-12-31",
+          "cashPct": 1.73,
+          "netAssets": 379173574
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 7.09,
+          "netAssets": 522653179
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 4.43,
+          "netAssets": 554632744
+        },
+        {
+          "d": "2023-09-30",
+          "cashPct": 4.97,
+          "netAssets": 529999456
+        },
+        {
+          "d": "2023-12-31",
+          "cashPct": 3.75,
+          "netAssets": 541135843
+        },
+        {
+          "d": "2024-03-31",
+          "cashPct": 5.52,
+          "netAssets": 574906042
+        },
+        {
+          "d": "2024-06-30",
+          "cashPct": 3.18,
+          "netAssets": 549024509
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 4.58,
+          "netAssets": 594096234
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 8.24,
+          "netAssets": 571169387
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 3.59,
+          "netAssets": 565689225
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 4.58,
+          "netAssets": 582875154
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 2.92,
+          "netAssets": 575008210
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 4.32,
+          "netAssets": 539729268
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 3.25,
+          "netAssets": 476177548
+        }
+      ]
+    },
+    "Bruce Berkowitz": {
+      "label": "Fairholme Fund (FAIRX)",
+      "cik": "1096344",
+      "seriesId": "S000008484",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-11-29",
+          "cashPct": 5.71,
+          "netAssets": 1056891682
+        },
+        {
+          "d": "2020-02-28",
+          "cashPct": 6.02,
+          "netAssets": 1022056490
+        },
+        {
+          "d": "2020-05-29",
+          "cashPct": 31.63,
+          "netAssets": 938786809
+        },
+        {
+          "d": "2020-08-31",
+          "cashPct": 28.95,
+          "netAssets": 1057016288
+        },
+        {
+          "d": "2020-11-30",
+          "cashPct": 23.2,
+          "netAssets": 1269507117
+        },
+        {
+          "d": "2021-02-26",
+          "cashPct": 18.87,
+          "netAssets": 1528587796
+        },
+        {
+          "d": "2021-05-28",
+          "cashPct": 20.29,
+          "netAssets": 1439412419
+        },
+        {
+          "d": "2021-08-31",
+          "cashPct": 17.34,
+          "netAssets": 1318653369
+        },
+        {
+          "d": "2021-11-30",
+          "cashPct": 12.61,
+          "netAssets": 1348489024
+        },
+        {
+          "d": "2022-02-28",
+          "cashPct": 9.88,
+          "netAssets": 1452245561
+        },
+        {
+          "d": "2022-05-31",
+          "cashPct": 9.61,
+          "netAssets": 1351360534
+        },
+        {
+          "d": "2022-08-31",
+          "cashPct": 10.74,
+          "netAssets": 1067889994
+        },
+        {
+          "d": "2022-11-30",
+          "cashPct": 9.98,
+          "netAssets": 1057803488
+        },
+        {
+          "d": "2023-02-28",
+          "cashPct": 10.76,
+          "netAssets": 1120149977
+        },
+        {
+          "d": "2023-05-31",
+          "cashPct": 9.42,
+          "netAssets": 1174213488
+        },
+        {
+          "d": "2023-08-31",
+          "cashPct": 11.07,
+          "netAssets": 1462832243
+        },
+        {
+          "d": "2023-11-30",
+          "cashPct": 11.67,
+          "netAssets": 1251457865
+        },
+        {
+          "d": "2024-02-29",
+          "cashPct": 10.22,
+          "netAssets": 1285575117
+        },
+        {
+          "d": "2024-05-31",
+          "cashPct": 13.7,
+          "netAssets": 1320660766
+        },
+        {
+          "d": "2024-08-30",
+          "cashPct": 14.05,
+          "netAssets": 1351321442
+        },
+        {
+          "d": "2024-11-29",
+          "cashPct": 15.22,
+          "netAssets": 1202944646
+        },
+        {
+          "d": "2025-02-28",
+          "cashPct": 13.78,
+          "netAssets": 1100165897
+        },
+        {
+          "d": "2025-05-30",
+          "cashPct": 12.26,
+          "netAssets": 1007358423
+        },
+        {
+          "d": "2025-08-29",
+          "cashPct": 12.34,
+          "netAssets": 1099221680
+        },
+        {
+          "d": "2025-11-28",
+          "cashPct": 10.34,
+          "netAssets": 1264054689
+        },
+        {
+          "d": "2026-02-27",
+          "cashPct": 8.65,
+          "netAssets": 1451766476
+        }
+      ]
+    },
+    "Mason Hawkins": {
+      "label": "Longleaf Partners Fund (LLPFX)",
+      "cik": "806636",
+      "seriesId": "S000009311",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2019-12-31",
+          "cashPct": 9.84,
+          "netAssets": 1797792291
+        },
+        {
+          "d": "2020-03-31",
+          "cashPct": 7.16,
+          "netAssets": 1182983470
+        },
+        {
+          "d": "2020-06-30",
+          "cashPct": 19.7,
+          "netAssets": 1362801680
+        },
+        {
+          "d": "2020-09-30",
+          "cashPct": 21.58,
+          "netAssets": 1407145602
+        },
+        {
+          "d": "2020-12-31",
+          "cashPct": 13.91,
+          "netAssets": 1655310656
+        },
+        {
+          "d": "2021-03-31",
+          "cashPct": 19.34,
+          "netAssets": 1885621817
+        },
+        {
+          "d": "2021-06-30",
+          "cashPct": 21.03,
+          "netAssets": 1877255420
+        },
+        {
+          "d": "2021-09-30",
+          "cashPct": 11.41,
+          "netAssets": 1753684299
+        },
+        {
+          "d": "2021-12-31",
+          "cashPct": 8.01,
+          "netAssets": 1802204856
+        },
+        {
+          "d": "2022-03-31",
+          "cashPct": 4.18,
+          "netAssets": 1750279552
+        },
+        {
+          "d": "2022-06-30",
+          "cashPct": 3.44,
+          "netAssets": 1450899594
+        },
+        {
+          "d": "2022-09-30",
+          "cashPct": 1.84,
+          "netAssets": 1190733463
+        },
+        {
+          "d": "2022-12-31",
+          "cashPct": 4.83,
+          "netAssets": 1236371056
+        },
+        {
+          "d": "2023-03-31",
+          "cashPct": 5.52,
+          "netAssets": 1336698282
+        },
+        {
+          "d": "2023-06-30",
+          "cashPct": 4.01,
+          "netAssets": 1371621841
+        },
+        {
+          "d": "2023-09-30",
+          "cashPct": 7.12,
+          "netAssets": 1324317773
+        },
+        {
+          "d": "2023-12-31",
+          "cashPct": 12.73,
+          "netAssets": 1369694527
+        },
+        {
+          "d": "2024-03-31",
+          "cashPct": 15.56,
+          "netAssets": 1399727254
+        },
+        {
+          "d": "2024-06-30",
+          "cashPct": 19.35,
+          "netAssets": 1274138103
+        },
+        {
+          "d": "2024-09-30",
+          "cashPct": 23.13,
+          "netAssets": 1358330120
+        },
+        {
+          "d": "2024-12-31",
+          "cashPct": 20.52,
+          "netAssets": 1267969718
+        },
+        {
+          "d": "2025-03-31",
+          "cashPct": 20.27,
+          "netAssets": 1162658122
+        },
+        {
+          "d": "2025-06-30",
+          "cashPct": 18.22,
+          "netAssets": 1182348772
+        },
+        {
+          "d": "2025-09-30",
+          "cashPct": 15.23,
+          "netAssets": 1139611980
+        },
+        {
+          "d": "2025-12-31",
+          "cashPct": 8.96,
+          "netAssets": 1102890119
+        },
+        {
+          "d": "2026-03-31",
+          "cashPct": 12.35,
+          "netAssets": 1048978555
+        }
+      ]
+    },
+    "Chuck Akre": {
+      "label": "Akre Focus Fund (AKREX)",
+      "cik": "811030",
+      "seriesId": "S000026760",
+      "source": "SEC N-PORT (Monatsdaten, quartalsweise öffentlich, ~60 Tage Verzug)",
+      "series": [
+        {
+          "d": "2020-01-31",
+          "cashPct": 20.02,
+          "netAssets": 12836019912
+        },
+        {
+          "d": "2020-04-30",
+          "cashPct": 10.63,
+          "netAssets": 12656447265
+        },
+        {
+          "d": "2020-07-31",
+          "cashPct": 7.76,
+          "netAssets": 14790786530
+        },
+        {
+          "d": "2020-10-31",
+          "cashPct": 6.59,
+          "netAssets": 13775077852
+        },
+        {
+          "d": "2021-01-31",
+          "cashPct": 5.17,
+          "netAssets": 14497380061
+        },
+        {
+          "d": "2021-04-30",
+          "cashPct": 1.93,
+          "netAssets": 16413486108
+        },
+        {
+          "d": "2021-07-31",
+          "cashPct": 1.79,
+          "netAssets": 17726686808
+        },
+        {
+          "d": "2021-10-31",
+          "cashPct": 1.79,
+          "netAssets": 18415504066
+        },
+        {
+          "d": "2022-01-31",
+          "cashPct": 4.18,
+          "netAssets": 16655003506
+        },
+        {
+          "d": "2022-04-30",
+          "cashPct": 4.77,
+          "netAssets": 14486084150
+        },
+        {
+          "d": "2022-07-31",
+          "cashPct": 4.01,
+          "netAssets": 14719385832
+        },
+        {
+          "d": "2022-10-31",
+          "cashPct": 3.35,
+          "netAssets": 12797760456
+        },
+        {
+          "d": "2023-01-31",
+          "cashPct": 6.09,
+          "netAssets": 13061847031
+        },
+        {
+          "d": "2023-04-30",
+          "cashPct": 4.01,
+          "netAssets": 12698482794
+        },
+        {
+          "d": "2023-07-31",
+          "cashPct": 3.03,
+          "netAssets": 13107467006
+        },
+        {
+          "d": "2023-10-31",
+          "cashPct": 5.36,
+          "netAssets": 11392118109
+        },
+        {
+          "d": "2024-01-31",
+          "cashPct": 3.03,
+          "netAssets": 12939541669
+        },
+        {
+          "d": "2024-04-30",
+          "cashPct": 2.63,
+          "netAssets": 12129123463
+        },
+        {
+          "d": "2024-07-31",
+          "cashPct": 2.68,
+          "netAssets": 12977917628
+        },
+        {
+          "d": "2024-10-31",
+          "cashPct": 1.9,
+          "netAssets": 12662625829
+        },
+        {
+          "d": "2025-01-31",
+          "cashPct": 4.47,
+          "netAssets": 12687242019
+        },
+        {
+          "d": "2025-04-30",
+          "cashPct": 5.23,
+          "netAssets": 11901564292
+        },
+        {
+          "d": "2025-07-31",
+          "cashPct": 6.91,
+          "netAssets": 12470470145
         }
       ]
     }

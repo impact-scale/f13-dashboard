@@ -1290,7 +1290,23 @@ if page == "💰 Cash & Flows":
                         for c in cash_data.values() if c.get("series"))
         source_line(f"SEC EDGAR 10-Q/10-K &nbsp;{links}",
                     f"Bilanzstichtag {_dd(cash_asof)}")
-        cols = st.columns(max(2, len(cash_data)))
+
+        # Berkshire-Cash-Quote: Cash+T-Bills ÷ (Cash+T-Bills + 13F-Aktienportfolio).
+        # Erst die Quote macht den Cash-Berg über die Zeit vergleichbar — absolute
+        # Beträge wachsen auch ohne Verkäufe durch operative Gewinne.
+        brk_inv = next((i for i in data["investors"]
+                        if i["person"] == "Warren Buffett"), None)
+        eq_by_date = {q["d"]: q["total"]
+                      for q in (brk_inv.get("quartersHist") if brk_inv else []) or []}
+        brk = cash_data.get("Warren Buffett")
+        quote_series = []
+        for x in (brk.get("series") if brk else []) or []:
+            eq = eq_by_date.get(x["date"])
+            if eq:
+                quote_series.append(
+                    (x["date"], 100.0 * x["total"] / (x["total"] + eq)))
+
+        cols = st.columns(len(cash_data) + (1 if quote_series else 0))
         for col, (person, c) in zip(cols, cash_data.items()):
             s = c.get("series") or []
             if not s:
@@ -1304,6 +1320,18 @@ if page == "💰 Cash & Flows":
             col.metric(f"{c['label']}", mrd(last["total"]), delta=delta_txt,
                        help=f"Stichtag {_dd(last['date'])} · Quelle: {c['source']}" +
                             (" · Summe aus Cash + US-T-Bills" if last.get("tbills") else ""))
+        if quote_series:
+            q_last = quote_series[-1][1]
+            q_prev = quote_series[-2][1] if len(quote_series) > 1 else None
+            cols[len(cash_data)].metric(
+                "Berkshire Cash-Quote",
+                f"{q_last:.0f} %".replace(".", ","),
+                delta=(f"{q_last - q_prev:+.1f} Pp Q/Q".replace(".", ",")
+                       if q_prev is not None else None),
+                delta_color="inverse",
+                help="Cash + T-Bills im Verhältnis zu Cash + T-Bills + "
+                     "13F-Aktienportfolio. Steigende Quote = Buffett findet "
+                     "nichts Kaufenswertes (Bewertungssignal, kein Timing-Signal).")
         st.write("")
 
         brk = cash_data.get("Warren Buffett")
@@ -1315,13 +1343,24 @@ if page == "💰 Cash & Flows":
                         name="Cash & Äquivalente", marker_color=SLATE)
             fig.add_bar(x=dates, y=[(x["tbills"] or 0) / 1e9 for x in s],
                         name="US Treasury Bills", marker_color=GOLD)
+            if quote_series:
+                fig.add_scatter(
+                    x=[d for d, _ in quote_series],
+                    y=[v for _, v in quote_series],
+                    name="Cash-Quote (%)", yaxis="y2",
+                    mode="lines+markers", line=dict(color=OFFWHITE, width=2.5),
+                    marker=dict(size=5),
+                    hovertemplate="Cash-Quote: %{y:.1f} %<extra></extra>")
             fig.update_layout(
                 barmode="stack",
-                title="Berkshire Hathaway — der Cash-Berg (Mrd USD)",
+                title="Berkshire Hathaway — der Cash-Berg (Mrd USD) und die Cash-Quote (%)",
                 paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
                 font=dict(color=OFFWHITE, family="Arial"),
                 xaxis=dict(gridcolor="#1a3a5c"),
                 yaxis=dict(gridcolor="#1a3a5c", title="Mrd USD"),
+                yaxis2=dict(overlaying="y", side="right", range=[0, 100],
+                            title="Cash-Quote %", showgrid=False,
+                            tickfont=dict(color=OFFWHITE)),
                 legend=dict(orientation="h", yanchor="bottom", y=1.02),
                 height=380, margin=dict(l=10, r=10, t=70, b=10),
             )
@@ -1329,7 +1368,68 @@ if page == "💰 Cash & Flows":
             st.caption("Quelle: SEC EDGAR 10-Q/10-K (XBRL-Cash + T-Bills aus der "
                        "Konzernbilanz). Buffetts 'Cash-Berg' besteht überwiegend aus "
                        "kurzlaufenden US-Staatsanleihen (T-Bills) — beides zusammen ist "
-                       "die investierbare Reserve.")
+                       "die investierbare Reserve. Die weiße Linie setzt sie ins "
+                       "Verhältnis zum Aktienportfolio (13F): Erst diese Quote macht "
+                       "Quartale vergleichbar, weil der absolute Bestand auch durch "
+                       "operative Gewinne wächst.")
+
+    # ── 1b) Echte Cash-Quoten der Fondsmanager (N-PORT) ───────────────────────
+    nport = data.get("nportCash", {}) or {}
+    if nport:
+        st.divider()
+        st.subheader("Cash-Quoten der Fondsmanager — N-PORT (echt gemessen)")
+        np_asof = max(c["series"][-1]["d"] for c in nport.values() if c.get("series"))
+        source_line(
+            "SEC EDGAR N-PORT (Flaggschiff-Fonds je Manager) " + info_link(
+                "https://www.sec.gov/edgar/search/#/forms=NPORT-P",
+                "Zur Originalquelle: SEC EDGAR N-PORT"),
+            f"Stichtage bis {_dd(np_asof)} · je Fonds unten · ~60 Tage Meldeverzug")
+
+        palette_np = [GOLD, "#5FA97C", "#C25E5E", "#8899AA", "#6b8caa",
+                      "#a8863a", "#d4c9b0", "#3d7a9a", "#b085c9"]
+        fig_np = go.Figure()
+        for i, (person, c) in enumerate(sorted(
+                nport.items(), key=lambda kv: -kv[1]["series"][-1]["cashPct"])):
+            s = c["series"]
+            fig_np.add_scatter(
+                x=[x["d"] for x in s], y=[x["cashPct"] for x in s],
+                mode="lines+markers", name=person,
+                line=dict(color=palette_np[i % len(palette_np)], width=2),
+                marker=dict(size=4),
+                hovertemplate=f"<b>{person}</b> · {c['label']}"
+                              "<br>%{x}: %{y:.1f} % Cash<extra></extra>")
+        fig_np.update_layout(
+            title="Cash-Quote je Fondsmanager (% des Fondsvermögens)",
+            paper_bgcolor=MIDNIGHT, plot_bgcolor=MIDNIGHT,
+            font=dict(color=OFFWHITE, family="Arial"),
+            xaxis=dict(gridcolor="#1a3a5c"),
+            yaxis=dict(gridcolor="#1a3a5c", title="% Cash", rangemode="tozero"),
+            legend=dict(orientation="h", yanchor="bottom", y=1.02,
+                        font=dict(size=10)),
+            height=420, margin=dict(l=10, r=10, t=90, b=10),
+        )
+        st.plotly_chart(fig_np, use_container_width=True)
+
+        df_np = pd.DataFrame([{
+            "Manager": person,
+            "Fonds": c["label"],
+            "Cash-Quote": f"{c['series'][-1]['cashPct']:.1f} %".replace(".", ","),
+            "Δ Vorstichtag": (f"{c['series'][-1]['cashPct'] - c['series'][-2]['cashPct']:+.1f} Pp"
+                              .replace(".", ",") if len(c["series"]) > 1 else "–"),
+            "Stichtag": _dd(c["series"][-1]["d"]),
+            "Quelle": ("https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany"
+                       f"&CIK={c['seriesId']}&type=NPORT-P&count=10"),
+        } for person, c in sorted(nport.items(),
+                                  key=lambda kv: -kv[1]["series"][-1]["cashPct"])])
+        st.dataframe(df_np, use_container_width=True, hide_index=True,
+                     column_config={"Quelle": st.column_config.LinkColumn(
+                         "Quelle", display_text="EDGAR ⓘ")})
+        st.caption("Cash-Quote = nicht angelegtes Cash + Geldmarkt-/Repo-Positionen "
+                   "+ US-Staatsanleihen in % des Fondsvermögens (viele Fonds parken "
+                   "Liquidität in T-Bills statt Cash). Der Flaggschiff-Fonds dient "
+                   "als Näherung für die Positionierung des Managers. Fiskalquartale "
+                   "weichen z.T. vom Kalenderquartal ab — der Stichtag zeigt den "
+                   "tatsächlichen Datenstand.")
 
     st.divider()
 
@@ -1343,8 +1443,25 @@ if page == "💰 Cash & Flows":
                 "Zur Originalquelle: SEC EDGAR 13F-HR"),
             f"Meldequartale bis {_dd(flow_asof)} (13F-Meldeverzug bis 45 Tage) · "
             f"Import {generated.strftime('%d.%m.%Y %H:%M')}")
+
+    # Diskretionäre = Eigenkapital/Family Offices/Permanent Capital: Sie KÖNNEN
+    # Cash aufbauen — ihre Netto-Verkäufe sind Marktmeinung. Mandatsgebundene
+    # Verwalter (SMA/Publikumsfonds) sind i.d.R. voll investiert und verwässern
+    # das Signal mit Kundengeld-Flüssen.
+    disc_names = {i["person"] for i in data["investors"] if i.get("discretionary")}
+    only_disc = False
+    if disc_names:
+        only_disc = st.toggle(
+            "🎯 Nur diskretionäre Investoren (Family Offices, Eigenkapital, "
+            "Permanent Capital)", value=False, key="flows_disc",
+            help="Kuratierte Zuordnung: " + ", ".join(sorted(disc_names)) +
+                 ". Mandatsgebundene Verwalter wie Fisher oder Dodge & Cox sind "
+                 "quasi immer voll investiert — ihre Flows spiegeln eher "
+                 "Kundengelder als Marktmeinung.")
+    flow_pool = [p for p in selected if not only_disc or p in disc_names]
+
     latest = []
-    for person in selected:
+    for person in flow_pool:
         series = flows_data.get(person) or []
         if series:
             latest.append((person, series[-1]))
@@ -1387,11 +1504,12 @@ if page == "💰 Cash & Flows":
 
         # Aggregat über die Zeit: Verkäuferquote je Quartal
         by_q = {}
-        for person in selected:
+        for person in flow_pool:
             for s in flows_data.get(person) or []:
                 by_q.setdefault(s["to"], []).append(s["flowPct"])
+        min_n = 6 if only_disc else 10
         agg = [(q, sum(1 for v in vals if v < -2) / len(vals) * 100.0, len(vals))
-               for q, vals in sorted(by_q.items()) if len(vals) >= 10]
+               for q, vals in sorted(by_q.items()) if len(vals) >= min_n]
         if agg:
             fig2 = go.Figure(go.Bar(
                 x=[a[0] for a in agg], y=[a[1] for a in agg], marker_color=NEG_RED,
