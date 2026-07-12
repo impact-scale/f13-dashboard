@@ -834,8 +834,9 @@ if page == "🎯 Backtest":
                 a1, a2, a3 = st.columns(3)
                 start_q = a1.selectbox("Startquartal", all_q[:-1], index=0, key="adv_s")
                 end_opts = [q for q in all_q if q > start_q] + [TODAY_OPT]
-                end_q = a2.selectbox("Endquartal", end_opts, index=len(end_opts) - 1,
-                                     key="adv_e")
+                # Default = jüngstes Quartal; "Heute" nur bei expliziter Auswahl
+                end_q = a2.selectbox("Endquartal", end_opts,
+                                     index=max(len(end_opts) - 2, 0), key="adv_e")
                 method_a = a3.radio("Gewichtung", ["Equal Weight", "Conviction (Profi)"],
                                     horizontal=True, key="adv_m")
                 n_a = st.number_input("Anzahl Titel (Top N)", 5, 20, data["topN"], 1,
