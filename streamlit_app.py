@@ -830,9 +830,10 @@ if page == "🎯 Backtest":
             if len(all_q) < 2 or not qp:
                 st.info("Zu wenig Historie für einen Zeitraum-Backtest.")
             else:
+                TODAY_OPT = "Heute (aktuelle Kurse)"
                 a1, a2, a3 = st.columns(3)
                 start_q = a1.selectbox("Startquartal", all_q[:-1], index=0, key="adv_s")
-                end_opts = [q for q in all_q if q > start_q]
+                end_opts = [q for q in all_q if q > start_q] + [TODAY_OPT]
                 end_q = a2.selectbox("Endquartal", end_opts, index=len(end_opts) - 1,
                                      key="adv_e")
                 method_a = a3.radio("Gewichtung", ["Equal Weight", "Conviction (Profi)"],
@@ -840,13 +841,19 @@ if page == "🎯 Backtest":
                 n_a = st.number_input("Anzahl Titel (Top N)", 5, 20, data["topN"], 1,
                                       key="adv_n")
 
+                use_today = end_q == TODAY_OPT
+                prices_now = data.get("prices", {}) or {}
+                asof_now = (data.get("pricesAsOf") or date.today().isoformat())[:10]
+                end_label = f"heute ({asof_now})" if use_today else end_q
+
                 snap_s = next(h for h in history if h["quarter"] == start_q)
                 entries_a = list(snap_s["ranking"])[:int(n_a)]
 
                 def _pd2(s):
                     y, m, d = map(int, s.split("-"))
                     return date(y, m, d)
-                yrs_a = max((_pd2(end_q) - _pd2(start_q)).days / 365.25, 1e-6)
+                end_date_s = asof_now if use_today else end_q
+                yrs_a = max((_pd2(end_date_s) - _pd2(start_q)).days / 365.25, 1e-6)
 
                 rows_a, rets_a, exc_a = [], [], 0
                 counts_a = [max(e["count"], 0) for e in entries_a]
@@ -854,7 +861,8 @@ if page == "🎯 Backtest":
                 for i, e in enumerate(entries_a):
                     t = e["ticker"]
                     p0 = qp.get(t, {}).get(start_q) or e.get("price")
-                    p1 = qp.get(t, {}).get(end_q)
+                    p1 = ((prices_now.get(t) or {}).get("price") if use_today
+                          else qp.get(t, {}).get(end_q))
                     ok = bool(p0 and p1 and 0.02 <= p1 / p0 <= 50)
                     r = (p1 - p0) / p0 * 100 if ok else None
                     w = (1 / len(entries_a) if method_a.startswith("Equal")
@@ -866,13 +874,14 @@ if page == "🎯 Backtest":
                     rows_a.append({
                         "Ticker": t or "–", "Aktie": e["name"],
                         f"Kurs {start_q}": f"{p0:,.2f} $".replace(",", ".") if p0 else "–",
-                        f"Kurs {end_q}": f"{p1:,.2f} $".replace(",", ".") if p1 else "–",
+                        f"Kurs {end_label}": f"{p1:,.2f} $".replace(",", ".") if p1 else "–",
                         "Rendite": f"{r:+.1f} %" if r is not None else "–",
                         "Gewicht": f"{w*100:.1f} %"})
 
                 def bwin(name):
-                    b = bench.get(name, {}).get("quarters", {})
-                    q0, q1 = b.get(start_q), b.get(end_q)
+                    b = bench.get(name, {})
+                    q0 = b.get("quarters", {}).get(start_q)
+                    q1 = b.get("current") if use_today else b.get("quarters", {}).get(end_q)
                     return (q1 - q0) / q0 * 100 if (q0 and q1) else None
 
                 spw, ndw = bwin("S&P 500"), bwin("Nasdaq 100")
@@ -882,7 +891,7 @@ if page == "🎯 Backtest":
                     pa_a = ((1 + port_a / 100) ** (1 / yrs_a) - 1) * 100 if yrs_a >= 1 else None
                     colr = "#5fbf7f" if port_a >= 0 else "#d9776a"
                     st.markdown(
-                        f'<div class="callout"><b>F13-Portfolio {start_q} → {end_q}:</b> '
+                        f'<div class="callout"><b>F13-Portfolio {start_q} → {end_label}:</b> '
                         f'<span style="color:{colr};font-weight:700;font-size:1.1em;">'
                         f'{port_a:+.1f} %</span>'
                         f'{f" · p.a. {pa_a:+.1f} %" if pa_a is not None else ""} '
@@ -910,11 +919,12 @@ if page == "🎯 Backtest":
                 else:
                     st.info("Keine Titel mit Kursdaten in diesem Zeitraum.")
                 if exc_a:
-                    st.caption(f"⚠ {exc_a} Titel ohne Kurs im Endquartal ausgeschlossen.")
+                    st.caption(f"⚠ {exc_a} Titel ohne Kurs zum Endzeitpunkt ausgeschlossen.")
                 st.dataframe(pd.DataFrame(rows_a), use_container_width=True,
                              hide_index=True, height=min(560, 45 + 34 * len(rows_a)))
                 st.caption("Zeitraum-Backtest: F13-Liste des Startquartals, gehalten bis zum "
-                           "Endquartal (split-bereinigte Kurse). Reine Kursrendite ohne "
+                           "Endquartal bzw. bis heute (split-bereinigte Kurse; „Heute“ nutzt "
+                           "die zuletzt importierten Tageskurse). Reine Kursrendite ohne "
                            "Dividenden.")
 
 
