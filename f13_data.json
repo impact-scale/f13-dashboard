@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-21T08:26:28.833256+00:00",
+  "generatedAt": "2026-07-22T08:27:46.426318+00:00",
   "topN": 15,
   "storeN": 25,
-  "quartersLoaded": 26,
+  "quartersLoaded": 27,
   "investors": [
     {
       "person": "Warren Buffett",
@@ -1202,7 +1202,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7853532000,
               "s": 132459618,
@@ -1296,7 +1296,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4563233000,
               "s": 132459618,
@@ -1374,7 +1374,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4858836000,
               "s": 131961832,
@@ -1452,7 +1452,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4730833000,
               "s": 131961832,
@@ -1546,7 +1546,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 6109721000,
               "s": 131137998,
@@ -1632,7 +1632,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7172993000,
               "s": 129687084,
@@ -1718,7 +1718,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7342802000,
               "s": 128888906,
@@ -1804,7 +1804,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7514279000,
               "s": 126417887,
@@ -1890,7 +1890,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7100894000,
               "s": 126417887,
@@ -1984,7 +1984,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 6719111000,
               "s": 126417887,
@@ -2070,7 +2070,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 5513432000,
               "s": 119805135,
@@ -36659,7 +36659,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -36856,7 +36856,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -37176,7 +37176,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -37428,7 +37428,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -37726,7 +37726,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 285796000,
               "s": 8295962,
@@ -37804,7 +37804,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 337607000,
               "s": 9169126,
@@ -37906,7 +37906,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 341503000,
               "s": 9525878,
@@ -37960,7 +37960,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 449973000,
               "s": 9658147,
@@ -38030,7 +38030,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 539734000,
               "s": 9758351,
@@ -38124,7 +38124,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 549771000,
               "s": 9650178,
@@ -38218,7 +38218,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 584305000,
               "s": 9830163,
@@ -38304,7 +38304,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 559536000,
               "s": 9961471,
@@ -38390,7 +38390,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 520532000,
               "s": 9793649,
@@ -38468,7 +38468,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 441186000,
               "s": 9586823,
@@ -38562,7 +38562,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 384161000,
               "s": 9527792,
@@ -38640,7 +38640,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 416028497,
               "s": 9539750,
@@ -39798,7 +39798,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 994100630,
               "s": 19113643,
@@ -76763,7 +76763,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -77014,7 +77014,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -77266,7 +77266,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -83580,7 +83580,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -83832,7 +83832,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -83874,7 +83874,7 @@
       "sold": [
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -83885,7 +83885,7 @@
       "soldYtd": [
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -97282,7 +97282,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 2431744,
               "s": 73600,
@@ -114123,7 +114123,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1011402986,
               "s": 22626465,
@@ -114209,7 +114209,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1008575046,
               "s": 25404913,
@@ -114255,7 +114255,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1537315013,
               "s": 33617210,
@@ -114349,7 +114349,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1169336217,
               "s": 24447757,
@@ -114427,7 +114427,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1471937054,
               "s": 34863502,
@@ -114545,7 +114545,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1090046617,
               "s": 24089428,
@@ -114860,13 +114860,13 @@
       "cik": "0001581811",
       "group": "",
       "form": "13F-HR",
-      "filingDate": "2026-05-13",
-      "accession": "0001581811-26-000005",
-      "reportDate": "2026-03-31",
-      "prevReportDate": "2025-12-31",
+      "filingDate": "2026-07-21",
+      "accession": "0001581811-26-000007",
+      "reportDate": "2026-06-30",
+      "prevReportDate": "2026-03-31",
       "ytdBaseDate": "2025-12-31",
-      "portfolioValue": 9010197462.0,
-      "positionsCount": 24,
+      "portfolioValue": 10351358177.0,
+      "positionsCount": 23,
       "top": [
         {
           "key": "92826C",
@@ -114874,9 +114874,9 @@
           "ticker": "V",
           "sector": "Financial",
           "region": "USA",
-          "value": 1242499573.0,
-          "shares": 4110970.0,
-          "weight": 13.79,
+          "value": 1463159112.0,
+          "shares": 4264651.0,
+          "weight": 14.13,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -114887,51 +114887,25 @@
           "ticker": "GOOG",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 992434912.0,
-          "shares": 3459649.0,
-          "weight": 11.01,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "615369",
-          "name": "Moodys Corp",
-          "ticker": "MCO",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 674298538.0,
-          "shares": 1545670.0,
-          "weight": 7.48,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "G54950",
-          "name": "Linde PLC",
-          "ticker": "LIN",
-          "sector": "Basic Materials",
-          "region": "USA",
-          "value": 529655607.0,
-          "shares": 1068371.0,
-          "weight": 5.88,
-          "isEtf": false,
-          "change": "NEU",
-          "changeYtd": "NEU"
-        },
-        {
-          "key": "144285",
-          "name": "Carpenter Technology Corp",
-          "ticker": "CRS",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 524582118.0,
-          "shares": 1330920.0,
-          "weight": 5.82,
+          "value": 1163018908.0,
+          "shares": 3291594.0,
+          "weight": 11.24,
           "isEtf": false,
           "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "032095",
+          "name": "Amphenol Corp",
+          "ticker": "APH",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 858094428.0,
+          "shares": 4866688.0,
+          "weight": 8.29,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
           "key": "023135",
@@ -114939,22 +114913,22 @@
           "ticker": "AMZN",
           "sector": "Consumer Cyclical",
           "region": "USA",
-          "value": 492211572.0,
-          "shares": 2363334.0,
-          "weight": 5.46,
+          "value": 851686063.0,
+          "shares": 3573408.0,
+          "weight": 8.23,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "AUFGESTOCKT",
           "changeYtd": "REDUZIERT"
         },
         {
-          "key": "929160",
-          "name": "Vulcan Materials CO",
-          "ticker": "VMC",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 481757517.0,
-          "shares": 1769216.0,
-          "weight": 5.35,
+          "key": "615369",
+          "name": "Moodys Corp",
+          "ticker": "MCO",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 771879399.0,
+          "shares": 1704229.0,
+          "weight": 7.46,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -114965,9 +114939,61 @@
           "ticker": "NVDA",
           "sector": "Technology",
           "region": "USA",
-          "value": 466523139.0,
-          "shares": 2675018.0,
-          "weight": 5.18,
+          "value": 683897616.0,
+          "shares": 3417950.0,
+          "weight": 6.61,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "58507V",
+          "name": "Medline Inc.",
+          "ticker": "MDLN",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 649611665.0,
+          "shares": 16470884.0,
+          "weight": 6.28,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "929160",
+          "name": "Vulcan Materials CO",
+          "ticker": "VMC",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 581669447.0,
+          "shares": 1971694.0,
+          "weight": 5.62,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "G25508",
+          "name": "Crh Public Ltd Co",
+          "ticker": "CRH",
+          "sector": "Basic Materials",
+          "region": "Irland",
+          "value": 469073662.0,
+          "shares": 4383866.0,
+          "weight": 4.53,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "038222",
+          "name": "Applied Materials Inc",
+          "ticker": "AMAT",
+          "sector": "Technology",
+          "region": "USA",
+          "value": 376729995.0,
+          "shares": 521065.0,
+          "weight": 3.64,
           "isEtf": false,
           "change": "NEU",
           "changeYtd": "NEU"
@@ -114978,51 +115004,12 @@
           "ticker": "IBKR",
           "sector": "Sonstige",
           "region": "–",
-          "value": 420876256.0,
-          "shares": 6275179.0,
-          "weight": 4.67,
+          "value": 359424369.0,
+          "shares": 4129416.0,
+          "weight": 3.47,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "032095",
-          "name": "Amphenol Corp",
-          "ticker": "APH",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 362795452.0,
-          "shares": 2871353.0,
-          "weight": 4.03,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "12572Q",
-          "name": "Cme Group Inc.",
-          "ticker": "CME",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 349371582.0,
-          "shares": 1182907.0,
-          "weight": 3.88,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "90353T",
-          "name": "Uber Technologies, Inc",
-          "ticker": "UBER",
-          "sector": "Technology",
-          "region": "USA",
-          "value": 334644471.0,
-          "shares": 4652363.0,
-          "weight": 3.71,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
         },
         {
           "key": "25179M",
@@ -115030,38 +115017,51 @@
           "ticker": "DVN",
           "sector": "Sonstige",
           "region": "–",
-          "value": 328345045.0,
-          "shares": 6525140.0,
-          "weight": 3.64,
+          "value": 312299039.0,
+          "shares": 7558060.0,
+          "weight": 3.02,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "31488V",
+          "name": "Ferguson Enterprises Inc.",
+          "ticker": "FERG",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 238759676.0,
+          "shares": 1006024.0,
+          "weight": 2.31,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "GEHALTEN"
+        },
+        {
+          "key": "294429",
+          "name": "Equifax Inc",
+          "ticker": "EFX",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 235094159.0,
+          "shares": 1481188.0,
+          "weight": 2.27,
           "isEtf": false,
           "change": "NEU",
           "changeYtd": "NEU"
         },
         {
-          "key": "G25508",
-          "name": "Crh Public Ltd Co",
-          "ticker": "CRH",
-          "sector": "Basic Materials",
-          "region": "Irland",
-          "value": 290060875.0,
-          "shares": 2759331.0,
-          "weight": 3.22,
+          "key": "29082A",
+          "name": "Embraer S.A.",
+          "ticker": "EMBJ",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 215921466.0,
+          "shares": 3384349.0,
+          "weight": 2.09,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "136385",
-          "name": "CANADIAN NATURAL RESOURCES Ltd",
-          "ticker": "CNQ",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 277056374.0,
-          "shares": 5690211.0,
-          "weight": 3.07,
-          "isEtf": false,
-          "change": "NEU",
-          "changeYtd": "NEU"
         }
       ],
       "holdings": [
@@ -115071,9 +115071,9 @@
           "ticker": "V",
           "sector": "Financial",
           "region": "USA",
-          "value": 1242499573.0,
-          "shares": 4110970.0,
-          "weight": 13.79,
+          "value": 1463159112.0,
+          "shares": 4264651.0,
+          "weight": 14.13,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -115084,51 +115084,25 @@
           "ticker": "GOOG",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 992434912.0,
-          "shares": 3459649.0,
-          "weight": 11.01,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "615369",
-          "name": "Moodys Corp",
-          "ticker": "MCO",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 674298538.0,
-          "shares": 1545670.0,
-          "weight": 7.48,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "G54950",
-          "name": "Linde PLC",
-          "ticker": "LIN",
-          "sector": "Basic Materials",
-          "region": "USA",
-          "value": 529655607.0,
-          "shares": 1068371.0,
-          "weight": 5.88,
-          "isEtf": false,
-          "change": "NEU",
-          "changeYtd": "NEU"
-        },
-        {
-          "key": "144285",
-          "name": "Carpenter Technology Corp",
-          "ticker": "CRS",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 524582118.0,
-          "shares": 1330920.0,
-          "weight": 5.82,
+          "value": 1163018908.0,
+          "shares": 3291594.0,
+          "weight": 11.24,
           "isEtf": false,
           "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "032095",
+          "name": "Amphenol Corp",
+          "ticker": "APH",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 858094428.0,
+          "shares": 4866688.0,
+          "weight": 8.29,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
           "key": "023135",
@@ -115136,22 +115110,22 @@
           "ticker": "AMZN",
           "sector": "Consumer Cyclical",
           "region": "USA",
-          "value": 492211572.0,
-          "shares": 2363334.0,
-          "weight": 5.46,
+          "value": 851686063.0,
+          "shares": 3573408.0,
+          "weight": 8.23,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "AUFGESTOCKT",
           "changeYtd": "REDUZIERT"
         },
         {
-          "key": "929160",
-          "name": "Vulcan Materials CO",
-          "ticker": "VMC",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 481757517.0,
-          "shares": 1769216.0,
-          "weight": 5.35,
+          "key": "615369",
+          "name": "Moodys Corp",
+          "ticker": "MCO",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 771879399.0,
+          "shares": 1704229.0,
+          "weight": 7.46,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -115162,9 +115136,61 @@
           "ticker": "NVDA",
           "sector": "Technology",
           "region": "USA",
-          "value": 466523139.0,
-          "shares": 2675018.0,
-          "weight": 5.18,
+          "value": 683897616.0,
+          "shares": 3417950.0,
+          "weight": 6.61,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "58507V",
+          "name": "Medline Inc.",
+          "ticker": "MDLN",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 649611665.0,
+          "shares": 16470884.0,
+          "weight": 6.28,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "929160",
+          "name": "Vulcan Materials CO",
+          "ticker": "VMC",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 581669447.0,
+          "shares": 1971694.0,
+          "weight": 5.62,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "G25508",
+          "name": "Crh Public Ltd Co",
+          "ticker": "CRH",
+          "sector": "Basic Materials",
+          "region": "Irland",
+          "value": 469073662.0,
+          "shares": 4383866.0,
+          "weight": 4.53,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "038222",
+          "name": "Applied Materials Inc",
+          "ticker": "AMAT",
+          "sector": "Technology",
+          "region": "USA",
+          "value": 376729995.0,
+          "shares": 521065.0,
+          "weight": 3.64,
           "isEtf": false,
           "change": "NEU",
           "changeYtd": "NEU"
@@ -115175,51 +115201,12 @@
           "ticker": "IBKR",
           "sector": "Sonstige",
           "region": "–",
-          "value": 420876256.0,
-          "shares": 6275179.0,
-          "weight": 4.67,
+          "value": 359424369.0,
+          "shares": 4129416.0,
+          "weight": 3.47,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "032095",
-          "name": "Amphenol Corp",
-          "ticker": "APH",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 362795452.0,
-          "shares": 2871353.0,
-          "weight": 4.03,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "12572Q",
-          "name": "Cme Group Inc.",
-          "ticker": "CME",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 349371582.0,
-          "shares": 1182907.0,
-          "weight": 3.88,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "90353T",
-          "name": "Uber Technologies, Inc",
-          "ticker": "UBER",
-          "sector": "Technology",
-          "region": "USA",
-          "value": 334644471.0,
-          "shares": 4652363.0,
-          "weight": 3.71,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
         },
         {
           "key": "25179M",
@@ -115227,61 +115214,35 @@
           "ticker": "DVN",
           "sector": "Sonstige",
           "region": "–",
-          "value": 328345045.0,
-          "shares": 6525140.0,
-          "weight": 3.64,
-          "isEtf": false,
-          "change": "NEU",
-          "changeYtd": "NEU"
-        },
-        {
-          "key": "G25508",
-          "name": "Crh Public Ltd Co",
-          "ticker": "CRH",
-          "sector": "Basic Materials",
-          "region": "Irland",
-          "value": 290060875.0,
-          "shares": 2759331.0,
-          "weight": 3.22,
+          "value": 312299039.0,
+          "shares": 7558060.0,
+          "weight": 3.02,
           "isEtf": false,
           "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "136385",
-          "name": "CANADIAN NATURAL RESOURCES Ltd",
-          "ticker": "CNQ",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 277056374.0,
-          "shares": 5690211.0,
-          "weight": 3.07,
-          "isEtf": false,
-          "change": "NEU",
           "changeYtd": "NEU"
         },
         {
-          "key": "57636Q",
-          "name": "Mastercard Inc",
-          "ticker": "MA",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 229669718.0,
-          "shares": 459652.0,
-          "weight": 2.55,
+          "key": "31488V",
+          "name": "Ferguson Enterprises Inc.",
+          "ticker": "FERG",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 238759676.0,
+          "shares": 1006024.0,
+          "weight": 2.31,
           "isEtf": false,
-          "change": "GEHALTEN",
+          "change": "AUFGESTOCKT",
           "changeYtd": "GEHALTEN"
         },
         {
-          "key": "58507V",
-          "name": "Medline Inc.",
-          "ticker": "MDLN",
+          "key": "294429",
+          "name": "Equifax Inc",
+          "ticker": "EFX",
           "sector": "Sonstige",
           "region": "–",
-          "value": 194278189.0,
-          "shares": 4365802.0,
-          "weight": 2.16,
+          "value": 235094159.0,
+          "shares": 1481188.0,
+          "weight": 2.27,
           "isEtf": false,
           "change": "NEU",
           "changeYtd": "NEU"
@@ -115292,22 +115253,22 @@
           "ticker": "EMBJ",
           "sector": "Sonstige",
           "region": "–",
-          "value": 176550208.0,
-          "shares": 2975231.0,
-          "weight": 1.96,
+          "value": 215921466.0,
+          "shares": 3384349.0,
+          "weight": 2.09,
           "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "31488V",
-          "name": "Ferguson Enterprises Inc.",
-          "ticker": "FERG",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 147947021.0,
-          "shares": 634258.0,
-          "weight": 1.64,
+          "key": "57636Q",
+          "name": "Mastercard Inc",
+          "ticker": "MA",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 186688464.0,
+          "shares": 363490.0,
+          "weight": 1.8,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
@@ -115318,51 +115279,38 @@
           "ticker": "LAMR",
           "sector": "Sonstige",
           "region": "–",
-          "value": 137900315.0,
-          "shares": 1088744.0,
-          "weight": 1.53,
+          "value": 170114752.0,
+          "shares": 1090619.0,
+          "weight": 1.64,
           "isEtf": false,
-          "change": "AUFGESTOCKT",
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "G0450A",
-          "name": "Arch Cap Group Ltd",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 107213343.0,
-          "shares": 1116922.0,
-          "weight": 1.19,
+          "key": "90353T",
+          "name": "Uber Technologies, Inc",
+          "ticker": "UBER",
+          "sector": "Technology",
+          "region": "USA",
+          "value": 167385800.0,
+          "shares": 2319648.0,
+          "weight": 1.62,
           "isEtf": false,
-          "change": "NEU",
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "G54950",
+          "name": "Linde PLC",
+          "ticker": "LIN",
+          "sector": "Basic Materials",
+          "region": "USA",
+          "value": 156125175.0,
+          "shares": 300854.0,
+          "weight": 1.51,
+          "isEtf": false,
+          "change": "REDUZIERT",
           "changeYtd": "NEU"
-        },
-        {
-          "key": "G7496G",
-          "name": "Renaissancere Hldgs Ltd",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 94313457.0,
-          "shares": 317308.0,
-          "weight": 1.05,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "650111",
-          "name": "New York Times Co",
-          "ticker": "NYT",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 81375847.0,
-          "shares": 971884.0,
-          "weight": 0.9,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
         },
         {
           "key": "04247X",
@@ -115370,9 +115318,48 @@
           "ticker": "AWI",
           "sector": "Sonstige",
           "region": "–",
-          "value": 73836333.0,
-          "shares": 448036.0,
-          "weight": 0.82,
+          "value": 148451705.0,
+          "shares": 925394.0,
+          "weight": 1.43,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "78409V",
+          "name": "S&P Global Inc.",
+          "ticker": "SPGI",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 143322939.0,
+          "shares": 351920.0,
+          "weight": 1.38,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "92840M",
+          "name": "Vistra Corp.",
+          "ticker": "VST",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 76975683.0,
+          "shares": 485253.0,
+          "weight": 0.74,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "767292",
+          "name": "Riot Platforms, Inc.",
+          "ticker": "RIOT",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 71974655.0,
+          "shares": 2628731.0,
+          "weight": 0.7,
           "isEtf": false,
           "change": "NEU",
           "changeYtd": "NEU"
@@ -115380,93 +115367,13 @@
       ],
       "prevHoldings": [
         {
-          "key": "023135",
-          "name": "Amazon Com Inc",
-          "ticker": "AMZN",
-          "sector": "Consumer Cyclical",
-          "region": "USA",
-          "value": 1360105927.0,
-          "weight": 14.78,
-          "isEtf": false
-        },
-        {
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
           "sector": "Financial",
           "region": "USA",
-          "value": 1147172059.0,
-          "weight": 12.47,
-          "isEtf": false
-        },
-        {
-          "key": "594918",
-          "name": "Microsoft Corp",
-          "ticker": "MSFT",
-          "sector": "Technology",
-          "region": "USA",
-          "value": 845685015.0,
-          "weight": 9.19,
-          "isEtf": false
-        },
-        {
-          "key": "101137",
-          "name": "Boston Scientific CORP",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 513467759.0,
-          "weight": 5.58,
-          "isEtf": false
-        },
-        {
-          "key": "14040H",
-          "name": "Capital One Financial Corp",
-          "ticker": "COF",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 501474347.0,
-          "weight": 5.45,
-          "isEtf": false
-        },
-        {
-          "key": "032095",
-          "name": "Amphenol Corp",
-          "ticker": "APH",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 501087093.0,
-          "weight": 5.45,
-          "isEtf": false
-        },
-        {
-          "key": "144285",
-          "name": "Carpenter Technology Corp",
-          "ticker": "CRS",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 488950298.0,
-          "weight": 5.31,
-          "isEtf": false
-        },
-        {
-          "key": "45841N",
-          "name": "Interactive Brokers Group, Inc.",
-          "ticker": "IBKR",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 446284454.0,
-          "weight": 4.85,
-          "isEtf": false
-        },
-        {
-          "key": "615369",
-          "name": "Moodys Corp",
-          "ticker": "MCO",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 395095988.0,
-          "weight": 4.29,
+          "value": 1242499573.0,
+          "weight": 13.79,
           "isEtf": false
         },
         {
@@ -115475,28 +115382,48 @@
           "ticker": "GOOG",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 338517398.0,
-          "weight": 3.68,
+          "value": 992434912.0,
+          "weight": 11.01,
           "isEtf": false
         },
         {
-          "key": "12572Q",
-          "name": "Cme Group Inc.",
-          "ticker": "CME",
+          "key": "615369",
+          "name": "Moodys Corp",
+          "ticker": "MCO",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 674298538.0,
+          "weight": 7.48,
+          "isEtf": false
+        },
+        {
+          "key": "G54950",
+          "name": "Linde PLC",
+          "ticker": "LIN",
+          "sector": "Basic Materials",
+          "region": "USA",
+          "value": 529655607.0,
+          "weight": 5.88,
+          "isEtf": false
+        },
+        {
+          "key": "144285",
+          "name": "Carpenter Technology Corp",
+          "ticker": "CRS",
           "sector": "Sonstige",
           "region": "–",
-          "value": 322177599.0,
-          "weight": 3.5,
+          "value": 524582118.0,
+          "weight": 5.82,
           "isEtf": false
         },
         {
-          "key": "G25508",
-          "name": "Crh Public Ltd Co",
-          "ticker": "CRH",
-          "sector": "Basic Materials",
-          "region": "Irland",
-          "value": 282180288.0,
-          "weight": 3.07,
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
+          "region": "USA",
+          "value": 492211572.0,
+          "weight": 5.46,
           "isEtf": false
         },
         {
@@ -115505,38 +115432,48 @@
           "ticker": "VMC",
           "sector": "Sonstige",
           "region": "–",
-          "value": 273860543.0,
-          "weight": 2.98,
+          "value": 481757517.0,
+          "weight": 5.35,
           "isEtf": false
         },
         {
-          "key": "57636Q",
-          "name": "Mastercard Inc",
-          "ticker": "MA",
-          "sector": "Financial",
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "sector": "Technology",
           "region": "USA",
-          "value": 261658281.0,
-          "weight": 2.84,
+          "value": 466523139.0,
+          "weight": 5.18,
           "isEtf": false
         },
         {
-          "key": "983134",
-          "name": "Wynn Resorts Ltd",
-          "ticker": "",
+          "key": "45841N",
+          "name": "Interactive Brokers Group, Inc.",
+          "ticker": "IBKR",
           "sector": "Sonstige",
           "region": "–",
-          "value": 249053138.0,
-          "weight": 2.71,
+          "value": 420876256.0,
+          "weight": 4.67,
           "isEtf": false
         },
         {
-          "key": "31488V",
-          "name": "Ferguson Enterprises Inc.",
-          "ticker": "FERG",
+          "key": "032095",
+          "name": "Amphenol Corp",
+          "ticker": "APH",
           "sector": "Sonstige",
           "region": "–",
-          "value": 224480946.0,
-          "weight": 2.44,
+          "value": 362795452.0,
+          "weight": 4.03,
+          "isEtf": false
+        },
+        {
+          "key": "12572Q",
+          "name": "Cme Group Inc.",
+          "ticker": "CME",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 349371582.0,
+          "weight": 3.88,
           "isEtf": false
         },
         {
@@ -115545,8 +115482,58 @@
           "ticker": "UBER",
           "sector": "Technology",
           "region": "USA",
-          "value": 219078564.0,
-          "weight": 2.38,
+          "value": 334644471.0,
+          "weight": 3.71,
+          "isEtf": false
+        },
+        {
+          "key": "25179M",
+          "name": "Devon Energy Corp",
+          "ticker": "DVN",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 328345045.0,
+          "weight": 3.64,
+          "isEtf": false
+        },
+        {
+          "key": "G25508",
+          "name": "Crh Public Ltd Co",
+          "ticker": "CRH",
+          "sector": "Basic Materials",
+          "region": "Irland",
+          "value": 290060875.0,
+          "weight": 3.22,
+          "isEtf": false
+        },
+        {
+          "key": "136385",
+          "name": "CANADIAN NATURAL RESOURCES Ltd",
+          "ticker": "CNQ",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 277056374.0,
+          "weight": 3.07,
+          "isEtf": false
+        },
+        {
+          "key": "57636Q",
+          "name": "Mastercard Inc",
+          "ticker": "MA",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 229669718.0,
+          "weight": 2.55,
+          "isEtf": false
+        },
+        {
+          "key": "58507V",
+          "name": "Medline Inc.",
+          "ticker": "MDLN",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 194278189.0,
+          "weight": 2.16,
           "isEtf": false
         },
         {
@@ -115555,38 +115542,18 @@
           "ticker": "EMBJ",
           "sector": "Sonstige",
           "region": "–",
-          "value": 211013872.0,
-          "weight": 2.29,
+          "value": 176550208.0,
+          "weight": 1.96,
           "isEtf": false
         },
         {
-          "key": "G7997R",
-          "name": "Seagate Technology Hldngs Pl",
-          "ticker": "",
+          "key": "31488V",
+          "name": "Ferguson Enterprises Inc.",
+          "ticker": "FERG",
           "sector": "Sonstige",
           "region": "–",
-          "value": 200848812.0,
-          "weight": 2.18,
-          "isEtf": false
-        },
-        {
-          "key": "G7496G",
-          "name": "Renaissancere Hldgs Ltd",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 137944406.0,
-          "weight": 1.5,
-          "isEtf": false
-        },
-        {
-          "key": "650111",
-          "name": "New York Times Co",
-          "ticker": "NYT",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 97882408.0,
-          "weight": 1.06,
+          "value": 147947021.0,
+          "weight": 1.64,
           "isEtf": false
         },
         {
@@ -115595,18 +115562,48 @@
           "ticker": "LAMR",
           "sector": "Sonstige",
           "region": "–",
-          "value": 91401266.0,
-          "weight": 0.99,
+          "value": 137900315.0,
+          "weight": 1.53,
           "isEtf": false
         },
         {
-          "key": "50212V",
-          "name": "LPL Financial Holdings Inc.",
-          "ticker": "LPLA",
+          "key": "G0450A",
+          "name": "Arch Cap Group Ltd",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 91011559.0,
-          "weight": 0.99,
+          "value": 107213343.0,
+          "weight": 1.19,
+          "isEtf": false
+        },
+        {
+          "key": "G7496G",
+          "name": "Renaissancere Hldgs Ltd",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 94313457.0,
+          "weight": 1.05,
+          "isEtf": false
+        },
+        {
+          "key": "650111",
+          "name": "New York Times Co",
+          "ticker": "NYT",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 81375847.0,
+          "weight": 0.9,
+          "isEtf": false
+        },
+        {
+          "key": "04247X",
+          "name": "Armstrong World Industries Inc",
+          "ticker": "AWI",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 73836333.0,
+          "weight": 0.82,
           "isEtf": false
         }
       ],
@@ -115844,58 +115841,58 @@
       ],
       "sold": [
         {
-          "key": "594918",
-          "name": "Microsoft Corp",
-          "ticker": "MSFT",
-          "sector": "Technology",
-          "region": "USA",
-          "prevValue": 845685015.0,
-          "prevWeight": 9.19
+          "key": "144285",
+          "name": "Carpenter Technology Corp",
+          "ticker": "CRS",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 524582118.0,
+          "prevWeight": 5.82
         },
         {
-          "key": "101137",
-          "name": "Boston Scientific CORP",
+          "key": "12572Q",
+          "name": "Cme Group Inc.",
+          "ticker": "CME",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 349371582.0,
+          "prevWeight": 3.88
+        },
+        {
+          "key": "136385",
+          "name": "CANADIAN NATURAL RESOURCES Ltd",
+          "ticker": "CNQ",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 277056374.0,
+          "prevWeight": 3.07
+        },
+        {
+          "key": "G0450A",
+          "name": "Arch Cap Group Ltd",
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "prevValue": 513467759.0,
-          "prevWeight": 5.58
+          "prevValue": 107213343.0,
+          "prevWeight": 1.19
         },
         {
-          "key": "14040H",
-          "name": "Capital One Financial Corp",
-          "ticker": "COF",
-          "sector": "Financial",
-          "region": "USA",
-          "prevValue": 501474347.0,
-          "prevWeight": 5.45
-        },
-        {
-          "key": "983134",
-          "name": "Wynn Resorts Ltd",
+          "key": "G7496G",
+          "name": "Renaissancere Hldgs Ltd",
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "prevValue": 249053138.0,
-          "prevWeight": 2.71
+          "prevValue": 94313457.0,
+          "prevWeight": 1.05
         },
         {
-          "key": "G7997R",
-          "name": "Seagate Technology Hldngs Pl",
-          "ticker": "",
+          "key": "650111",
+          "name": "New York Times Co",
+          "ticker": "NYT",
           "sector": "Sonstige",
           "region": "–",
-          "prevValue": 200848812.0,
-          "prevWeight": 2.18
-        },
-        {
-          "key": "50212V",
-          "name": "LPL Financial Holdings Inc.",
-          "ticker": "LPLA",
-          "sector": "Sonstige",
-          "region": "–",
-          "prevValue": 91011559.0,
-          "prevWeight": 0.99
+          "prevValue": 81375847.0,
+          "prevWeight": 0.9
         }
       ],
       "soldYtd": [
@@ -115927,6 +115924,24 @@
           "prevWeight": 5.45
         },
         {
+          "key": "144285",
+          "name": "Carpenter Technology Corp",
+          "ticker": "CRS",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 488950298.0,
+          "prevWeight": 5.31
+        },
+        {
+          "key": "12572Q",
+          "name": "Cme Group Inc.",
+          "ticker": "CME",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 322177599.0,
+          "prevWeight": 3.5
+        },
+        {
           "key": "983134",
           "name": "Wynn Resorts Ltd",
           "ticker": "",
@@ -115943,6 +115958,24 @@
           "region": "–",
           "prevValue": 200848812.0,
           "prevWeight": 2.18
+        },
+        {
+          "key": "G7496G",
+          "name": "Renaissancere Hldgs Ltd",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 137944406.0,
+          "prevWeight": 1.5
+        },
+        {
+          "key": "650111",
+          "name": "New York Times Co",
+          "ticker": "NYT",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 97882408.0,
+          "prevWeight": 1.06
         },
         {
           "key": "50212V",
@@ -118188,6 +118221,92 @@
               "v": 362795452,
               "s": 2871353,
               "w": 4.03
+            }
+          ]
+        },
+        {
+          "d": "2026-06-30",
+          "total": 10351358177,
+          "top": [
+            {
+              "k": "92826C",
+              "n": "Visa Inc.",
+              "t": "V",
+              "v": 1463159112,
+              "s": 4264651,
+              "w": 14.13
+            },
+            {
+              "k": "02079K",
+              "n": "Alphabet Inc.",
+              "t": "GOOG",
+              "v": 1163018908,
+              "s": 3291594,
+              "w": 11.24
+            },
+            {
+              "k": "032095",
+              "n": "Amphenol Corp",
+              "t": "APH",
+              "v": 858094428,
+              "s": 4866688,
+              "w": 8.29
+            },
+            {
+              "k": "023135",
+              "n": "Amazon Com Inc",
+              "t": "AMZN",
+              "v": 851686063,
+              "s": 3573408,
+              "w": 8.23
+            },
+            {
+              "k": "615369",
+              "n": "Moodys Corp",
+              "t": "MCO",
+              "v": 771879399,
+              "s": 1704229,
+              "w": 7.46
+            },
+            {
+              "k": "67066G",
+              "n": "Nvidia Corp",
+              "t": "NVDA",
+              "v": 683897616,
+              "s": 3417950,
+              "w": 6.61
+            },
+            {
+              "k": "58507V",
+              "n": "Medline Inc.",
+              "t": "MDLN",
+              "v": 649611665,
+              "s": 16470884,
+              "w": 6.28
+            },
+            {
+              "k": "929160",
+              "n": "Vulcan Materials CO",
+              "t": "VMC",
+              "v": 581669447,
+              "s": 1971694,
+              "w": 5.62
+            },
+            {
+              "k": "G25508",
+              "n": "Crh Public Ltd Co",
+              "t": "CRH",
+              "v": 469073662,
+              "s": 4383866,
+              "w": 4.53
+            },
+            {
+              "k": "038222",
+              "n": "Applied Materials Inc",
+              "t": "AMAT",
+              "v": 376729995,
+              "s": 521065,
+              "w": 3.64
             }
           ]
         }
@@ -127687,9 +127806,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 11.01,
-          "value": 992434912.0,
-          "change": "AUFGESTOCKT",
+          "weight": 11.24,
+          "value": 1163018908.0,
+          "change": "REDUZIERT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -127777,7 +127896,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 53541391191.0,
+      "combinedValue": 53711975187.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -127849,9 +127968,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 5.46,
-          "value": 492211572.0,
-          "change": "REDUZIERT",
+          "weight": 8.23,
+          "value": 851686063.0,
+          "change": "AUFGESTOCKT",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -127883,7 +128002,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 18895656822.0,
+      "combinedValue": 19255131313.0,
       "countPrev": 16,
       "countDelta": -3,
       "countYtd": 16,
@@ -127983,8 +128102,8 @@
         }
       ],
       "combinedValue": 22704495238.0,
-      "countPrev": 18,
-      "countDelta": -6,
+      "countPrev": 17,
+      "countDelta": -5,
       "countYtd": 18,
       "countDeltaYtd": -6
     },
@@ -128238,9 +128357,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 5.18,
-          "value": 466523139.0,
-          "change": "NEU",
+          "weight": 6.61,
+          "value": 683897616.0,
+          "change": "AUFGESTOCKT",
           "changeYtd": "NEU"
         },
         {
@@ -128265,9 +128384,9 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 22449325487.0,
-      "countPrev": 9,
-      "countDelta": 1,
+      "combinedValue": 22666699964.0,
+      "countPrev": 10,
+      "countDelta": 0,
       "countYtd": 9,
       "countDeltaYtd": 1
     },
@@ -128515,8 +128634,8 @@
         },
         {
           "person": "John Armitage",
-          "weight": 13.79,
-          "value": 1242499573.0,
+          "weight": 14.13,
+          "value": 1463159112.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128549,7 +128668,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 13976753704.0,
+      "combinedValue": 14197413243.0,
       "countPrev": 8,
       "countDelta": -1,
       "countYtd": 8,
@@ -128579,8 +128698,8 @@
         },
         {
           "person": "John Armitage",
-          "weight": 7.48,
-          "value": 674298538.0,
+          "weight": 7.46,
+          "value": 771879399.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128599,7 +128718,7 @@
           "changeYtd": "NEU"
         }
       ],
-      "combinedValue": 18284708972.0,
+      "combinedValue": 18382289833.0,
       "countPrev": 4,
       "countDelta": 1,
       "countYtd": 4,
@@ -128756,54 +128875,54 @@
       "countDeltaYtd": 1
     },
     {
-      "key": "90353T",
-      "name": "Uber Technologies, Inc",
-      "ticker": "UBER",
+      "key": "038222",
+      "name": "Applied Materials Inc",
+      "ticker": "AMAT",
       "sector": "Technology",
       "region": "USA",
       "count": 5,
       "investors": [
         {
-          "person": "Bill Ackman",
-          "weight": 15.71,
-          "value": 2154934398.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "person": "Philippe Laffont",
+          "weight": 6.17,
+          "value": 1793782961.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
-          "person": "David Tepper",
-          "weight": 7.68,
-          "value": 455512550.0,
+          "person": "Steven Cohen",
+          "weight": 1.07,
+          "value": 586895128.0,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "person": "Chase Coleman",
+          "weight": 2.48,
+          "value": 566311851.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Thomas Russo",
-          "weight": 4.38,
-          "value": 372122950.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
         },
         {
           "person": "John Armitage",
-          "weight": 3.71,
-          "value": 334644471.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Pat Dorsey",
-          "weight": 6.24,
-          "value": 78423912.0,
+          "weight": 3.64,
+          "value": 376729995.0,
           "change": "NEU",
           "changeYtd": "NEU"
+        },
+        {
+          "person": "Ray Dalio",
+          "weight": 0.85,
+          "value": 191374373.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 3395638281.0,
-      "countPrev": 2,
-      "countDelta": 3,
-      "countYtd": 2,
-      "countDeltaYtd": 3
+      "combinedValue": 3515094308.0,
+      "countPrev": 1,
+      "countDelta": 4,
+      "countYtd": 1,
+      "countDeltaYtd": 4
     },
     {
       "key": "500754",
@@ -128935,47 +129054,47 @@
       "countDeltaYtd": 4
     },
     {
-      "key": "038222",
-      "name": "Applied Materials Inc",
-      "ticker": "AMAT",
+      "key": "90353T",
+      "name": "Uber Technologies, Inc",
+      "ticker": "UBER",
       "sector": "Technology",
       "region": "USA",
       "count": 4,
       "investors": [
         {
-          "person": "Philippe Laffont",
-          "weight": 6.17,
-          "value": 1793782961.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
+          "person": "Bill Ackman",
+          "weight": 15.71,
+          "value": 2154934398.0,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
         },
         {
-          "person": "Steven Cohen",
-          "weight": 1.07,
-          "value": 586895128.0,
+          "person": "David Tepper",
+          "weight": 7.68,
+          "value": 455512550.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Thomas Russo",
+          "weight": 4.38,
+          "value": 372122950.0,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
+        },
+        {
+          "person": "Pat Dorsey",
+          "weight": 6.24,
+          "value": 78423912.0,
           "change": "NEU",
           "changeYtd": "NEU"
-        },
-        {
-          "person": "Chase Coleman",
-          "weight": 2.48,
-          "value": 566311851.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Ray Dalio",
-          "weight": 0.85,
-          "value": 191374373.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 3138364313.0,
-      "countPrev": 1,
-      "countDelta": 3,
-      "countYtd": 1,
-      "countDeltaYtd": 3
+      "combinedValue": 3060993810.0,
+      "countPrev": 3,
+      "countDelta": 1,
+      "countYtd": 2,
+      "countDeltaYtd": 2
     },
     {
       "key": "22266T",
@@ -129375,8 +129494,8 @@
         }
       ],
       "combinedValue": 1990269264.0,
-      "countPrev": 6,
-      "countDelta": -3,
+      "countPrev": 5,
+      "countDelta": -2,
       "countYtd": 6,
       "countDeltaYtd": -3
     },
@@ -129411,42 +129530,6 @@
         }
       ],
       "combinedValue": 1544451127.0,
-      "countPrev": 2,
-      "countDelta": 1,
-      "countYtd": 2,
-      "countDeltaYtd": 1
-    },
-    {
-      "key": "144285",
-      "name": "Carpenter Technology Corp",
-      "ticker": "CRS",
-      "sector": "Sonstige",
-      "region": "–",
-      "count": 3,
-      "investors": [
-        {
-          "person": "Stephen Mandel",
-          "weight": 5.71,
-          "value": 716541051.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "John Armitage",
-          "weight": 5.82,
-          "value": 524582118.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Daniel Loeb",
-          "weight": 5.87,
-          "value": 122186500.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        }
-      ],
-      "combinedValue": 1363309669.0,
       "countPrev": 2,
       "countDelta": 1,
       "countYtd": 2,
@@ -129997,8 +130080,8 @@
         }
       ],
       "combinedValue": 2072760779.0,
-      "countPrev": 5,
-      "countDelta": -3,
+      "countPrev": 4,
+      "countDelta": -2,
       "countYtd": 5,
       "countDeltaYtd": -3
     },
@@ -130264,6 +130347,35 @@
       "countDeltaYtd": 1
     },
     {
+      "key": "58507V",
+      "name": "Medline Inc.",
+      "ticker": "MDLN",
+      "sector": "Sonstige",
+      "region": "–",
+      "count": 2,
+      "investors": [
+        {
+          "person": "John Armitage",
+          "weight": 6.28,
+          "value": 649611665.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "NEU"
+        },
+        {
+          "person": "Stephen Mandel",
+          "weight": 4.18,
+          "value": 524617442.0,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
+        }
+      ],
+      "combinedValue": 1174229107.0,
+      "countPrev": 1,
+      "countDelta": 1,
+      "countYtd": 1,
+      "countDeltaYtd": 1
+    },
+    {
       "key": "22160N",
       "name": "Costar Group, Inc.",
       "ticker": "CSGP",
@@ -130367,9 +130479,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 11.01,
-          "value": 992434912.0,
-          "change": "AUFGESTOCKT",
+          "weight": 11.24,
+          "value": 1163018908.0,
+          "change": "REDUZIERT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -130457,7 +130569,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 53541391191.0,
+      "combinedValue": 53711975187.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -130529,9 +130641,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 5.46,
-          "value": 492211572.0,
-          "change": "REDUZIERT",
+          "weight": 8.23,
+          "value": 851686063.0,
+          "change": "AUFGESTOCKT",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -130563,7 +130675,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 18895656822.0,
+      "combinedValue": 19255131313.0,
       "countPrev": 16,
       "countDelta": -3,
       "countYtd": 16,
@@ -130663,8 +130775,8 @@
         }
       ],
       "combinedValue": 22704495238.0,
-      "countPrev": 18,
-      "countDelta": -6,
+      "countPrev": 17,
+      "countDelta": -5,
       "countYtd": 18,
       "countDeltaYtd": -6
     },
@@ -130918,9 +131030,9 @@
         },
         {
           "person": "John Armitage",
-          "weight": 5.18,
-          "value": 466523139.0,
-          "change": "NEU",
+          "weight": 6.61,
+          "value": 683897616.0,
+          "change": "AUFGESTOCKT",
           "changeYtd": "NEU"
         },
         {
@@ -130945,9 +131057,9 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 22449325487.0,
-      "countPrev": 9,
-      "countDelta": 1,
+      "combinedValue": 22666699964.0,
+      "countPrev": 10,
+      "countDelta": 0,
       "countYtd": 9,
       "countDeltaYtd": 1
     },
@@ -131195,8 +131307,8 @@
         },
         {
           "person": "John Armitage",
-          "weight": 13.79,
-          "value": 1242499573.0,
+          "weight": 14.13,
+          "value": 1463159112.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -131229,7 +131341,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 13976753704.0,
+      "combinedValue": 14197413243.0,
       "countPrev": 8,
       "countDelta": -1,
       "countYtd": 8,
@@ -131259,8 +131371,8 @@
         },
         {
           "person": "John Armitage",
-          "weight": 7.48,
-          "value": 674298538.0,
+          "weight": 7.46,
+          "value": 771879399.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -131279,7 +131391,7 @@
           "changeYtd": "NEU"
         }
       ],
-      "combinedValue": 18284708972.0,
+      "combinedValue": 18382289833.0,
       "countPrev": 4,
       "countDelta": 1,
       "countYtd": 4,
@@ -131436,54 +131548,54 @@
       "countDeltaYtd": 1
     },
     {
-      "key": "90353T",
-      "name": "Uber Technologies, Inc",
-      "ticker": "UBER",
+      "key": "038222",
+      "name": "Applied Materials Inc",
+      "ticker": "AMAT",
       "sector": "Technology",
       "region": "USA",
       "count": 5,
       "investors": [
         {
-          "person": "Bill Ackman",
-          "weight": 15.71,
-          "value": 2154934398.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "person": "Philippe Laffont",
+          "weight": 6.17,
+          "value": 1793782961.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
-          "person": "David Tepper",
-          "weight": 7.68,
-          "value": 455512550.0,
+          "person": "Steven Cohen",
+          "weight": 1.07,
+          "value": 586895128.0,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "person": "Chase Coleman",
+          "weight": 2.48,
+          "value": 566311851.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Thomas Russo",
-          "weight": 4.38,
-          "value": 372122950.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
         },
         {
           "person": "John Armitage",
-          "weight": 3.71,
-          "value": 334644471.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Pat Dorsey",
-          "weight": 6.24,
-          "value": 78423912.0,
+          "weight": 3.64,
+          "value": 376729995.0,
           "change": "NEU",
           "changeYtd": "NEU"
+        },
+        {
+          "person": "Ray Dalio",
+          "weight": 0.85,
+          "value": 191374373.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 3395638281.0,
-      "countPrev": 2,
-      "countDelta": 3,
-      "countYtd": 2,
-      "countDeltaYtd": 3
+      "combinedValue": 3515094308.0,
+      "countPrev": 1,
+      "countDelta": 4,
+      "countYtd": 1,
+      "countDeltaYtd": 4
     }
   ],
   "history": [
@@ -135776,259 +135888,420 @@
           "price": 18.88
         }
       ]
+    },
+    {
+      "quarter": "2026-06-30",
+      "ranking": [
+        {
+          "key": "92826C",
+          "name": "Visa Inc.",
+          "ticker": "V",
+          "sector": "Financial",
+          "count": 1,
+          "price": 343.09
+        },
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOG",
+          "sector": "Communication Services",
+          "count": 1,
+          "price": 353.33
+        },
+        {
+          "key": "032095",
+          "name": "Amphenol Corp",
+          "ticker": "APH",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 176.32
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
+          "count": 1,
+          "price": 238.34
+        },
+        {
+          "key": "615369",
+          "name": "Moodys Corp",
+          "ticker": "MCO",
+          "sector": "Financial",
+          "count": 1,
+          "price": 452.92
+        },
+        {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "sector": "Technology",
+          "count": 1,
+          "price": 200.09
+        },
+        {
+          "key": "58507V",
+          "name": "Medline Inc.",
+          "ticker": "MDLN",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 39.44
+        },
+        {
+          "key": "929160",
+          "name": "Vulcan Materials CO",
+          "ticker": "VMC",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 295.01
+        },
+        {
+          "key": "G25508",
+          "name": "Crh Public Ltd Co",
+          "ticker": "CRH",
+          "sector": "Basic Materials",
+          "count": 1,
+          "price": 107.0
+        },
+        {
+          "key": "038222",
+          "name": "Applied Materials Inc",
+          "ticker": "AMAT",
+          "sector": "Technology",
+          "count": 1,
+          "price": 723.0
+        },
+        {
+          "key": "45841N",
+          "name": "Interactive Brokers Group, Inc.",
+          "ticker": "IBKR",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 87.04
+        },
+        {
+          "key": "25179M",
+          "name": "Devon Energy Corp",
+          "ticker": "DVN",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 41.32
+        },
+        {
+          "key": "31488V",
+          "name": "Ferguson Enterprises Inc.",
+          "ticker": "FERG",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 237.33
+        },
+        {
+          "key": "294429",
+          "name": "Equifax Inc",
+          "ticker": "EFX",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 158.72
+        },
+        {
+          "key": "29082A",
+          "name": "Embraer S.A.",
+          "ticker": "EMBJ",
+          "sector": "Sonstige",
+          "count": 1,
+          "price": 63.8
+        }
+      ]
     }
   ],
   "prices": {
-    "MCO": {
-      "price": 505.37,
-      "asOf": "2026-07-21"
-    },
-    "CMCSA": {
-      "price": 23.78,
-      "asOf": "2026-07-21"
-    },
-    "NFLX": {
-      "price": 67.6,
-      "asOf": "2026-07-21"
-    },
-    "GOOG": {
-      "price": 351.37,
-      "asOf": "2026-07-21"
-    },
-    "TDG": {
-      "price": 1204.73,
-      "asOf": "2026-07-21"
-    },
-    "PCG": {
-      "price": 17.43,
-      "asOf": "2026-07-21"
-    },
-    "CSGP": {
-      "price": 29.68,
-      "asOf": "2026-07-21"
-    },
-    "MA": {
-      "price": 547.44,
-      "asOf": "2026-07-21"
-    },
-    "V": {
-      "price": 360.57,
-      "asOf": "2026-07-21"
-    },
-    "JPM": {
-      "price": 338.87,
-      "asOf": "2026-07-21"
-    },
-    "MU": {
-      "price": 865.46,
-      "asOf": "2026-07-21"
-    },
-    "JD": {
-      "price": 30.6,
-      "asOf": "2026-07-21"
-    },
     "TMUS": {
-      "price": 195.64,
-      "asOf": "2026-07-21"
-    },
-    "FISV": {
-      "price": 51.68,
-      "asOf": "2026-07-21"
-    },
-    "KHC": {
-      "price": 25.86,
-      "asOf": "2026-07-21"
-    },
-    "META": {
-      "price": 645.85,
-      "asOf": "2026-07-21"
-    },
-    "SUNB": {
-      "price": 72.0,
-      "asOf": "2026-07-21"
-    },
-    "COF": {
-      "price": 206.77,
-      "asOf": "2026-07-21"
-    },
-    "CRM": {
-      "price": 173.79,
-      "asOf": "2026-07-21"
-    },
-    "DHR": {
-      "price": 201.11,
-      "asOf": "2026-07-21"
-    },
-    "QCOM": {
-      "price": 170.32,
-      "asOf": "2026-07-21"
-    },
-    "MSFT": {
-      "price": 402.29,
-      "asOf": "2026-07-21"
-    },
-    "CHTR": {
-      "price": 129.16,
-      "asOf": "2026-07-21"
-    },
-    "BKNG": {
-      "price": 179.45,
-      "asOf": "2026-07-21"
-    },
-    "MRK": {
-      "price": 124.4,
-      "asOf": "2026-07-21"
-    },
-    "AAPL": {
-      "price": 326.59,
-      "asOf": "2026-07-21"
-    },
-    "VST": {
-      "price": 157.99,
-      "asOf": "2026-07-21"
-    },
-    "FDX": {
-      "price": 306.22,
-      "asOf": "2026-07-21"
-    },
-    "SPOT": {
-      "price": 492.32,
-      "asOf": "2026-07-21"
-    },
-    "BN": {
-      "price": 42.39,
-      "asOf": "2026-07-21"
-    },
-    "ASML": {
-      "price": 1739.02,
-      "asOf": "2026-07-21"
-    },
-    "DIS": {
-      "price": 96.41,
-      "asOf": "2026-07-21"
-    },
-    "WMT": {
-      "price": 112.2,
-      "asOf": "2026-07-21"
-    },
-    "PYPL": {
-      "price": 56.82,
-      "asOf": "2026-07-21"
-    },
-    "PM": {
-      "price": 192.72,
-      "asOf": "2026-07-21"
-    },
-    "AXP": {
-      "price": 351.93,
-      "asOf": "2026-07-21"
+      "price": 190.77,
+      "asOf": "2026-07-22"
     },
     "CPNG": {
-      "price": 16.44,
-      "asOf": "2026-07-21"
+      "price": 15.76,
+      "asOf": "2026-07-22"
     },
-    "SCHW": {
-      "price": 102.54,
-      "asOf": "2026-07-21"
-    },
-    "AMAT": {
-      "price": 525.7,
-      "asOf": "2026-07-21"
-    },
-    "ADBE": {
-      "price": 234.74,
-      "asOf": "2026-07-21"
-    },
-    "OXY": {
-      "price": 55.19,
-      "asOf": "2026-07-21"
-    },
-    "NVDA": {
-      "price": 203.28,
-      "asOf": "2026-07-21"
+    "MA": {
+      "price": 538.3,
+      "asOf": "2026-07-22"
     },
     "AVGO": {
-      "price": 378.16,
-      "asOf": "2026-07-21"
+      "price": 386.5,
+      "asOf": "2026-07-22"
     },
-    "UBER": {
-      "price": 72.17,
-      "asOf": "2026-07-21"
-    },
-    "GOOGL": {
-      "price": 351.99,
-      "asOf": "2026-07-21"
-    },
-    "LLY": {
-      "price": 1146.9,
-      "asOf": "2026-07-21"
-    },
-    "JNJ": {
-      "price": 248.82,
-      "asOf": "2026-07-21"
-    },
-    "TSM": {
-      "price": 402.3,
-      "asOf": "2026-07-21"
-    },
-    "AMD": {
-      "price": 503.57,
-      "asOf": "2026-07-21"
-    },
-    "GE": {
-      "price": 341.3,
-      "asOf": "2026-07-21"
-    },
-    "PDD": {
-      "price": 86.05,
-      "asOf": "2026-07-21"
-    },
-    "AMZN": {
-      "price": 249.99,
-      "asOf": "2026-07-21"
-    },
-    "KO": {
-      "price": 82.12,
-      "asOf": "2026-07-21"
-    },
-    "UNH": {
-      "price": 421.55,
-      "asOf": "2026-07-21"
-    },
-    "BAC": {
-      "price": 60.42,
-      "asOf": "2026-07-21"
-    },
-    "LRCX": {
-      "price": 306.76,
-      "asOf": "2026-07-21"
-    },
-    "WFC": {
-      "price": 86.33,
-      "asOf": "2026-07-21"
-    },
-    "BABA": {
-      "price": 120.34,
-      "asOf": "2026-07-21"
-    },
-    "BRK-B": {
-      "price": 491.25,
-      "asOf": "2026-07-21"
+    "PCG": {
+      "price": 17.49,
+      "asOf": "2026-07-22"
     },
     "ORCL": {
-      "price": 121.38,
-      "asOf": "2026-07-21"
+      "price": 127.05,
+      "asOf": "2026-07-22"
     },
     "GM": {
-      "price": 75.8,
-      "asOf": "2026-07-21"
+      "price": 79.52,
+      "asOf": "2026-07-22"
+    },
+    "BN": {
+      "price": 42.15,
+      "asOf": "2026-07-22"
+    },
+    "JPM": {
+      "price": 345.23,
+      "asOf": "2026-07-22"
+    },
+    "EFX": {
+      "price": 173.0,
+      "asOf": "2026-07-22"
+    },
+    "WFC": {
+      "price": 87.74,
+      "asOf": "2026-07-22"
+    },
+    "SPOT": {
+      "price": 493.23,
+      "asOf": "2026-07-22"
+    },
+    "APH": {
+      "price": 157.81,
+      "asOf": "2026-07-22"
     },
     "DHI": {
-      "price": 144.79,
-      "asOf": "2026-07-21"
+      "price": 143.52,
+      "asOf": "2026-07-22"
+    },
+    "CHTR": {
+      "price": 127.79,
+      "asOf": "2026-07-22"
+    },
+    "PDD": {
+      "price": 84.83,
+      "asOf": "2026-07-22"
+    },
+    "LRCX": {
+      "price": 322.0,
+      "asOf": "2026-07-22"
+    },
+    "CRM": {
+      "price": 170.06,
+      "asOf": "2026-07-22"
+    },
+    "CSGP": {
+      "price": 28.5,
+      "asOf": "2026-07-22"
+    },
+    "SUNB": {
+      "price": 72.05,
+      "asOf": "2026-07-22"
+    },
+    "BABA": {
+      "price": 117.97,
+      "asOf": "2026-07-22"
+    },
+    "FERG": {
+      "price": 226.5,
+      "asOf": "2026-07-22"
+    },
+    "JD": {
+      "price": 30.43,
+      "asOf": "2026-07-22"
+    },
+    "DIS": {
+      "price": 96.14,
+      "asOf": "2026-07-22"
+    },
+    "LLY": {
+      "price": 1175.41,
+      "asOf": "2026-07-22"
+    },
+    "AXP": {
+      "price": 350.79,
+      "asOf": "2026-07-22"
+    },
+    "TDG": {
+      "price": 1205.49,
+      "asOf": "2026-07-22"
+    },
+    "GE": {
+      "price": 340.7,
+      "asOf": "2026-07-22"
+    },
+    "SCHW": {
+      "price": 99.96,
+      "asOf": "2026-07-22"
+    },
+    "EMBJ": {
+      "price": 65.47,
+      "asOf": "2026-07-22"
+    },
+    "MSFT": {
+      "price": 397.75,
+      "asOf": "2026-07-22"
+    },
+    "GOOGL": {
+      "price": 347.15,
+      "asOf": "2026-07-22"
+    },
+    "PYPL": {
+      "price": 55.85,
+      "asOf": "2026-07-22"
+    },
+    "ADBE": {
+      "price": 227.16,
+      "asOf": "2026-07-22"
+    },
+    "UBER": {
+      "price": 71.55,
+      "asOf": "2026-07-22"
+    },
+    "TSM": {
+      "price": 424.61,
+      "asOf": "2026-07-22"
+    },
+    "MRK": {
+      "price": 126.26,
+      "asOf": "2026-07-22"
+    },
+    "UNH": {
+      "price": 436.35,
+      "asOf": "2026-07-22"
+    },
+    "NVDA": {
+      "price": 207.29,
+      "asOf": "2026-07-22"
+    },
+    "PM": {
+      "price": 188.04,
+      "asOf": "2026-07-22"
+    },
+    "WMT": {
+      "price": 110.39,
+      "asOf": "2026-07-22"
+    },
+    "DHR": {
+      "price": 179.01,
+      "asOf": "2026-07-22"
+    },
+    "QCOM": {
+      "price": 173.5,
+      "asOf": "2026-07-22"
+    },
+    "VST": {
+      "price": 162.33,
+      "asOf": "2026-07-22"
+    },
+    "VMC": {
+      "price": 276.75,
+      "asOf": "2026-07-22"
+    },
+    "IBKR": {
+      "price": 94.42,
+      "asOf": "2026-07-22"
+    },
+    "V": {
+      "price": 355.82,
+      "asOf": "2026-07-22"
+    },
+    "JNJ": {
+      "price": 250.61,
+      "asOf": "2026-07-22"
+    },
+    "BKNG": {
+      "price": 179.4,
+      "asOf": "2026-07-22"
+    },
+    "COF": {
+      "price": 206.22,
+      "asOf": "2026-07-22"
+    },
+    "AMAT": {
+      "price": 564.55,
+      "asOf": "2026-07-22"
+    },
+    "FDX": {
+      "price": 315.19,
+      "asOf": "2026-07-22"
+    },
+    "BAC": {
+      "price": 61.22,
+      "asOf": "2026-07-22"
+    },
+    "AMD": {
+      "price": 544.43,
+      "asOf": "2026-07-22"
+    },
+    "DVN": {
+      "price": 44.1,
+      "asOf": "2026-07-22"
+    },
+    "CMCSA": {
+      "price": 23.81,
+      "asOf": "2026-07-22"
+    },
+    "AAPL": {
+      "price": 327.74,
+      "asOf": "2026-07-22"
+    },
+    "OXY": {
+      "price": 56.5,
+      "asOf": "2026-07-22"
+    },
+    "CRH": {
+      "price": 99.74,
+      "asOf": "2026-07-22"
+    },
+    "NFLX": {
+      "price": 68.67,
+      "asOf": "2026-07-22"
+    },
+    "AMZN": {
+      "price": 247.55,
+      "asOf": "2026-07-22"
+    },
+    "META": {
+      "price": 643.81,
+      "asOf": "2026-07-22"
+    },
+    "ASML": {
+      "price": 1801.51,
+      "asOf": "2026-07-22"
+    },
+    "BRK-B": {
+      "price": 489.65,
+      "asOf": "2026-07-22"
+    },
+    "MCO": {
+      "price": 490.77,
+      "asOf": "2026-07-22"
+    },
+    "KHC": {
+      "price": 25.79,
+      "asOf": "2026-07-22"
+    },
+    "MDLN": {
+      "price": 39.09,
+      "asOf": "2026-07-22"
+    },
+    "MU": {
+      "price": 970.82,
+      "asOf": "2026-07-22"
+    },
+    "GOOG": {
+      "price": 346.19,
+      "asOf": "2026-07-22"
+    },
+    "KO": {
+      "price": 81.97,
+      "asOf": "2026-07-22"
+    },
+    "FISV": {
+      "price": 50.61,
+      "asOf": "2026-07-22"
     }
   },
-  "pricesAsOf": "2026-07-21",
+  "pricesAsOf": "2026-07-22",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -136057,10 +136330,11 @@
         "2025-06-30": 6204.95,
         "2025-09-30": 6688.46,
         "2025-12-31": 6845.5,
-        "2026-03-31": 6528.52
+        "2026-03-31": 6528.52,
+        "2026-06-30": 7499.36
       },
-      "current": 7443.28,
-      "currentAsOf": "2026-07-20"
+      "current": 7509.2,
+      "currentAsOf": "2026-07-21"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -136089,10 +136363,11 @@
         "2025-06-30": 22679.01,
         "2025-09-30": 24679.99,
         "2025-12-31": 25249.85,
-        "2026-03-31": 23740.19
+        "2026-03-31": 23740.19,
+        "2026-06-30": 30276.35
       },
-      "current": 28604.23,
-      "currentAsOf": "2026-07-20"
+      "current": 29155.18,
+      "currentAsOf": "2026-07-21"
     }
   },
   "quarterPrices": {
@@ -136122,7 +136397,8 @@
       "2025-06-30": 205.17,
       "2025-09-30": 254.63,
       "2025-12-31": 271.86,
-      "2026-03-31": 253.79
+      "2026-03-31": 253.79,
+      "2026-06-30": 289.36
     },
     "ADBE": {
       "2019-12-31": 329.81,
@@ -136150,7 +136426,8 @@
       "2025-06-30": 386.88,
       "2025-09-30": 352.75,
       "2025-12-31": 349.99,
-      "2026-03-31": 243.08
+      "2026-03-31": 243.08,
+      "2026-06-30": 205.02
     },
     "AMAT": {
       "2019-12-31": 61.04,
@@ -136178,7 +136455,8 @@
       "2025-06-30": 183.07,
       "2025-09-30": 204.74,
       "2025-12-31": 256.99,
-      "2026-03-31": 341.79
+      "2026-03-31": 341.79,
+      "2026-06-30": 723.0
     },
     "AMD": {
       "2019-12-31": 45.86,
@@ -136206,7 +136484,8 @@
       "2025-06-30": 141.9,
       "2025-09-30": 161.79,
       "2025-12-31": 214.16,
-      "2026-03-31": 203.43
+      "2026-03-31": 203.43,
+      "2026-06-30": 580.91
     },
     "AMZN": {
       "2019-12-31": 92.39,
@@ -136234,7 +136513,8 @@
       "2025-06-30": 219.39,
       "2025-09-30": 219.57,
       "2025-12-31": 230.82,
-      "2026-03-31": 208.27
+      "2026-03-31": 208.27,
+      "2026-06-30": 238.34
     },
     "ASML": {
       "2019-12-31": 295.94,
@@ -136262,7 +136542,8 @@
       "2025-06-30": 801.39,
       "2025-09-30": 968.09,
       "2025-12-31": 1069.86,
-      "2026-03-31": 1320.83
+      "2026-03-31": 1320.83,
+      "2026-06-30": 1989.44
     },
     "AVGO": {
       "2019-12-31": 31.6,
@@ -136290,7 +136571,8 @@
       "2025-06-30": 275.65,
       "2025-09-30": 329.91,
       "2025-12-31": 346.1,
-      "2026-03-31": 309.51
+      "2026-03-31": 309.51,
+      "2026-06-30": 377.75
     },
     "AXP": {
       "2019-12-31": 124.49,
@@ -136318,7 +136600,8 @@
       "2025-06-30": 318.98,
       "2025-09-30": 332.16,
       "2025-12-31": 369.95,
-      "2026-03-31": 302.48
+      "2026-03-31": 302.48,
+      "2026-06-30": 338.25
     },
     "BABA": {
       "2019-12-31": 212.1,
@@ -136346,7 +136629,8 @@
       "2025-06-30": 113.41,
       "2025-09-30": 178.73,
       "2025-12-31": 146.58,
-      "2026-03-31": 125.46
+      "2026-03-31": 125.46,
+      "2026-06-30": 95.98
     },
     "BAC": {
       "2019-12-31": 35.22,
@@ -136374,7 +136658,8 @@
       "2025-06-30": 47.32,
       "2025-09-30": 51.59,
       "2025-12-31": 55.0,
-      "2026-03-31": 48.75
+      "2026-03-31": 48.75,
+      "2026-06-30": 56.98
     },
     "BKNG": {
       "2019-12-31": 82.15,
@@ -136402,7 +136687,8 @@
       "2025-06-30": 231.57,
       "2025-09-30": 215.97,
       "2025-12-31": 214.21,
-      "2026-03-31": 168.41
+      "2026-03-31": 168.41,
+      "2026-06-30": 178.24
     },
     "BN": {
       "2019-12-31": 20.62,
@@ -136430,7 +136716,8 @@
       "2025-06-30": 41.23,
       "2025-09-30": 45.72,
       "2025-12-31": 45.89,
-      "2026-03-31": 40.47
+      "2026-03-31": 40.47,
+      "2026-06-30": 42.59
     },
     "BRK-B": {
       "2019-12-31": 226.5,
@@ -136458,7 +136745,8 @@
       "2025-06-30": 485.77,
       "2025-09-30": 502.74,
       "2025-12-31": 502.65,
-      "2026-03-31": 479.2
+      "2026-03-31": 479.2,
+      "2026-06-30": 500.39
     },
     "CHTR": {
       "2019-12-31": 485.08,
@@ -136486,7 +136774,8 @@
       "2025-06-30": 408.81,
       "2025-09-30": 275.11,
       "2025-12-31": 208.75,
-      "2026-03-31": 215.88
+      "2026-03-31": 215.88,
+      "2026-06-30": 142.21
     },
     "CMCSA": {
       "2019-12-31": 42.15,
@@ -136514,7 +136803,8 @@
       "2025-06-30": 33.45,
       "2025-09-30": 29.45,
       "2025-12-31": 28.01,
-      "2026-03-31": 28.71
+      "2026-03-31": 28.71,
+      "2026-06-30": 24.55
     },
     "CNI": {
       "2019-12-31": 90.45,
@@ -136570,7 +136860,8 @@
       "2025-06-30": 212.76,
       "2025-09-30": 212.58,
       "2025-12-31": 242.36,
-      "2026-03-31": 182.43
+      "2026-03-31": 182.43,
+      "2026-06-30": 200.62
     },
     "CP": {
       "2019-12-31": 50.99,
@@ -136621,7 +136912,8 @@
       "2025-06-30": 29.96,
       "2025-09-30": 32.2,
       "2025-12-31": 23.59,
-      "2026-03-31": 18.88
+      "2026-03-31": 18.88,
+      "2026-06-30": 17.37
     },
     "CRM": {
       "2019-12-31": 162.64,
@@ -136649,7 +136941,8 @@
       "2025-06-30": 272.69,
       "2025-09-30": 237.0,
       "2025-12-31": 264.91,
-      "2026-03-31": 186.67
+      "2026-03-31": 186.67,
+      "2026-06-30": 156.66
     },
     "CSGP": {
       "2019-12-31": 59.83,
@@ -136677,7 +136970,8 @@
       "2025-06-30": 80.4,
       "2025-09-30": 84.37,
       "2025-12-31": 67.24,
-      "2026-03-31": 40.34
+      "2026-03-31": 40.34,
+      "2026-06-30": 28.32
     },
     "DHI": {
       "2019-12-31": 52.75,
@@ -136705,7 +136999,8 @@
       "2025-06-30": 128.92,
       "2025-09-30": 169.47,
       "2025-12-31": 144.03,
-      "2026-03-31": 137.22
+      "2026-03-31": 137.22,
+      "2026-06-30": 162.88
     },
     "DHR": {
       "2019-12-31": 136.06,
@@ -136733,7 +137028,8 @@
       "2025-06-30": 197.54,
       "2025-09-30": 198.26,
       "2025-12-31": 228.92,
-      "2026-03-31": 189.6
+      "2026-03-31": 189.6,
+      "2026-06-30": 190.48
     },
     "DIS": {
       "2019-12-31": 144.63,
@@ -136761,7 +137057,8 @@
       "2025-06-30": 124.01,
       "2025-09-30": 114.5,
       "2025-12-31": 113.77,
-      "2026-03-31": 96.38
+      "2026-03-31": 96.38,
+      "2026-06-30": 96.25
     },
     "FDX": {
       "2019-12-31": 121.85,
@@ -136789,7 +137086,8 @@
       "2025-06-30": 183.17,
       "2025-09-30": 190.02,
       "2025-12-31": 232.76,
-      "2026-03-31": 287.01
+      "2026-03-31": 287.01,
+      "2026-06-30": 313.13
     },
     "FISV": {
       "2019-12-31": 115.63,
@@ -136817,7 +137115,8 @@
       "2025-06-30": 172.41,
       "2025-09-30": 128.93,
       "2025-12-31": 67.17,
-      "2026-03-31": 55.8
+      "2026-03-31": 55.8,
+      "2026-06-30": 49.05
     },
     "GE": {
       "2019-12-31": 55.62,
@@ -136845,7 +137144,8 @@
       "2025-06-30": 257.39,
       "2025-09-30": 300.82,
       "2025-12-31": 308.03,
-      "2026-03-31": 283.77
+      "2026-03-31": 283.77,
+      "2026-06-30": 373.73
     },
     "GM": {
       "2019-12-31": 36.6,
@@ -136873,7 +137173,8 @@
       "2025-06-30": 49.21,
       "2025-09-30": 60.97,
       "2025-12-31": 81.32,
-      "2026-03-31": 74.5
+      "2026-03-31": 74.5,
+      "2026-06-30": 77.08
     },
     "GOOG": {
       "2019-12-31": 66.85,
@@ -136901,7 +137202,8 @@
       "2025-06-30": 177.39,
       "2025-09-30": 243.55,
       "2025-12-31": 313.8,
-      "2026-03-31": 286.86
+      "2026-03-31": 286.86,
+      "2026-06-30": 353.33
     },
     "GOOGL": {
       "2019-12-31": 66.97,
@@ -136929,7 +137231,8 @@
       "2025-06-30": 176.23,
       "2025-09-30": 243.1,
       "2025-12-31": 313.0,
-      "2026-03-31": 287.56
+      "2026-03-31": 287.56,
+      "2026-06-30": 357.37
     },
     "JD": {
       "2019-12-31": 35.23,
@@ -136957,7 +137260,8 @@
       "2025-06-30": 32.64,
       "2025-09-30": 34.98,
       "2025-12-31": 28.7,
-      "2026-03-31": 29.57
+      "2026-03-31": 29.57,
+      "2026-06-30": 25.48
     },
     "JNJ": {
       "2019-12-31": 145.87,
@@ -136985,7 +137289,8 @@
       "2025-06-30": 152.75,
       "2025-09-30": 185.42,
       "2025-12-31": 206.95,
-      "2026-03-31": 244.44
+      "2026-03-31": 244.44,
+      "2026-06-30": 253.97
     },
     "JPM": {
       "2019-12-31": 139.4,
@@ -137013,7 +137318,8 @@
       "2025-06-30": 289.91,
       "2025-09-30": 315.43,
       "2025-12-31": 322.22,
-      "2026-03-31": 294.16
+      "2026-03-31": 294.16,
+      "2026-06-30": 327.33
     },
     "KHC": {
       "2019-12-31": 32.13,
@@ -137041,7 +137347,8 @@
       "2025-06-30": 25.82,
       "2025-09-30": 26.04,
       "2025-12-31": 24.25,
-      "2026-03-31": 22.49
+      "2026-03-31": 22.49,
+      "2026-06-30": 23.62
     },
     "KO": {
       "2019-12-31": 55.35,
@@ -137069,7 +137376,8 @@
       "2025-06-30": 70.75,
       "2025-09-30": 66.32,
       "2025-12-31": 69.91,
-      "2026-03-31": 76.05
+      "2026-03-31": 76.05,
+      "2026-06-30": 81.27
     },
     "LLY": {
       "2019-12-31": 131.43,
@@ -137097,7 +137405,8 @@
       "2025-06-30": 779.53,
       "2025-09-30": 763.0,
       "2025-12-31": 1074.68,
-      "2026-03-31": 919.77
+      "2026-03-31": 919.77,
+      "2026-06-30": 1199.43
     },
     "LRCX": {
       "2019-12-31": 29.24,
@@ -137125,7 +137434,8 @@
       "2025-06-30": 97.34,
       "2025-09-30": 133.9,
       "2025-12-31": 171.18,
-      "2026-03-31": 213.66
+      "2026-03-31": 213.66,
+      "2026-06-30": 433.33
     },
     "MA": {
       "2019-12-31": 298.59,
@@ -137153,7 +137463,8 @@
       "2025-06-30": 561.94,
       "2025-09-30": 568.81,
       "2025-12-31": 570.88,
-      "2026-03-31": 499.66
+      "2026-03-31": 499.66,
+      "2026-06-30": 513.6
     },
     "MCO": {
       "2019-12-31": 237.41,
@@ -137181,7 +137492,8 @@
       "2025-06-30": 501.59,
       "2025-09-30": 476.48,
       "2025-12-31": 510.85,
-      "2026-03-31": 436.25
+      "2026-03-31": 436.25,
+      "2026-06-30": 452.92
     },
     "META": {
       "2019-12-31": 205.25,
@@ -137209,7 +137521,8 @@
       "2025-06-30": 738.09,
       "2025-09-30": 734.38,
       "2025-12-31": 660.09,
-      "2026-03-31": 572.13
+      "2026-03-31": 572.13,
+      "2026-06-30": 563.29
     },
     "MRK": {
       "2019-12-31": 86.78,
@@ -137237,7 +137550,8 @@
       "2025-06-30": 79.16,
       "2025-09-30": 83.93,
       "2025-12-31": 105.26,
-      "2026-03-31": 120.29
+      "2026-03-31": 120.29,
+      "2026-06-30": 128.5
     },
     "MSFT": {
       "2019-12-31": 157.7,
@@ -137265,7 +137579,8 @@
       "2025-06-30": 497.41,
       "2025-09-30": 517.95,
       "2025-12-31": 483.62,
-      "2026-03-31": 370.17
+      "2026-03-31": 370.17,
+      "2026-06-30": 373.02
     },
     "MU": {
       "2019-12-31": 53.78,
@@ -137293,7 +137608,8 @@
       "2025-06-30": 123.25,
       "2025-09-30": 167.32,
       "2025-12-31": 285.41,
-      "2026-03-31": 337.84
+      "2026-03-31": 337.84,
+      "2026-06-30": 1154.29
     },
     "NFLX": {
       "2019-12-31": 32.36,
@@ -137321,7 +137637,8 @@
       "2025-06-30": 133.91,
       "2025-09-30": 119.89,
       "2025-12-31": 93.76,
-      "2026-03-31": 96.15
+      "2026-03-31": 96.15,
+      "2026-06-30": 71.4
     },
     "NVDA": {
       "2019-12-31": 5.88,
@@ -137349,7 +137666,8 @@
       "2025-06-30": 157.99,
       "2025-09-30": 186.58,
       "2025-12-31": 186.5,
-      "2026-03-31": 174.4
+      "2026-03-31": 174.4,
+      "2026-06-30": 200.09
     },
     "ORCL": {
       "2019-12-31": 52.98,
@@ -137377,7 +137695,8 @@
       "2025-06-30": 218.63,
       "2025-09-30": 281.24,
       "2025-12-31": 194.91,
-      "2026-03-31": 147.11
+      "2026-03-31": 147.11,
+      "2026-06-30": 146.55
     },
     "OXY": {
       "2019-12-31": 41.21,
@@ -137405,7 +137724,8 @@
       "2025-06-30": 42.01,
       "2025-09-30": 47.25,
       "2025-12-31": 41.12,
-      "2026-03-31": 65.0
+      "2026-03-31": 65.0,
+      "2026-06-30": 48.57
     },
     "PDD": {
       "2019-12-31": 37.82,
@@ -137433,7 +137753,8 @@
       "2025-06-30": 104.66,
       "2025-09-30": 132.17,
       "2025-12-31": 113.39,
-      "2026-03-31": 102.18
+      "2026-03-31": 102.18,
+      "2026-06-30": 76.28
     },
     "PM": {
       "2019-12-31": 85.09,
@@ -137461,7 +137782,8 @@
       "2025-06-30": 182.13,
       "2025-09-30": 162.2,
       "2025-12-31": 160.4,
-      "2026-03-31": 165.34
+      "2026-03-31": 165.34,
+      "2026-06-30": 180.91
     },
     "PYPL": {
       "2019-12-31": 108.17,
@@ -137489,7 +137811,8 @@
       "2025-06-30": 74.32,
       "2025-09-30": 67.06,
       "2025-12-31": 58.38,
-      "2026-03-31": 45.23
+      "2026-03-31": 45.23,
+      "2026-06-30": 43.18
     },
     "QCOM": {
       "2019-12-31": 88.23,
@@ -137517,7 +137840,8 @@
       "2025-06-30": 159.26,
       "2025-09-30": 166.36,
       "2025-12-31": 171.05,
-      "2026-03-31": 128.78
+      "2026-03-31": 128.78,
+      "2026-06-30": 184.79
     },
     "SCHW": {
       "2019-12-31": 47.56,
@@ -137545,7 +137869,8 @@
       "2025-06-30": 91.24,
       "2025-09-30": 95.47,
       "2025-12-31": 99.91,
-      "2026-03-31": 93.98
+      "2026-03-31": 93.98,
+      "2026-06-30": 92.27
     },
     "SPOT": {
       "2019-12-31": 149.55,
@@ -137573,10 +137898,12 @@
       "2025-06-30": 767.34,
       "2025-09-30": 698.0,
       "2025-12-31": 580.71,
-      "2026-03-31": 484.91
+      "2026-03-31": 484.91,
+      "2026-06-30": 459.13
     },
     "SUNB": {
-      "2026-03-31": 65.09
+      "2026-03-31": 65.09,
+      "2026-06-30": 74.81
     },
     "TDG": {
       "2019-12-31": 560.0,
@@ -137604,7 +137931,8 @@
       "2025-06-30": 1520.64,
       "2025-09-30": 1318.02,
       "2025-12-31": 1329.85,
-      "2026-03-31": 1158.96
+      "2026-03-31": 1158.96,
+      "2026-06-30": 1332.04
     },
     "TMUS": {
       "2019-12-31": 78.42,
@@ -137632,7 +137960,8 @@
       "2025-06-30": 238.26,
       "2025-09-30": 239.38,
       "2025-12-31": 203.04,
-      "2026-03-31": 210.03
+      "2026-03-31": 210.03,
+      "2026-06-30": 167.73
     },
     "TSM": {
       "2019-12-31": 58.1,
@@ -137660,7 +137989,8 @@
       "2025-06-30": 226.49,
       "2025-09-30": 279.29,
       "2025-12-31": 303.89,
-      "2026-03-31": 337.95
+      "2026-03-31": 337.95,
+      "2026-06-30": 477.57
     },
     "UBER": {
       "2019-12-31": 29.74,
@@ -137688,7 +138018,8 @@
       "2025-06-30": 93.3,
       "2025-09-30": 97.97,
       "2025-12-31": 81.71,
-      "2026-03-31": 71.93
+      "2026-03-31": 71.93,
+      "2026-06-30": 72.16
     },
     "UNH": {
       "2019-12-31": 293.98,
@@ -137716,7 +138047,8 @@
       "2025-06-30": 311.97,
       "2025-09-30": 345.3,
       "2025-12-31": 330.11,
-      "2026-03-31": 270.59
+      "2026-03-31": 270.59,
+      "2026-06-30": 415.63
     },
     "V": {
       "2019-12-31": 187.9,
@@ -137744,7 +138076,8 @@
       "2025-06-30": 355.05,
       "2025-09-30": 341.38,
       "2025-12-31": 350.71,
-      "2026-03-31": 302.24
+      "2026-03-31": 302.24,
+      "2026-06-30": 343.09
     },
     "VST": {
       "2019-12-31": 22.99,
@@ -137772,7 +138105,8 @@
       "2025-06-30": 193.81,
       "2025-09-30": 195.92,
       "2025-12-31": 161.33,
-      "2026-03-31": 150.33
+      "2026-03-31": 150.33,
+      "2026-06-30": 158.63
     },
     "WFC": {
       "2019-12-31": 53.8,
@@ -137800,7 +138134,8 @@
       "2025-06-30": 80.12,
       "2025-09-30": 83.82,
       "2025-12-31": 93.2,
-      "2026-03-31": 79.61
+      "2026-03-31": 79.61,
+      "2026-06-30": 82.64
     },
     "WMT": {
       "2019-12-31": 39.61,
@@ -137828,7 +138163,8 @@
       "2025-06-30": 97.78,
       "2025-09-30": 103.06,
       "2025-12-31": 111.41,
-      "2026-03-31": 124.28
+      "2026-03-31": 124.28,
+      "2026-06-30": 113.26
     },
     "APP": {
       "2021-06-30": 75.17,
@@ -137878,7 +138214,245 @@
       "2025-06-30": 13.94,
       "2025-09-30": 15.08,
       "2025-12-31": 16.07,
-      "2026-03-31": 17.57
+      "2026-03-31": 17.57,
+      "2026-06-30": 16.82
+    },
+    "APH": {
+      "2019-12-31": 27.06,
+      "2020-03-31": 18.22,
+      "2020-06-30": 23.95,
+      "2020-09-30": 27.07,
+      "2020-12-31": 32.69,
+      "2021-03-31": 32.99,
+      "2021-06-30": 34.21,
+      "2021-09-30": 36.62,
+      "2021-12-31": 43.73,
+      "2022-03-31": 37.67,
+      "2022-06-30": 32.19,
+      "2022-09-30": 33.48,
+      "2022-12-31": 38.07,
+      "2023-03-31": 40.86,
+      "2023-06-30": 42.47,
+      "2023-09-30": 41.99,
+      "2023-12-31": 49.56,
+      "2024-03-31": 57.67,
+      "2024-06-30": 67.37,
+      "2024-09-30": 65.16,
+      "2024-12-31": 69.45,
+      "2025-03-31": 65.59,
+      "2025-06-30": 98.75,
+      "2025-09-30": 123.75,
+      "2025-12-31": 135.14,
+      "2026-03-31": 126.35,
+      "2026-06-30": 176.32
+    },
+    "CRH": {
+      "2019-12-31": 40.33,
+      "2020-03-31": 26.84,
+      "2020-06-30": 34.31,
+      "2020-09-30": 36.09,
+      "2020-12-31": 42.58,
+      "2021-03-31": 46.98,
+      "2021-06-30": 50.84,
+      "2021-09-30": 46.74,
+      "2021-12-31": 52.8,
+      "2022-03-31": 40.06,
+      "2022-06-30": 34.82,
+      "2022-09-30": 32.23,
+      "2022-12-31": 39.79,
+      "2023-03-31": 50.87,
+      "2023-06-30": 55.73,
+      "2023-09-30": 54.73,
+      "2023-12-31": 69.16,
+      "2024-03-31": 86.26,
+      "2024-06-30": 74.98,
+      "2024-09-30": 92.74,
+      "2024-12-31": 92.52,
+      "2025-03-31": 87.97,
+      "2025-06-30": 91.8,
+      "2025-09-30": 119.9,
+      "2025-12-31": 124.8,
+      "2026-03-31": 105.12,
+      "2026-06-30": 107.0
+    },
+    "DVN": {
+      "2019-12-31": 25.97,
+      "2020-03-31": 6.91,
+      "2020-06-30": 11.34,
+      "2020-09-30": 9.46,
+      "2020-12-31": 15.81,
+      "2021-03-31": 21.85,
+      "2021-06-30": 29.19,
+      "2021-09-30": 35.51,
+      "2021-12-31": 44.05,
+      "2022-03-31": 59.13,
+      "2022-06-30": 55.11,
+      "2022-09-30": 60.13,
+      "2022-12-31": 61.51,
+      "2023-03-31": 50.61,
+      "2023-06-30": 48.34,
+      "2023-09-30": 47.7,
+      "2023-12-31": 45.3,
+      "2024-03-31": 50.18,
+      "2024-06-30": 47.4,
+      "2024-09-30": 39.12,
+      "2024-12-31": 32.73,
+      "2025-03-31": 37.4,
+      "2025-06-30": 31.81,
+      "2025-09-30": 35.06,
+      "2025-12-31": 36.63,
+      "2026-03-31": 50.32,
+      "2026-06-30": 41.32
+    },
+    "EFX": {
+      "2019-12-31": 140.12,
+      "2020-03-31": 119.45,
+      "2020-06-30": 171.88,
+      "2020-09-30": 156.9,
+      "2020-12-31": 192.84,
+      "2021-03-31": 181.13,
+      "2021-06-30": 239.51,
+      "2021-09-30": 253.42,
+      "2021-12-31": 292.79,
+      "2022-03-31": 237.1,
+      "2022-06-30": 182.78,
+      "2022-09-30": 171.43,
+      "2022-12-31": 194.36,
+      "2023-03-31": 202.84,
+      "2023-06-30": 235.3,
+      "2023-09-30": 183.18,
+      "2023-12-31": 247.29,
+      "2024-03-31": 267.52,
+      "2024-06-30": 242.46,
+      "2024-09-30": 293.86,
+      "2024-12-31": 254.85,
+      "2025-03-31": 243.56,
+      "2025-06-30": 259.37,
+      "2025-09-30": 256.53,
+      "2025-12-31": 216.98,
+      "2026-03-31": 180.07,
+      "2026-06-30": 158.72
+    },
+    "EMBJ": {
+      "2019-12-31": 19.49,
+      "2020-03-31": 7.4,
+      "2020-06-30": 5.98,
+      "2020-09-30": 4.41,
+      "2020-12-31": 6.81,
+      "2021-03-31": 10.01,
+      "2021-06-30": 15.14,
+      "2021-09-30": 17.0,
+      "2021-12-31": 17.75,
+      "2022-03-31": 12.61,
+      "2022-06-30": 8.78,
+      "2022-09-30": 8.6,
+      "2022-12-31": 10.93,
+      "2023-03-31": 16.37,
+      "2023-06-30": 15.46,
+      "2023-09-30": 13.72,
+      "2023-12-31": 18.45,
+      "2024-03-31": 26.64,
+      "2024-06-30": 25.8,
+      "2024-09-30": 35.37,
+      "2024-12-31": 36.68,
+      "2025-03-31": 46.2,
+      "2025-06-30": 56.91,
+      "2025-09-30": 60.45,
+      "2025-12-31": 64.37,
+      "2026-03-31": 59.34,
+      "2026-06-30": 63.8
+    },
+    "FERG": {
+      "2019-12-31": 91.61,
+      "2020-03-31": 58.83,
+      "2020-06-30": 82.15,
+      "2020-09-30": 100.75,
+      "2020-12-31": 118.5,
+      "2021-03-31": 120.13,
+      "2021-06-30": 139.54,
+      "2021-09-30": 139.52,
+      "2021-12-31": 179.39,
+      "2022-03-31": 134.12,
+      "2022-06-30": 110.71,
+      "2022-09-30": 102.93,
+      "2022-12-31": 126.97,
+      "2023-03-31": 133.75,
+      "2023-06-30": 157.31,
+      "2023-09-30": 164.47,
+      "2023-12-31": 193.07,
+      "2024-03-31": 218.43,
+      "2024-06-30": 193.65,
+      "2024-09-30": 198.57,
+      "2024-12-31": 173.57,
+      "2025-03-31": 160.23,
+      "2025-06-30": 217.75,
+      "2025-09-30": 224.58,
+      "2025-12-31": 222.63,
+      "2026-03-31": 233.26,
+      "2026-06-30": 237.33
+    },
+    "IBKR": {
+      "2019-12-31": 11.65,
+      "2020-03-31": 10.79,
+      "2020-06-30": 10.44,
+      "2020-09-30": 12.08,
+      "2020-12-31": 15.23,
+      "2021-03-31": 18.26,
+      "2021-06-30": 16.43,
+      "2021-09-30": 15.59,
+      "2021-12-31": 19.85,
+      "2022-03-31": 16.48,
+      "2022-06-30": 13.75,
+      "2022-09-30": 15.98,
+      "2022-12-31": 18.09,
+      "2023-03-31": 20.64,
+      "2023-06-30": 20.77,
+      "2023-09-30": 21.64,
+      "2023-12-31": 20.73,
+      "2024-03-31": 27.93,
+      "2024-06-30": 30.65,
+      "2024-09-30": 34.84,
+      "2024-12-31": 44.17,
+      "2025-03-31": 41.4,
+      "2025-06-30": 55.41,
+      "2025-09-30": 68.81,
+      "2025-12-31": 64.31,
+      "2026-03-31": 67.07,
+      "2026-06-30": 87.04
+    },
+    "MDLN": {
+      "2025-12-31": 42.0,
+      "2026-03-31": 44.5,
+      "2026-06-30": 39.44
+    },
+    "VMC": {
+      "2019-12-31": 143.99,
+      "2020-03-31": 108.07,
+      "2020-06-30": 115.85,
+      "2020-09-30": 135.54,
+      "2020-12-31": 148.31,
+      "2021-03-31": 168.75,
+      "2021-06-30": 174.07,
+      "2021-09-30": 169.16,
+      "2021-12-31": 207.58,
+      "2022-03-31": 183.7,
+      "2022-06-30": 142.1,
+      "2022-09-30": 157.71,
+      "2022-12-31": 175.11,
+      "2023-03-31": 171.56,
+      "2023-06-30": 225.44,
+      "2023-09-30": 202.02,
+      "2023-12-31": 227.01,
+      "2024-03-31": 272.92,
+      "2024-06-30": 248.68,
+      "2024-09-30": 250.43,
+      "2024-12-31": 257.23,
+      "2025-03-31": 233.3,
+      "2025-06-30": 260.82,
+      "2025-09-30": 307.62,
+      "2025-12-31": 285.22,
+      "2026-03-31": 272.3,
+      "2026-06-30": 295.01
     }
   },
   "cash": {
@@ -148993,6 +149567,16 @@
         "coverage": 6.3,
         "basis": "benchmark",
         "totalUsd": 9010197462
+      },
+      {
+        "from": "2026-03-31",
+        "to": "2026-06-30",
+        "flowUsd": 1276621,
+        "flowPct": 0.01,
+        "ret": 14.87,
+        "coverage": 1.5,
+        "basis": "benchmark",
+        "totalUsd": 10351358177
       }
     ],
     "Gates Foundation": [
