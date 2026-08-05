@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T08:34:37.686967+00:00",
+  "generatedAt": "2026-08-05T08:34:29.144069+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 27,
@@ -33249,13 +33249,13 @@
       "cik": "0000850529",
       "group": "super15",
       "form": "13F-HR",
-      "filingDate": "2026-05-05",
-      "accession": "0000850529-26-000004",
-      "reportDate": "2026-03-31",
-      "prevReportDate": "2025-12-31",
+      "filingDate": "2026-08-04",
+      "accession": "0000850529-26-000006",
+      "reportDate": "2026-06-30",
+      "prevReportDate": "2026-03-31",
       "ytdBaseDate": "2025-12-31",
-      "portfolioValue": 294892645875.0,
-      "positionsCount": 841,
+      "portfolioValue": 335827609549.0,
+      "positionsCount": 865,
       "top": [
         {
           "key": "67066G",
@@ -33263,9 +33263,9 @@
           "ticker": "NVDA",
           "sector": "Technology",
           "region": "USA",
-          "value": 15444789113.0,
-          "shares": 88559570.0,
-          "weight": 5.24,
+          "value": 18195373846.0,
+          "shares": 90935947.0,
+          "weight": 5.42,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33276,9 +33276,9 @@
           "ticker": "AAPL",
           "sector": "Technology",
           "region": "USA",
-          "value": 14321456572.0,
-          "shares": 56430341.0,
-          "weight": 4.86,
+          "value": 16670059955.0,
+          "shares": 57610104.0,
+          "weight": 4.96,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33289,11 +33289,24 @@
           "ticker": "GOOGL",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 11723486393.0,
-          "shares": 40773026.0,
-          "weight": 3.98,
+          "value": 14889605021.0,
+          "shares": 41683540.0,
+          "weight": 4.43,
           "isEtf": false,
           "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "149123",
+          "name": "Caterpillar Inc",
+          "ticker": "CAT",
+          "sector": "Industrials",
+          "region": "USA",
+          "value": 10587791364.0,
+          "shares": 9942521.0,
+          "weight": 3.15,
+          "isEtf": false,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -33302,48 +33315,9 @@
           "ticker": "MSFT",
           "sector": "Technology",
           "region": "USA",
-          "value": 9602800248.0,
-          "shares": 25941594.0,
-          "weight": 3.26,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "023135",
-          "name": "Amazon Com Inc",
-          "ticker": "AMZN",
-          "sector": "Consumer Cyclical",
-          "region": "USA",
-          "value": 7119805455.0,
-          "shares": 34185457.0,
-          "weight": 2.41,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "149123",
-          "name": "Caterpillar Inc",
-          "ticker": "CAT",
-          "sector": "Industrials",
-          "region": "USA",
-          "value": 6925871728.0,
-          "shares": 9775952.0,
-          "weight": 2.35,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "874039",
-          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-          "ticker": "TSM",
-          "sector": "Technology",
-          "region": "Taiwan",
-          "value": 6291848786.0,
-          "shares": 18617691.0,
-          "weight": 2.13,
+          "value": 9926707366.0,
+          "shares": 26611728.0,
+          "weight": 2.96,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33354,9 +33328,35 @@
           "ticker": "ASML",
           "sector": "Technology",
           "region": "Niederlande",
-          "value": 6076495515.0,
-          "shares": 4600512.0,
-          "weight": 2.06,
+          "value": 9425199953.0,
+          "shares": 4737614.0,
+          "weight": 2.81,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "sector": "Technology",
+          "region": "Taiwan",
+          "value": 9009930721.0,
+          "shares": 18866198.0,
+          "weight": 2.68,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
+          "region": "USA",
+          "value": 8336759712.0,
+          "shares": 34978432.0,
+          "weight": 2.48,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33367,48 +33367,22 @@
           "ticker": "GS",
           "sector": "Financial",
           "region": "USA",
-          "value": 5775836640.0,
-          "shares": 6827310.0,
-          "weight": 1.96,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "30231G",
-          "name": "Exxon Mobil CORP",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 5477079257.0,
-          "shares": 32282677.0,
-          "weight": 1.86,
+          "value": 7043295916.0,
+          "shares": 6964113.0,
+          "weight": 2.1,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "931142",
-          "name": "Walmart Inc.",
-          "ticker": "WMT",
-          "sector": "Consumer Defensive",
+          "key": "532457",
+          "name": "ELI LILLY & Co",
+          "ticker": "LLY",
+          "sector": "Healthcare",
           "region": "USA",
-          "value": 5092715658.0,
-          "shares": 40977756.0,
-          "weight": 1.73,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "46625H",
-          "name": "Jpmorgan Chase & Co",
-          "ticker": "JPM",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 5006622726.0,
-          "shares": 17020065.0,
-          "weight": 1.7,
+          "value": 6073333633.0,
+          "shares": 5063516.0,
+          "weight": 1.81,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33419,35 +33393,61 @@
           "ticker": "AVGO",
           "sector": "Technology",
           "region": "USA",
-          "value": 4547124089.0,
-          "shares": 14691363.0,
-          "weight": 1.54,
+          "value": 5715990096.0,
+          "shares": 15131673.0,
+          "weight": 1.7,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "166764",
-          "name": "Chevron Corp",
-          "ticker": "CVX",
-          "sector": "Energy",
+          "key": "46625H",
+          "name": "Jpmorgan Chase & Co",
+          "ticker": "JPM",
+          "sector": "Financial",
           "region": "USA",
-          "value": 4528511351.0,
-          "shares": 21887438.0,
-          "weight": 1.54,
+          "value": 5704514924.0,
+          "shares": 17427412.0,
+          "weight": 1.7,
           "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "532457",
-          "name": "ELI LILLY & Co",
-          "ticker": "LLY",
+          "key": "617446",
+          "name": "Morgan Stanley",
+          "ticker": "MS",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 5471202923.0,
+          "shares": 26172995.0,
+          "weight": 1.63,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "172967",
+          "name": "Citigroup Inc",
+          "ticker": "C",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 5102404623.0,
+          "shares": 36456162.0,
+          "weight": 1.52,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "58933Y",
+          "name": "Merck & Co., Inc.",
+          "ticker": "MRK",
           "sector": "Healthcare",
           "region": "USA",
-          "value": 4450754887.0,
-          "shares": 4838986.0,
-          "weight": 1.51,
+          "value": 4949339962.0,
+          "shares": 38516263.0,
+          "weight": 1.47,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33460,9 +33460,9 @@
           "ticker": "NVDA",
           "sector": "Technology",
           "region": "USA",
-          "value": 15444789113.0,
-          "shares": 88559570.0,
-          "weight": 5.24,
+          "value": 18195373846.0,
+          "shares": 90935947.0,
+          "weight": 5.42,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33473,12 +33473,12 @@
           "ticker": "IUSG",
           "sector": "Sonstige",
           "region": "–",
-          "value": 15442672748.0,
-          "shares": 162347601.0,
-          "weight": 5.24,
+          "value": 16714399245.0,
+          "shares": 175340974.0,
+          "weight": 4.98,
           "isEtf": true,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
           "key": "037833",
@@ -33486,9 +33486,9 @@
           "ticker": "AAPL",
           "sector": "Technology",
           "region": "USA",
-          "value": 14321456572.0,
-          "shares": 56430341.0,
-          "weight": 4.86,
+          "value": 16670059955.0,
+          "shares": 57610104.0,
+          "weight": 4.96,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33499,11 +33499,24 @@
           "ticker": "GOOGL",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 11723486393.0,
-          "shares": 40773026.0,
-          "weight": 3.98,
+          "value": 14889605021.0,
+          "shares": 41683540.0,
+          "weight": 4.43,
           "isEtf": false,
           "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "149123",
+          "name": "Caterpillar Inc",
+          "ticker": "CAT",
+          "sector": "Industrials",
+          "region": "USA",
+          "value": 10587791364.0,
+          "shares": 9942521.0,
+          "weight": 3.15,
+          "isEtf": false,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -33512,61 +33525,9 @@
           "ticker": "MSFT",
           "sector": "Technology",
           "region": "USA",
-          "value": 9602800248.0,
-          "shares": 25941594.0,
-          "weight": 3.26,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "92206C",
-          "name": "Vanguard Scottsdale Fds Vng Ru",
-          "ticker": "VCIT",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 7612760243.0,
-          "shares": 93022005.0,
-          "weight": 2.58,
-          "isEtf": true,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "023135",
-          "name": "Amazon Com Inc",
-          "ticker": "AMZN",
-          "sector": "Consumer Cyclical",
-          "region": "USA",
-          "value": 7119805455.0,
-          "shares": 34185457.0,
-          "weight": 2.41,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "149123",
-          "name": "Caterpillar Inc",
-          "ticker": "CAT",
-          "sector": "Industrials",
-          "region": "USA",
-          "value": 6925871728.0,
-          "shares": 9775952.0,
-          "weight": 2.35,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "874039",
-          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-          "ticker": "TSM",
-          "sector": "Technology",
-          "region": "Taiwan",
-          "value": 6291848786.0,
-          "shares": 18617691.0,
-          "weight": 2.13,
+          "value": 9926707366.0,
+          "shares": 26611728.0,
+          "weight": 2.96,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33577,10 +33538,49 @@
           "ticker": "ASML",
           "sector": "Technology",
           "region": "Niederlande",
-          "value": 6076495515.0,
-          "shares": 4600512.0,
-          "weight": 2.06,
+          "value": 9425199953.0,
+          "shares": 4737614.0,
+          "weight": 2.81,
           "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "sector": "Technology",
+          "region": "Taiwan",
+          "value": 9009930721.0,
+          "shares": 18866198.0,
+          "weight": 2.68,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
+          "region": "USA",
+          "value": 8336759712.0,
+          "shares": 34978432.0,
+          "weight": 2.48,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "92206C",
+          "name": "Vanguard Fds Int Term CORP",
+          "ticker": "VCIT",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 8138627564.0,
+          "shares": 99493001.0,
+          "weight": 2.42,
+          "isEtf": true,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -33590,48 +33590,22 @@
           "ticker": "GS",
           "sector": "Financial",
           "region": "USA",
-          "value": 5775836640.0,
-          "shares": 6827310.0,
-          "weight": 1.96,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "30231G",
-          "name": "Exxon Mobil CORP",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 5477079257.0,
-          "shares": 32282677.0,
-          "weight": 1.86,
+          "value": 7043295916.0,
+          "shares": 6964113.0,
+          "weight": 2.1,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "931142",
-          "name": "Walmart Inc.",
-          "ticker": "WMT",
-          "sector": "Consumer Defensive",
+          "key": "532457",
+          "name": "ELI LILLY & Co",
+          "ticker": "LLY",
+          "sector": "Healthcare",
           "region": "USA",
-          "value": 5092715658.0,
-          "shares": 40977756.0,
-          "weight": 1.73,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "46625H",
-          "name": "Jpmorgan Chase & Co",
-          "ticker": "JPM",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 5006622726.0,
-          "shares": 17020065.0,
-          "weight": 1.7,
+          "value": 6073333633.0,
+          "shares": 5063516.0,
+          "weight": 1.81,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33642,48 +33616,22 @@
           "ticker": "AVGO",
           "sector": "Technology",
           "region": "USA",
-          "value": 4547124089.0,
-          "shares": 14691363.0,
-          "weight": 1.54,
+          "value": 5715990096.0,
+          "shares": 15131673.0,
+          "weight": 1.7,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
         {
-          "key": "166764",
-          "name": "Chevron Corp",
-          "ticker": "CVX",
-          "sector": "Energy",
+          "key": "46625H",
+          "name": "Jpmorgan Chase & Co",
+          "ticker": "JPM",
+          "sector": "Financial",
           "region": "USA",
-          "value": 4528511351.0,
-          "shares": 21887438.0,
-          "weight": 1.54,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "532457",
-          "name": "ELI LILLY & Co",
-          "ticker": "LLY",
-          "sector": "Healthcare",
-          "region": "USA",
-          "value": 4450754887.0,
-          "shares": 4838986.0,
-          "weight": 1.51,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "75513E",
-          "name": "RTX Corp",
-          "ticker": "RTX",
-          "sector": "Industrials",
-          "region": "USA",
-          "value": 4291009129.0,
-          "shares": 22244732.0,
-          "weight": 1.46,
+          "value": 5704514924.0,
+          "shares": 17427412.0,
+          "weight": 1.7,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33694,9 +33642,9 @@
           "ticker": "MS",
           "sector": "Financial",
           "region": "USA",
-          "value": 4213003465.0,
-          "shares": 25600068.0,
-          "weight": 1.43,
+          "value": 5471202923.0,
+          "shares": 26172995.0,
+          "weight": 1.63,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
@@ -33707,64 +33655,12 @@
           "ticker": "C",
           "sector": "Financial",
           "region": "USA",
-          "value": 3994186506.0,
-          "shares": 35218996.0,
-          "weight": 1.35,
+          "value": 5102404623.0,
+          "shares": 36456162.0,
+          "weight": 1.52,
           "isEtf": false,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "35671D",
-          "name": "Freeport-Mcmoran Inc",
-          "ticker": "FCX",
-          "sector": "Basic Materials",
-          "region": "USA",
-          "value": 3825967082.0,
-          "shares": 65089606.0,
-          "weight": 1.3,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "30303M",
-          "name": "Meta Platforms, Inc.",
-          "ticker": "META",
-          "sector": "Communication Services",
-          "region": "USA",
-          "value": 3824965285.0,
-          "shares": 6685482.0,
-          "weight": 1.3,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "437076",
-          "name": "Home Depot, Inc.",
-          "ticker": "HD",
-          "sector": "Consumer Cyclical",
-          "region": "USA",
-          "value": 3385284450.0,
-          "shares": 10293059.0,
-          "weight": 1.15,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "22160K",
-          "name": "Costco Wholesale Corp",
-          "ticker": "COST",
-          "sector": "Consumer Defensive",
-          "region": "USA",
-          "value": 3208361404.0,
-          "shares": 3219856.0,
-          "weight": 1.09,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
         },
         {
           "key": "58933Y",
@@ -33772,11 +33668,115 @@
           "ticker": "MRK",
           "sector": "Healthcare",
           "region": "USA",
-          "value": 3180020742.0,
-          "shares": 26436284.0,
-          "weight": 1.08,
+          "value": 4949339962.0,
+          "shares": 38516263.0,
+          "weight": 1.47,
           "isEtf": false,
           "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "931142",
+          "name": "Walmart Inc.",
+          "ticker": "WMT",
+          "sector": "Consumer Defensive",
+          "region": "USA",
+          "value": 4699516990.0,
+          "shares": 41493173.0,
+          "weight": 1.4,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "75513E",
+          "name": "RTX Corp",
+          "ticker": "RTX",
+          "sector": "Industrials",
+          "region": "USA",
+          "value": 4339553116.0,
+          "shares": 22872255.0,
+          "weight": 1.29,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "369604",
+          "name": "General Electric Co",
+          "ticker": "GE",
+          "sector": "Industrials",
+          "region": "USA",
+          "value": 4330801001.0,
+          "shares": 11588047.0,
+          "weight": 1.29,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "30231G",
+          "name": "Exxon Mobil CORP",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 4302320615.0,
+          "shares": 31468114.0,
+          "weight": 1.28,
+          "isEtf": false,
+          "change": "REDUZIERT",
+          "changeYtd": "GEHALTEN"
+        },
+        {
+          "key": "35671D",
+          "name": "Freeport-Mcmoran Inc",
+          "ticker": "FCX",
+          "sector": "Basic Materials",
+          "region": "USA",
+          "value": 4208725507.0,
+          "shares": 66922014.0,
+          "weight": 1.25,
+          "isEtf": false,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "36828A",
+          "name": "GE Vernova Inc.",
+          "ticker": "GEV",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 4181889801.0,
+          "shares": 3559479.0,
+          "weight": 1.25,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "17275R",
+          "name": "Cisco Systems, Inc.",
+          "ticker": "CSCO",
+          "sector": "Technology",
+          "region": "USA",
+          "value": 3924658829.0,
+          "shares": 33412725.0,
+          "weight": 1.17,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "sector": "Communication Services",
+          "region": "USA",
+          "value": 3827005774.0,
+          "shares": 6794023.0,
+          "weight": 1.14,
+          "isEtf": false,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         }
       ],
@@ -33787,8 +33787,8 @@
           "ticker": "NVDA",
           "sector": "Technology",
           "region": "USA",
-          "value": 16049730832.0,
-          "weight": 5.48,
+          "value": 15444789113.0,
+          "weight": 5.24,
           "isEtf": false
         },
         {
@@ -33797,8 +33797,8 @@
           "ticker": "IUSG",
           "sector": "Sonstige",
           "region": "–",
-          "value": 15421178047.0,
-          "weight": 5.26,
+          "value": 15442672748.0,
+          "weight": 5.24,
           "isEtf": true
         },
         {
@@ -33807,8 +33807,8 @@
           "ticker": "AAPL",
           "sector": "Technology",
           "region": "USA",
-          "value": 14992196101.0,
-          "weight": 5.12,
+          "value": 14321456572.0,
+          "weight": 4.86,
           "isEtf": false
         },
         {
@@ -33817,8 +33817,8 @@
           "ticker": "GOOGL",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 12466926196.0,
-          "weight": 4.26,
+          "value": 11723486393.0,
+          "weight": 3.98,
           "isEtf": false
         },
         {
@@ -33827,18 +33827,8 @@
           "ticker": "MSFT",
           "sector": "Technology",
           "region": "USA",
-          "value": 12235784763.0,
-          "weight": 4.18,
-          "isEtf": false
-        },
-        {
-          "key": "023135",
-          "name": "Amazon Com Inc",
-          "ticker": "AMZN",
-          "sector": "Consumer Cyclical",
-          "region": "USA",
-          "value": 7754077761.0,
-          "weight": 2.65,
+          "value": 9602800248.0,
+          "weight": 3.26,
           "isEtf": false
         },
         {
@@ -33847,28 +33837,18 @@
           "ticker": "VCIT",
           "sector": "Sonstige",
           "region": "–",
-          "value": 7278151161.0,
-          "weight": 2.48,
+          "value": 7612760243.0,
+          "weight": 2.58,
           "isEtf": true
         },
         {
-          "key": "38141G",
-          "name": "Goldman Sachs Group Inc",
-          "ticker": "GS",
-          "sector": "Financial",
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
           "region": "USA",
-          "value": 5952198523.0,
-          "weight": 2.03,
-          "isEtf": false
-        },
-        {
-          "key": "874039",
-          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
-          "ticker": "TSM",
-          "sector": "Technology",
-          "region": "Taiwan",
-          "value": 5514661759.0,
-          "weight": 1.88,
+          "value": 7119805455.0,
+          "weight": 2.41,
           "isEtf": false
         },
         {
@@ -33877,28 +33857,18 @@
           "ticker": "CAT",
           "sector": "Industrials",
           "region": "USA",
-          "value": 5438408329.0,
-          "weight": 1.86,
+          "value": 6925871728.0,
+          "weight": 2.35,
           "isEtf": false
         },
         {
-          "key": "46625H",
-          "name": "Jpmorgan Chase & Co",
-          "ticker": "JPM",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 5161531796.0,
-          "weight": 1.76,
-          "isEtf": false
-        },
-        {
-          "key": "532457",
-          "name": "ELI LILLY & Co",
-          "ticker": "LLY",
-          "sector": "Healthcare",
-          "region": "USA",
-          "value": 4950328353.0,
-          "weight": 1.69,
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "sector": "Technology",
+          "region": "Taiwan",
+          "value": 6291848786.0,
+          "weight": 2.13,
           "isEtf": false
         },
         {
@@ -33907,68 +33877,18 @@
           "ticker": "ASML",
           "sector": "Technology",
           "region": "Niederlande",
-          "value": 4798268297.0,
-          "weight": 1.64,
+          "value": 6076495515.0,
+          "weight": 2.06,
           "isEtf": false
         },
         {
-          "key": "11135F",
-          "name": "Broadcom Inc.",
-          "ticker": "AVGO",
-          "sector": "Technology",
-          "region": "USA",
-          "value": 4791480054.0,
-          "weight": 1.64,
-          "isEtf": false
-        },
-        {
-          "key": "931142",
-          "name": "Walmart Inc.",
-          "ticker": "WMT",
-          "sector": "Consumer Defensive",
-          "region": "USA",
-          "value": 4526237723.0,
-          "weight": 1.54,
-          "isEtf": false
-        },
-        {
-          "key": "617446",
-          "name": "Morgan Stanley",
-          "ticker": "MS",
+          "key": "38141G",
+          "name": "Goldman Sachs Group Inc",
+          "ticker": "GS",
           "sector": "Financial",
           "region": "USA",
-          "value": 4441505244.0,
-          "weight": 1.52,
-          "isEtf": false
-        },
-        {
-          "key": "30303M",
-          "name": "Meta Platforms, Inc.",
-          "ticker": "META",
-          "sector": "Communication Services",
-          "region": "USA",
-          "value": 4363124107.0,
-          "weight": 1.49,
-          "isEtf": false
-        },
-        {
-          "key": "75513E",
-          "name": "RTX Corp",
-          "ticker": "RTX",
-          "sector": "Industrials",
-          "region": "USA",
-          "value": 3998154670.0,
-          "weight": 1.36,
-          "isEtf": false
-        },
-        {
-          "key": "172967",
-          "name": "Citigroup Inc",
-          "ticker": "C",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 3954307451.0,
-          "weight": 1.35,
+          "value": 5775836640.0,
+          "weight": 1.96,
           "isEtf": false
         },
         {
@@ -33977,38 +33897,38 @@
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 3790451642.0,
-          "weight": 1.29,
+          "value": 5477079257.0,
+          "weight": 1.86,
           "isEtf": false
         },
         {
-          "key": "803054",
-          "name": "Sap SE",
-          "ticker": "SAP",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 3577792914.0,
-          "weight": 1.22,
-          "isEtf": false
-        },
-        {
-          "key": "437076",
-          "name": "Home Depot, Inc.",
-          "ticker": "HD",
-          "sector": "Consumer Cyclical",
+          "key": "931142",
+          "name": "Walmart Inc.",
+          "ticker": "WMT",
+          "sector": "Consumer Defensive",
           "region": "USA",
-          "value": 3494152928.0,
-          "weight": 1.19,
+          "value": 5092715658.0,
+          "weight": 1.73,
           "isEtf": false
         },
         {
-          "key": "025816",
-          "name": "American Express Co",
-          "ticker": "AXP",
+          "key": "46625H",
+          "name": "Jpmorgan Chase & Co",
+          "ticker": "JPM",
           "sector": "Financial",
           "region": "USA",
-          "value": 3338237725.0,
-          "weight": 1.14,
+          "value": 5006622726.0,
+          "weight": 1.7,
+          "isEtf": false
+        },
+        {
+          "key": "11135F",
+          "name": "Broadcom Inc.",
+          "ticker": "AVGO",
+          "sector": "Technology",
+          "region": "USA",
+          "value": 4547124089.0,
+          "weight": 1.54,
           "isEtf": false
         },
         {
@@ -34017,8 +33937,48 @@
           "ticker": "CVX",
           "sector": "Energy",
           "region": "USA",
-          "value": 3272535462.0,
-          "weight": 1.12,
+          "value": 4528511351.0,
+          "weight": 1.54,
+          "isEtf": false
+        },
+        {
+          "key": "532457",
+          "name": "ELI LILLY & Co",
+          "ticker": "LLY",
+          "sector": "Healthcare",
+          "region": "USA",
+          "value": 4450754887.0,
+          "weight": 1.51,
+          "isEtf": false
+        },
+        {
+          "key": "75513E",
+          "name": "RTX Corp",
+          "ticker": "RTX",
+          "sector": "Industrials",
+          "region": "USA",
+          "value": 4291009129.0,
+          "weight": 1.46,
+          "isEtf": false
+        },
+        {
+          "key": "617446",
+          "name": "Morgan Stanley",
+          "ticker": "MS",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 4213003465.0,
+          "weight": 1.43,
+          "isEtf": false
+        },
+        {
+          "key": "172967",
+          "name": "Citigroup Inc",
+          "ticker": "C",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 3994186506.0,
+          "weight": 1.35,
           "isEtf": false
         },
         {
@@ -34027,8 +33987,48 @@
           "ticker": "FCX",
           "sector": "Basic Materials",
           "region": "USA",
-          "value": 3244503695.0,
-          "weight": 1.11,
+          "value": 3825967082.0,
+          "weight": 1.3,
+          "isEtf": false
+        },
+        {
+          "key": "30303M",
+          "name": "Meta Platforms, Inc.",
+          "ticker": "META",
+          "sector": "Communication Services",
+          "region": "USA",
+          "value": 3824965285.0,
+          "weight": 1.3,
+          "isEtf": false
+        },
+        {
+          "key": "437076",
+          "name": "Home Depot, Inc.",
+          "ticker": "HD",
+          "sector": "Consumer Cyclical",
+          "region": "USA",
+          "value": 3385284450.0,
+          "weight": 1.15,
+          "isEtf": false
+        },
+        {
+          "key": "22160K",
+          "name": "Costco Wholesale Corp",
+          "ticker": "COST",
+          "sector": "Consumer Defensive",
+          "region": "USA",
+          "value": 3208361404.0,
+          "weight": 1.09,
+          "isEtf": false
+        },
+        {
+          "key": "58933Y",
+          "name": "Merck & Co., Inc.",
+          "ticker": "MRK",
+          "sector": "Healthcare",
+          "region": "USA",
+          "value": 3180020742.0,
+          "weight": 1.08,
           "isEtf": false
         }
       ],
@@ -34285,7 +34285,17 @@
         }
       ],
       "sold": [],
-      "soldYtd": [],
+      "soldYtd": [
+        {
+          "key": "803054",
+          "name": "Sap SE",
+          "ticker": "SAP",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 3577792914.0,
+          "prevWeight": 1.22
+        }
+      ],
       "quartersHist": [
         {
           "d": "2019-12-31",
@@ -36520,6 +36530,92 @@
               "v": 6076495515,
               "s": 4600512,
               "w": 2.06
+            }
+          ]
+        },
+        {
+          "d": "2026-06-30",
+          "total": 335827609549,
+          "top": [
+            {
+              "k": "67066G",
+              "n": "Nvidia Corp",
+              "t": "NVDA",
+              "v": 18195373846,
+              "s": 90935947,
+              "w": 5.42
+            },
+            {
+              "k": "464287",
+              "n": "Ishares Core Sp US Growth E",
+              "t": "IUSG",
+              "v": 16714399245,
+              "s": 175340974,
+              "w": 4.98
+            },
+            {
+              "k": "037833",
+              "n": "Apple Inc.",
+              "t": "AAPL",
+              "v": 16670059955,
+              "s": 57610104,
+              "w": 4.96
+            },
+            {
+              "k": "02079K",
+              "n": "Alphabet Inc.",
+              "t": "GOOGL",
+              "v": 14889605021,
+              "s": 41683540,
+              "w": 4.43
+            },
+            {
+              "k": "149123",
+              "n": "Caterpillar Inc",
+              "t": "CAT",
+              "v": 10587791364,
+              "s": 9942521,
+              "w": 3.15
+            },
+            {
+              "k": "594918",
+              "n": "Microsoft Corp",
+              "t": "MSFT",
+              "v": 9926707366,
+              "s": 26611728,
+              "w": 2.96
+            },
+            {
+              "k": "N07059",
+              "n": "Asml Holding NV",
+              "t": "ASML",
+              "v": 9425199953,
+              "s": 4737614,
+              "w": 2.81
+            },
+            {
+              "k": "874039",
+              "n": "Taiwan Semiconductor Manufacturing Co Ltd",
+              "t": "TSM",
+              "v": 9009930721,
+              "s": 18866198,
+              "w": 2.68
+            },
+            {
+              "k": "023135",
+              "n": "Amazon Com Inc",
+              "t": "AMZN",
+              "v": 8336759712,
+              "s": 34978432,
+              "w": 2.48
+            },
+            {
+              "k": "92206C",
+              "n": "Vanguard Fds Int Term CORP",
+              "t": "VCIT",
+              "v": 8138627564,
+              "s": 99493001,
+              "w": 2.42
             }
           ]
         }
@@ -127750,8 +127846,8 @@
         },
         {
           "person": "Ken Fisher",
-          "weight": 3.98,
-          "value": 11723486393.0,
+          "weight": 4.43,
+          "value": 14889605021.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -127896,7 +127992,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 53711975187.0,
+      "combinedValue": 56878093815.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -127912,10 +128008,10 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 2.41,
-          "value": 7119805455.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "weight": 2.48,
+          "value": 8336759712.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
           "person": "Bill Ackman",
@@ -128002,7 +128098,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 19255131313.0,
+      "combinedValue": 20472085570.0,
       "countPrev": 16,
       "countDelta": -3,
       "countYtd": 16,
@@ -128018,8 +128114,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 3.26,
-          "value": 9602800248.0,
+          "weight": 2.96,
+          "value": 9926707366.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128101,7 +128197,7 @@
           "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 22704495238.0,
+      "combinedValue": 23028402356.0,
       "countPrev": 17,
       "countDelta": -5,
       "countYtd": 18,
@@ -128117,9 +128213,9 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 2.13,
-          "value": 6291848786.0,
-          "change": "AUFGESTOCKT",
+          "weight": 2.68,
+          "value": 9009930721.0,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -128200,7 +128296,7 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 15030295904.0,
+      "combinedValue": 17748377839.0,
       "countPrev": 10,
       "countDelta": 2,
       "countYtd": 10,
@@ -128300,8 +128396,8 @@
         }
       ],
       "combinedValue": 8074794789.0,
-      "countPrev": 12,
-      "countDelta": 0,
+      "countPrev": 11,
+      "countDelta": 1,
       "countYtd": 12,
       "countDeltaYtd": 0
     },
@@ -128315,8 +128411,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 5.24,
-          "value": 15444789113.0,
+          "weight": 5.42,
+          "value": 18195373846.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128384,7 +128480,7 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 22666699964.0,
+      "combinedValue": 25417284697.0,
       "countPrev": 10,
       "countDelta": 0,
       "countYtd": 9,
@@ -128485,8 +128581,8 @@
         },
         {
           "person": "Ken Fisher",
-          "weight": 4.86,
-          "value": 14321456572.0,
+          "weight": 4.96,
+          "value": 16670059955.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128533,7 +128629,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 75722197186.0,
+      "combinedValue": 78070800569.0,
       "countPrev": 7,
       "countDelta": 1,
       "countYtd": 7,
@@ -128549,8 +128645,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 1.54,
-          "value": 4547124089.0,
+          "weight": 1.7,
+          "value": 5715990096.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -128604,7 +128700,7 @@
           "changeYtd": "NEU"
         }
       ],
-      "combinedValue": 9772971476.0,
+      "combinedValue": 10941837483.0,
       "countPrev": 8,
       "countDelta": 0,
       "countYtd": 8,
@@ -128725,6 +128821,56 @@
       "countDeltaYtd": 1
     },
     {
+      "key": "N07059",
+      "name": "Asml Holding NV",
+      "ticker": "ASML",
+      "sector": "Technology",
+      "region": "Niederlande",
+      "count": 5,
+      "investors": [
+        {
+          "person": "Ken Fisher",
+          "weight": 2.81,
+          "value": 9425199953.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Stephen Mandel",
+          "weight": 6.9,
+          "value": 865339133.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Steven Cohen",
+          "weight": 1.36,
+          "value": 745907043.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "person": "Philippe Laffont",
+          "weight": 2.26,
+          "value": 655440753.0,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "person": "Pat Dorsey",
+          "weight": 14.76,
+          "value": 185305845.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        }
+      ],
+      "combinedValue": 11877192727.0,
+      "countPrev": 4,
+      "countDelta": 1,
+      "countYtd": 4,
+      "countDeltaYtd": 1
+    },
+    {
       "key": "808513",
       "name": "Schwab Charles Corp",
       "ticker": "SCHW",
@@ -128773,56 +128919,6 @@
       "countDelta": 0,
       "countYtd": 5,
       "countDeltaYtd": 0
-    },
-    {
-      "key": "N07059",
-      "name": "Asml Holding NV",
-      "ticker": "ASML",
-      "sector": "Technology",
-      "region": "Niederlande",
-      "count": 5,
-      "investors": [
-        {
-          "person": "Ken Fisher",
-          "weight": 2.06,
-          "value": 6076495515.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Stephen Mandel",
-          "weight": 6.9,
-          "value": 865339133.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Steven Cohen",
-          "weight": 1.36,
-          "value": 745907043.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Philippe Laffont",
-          "weight": 2.26,
-          "value": 655440753.0,
-          "change": "NEU",
-          "changeYtd": "NEU"
-        },
-        {
-          "person": "Pat Dorsey",
-          "weight": 14.76,
-          "value": 185305845.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        }
-      ],
-      "combinedValue": 8528488289.0,
-      "countPrev": 4,
-      "countDelta": 1,
-      "countYtd": 4,
-      "countDeltaYtd": 1
     },
     {
       "key": "512807",
@@ -129185,9 +129281,9 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 2.35,
-          "value": 6925871728.0,
-          "change": "AUFGESTOCKT",
+          "weight": 3.15,
+          "value": 10587791364.0,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -129205,11 +129301,47 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 11510110934.0,
+      "combinedValue": 15172030570.0,
       "countPrev": 2,
       "countDelta": 1,
       "countYtd": 2,
       "countDeltaYtd": 1
+    },
+    {
+      "key": "58933Y",
+      "name": "Merck & Co., Inc.",
+      "ticker": "MRK",
+      "sector": "Healthcare",
+      "region": "USA",
+      "count": 3,
+      "investors": [
+        {
+          "person": "Ken Fisher",
+          "weight": 1.47,
+          "value": 4949339962.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Bill Nygren",
+          "weight": 1.99,
+          "value": 1487618401.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "person": "Jeremy Grantham",
+          "weight": 2.16,
+          "value": 843687399.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        }
+      ],
+      "combinedValue": 7280645762.0,
+      "countPrev": 0,
+      "countDelta": 3,
+      "countYtd": 0,
+      "countDeltaYtd": 3
     },
     {
       "key": "78409V",
@@ -129738,35 +129870,6 @@
       "countDeltaYtd": -1
     },
     {
-      "key": "166764",
-      "name": "Chevron Corp",
-      "ticker": "CVX",
-      "sector": "Energy",
-      "region": "USA",
-      "count": 2,
-      "investors": [
-        {
-          "person": "Warren Buffett",
-          "weight": 6.64,
-          "value": 17457364606.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Ken Fisher",
-          "weight": 1.54,
-          "value": 4528511351.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        }
-      ],
-      "combinedValue": 21985875957.0,
-      "countPrev": 1,
-      "countDelta": 1,
-      "countYtd": 1,
-      "countDeltaYtd": 1
-    },
-    {
       "key": "75513E",
       "name": "RTX Corp",
       "ticker": "RTX",
@@ -129796,6 +129899,35 @@
       "countDeltaYtd": 1
     },
     {
+      "key": "46625H",
+      "name": "Jpmorgan Chase & Co",
+      "ticker": "JPM",
+      "sector": "Financial",
+      "region": "USA",
+      "count": 2,
+      "investors": [
+        {
+          "person": "Ken Fisher",
+          "weight": 1.7,
+          "value": 5704514924.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Andreas Halvorsen",
+          "weight": 2.23,
+          "value": 795413935.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        }
+      ],
+      "combinedValue": 6499928859.0,
+      "countPrev": 2,
+      "countDelta": 0,
+      "countYtd": 2,
+      "countDeltaYtd": 0
+    },
+    {
       "key": "136375",
       "name": "Canadian National Railway Co",
       "ticker": "CNI",
@@ -129819,64 +129951,6 @@
         }
       ],
       "combinedValue": 6339447052.0,
-      "countPrev": 2,
-      "countDelta": 0,
-      "countYtd": 2,
-      "countDeltaYtd": 0
-    },
-    {
-      "key": "931142",
-      "name": "Walmart Inc.",
-      "ticker": "WMT",
-      "sector": "Consumer Defensive",
-      "region": "USA",
-      "count": 2,
-      "investors": [
-        {
-          "person": "Ken Fisher",
-          "weight": 1.73,
-          "value": 5092715658.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "person": "Gates Foundation",
-          "weight": 3.29,
-          "value": 1042768482.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        }
-      ],
-      "combinedValue": 6135484140.0,
-      "countPrev": 2,
-      "countDelta": 0,
-      "countYtd": 2,
-      "countDeltaYtd": 0
-    },
-    {
-      "key": "46625H",
-      "name": "Jpmorgan Chase & Co",
-      "ticker": "JPM",
-      "sector": "Financial",
-      "region": "USA",
-      "count": 2,
-      "investors": [
-        {
-          "person": "Ken Fisher",
-          "weight": 1.7,
-          "value": 5006622726.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Andreas Halvorsen",
-          "weight": 2.23,
-          "value": 795413935.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        }
-      ],
-      "combinedValue": 5802036661.0,
       "countPrev": 2,
       "countDelta": 0,
       "countYtd": 2,
@@ -130026,35 +130100,6 @@
       "countDelta": -1,
       "countYtd": 3,
       "countDeltaYtd": -1
-    },
-    {
-      "key": "58933Y",
-      "name": "Merck & Co., Inc.",
-      "ticker": "MRK",
-      "sector": "Healthcare",
-      "region": "USA",
-      "count": 2,
-      "investors": [
-        {
-          "person": "Bill Nygren",
-          "weight": 1.99,
-          "value": 1487618401.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Jeremy Grantham",
-          "weight": 2.16,
-          "value": 843687399.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        }
-      ],
-      "combinedValue": 2331305800.0,
-      "countPrev": 0,
-      "countDelta": 2,
-      "countYtd": 0,
-      "countDeltaYtd": 2
     },
     {
       "key": "14040H",
@@ -130403,6 +130448,64 @@
       "countDelta": -2,
       "countYtd": 4,
       "countDeltaYtd": -2
+    },
+    {
+      "key": "595112",
+      "name": "Micron Technology Inc",
+      "ticker": "MU",
+      "sector": "Technology",
+      "region": "USA",
+      "count": 2,
+      "investors": [
+        {
+          "person": "David Tepper",
+          "weight": 9.48,
+          "value": 562503600.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Ray Dalio",
+          "weight": 2.23,
+          "value": 498551839.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        }
+      ],
+      "combinedValue": 1061055439.0,
+      "countPrev": 2,
+      "countDelta": 0,
+      "countYtd": 2,
+      "countDeltaYtd": 0
+    },
+    {
+      "key": "144285",
+      "name": "Carpenter Technology Corp",
+      "ticker": "CRS",
+      "sector": "Sonstige",
+      "region": "–",
+      "count": 2,
+      "investors": [
+        {
+          "person": "Stephen Mandel",
+          "weight": 5.71,
+          "value": 716541051.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Daniel Loeb",
+          "weight": 5.87,
+          "value": 122186500.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        }
+      ],
+      "combinedValue": 838727551.0,
+      "countPrev": 2,
+      "countDelta": 0,
+      "countYtd": 2,
+      "countDeltaYtd": 0
     }
   ],
   "f13": [
@@ -130423,8 +130526,8 @@
         },
         {
           "person": "Ken Fisher",
-          "weight": 3.98,
-          "value": 11723486393.0,
+          "weight": 4.43,
+          "value": 14889605021.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -130569,7 +130672,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 53711975187.0,
+      "combinedValue": 56878093815.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -130585,10 +130688,10 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 2.41,
-          "value": 7119805455.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "weight": 2.48,
+          "value": 8336759712.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
         },
         {
           "person": "Bill Ackman",
@@ -130675,7 +130778,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 19255131313.0,
+      "combinedValue": 20472085570.0,
       "countPrev": 16,
       "countDelta": -3,
       "countYtd": 16,
@@ -130691,8 +130794,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 3.26,
-          "value": 9602800248.0,
+          "weight": 2.96,
+          "value": 9926707366.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -130774,7 +130877,7 @@
           "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 22704495238.0,
+      "combinedValue": 23028402356.0,
       "countPrev": 17,
       "countDelta": -5,
       "countYtd": 18,
@@ -130790,9 +130893,9 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 2.13,
-          "value": 6291848786.0,
-          "change": "AUFGESTOCKT",
+          "weight": 2.68,
+          "value": 9009930721.0,
+          "change": "GEHALTEN",
           "changeYtd": "AUFGESTOCKT"
         },
         {
@@ -130873,7 +130976,7 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 15030295904.0,
+      "combinedValue": 17748377839.0,
       "countPrev": 10,
       "countDelta": 2,
       "countYtd": 10,
@@ -130973,8 +131076,8 @@
         }
       ],
       "combinedValue": 8074794789.0,
-      "countPrev": 12,
-      "countDelta": 0,
+      "countPrev": 11,
+      "countDelta": 1,
       "countYtd": 12,
       "countDeltaYtd": 0
     },
@@ -130988,8 +131091,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 5.24,
-          "value": 15444789113.0,
+          "weight": 5.42,
+          "value": 18195373846.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -131057,7 +131160,7 @@
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 22666699964.0,
+      "combinedValue": 25417284697.0,
       "countPrev": 10,
       "countDelta": 0,
       "countYtd": 9,
@@ -131158,8 +131261,8 @@
         },
         {
           "person": "Ken Fisher",
-          "weight": 4.86,
-          "value": 14321456572.0,
+          "weight": 4.96,
+          "value": 16670059955.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -131206,7 +131309,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 75722197186.0,
+      "combinedValue": 78070800569.0,
       "countPrev": 7,
       "countDelta": 1,
       "countYtd": 7,
@@ -131222,8 +131325,8 @@
       "investors": [
         {
           "person": "Ken Fisher",
-          "weight": 1.54,
-          "value": 4547124089.0,
+          "weight": 1.7,
+          "value": 5715990096.0,
           "change": "AUFGESTOCKT",
           "changeYtd": "AUFGESTOCKT"
         },
@@ -131277,7 +131380,7 @@
           "changeYtd": "NEU"
         }
       ],
-      "combinedValue": 9772971476.0,
+      "combinedValue": 10941837483.0,
       "countPrev": 8,
       "countDelta": 0,
       "countYtd": 8,
@@ -131398,6 +131501,56 @@
       "countDeltaYtd": 1
     },
     {
+      "key": "N07059",
+      "name": "Asml Holding NV",
+      "ticker": "ASML",
+      "sector": "Technology",
+      "region": "Niederlande",
+      "count": 5,
+      "investors": [
+        {
+          "person": "Ken Fisher",
+          "weight": 2.81,
+          "value": 9425199953.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Stephen Mandel",
+          "weight": 6.9,
+          "value": 865339133.0,
+          "change": "AUFGESTOCKT",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "person": "Steven Cohen",
+          "weight": 1.36,
+          "value": 745907043.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "person": "Philippe Laffont",
+          "weight": 2.26,
+          "value": 655440753.0,
+          "change": "NEU",
+          "changeYtd": "NEU"
+        },
+        {
+          "person": "Pat Dorsey",
+          "weight": 14.76,
+          "value": 185305845.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        }
+      ],
+      "combinedValue": 11877192727.0,
+      "countPrev": 4,
+      "countDelta": 1,
+      "countYtd": 4,
+      "countDeltaYtd": 1
+    },
+    {
       "key": "808513",
       "name": "Schwab Charles Corp",
       "ticker": "SCHW",
@@ -131446,56 +131599,6 @@
       "countDelta": 0,
       "countYtd": 5,
       "countDeltaYtd": 0
-    },
-    {
-      "key": "N07059",
-      "name": "Asml Holding NV",
-      "ticker": "ASML",
-      "sector": "Technology",
-      "region": "Niederlande",
-      "count": 5,
-      "investors": [
-        {
-          "person": "Ken Fisher",
-          "weight": 2.06,
-          "value": 6076495515.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Stephen Mandel",
-          "weight": 6.9,
-          "value": 865339133.0,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "person": "Steven Cohen",
-          "weight": 1.36,
-          "value": 745907043.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Philippe Laffont",
-          "weight": 2.26,
-          "value": 655440753.0,
-          "change": "NEU",
-          "changeYtd": "NEU"
-        },
-        {
-          "person": "Pat Dorsey",
-          "weight": 14.76,
-          "value": 185305845.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        }
-      ],
-      "combinedValue": 8528488289.0,
-      "countPrev": 4,
-      "countDelta": 1,
-      "countYtd": 4,
-      "countDeltaYtd": 1
     },
     {
       "key": "512807",
@@ -135893,20 +135996,132 @@
       "quarter": "2026-06-30",
       "ranking": [
         {
+          "key": "67066G",
+          "name": "Nvidia Corp",
+          "ticker": "NVDA",
+          "sector": "Technology",
+          "count": 2,
+          "price": 200.09
+        },
+        {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "sector": "Communication Services",
+          "count": 2,
+          "price": 357.37
+        },
+        {
+          "key": "023135",
+          "name": "Amazon Com Inc",
+          "ticker": "AMZN",
+          "sector": "Consumer Cyclical",
+          "count": 2,
+          "price": 238.34
+        },
+        {
+          "key": "037833",
+          "name": "Apple Inc.",
+          "ticker": "AAPL",
+          "sector": "Technology",
+          "count": 1,
+          "price": 289.36
+        },
+        {
+          "key": "149123",
+          "name": "Caterpillar Inc",
+          "ticker": "CAT",
+          "sector": "Industrials",
+          "count": 1,
+          "price": 1064.9
+        },
+        {
+          "key": "594918",
+          "name": "Microsoft Corp",
+          "ticker": "MSFT",
+          "sector": "Technology",
+          "count": 1,
+          "price": 373.02
+        },
+        {
+          "key": "N07059",
+          "name": "Asml Holding NV",
+          "ticker": "ASML",
+          "sector": "Technology",
+          "count": 1,
+          "price": 1989.44
+        },
+        {
+          "key": "874039",
+          "name": "Taiwan Semiconductor Manufacturing Co Ltd",
+          "ticker": "TSM",
+          "sector": "Technology",
+          "count": 1,
+          "price": 477.57
+        },
+        {
+          "key": "38141G",
+          "name": "Goldman Sachs Group Inc",
+          "ticker": "GS",
+          "sector": "Financial",
+          "count": 1,
+          "price": 1011.37
+        },
+        {
+          "key": "532457",
+          "name": "ELI LILLY & Co",
+          "ticker": "LLY",
+          "sector": "Healthcare",
+          "count": 1,
+          "price": 1199.43
+        },
+        {
+          "key": "11135F",
+          "name": "Broadcom Inc.",
+          "ticker": "AVGO",
+          "sector": "Technology",
+          "count": 1,
+          "price": 377.75
+        },
+        {
+          "key": "46625H",
+          "name": "Jpmorgan Chase & Co",
+          "ticker": "JPM",
+          "sector": "Financial",
+          "count": 1,
+          "price": 327.33
+        },
+        {
+          "key": "617446",
+          "name": "Morgan Stanley",
+          "ticker": "MS",
+          "sector": "Financial",
+          "count": 1,
+          "price": 209.04
+        },
+        {
+          "key": "172967",
+          "name": "Citigroup Inc",
+          "ticker": "C",
+          "sector": "Financial",
+          "count": 1,
+          "price": 139.96
+        },
+        {
+          "key": "58933Y",
+          "name": "Merck & Co., Inc.",
+          "ticker": "MRK",
+          "sector": "Healthcare",
+          "count": 1,
+          "price": 128.5
+        },
+        {
           "key": "92826C",
           "name": "Visa Inc.",
           "ticker": "V",
           "sector": "Financial",
           "count": 1,
           "price": 343.09
-        },
-        {
-          "key": "02079K",
-          "name": "Alphabet Inc.",
-          "ticker": "GOOG",
-          "sector": "Communication Services",
-          "count": 1,
-          "price": 353.33
         },
         {
           "key": "032095",
@@ -135917,28 +136132,12 @@
           "price": 176.32
         },
         {
-          "key": "023135",
-          "name": "Amazon Com Inc",
-          "ticker": "AMZN",
-          "sector": "Consumer Cyclical",
-          "count": 1,
-          "price": 238.34
-        },
-        {
           "key": "615369",
           "name": "Moodys Corp",
           "ticker": "MCO",
           "sector": "Financial",
           "count": 1,
           "price": 452.92
-        },
-        {
-          "key": "67066G",
-          "name": "Nvidia Corp",
-          "ticker": "NVDA",
-          "sector": "Technology",
-          "count": 1,
-          "price": 200.09
         },
         {
           "key": "58507V",
@@ -135955,353 +136154,289 @@
           "sector": "Sonstige",
           "count": 1,
           "price": 295.01
-        },
-        {
-          "key": "G25508",
-          "name": "Crh Public Ltd Co",
-          "ticker": "CRH",
-          "sector": "Basic Materials",
-          "count": 1,
-          "price": 107.0
-        },
-        {
-          "key": "038222",
-          "name": "Applied Materials Inc",
-          "ticker": "AMAT",
-          "sector": "Technology",
-          "count": 1,
-          "price": 723.0
-        },
-        {
-          "key": "45841N",
-          "name": "Interactive Brokers Group, Inc.",
-          "ticker": "IBKR",
-          "sector": "Sonstige",
-          "count": 1,
-          "price": 87.04
-        },
-        {
-          "key": "25179M",
-          "name": "Devon Energy Corp",
-          "ticker": "DVN",
-          "sector": "Sonstige",
-          "count": 1,
-          "price": 41.32
-        },
-        {
-          "key": "31488V",
-          "name": "Ferguson Enterprises Inc.",
-          "ticker": "FERG",
-          "sector": "Sonstige",
-          "count": 1,
-          "price": 237.33
-        },
-        {
-          "key": "294429",
-          "name": "Equifax Inc",
-          "ticker": "EFX",
-          "sector": "Sonstige",
-          "count": 1,
-          "price": 158.72
-        },
-        {
-          "key": "29082A",
-          "name": "Embraer S.A.",
-          "ticker": "EMBJ",
-          "sector": "Sonstige",
-          "count": 1,
-          "price": 63.8
         }
       ]
     }
   ],
   "prices": {
-    "MU": {
-      "price": 829.5,
-      "asOf": "2026-08-04"
-    },
-    "MCO": {
-      "price": 483.36,
-      "asOf": "2026-08-04"
-    },
-    "WFC": {
-      "price": 87.89,
-      "asOf": "2026-08-04"
-    },
-    "SCHW": {
-      "price": 105.87,
-      "asOf": "2026-08-04"
-    },
-    "OXY": {
-      "price": 55.47,
-      "asOf": "2026-08-04"
-    },
-    "KO": {
-      "price": 86.86,
-      "asOf": "2026-08-04"
-    },
-    "DVN": {
-      "price": 44.57,
-      "asOf": "2026-08-04"
-    },
-    "NVDA": {
-      "price": 206.64,
-      "asOf": "2026-08-04"
-    },
-    "DHR": {
-      "price": 197.5,
-      "asOf": "2026-08-04"
-    },
-    "JNJ": {
-      "price": 254.41,
-      "asOf": "2026-08-04"
-    },
-    "GOOG": {
-      "price": 372.47,
-      "asOf": "2026-08-04"
-    },
-    "TSM": {
-      "price": 406.11,
-      "asOf": "2026-08-04"
-    },
-    "FERG": {
-      "price": 250.08,
-      "asOf": "2026-08-04"
-    },
-    "GOOGL": {
-      "price": 373.51,
-      "asOf": "2026-08-04"
-    },
-    "NFLX": {
-      "price": 73.33,
-      "asOf": "2026-08-04"
-    },
-    "AAPL": {
-      "price": 303.42,
-      "asOf": "2026-08-04"
-    },
-    "AXP": {
-      "price": 344.72,
-      "asOf": "2026-08-04"
-    },
-    "CMCSA": {
-      "price": 24.56,
-      "asOf": "2026-08-04"
-    },
-    "CSGP": {
-      "price": 30.03,
-      "asOf": "2026-08-04"
-    },
-    "MSFT": {
-      "price": 487.65,
-      "asOf": "2026-08-04"
-    },
-    "COF": {
-      "price": 217.68,
-      "asOf": "2026-08-04"
-    },
-    "MDLN": {
-      "price": 40.47,
-      "asOf": "2026-08-04"
-    },
-    "LRCX": {
-      "price": 294.61,
-      "asOf": "2026-08-04"
-    },
-    "IBKR": {
-      "price": 87.75,
-      "asOf": "2026-08-04"
-    },
-    "UNH": {
-      "price": 415.36,
-      "asOf": "2026-08-04"
-    },
-    "ADBE": {
-      "price": 251.34,
-      "asOf": "2026-08-04"
-    },
-    "PYPL": {
-      "price": 57.87,
-      "asOf": "2026-08-04"
-    },
-    "JD": {
-      "price": 33.02,
-      "asOf": "2026-08-04"
-    },
-    "FISV": {
-      "price": 54.35,
-      "asOf": "2026-08-04"
-    },
-    "AVGO": {
-      "price": 392.23,
-      "asOf": "2026-08-04"
-    },
-    "SPOT": {
-      "price": 486.33,
-      "asOf": "2026-08-04"
+    "V": {
+      "price": 369.59,
+      "asOf": "2026-08-05"
     },
     "KHC": {
-      "price": 26.42,
-      "asOf": "2026-08-04"
+      "price": 26.64,
+      "asOf": "2026-08-05"
     },
-    "PM": {
-      "price": 187.41,
-      "asOf": "2026-08-04"
-    },
-    "BKNG": {
-      "price": 192.71,
-      "asOf": "2026-08-04"
-    },
-    "PDD": {
-      "price": 90.15,
-      "asOf": "2026-08-04"
-    },
-    "BN": {
-      "price": 43.53,
-      "asOf": "2026-08-04"
-    },
-    "EMBJ": {
-      "price": 70.94,
-      "asOf": "2026-08-04"
-    },
-    "DIS": {
-      "price": 98.14,
-      "asOf": "2026-08-04"
-    },
-    "UBER": {
-      "price": 71.61,
-      "asOf": "2026-08-04"
+    "AAPL": {
+      "price": 309.38,
+      "asOf": "2026-08-05"
     },
     "ASML": {
-      "price": 1642.52,
-      "asOf": "2026-08-04"
-    },
-    "BRK-B": {
-      "price": 513.14,
-      "asOf": "2026-08-04"
-    },
-    "BAC": {
-      "price": 62.48,
-      "asOf": "2026-08-04"
+      "price": 1711.89,
+      "asOf": "2026-08-05"
     },
     "SUNB": {
-      "price": 75.07,
-      "asOf": "2026-08-04"
+      "price": 80.43,
+      "asOf": "2026-08-05"
     },
-    "EFX": {
-      "price": 174.11,
-      "asOf": "2026-08-04"
+    "UNH": {
+      "price": 407.55,
+      "asOf": "2026-08-05"
     },
-    "CPNG": {
-      "price": 16.42,
-      "asOf": "2026-08-04"
+    "CSGP": {
+      "price": 29.82,
+      "asOf": "2026-08-05"
     },
-    "GM": {
-      "price": 87.68,
-      "asOf": "2026-08-04"
+    "UBER": {
+      "price": 71.99,
+      "asOf": "2026-08-05"
     },
-    "GE": {
-      "price": 368.93,
-      "asOf": "2026-08-04"
-    },
-    "CRH": {
-      "price": 98.59,
-      "asOf": "2026-08-04"
-    },
-    "META": {
-      "price": 590.24,
-      "asOf": "2026-08-04"
-    },
-    "CHTR": {
-      "price": 144.1,
-      "asOf": "2026-08-04"
-    },
-    "AMD": {
-      "price": 484.64,
-      "asOf": "2026-08-04"
-    },
-    "ORCL": {
-      "price": 141.85,
-      "asOf": "2026-08-04"
-    },
-    "VMC": {
-      "price": 283.59,
-      "asOf": "2026-08-04"
-    },
-    "APH": {
-      "price": 163.34,
-      "asOf": "2026-08-04"
-    },
-    "AMAT": {
-      "price": 518.21,
-      "asOf": "2026-08-04"
-    },
-    "BABA": {
-      "price": 127.3,
-      "asOf": "2026-08-04"
-    },
-    "MA": {
-      "price": 570.97,
-      "asOf": "2026-08-04"
-    },
-    "VST": {
-      "price": 155.94,
-      "asOf": "2026-08-04"
-    },
-    "DHI": {
-      "price": 146.66,
-      "asOf": "2026-08-04"
-    },
-    "AMZN": {
-      "price": 284.02,
-      "asOf": "2026-08-04"
-    },
-    "JPM": {
-      "price": 352.64,
-      "asOf": "2026-08-04"
-    },
-    "CRM": {
-      "price": 185.95,
-      "asOf": "2026-08-04"
-    },
-    "QCOM": {
-      "price": 151.57,
-      "asOf": "2026-08-04"
+    "MU": {
+      "price": 892.67,
+      "asOf": "2026-08-05"
     },
     "TDG": {
-      "price": 1285.56,
-      "asOf": "2026-08-04"
-    },
-    "V": {
-      "price": 365.67,
-      "asOf": "2026-08-04"
-    },
-    "WMT": {
-      "price": 110.71,
-      "asOf": "2026-08-04"
+      "price": 1275.05,
+      "asOf": "2026-08-05"
     },
     "PCG": {
-      "price": 17.43,
-      "asOf": "2026-08-04"
+      "price": 17.45,
+      "asOf": "2026-08-05"
     },
-    "FDX": {
-      "price": 309.24,
-      "asOf": "2026-08-04"
+    "WMT": {
+      "price": 111.55,
+      "asOf": "2026-08-05"
     },
-    "MRK": {
-      "price": 127.77,
-      "asOf": "2026-08-04"
+    "COF": {
+      "price": 221.91,
+      "asOf": "2026-08-05"
     },
-    "LLY": {
-      "price": 1121.36,
-      "asOf": "2026-08-04"
+    "APH": {
+      "price": 171.33,
+      "asOf": "2026-08-05"
+    },
+    "BABA": {
+      "price": 128.99,
+      "asOf": "2026-08-05"
+    },
+    "SPOT": {
+      "price": 478.17,
+      "asOf": "2026-08-05"
+    },
+    "BRK-B": {
+      "price": 517.22,
+      "asOf": "2026-08-05"
+    },
+    "AVGO": {
+      "price": 418.16,
+      "asOf": "2026-08-05"
+    },
+    "GOOG": {
+      "price": 375.35,
+      "asOf": "2026-08-05"
+    },
+    "CAT": {
+      "price": 876.54,
+      "asOf": "2026-08-05"
     },
     "TMUS": {
-      "price": 177.09,
-      "asOf": "2026-08-04"
+      "price": 177.21,
+      "asOf": "2026-08-05"
+    },
+    "NVDA": {
+      "price": 211.94,
+      "asOf": "2026-08-05"
+    },
+    "DHR": {
+      "price": 194.78,
+      "asOf": "2026-08-05"
+    },
+    "JD": {
+      "price": 32.97,
+      "asOf": "2026-08-05"
+    },
+    "FDX": {
+      "price": 313.34,
+      "asOf": "2026-08-05"
+    },
+    "VMC": {
+      "price": 285.1,
+      "asOf": "2026-08-05"
+    },
+    "LRCX": {
+      "price": 317.74,
+      "asOf": "2026-08-05"
+    },
+    "MRK": {
+      "price": 128.0,
+      "asOf": "2026-08-05"
+    },
+    "CHTR": {
+      "price": 153.07,
+      "asOf": "2026-08-05"
+    },
+    "QCOM": {
+      "price": 162.67,
+      "asOf": "2026-08-05"
+    },
+    "MCO": {
+      "price": 483.67,
+      "asOf": "2026-08-05"
+    },
+    "C": {
+      "price": 136.87,
+      "asOf": "2026-08-05"
+    },
+    "NFLX": {
+      "price": 73.57,
+      "asOf": "2026-08-05"
+    },
+    "AMZN": {
+      "price": 277.42,
+      "asOf": "2026-08-05"
+    },
+    "ADBE": {
+      "price": 257.49,
+      "asOf": "2026-08-05"
+    },
+    "AXP": {
+      "price": 346.71,
+      "asOf": "2026-08-05"
+    },
+    "PYPL": {
+      "price": 58.54,
+      "asOf": "2026-08-05"
+    },
+    "JNJ": {
+      "price": 254.93,
+      "asOf": "2026-08-05"
+    },
+    "DHI": {
+      "price": 150.37,
+      "asOf": "2026-08-05"
+    },
+    "GE": {
+      "price": 377.28,
+      "asOf": "2026-08-05"
+    },
+    "PM": {
+      "price": 186.91,
+      "asOf": "2026-08-05"
+    },
+    "GOOGL": {
+      "price": 377.65,
+      "asOf": "2026-08-05"
+    },
+    "LLY": {
+      "price": 1115.68,
+      "asOf": "2026-08-05"
+    },
+    "TSM": {
+      "price": 417.17,
+      "asOf": "2026-08-05"
+    },
+    "OXY": {
+      "price": 55.09,
+      "asOf": "2026-08-05"
+    },
+    "PDD": {
+      "price": 91.03,
+      "asOf": "2026-08-05"
+    },
+    "MS": {
+      "price": 217.04,
+      "asOf": "2026-08-05"
+    },
+    "AMD": {
+      "price": 518.58,
+      "asOf": "2026-08-05"
+    },
+    "CPNG": {
+      "price": 16.78,
+      "asOf": "2026-08-05"
+    },
+    "MA": {
+      "price": 571.1,
+      "asOf": "2026-08-05"
+    },
+    "JPM": {
+      "price": 357.52,
+      "asOf": "2026-08-05"
+    },
+    "SCHW": {
+      "price": 106.35,
+      "asOf": "2026-08-05"
+    },
+    "BKNG": {
+      "price": 194.27,
+      "asOf": "2026-08-05"
+    },
+    "GS": {
+      "price": 1052.98,
+      "asOf": "2026-08-05"
+    },
+    "CRM": {
+      "price": 190.99,
+      "asOf": "2026-08-05"
+    },
+    "DIS": {
+      "price": 98.18,
+      "asOf": "2026-08-05"
+    },
+    "GM": {
+      "price": 88.31,
+      "asOf": "2026-08-05"
+    },
+    "MDLN": {
+      "price": 42.04,
+      "asOf": "2026-08-05"
+    },
+    "FISV": {
+      "price": 55.78,
+      "asOf": "2026-08-05"
+    },
+    "AMAT": {
+      "price": 546.62,
+      "asOf": "2026-08-05"
+    },
+    "KO": {
+      "price": 86.56,
+      "asOf": "2026-08-05"
+    },
+    "ORCL": {
+      "price": 145.74,
+      "asOf": "2026-08-05"
+    },
+    "WFC": {
+      "price": 88.39,
+      "asOf": "2026-08-05"
+    },
+    "MSFT": {
+      "price": 492.81,
+      "asOf": "2026-08-05"
+    },
+    "CMCSA": {
+      "price": 24.93,
+      "asOf": "2026-08-05"
+    },
+    "VST": {
+      "price": 143.23,
+      "asOf": "2026-08-05"
+    },
+    "META": {
+      "price": 587.94,
+      "asOf": "2026-08-05"
+    },
+    "BN": {
+      "price": 44.62,
+      "asOf": "2026-08-05"
+    },
+    "BAC": {
+      "price": 62.9,
+      "asOf": "2026-08-05"
     }
   },
-  "pricesAsOf": "2026-08-04",
+  "pricesAsOf": "2026-08-05",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -136333,8 +136468,8 @@
         "2026-03-31": 6528.52,
         "2026-06-30": 7499.36
       },
-      "current": 7489.72,
-      "currentAsOf": "2026-07-31"
+      "current": 7736.52,
+      "currentAsOf": "2026-08-04"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -136366,8 +136501,8 @@
         "2026-03-31": 23740.19,
         "2026-06-30": 30276.35
       },
-      "current": 28274.2,
-      "currentAsOf": "2026-07-31"
+      "current": 29733.16,
+      "currentAsOf": "2026-08-04"
     }
   },
   "quarterPrices": {
@@ -138453,6 +138588,122 @@
       "2025-12-31": 285.22,
       "2026-03-31": 272.3,
       "2026-06-30": 295.01
+    },
+    "C": {
+      "2019-12-31": 79.89,
+      "2020-03-31": 42.12,
+      "2020-06-30": 51.1,
+      "2020-09-30": 43.11,
+      "2020-12-31": 61.66,
+      "2021-03-31": 72.75,
+      "2021-06-30": 70.75,
+      "2021-09-30": 70.18,
+      "2021-12-31": 60.39,
+      "2022-03-31": 53.4,
+      "2022-06-30": 45.99,
+      "2022-09-30": 41.67,
+      "2022-12-31": 45.23,
+      "2023-03-31": 46.89,
+      "2023-06-30": 46.04,
+      "2023-09-30": 41.13,
+      "2023-12-31": 51.44,
+      "2024-03-31": 63.24,
+      "2024-06-30": 63.46,
+      "2024-09-30": 62.6,
+      "2024-12-31": 70.39,
+      "2025-03-31": 70.99,
+      "2025-06-30": 85.12,
+      "2025-09-30": 101.5,
+      "2025-12-31": 116.69,
+      "2026-03-31": 113.41,
+      "2026-06-30": 139.96
+    },
+    "CAT": {
+      "2019-12-31": 147.68,
+      "2020-03-31": 116.04,
+      "2020-06-30": 126.5,
+      "2020-09-30": 149.15,
+      "2020-12-31": 182.02,
+      "2021-03-31": 231.87,
+      "2021-06-30": 217.63,
+      "2021-09-30": 191.97,
+      "2021-12-31": 206.74,
+      "2022-03-31": 222.82,
+      "2022-06-30": 178.76,
+      "2022-09-30": 164.08,
+      "2022-12-31": 239.56,
+      "2023-03-31": 228.84,
+      "2023-06-30": 246.05,
+      "2023-09-30": 273.0,
+      "2023-12-31": 295.67,
+      "2024-03-31": 366.43,
+      "2024-06-30": 333.1,
+      "2024-09-30": 391.12,
+      "2024-12-31": 362.76,
+      "2025-03-31": 329.8,
+      "2025-06-30": 388.21,
+      "2025-09-30": 477.15,
+      "2025-12-31": 572.87,
+      "2026-03-31": 708.46,
+      "2026-06-30": 1064.9
+    },
+    "GS": {
+      "2019-12-31": 229.93,
+      "2020-03-31": 154.59,
+      "2020-06-30": 197.62,
+      "2020-09-30": 200.97,
+      "2020-12-31": 263.71,
+      "2021-03-31": 327.0,
+      "2021-06-30": 379.53,
+      "2021-09-30": 378.03,
+      "2021-12-31": 382.55,
+      "2022-03-31": 330.1,
+      "2022-06-30": 297.02,
+      "2022-09-30": 293.05,
+      "2022-12-31": 343.38,
+      "2023-03-31": 327.11,
+      "2023-06-30": 322.54,
+      "2023-09-30": 323.57,
+      "2023-12-31": 385.77,
+      "2024-03-31": 417.69,
+      "2024-06-30": 452.32,
+      "2024-09-30": 495.11,
+      "2024-12-31": 572.62,
+      "2025-03-31": 546.29,
+      "2025-06-30": 707.75,
+      "2025-09-30": 796.35,
+      "2025-12-31": 879.0,
+      "2026-03-31": 845.99,
+      "2026-06-30": 1011.37
+    },
+    "MS": {
+      "2019-12-31": 51.12,
+      "2020-03-31": 34.0,
+      "2020-06-30": 48.3,
+      "2020-09-30": 48.35,
+      "2020-12-31": 68.53,
+      "2021-03-31": 77.66,
+      "2021-06-30": 91.69,
+      "2021-09-30": 97.31,
+      "2021-12-31": 98.16,
+      "2022-03-31": 87.4,
+      "2022-06-30": 76.06,
+      "2022-09-30": 79.01,
+      "2022-12-31": 85.02,
+      "2023-03-31": 87.8,
+      "2023-06-30": 85.4,
+      "2023-09-30": 81.67,
+      "2023-12-31": 93.25,
+      "2024-03-31": 94.16,
+      "2024-06-30": 97.19,
+      "2024-09-30": 104.24,
+      "2024-12-31": 125.72,
+      "2025-03-31": 116.67,
+      "2025-06-30": 140.86,
+      "2025-09-30": 158.96,
+      "2025-12-31": 177.53,
+      "2026-03-31": 164.57,
+      "2026-06-30": 209.04
     }
   },
   "cash": {
@@ -143045,6 +143296,16 @@
         "coverage": 0.8,
         "basis": "benchmark",
         "totalUsd": 294892645875
+      },
+      {
+        "from": "2026-03-31",
+        "to": "2026-06-30",
+        "flowUsd": -2917789526,
+        "flowPct": -0.99,
+        "ret": 14.87,
+        "coverage": 1.1,
+        "basis": "benchmark",
+        "totalUsd": 335827609549
       }
     ],
     "Jeremy Grantham": [
