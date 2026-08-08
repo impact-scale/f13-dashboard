@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T07:13:41.635996+00:00",
+  "generatedAt": "2026-08-08T06:50:56.145200+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 27,
@@ -76366,13 +76366,13 @@
       "cik": "0000732905",
       "group": "",
       "form": "13F-HR",
-      "filingDate": "2026-05-06",
-      "accession": "0001193125-26-208439",
-      "reportDate": "2026-03-31",
-      "prevReportDate": "2025-12-31",
+      "filingDate": "2026-08-07",
+      "accession": "0001193125-26-340443",
+      "reportDate": "2026-06-30",
+      "prevReportDate": "2026-03-31",
       "ytdBaseDate": "2025-12-31",
-      "portfolioValue": 1258817374.0,
-      "positionsCount": 92,
+      "portfolioValue": 1319974933.0,
+      "positionsCount": 90,
       "top": [
         {
           "key": "N20944",
@@ -76380,9 +76380,9 @@
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 221653938.0,
-          "shares": 20150358.0,
-          "weight": 17.61,
+          "value": 225901366.0,
+          "shares": 20115883.0,
+          "weight": 17.11,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76393,11 +76393,11 @@
           "ticker": "IONS",
           "sector": "Sonstige",
           "region": "–",
-          "value": 170876681.0,
-          "shares": 2275625.0,
-          "weight": 13.57,
+          "value": 180805859.0,
+          "shares": 2280311.0,
+          "weight": 13.7,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -76406,9 +76406,9 @@
           "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
-          "value": 150089115.0,
-          "shares": 97550.0,
-          "weight": 11.92,
+          "value": 156684974.0,
+          "shares": 97769.0,
+          "weight": 11.87,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76419,25 +76419,12 @@
           "ticker": "KOF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 114136036.0,
-          "shares": 1170026.0,
-          "weight": 9.07,
+          "value": 123310563.0,
+          "shares": 1160570.0,
+          "weight": 9.34,
           "isEtf": false,
           "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "02079K",
-          "name": "Alphabet Inc.",
-          "ticker": "GOOGL",
-          "sector": "Communication Services",
-          "region": "USA",
-          "value": 57034938.0,
-          "shares": 198341.0,
-          "weight": 4.53,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "changeYtd": "REDUZIERT"
         },
         {
           "key": "478160",
@@ -76445,22 +76432,22 @@
           "ticker": "JNJ",
           "sector": "Healthcare",
           "region": "USA",
-          "value": 53652136.0,
-          "shares": 219490.0,
-          "weight": 4.26,
+          "value": 51211527.0,
+          "shares": 201644.0,
+          "weight": 3.88,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
         },
         {
-          "key": "949746",
-          "name": "Wells Fargo & Company",
-          "ticker": "WFC",
-          "sector": "Financial",
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "sector": "Communication Services",
           "region": "USA",
-          "value": 41072391.0,
-          "shares": 515920.0,
-          "weight": 3.26,
+          "value": 50489948.0,
+          "shares": 141282.0,
+          "weight": 3.83,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
@@ -76471,12 +76458,38 @@
           "ticker": "ALV",
           "sector": "Sonstige",
           "region": "–",
-          "value": 40338535.0,
-          "shares": 383592.0,
-          "weight": 3.2,
+          "value": 44529587.0,
+          "shares": 383314.0,
+          "weight": 3.37,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "949746",
+          "name": "Wells Fargo & Company",
+          "ticker": "WFC",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 41072989.0,
+          "shares": 497011.0,
+          "weight": 3.11,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "98978V",
+          "name": "Zoetis Inc.",
+          "ticker": "ZTS",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 39958184.0,
+          "shares": 556056.0,
+          "weight": 3.03,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
         },
         {
           "key": "29415F",
@@ -76484,25 +76497,12 @@
           "ticker": "NVST",
           "sector": "Sonstige",
           "region": "–",
-          "value": 36451134.0,
-          "shares": 1436781.0,
-          "weight": 2.9,
+          "value": 37818785.0,
+          "shares": 1435248.0,
+          "weight": 2.87,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "31428X",
-          "name": "Fedex Corp",
-          "ticker": "FDX",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 26369786.0,
-          "shares": 74035.0,
-          "weight": 2.09,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
         },
         {
           "key": "89832Q",
@@ -76510,12 +76510,12 @@
           "ticker": "TFC",
           "sector": "Sonstige",
           "region": "–",
-          "value": 25625287.0,
-          "shares": 557435.0,
-          "weight": 2.04,
+          "value": 27214474.0,
+          "shares": 546256.0,
+          "weight": 2.06,
           "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
           "key": "904708",
@@ -76523,8 +76523,8 @@
           "ticker": "UNF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 25579407.0,
-          "shares": 101671.0,
+          "value": 26856706.0,
+          "shares": 101553.0,
           "weight": 2.03,
           "isEtf": false,
           "change": "GEHALTEN",
@@ -76536,9 +76536,9 @@
           "ticker": "UHAL/B",
           "sector": "Sonstige",
           "region": "–",
-          "value": 20697040.0,
-          "shares": 463332.0,
-          "weight": 1.64,
+          "value": 26705118.0,
+          "shares": 462827.0,
+          "weight": 2.02,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76549,25 +76549,25 @@
           "ticker": "AXP",
           "sector": "Financial",
           "region": "USA",
-          "value": 19051703.0,
-          "shares": 62985.0,
-          "weight": 1.51,
+          "value": 21214702.0,
+          "shares": 62719.0,
+          "weight": 1.61,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         },
         {
-          "key": "053332",
-          "name": "Autozone Inc",
-          "ticker": "AZO",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 18696012.0,
-          "shares": 5535.0,
-          "weight": 1.49,
+          "key": "060505",
+          "name": "Bank Of America Corp",
+          "ticker": "BAC",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 20784936.0,
+          "shares": 364776.0,
+          "weight": 1.57,
           "isEtf": false,
           "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "changeYtd": "REDUZIERT"
         }
       ],
       "holdings": [
@@ -76577,9 +76577,9 @@
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 221653938.0,
-          "shares": 20150358.0,
-          "weight": 17.61,
+          "value": 225901366.0,
+          "shares": 20115883.0,
+          "weight": 17.11,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76590,11 +76590,11 @@
           "ticker": "IONS",
           "sector": "Sonstige",
           "region": "–",
-          "value": 170876681.0,
-          "shares": 2275625.0,
-          "weight": 13.57,
+          "value": 180805859.0,
+          "shares": 2280311.0,
+          "weight": 13.7,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -76603,9 +76603,9 @@
           "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
-          "value": 150089115.0,
-          "shares": 97550.0,
-          "weight": 11.92,
+          "value": 156684974.0,
+          "shares": 97769.0,
+          "weight": 11.87,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76616,25 +76616,12 @@
           "ticker": "KOF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 114136036.0,
-          "shares": 1170026.0,
-          "weight": 9.07,
+          "value": 123310563.0,
+          "shares": 1160570.0,
+          "weight": 9.34,
           "isEtf": false,
           "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "02079K",
-          "name": "Alphabet Inc.",
-          "ticker": "GOOGL",
-          "sector": "Communication Services",
-          "region": "USA",
-          "value": 57034938.0,
-          "shares": 198341.0,
-          "weight": 4.53,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "changeYtd": "REDUZIERT"
         },
         {
           "key": "478160",
@@ -76642,22 +76629,22 @@
           "ticker": "JNJ",
           "sector": "Healthcare",
           "region": "USA",
-          "value": 53652136.0,
-          "shares": 219490.0,
-          "weight": 4.26,
+          "value": 51211527.0,
+          "shares": 201644.0,
+          "weight": 3.88,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
         },
         {
-          "key": "949746",
-          "name": "Wells Fargo & Company",
-          "ticker": "WFC",
-          "sector": "Financial",
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "sector": "Communication Services",
           "region": "USA",
-          "value": 41072391.0,
-          "shares": 515920.0,
-          "weight": 3.26,
+          "value": 50489948.0,
+          "shares": 141282.0,
+          "weight": 3.83,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
@@ -76668,12 +76655,38 @@
           "ticker": "ALV",
           "sector": "Sonstige",
           "region": "–",
-          "value": 40338535.0,
-          "shares": 383592.0,
-          "weight": 3.2,
+          "value": 44529587.0,
+          "shares": 383314.0,
+          "weight": 3.37,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "949746",
+          "name": "Wells Fargo & Company",
+          "ticker": "WFC",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 41072989.0,
+          "shares": 497011.0,
+          "weight": 3.11,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "98978V",
+          "name": "Zoetis Inc.",
+          "ticker": "ZTS",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 39958184.0,
+          "shares": 556056.0,
+          "weight": 3.03,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
         },
         {
           "key": "29415F",
@@ -76681,25 +76694,12 @@
           "ticker": "NVST",
           "sector": "Sonstige",
           "region": "–",
-          "value": 36451134.0,
-          "shares": 1436781.0,
-          "weight": 2.9,
+          "value": 37818785.0,
+          "shares": 1435248.0,
+          "weight": 2.87,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "31428X",
-          "name": "Fedex Corp",
-          "ticker": "FDX",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 26369786.0,
-          "shares": 74035.0,
-          "weight": 2.09,
-          "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
         },
         {
           "key": "89832Q",
@@ -76707,12 +76707,12 @@
           "ticker": "TFC",
           "sector": "Sonstige",
           "region": "–",
-          "value": 25625287.0,
-          "shares": 557435.0,
-          "weight": 2.04,
+          "value": 27214474.0,
+          "shares": 546256.0,
+          "weight": 2.06,
           "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
           "key": "904708",
@@ -76720,8 +76720,8 @@
           "ticker": "UNF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 25579407.0,
-          "shares": 101671.0,
+          "value": 26856706.0,
+          "shares": 101553.0,
           "weight": 2.03,
           "isEtf": false,
           "change": "GEHALTEN",
@@ -76733,9 +76733,9 @@
           "ticker": "UHAL/B",
           "sector": "Sonstige",
           "region": "–",
-          "value": 20697040.0,
-          "shares": 463332.0,
-          "weight": 1.64,
+          "value": 26705118.0,
+          "shares": 462827.0,
+          "weight": 2.02,
           "isEtf": false,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
@@ -76746,51 +76746,12 @@
           "ticker": "AXP",
           "sector": "Financial",
           "region": "USA",
-          "value": 19051703.0,
-          "shares": 62985.0,
-          "weight": 1.51,
+          "value": 21214702.0,
+          "shares": 62719.0,
+          "weight": 1.61,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "053332",
-          "name": "Autozone Inc",
-          "ticker": "AZO",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 18696012.0,
-          "shares": 5535.0,
-          "weight": 1.49,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "key": "92532F",
-          "name": "Vertex Pharmaceuticals Inc / Ma",
-          "ticker": "VRTX",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 18034411.0,
-          "shares": 40387.0,
-          "weight": 1.43,
-          "isEtf": false,
-          "change": "AUFGESTOCKT",
-          "changeYtd": "AUFGESTOCKT"
-        },
-        {
-          "key": "81211K",
-          "name": "Sealed Air Corporation",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 18013688.0,
-          "shares": 509581.0,
-          "weight": 1.43,
-          "isEtf": false,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
         },
         {
           "key": "060505",
@@ -76798,12 +76759,38 @@
           "ticker": "BAC",
           "sector": "Financial",
           "region": "USA",
-          "value": 17807108.0,
-          "shares": 365274.0,
-          "weight": 1.41,
+          "value": 20784936.0,
+          "shares": 364776.0,
+          "weight": 1.57,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "92532F",
+          "name": "Vertex Pharmaceuticals Inc / Ma",
+          "ticker": "VRTX",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 19929304.0,
+          "shares": 40121.0,
+          "weight": 1.51,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "AUFGESTOCKT"
+        },
+        {
+          "key": "053332",
+          "name": "Autozone Inc",
+          "ticker": "AZO",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 17673548.0,
+          "shares": 5530.0,
+          "weight": 1.34,
+          "isEtf": false,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
         },
         {
           "key": "064058",
@@ -76811,9 +76798,9 @@
           "ticker": "BNY",
           "sector": "Sonstige",
           "region": "–",
-          "value": 12925332.0,
-          "shares": 108955.0,
-          "weight": 1.03,
+          "value": 14785794.0,
+          "shares": 102246.0,
+          "weight": 1.12,
           "isEtf": false,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
@@ -76824,11 +76811,11 @@
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 11382511.0,
-          "shares": 60209.0,
-          "weight": 0.9,
+          "value": 14494105.0,
+          "shares": 60149.0,
+          "weight": 1.1,
           "isEtf": false,
-          "change": "NEU",
+          "change": "GEHALTEN",
           "changeYtd": "NEU"
         },
         {
@@ -76837,24 +76824,11 @@
           "ticker": "NVS",
           "sector": "Sonstige",
           "region": "–",
-          "value": 10891839.0,
-          "shares": 71305.0,
-          "weight": 0.87,
+          "value": 11146710.0,
+          "shares": 71125.0,
+          "weight": 0.84,
           "isEtf": false,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "key": "F92124",
-          "name": "Totalenergies SE Adr",
-          "ticker": "",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 10699521.0,
-          "shares": 117603.0,
-          "weight": 0.85,
-          "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -76863,12 +76837,12 @@
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
-          "value": 9582738.0,
-          "shares": 184248.0,
-          "weight": 0.76,
+          "value": 10986518.0,
+          "shares": 181896.0,
+          "weight": 0.83,
           "isEtf": false,
           "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "changeYtd": "REDUZIERT"
         },
         {
           "key": "25243Q",
@@ -76876,11 +76850,24 @@
           "ticker": "DEO",
           "sector": "Sonstige",
           "region": "–",
-          "value": 9396409.0,
-          "shares": 126211.0,
-          "weight": 0.75,
+          "value": 10142027.0,
+          "shares": 126176.0,
+          "weight": 0.77,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "F92124",
+          "name": "Totalenergies SE Adr",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 9106318.0,
+          "shares": 117108.0,
+          "weight": 0.69,
+          "isEtf": false,
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         },
         {
@@ -76889,33 +76876,46 @@
           "ticker": "UNP",
           "sector": "Industrials",
           "region": "USA",
-          "value": 4654665.0,
+          "value": 5218320.0,
           "shares": 19185.0,
-          "weight": 0.37,
+          "weight": 0.4,
           "isEtf": false,
-          "change": "REDUZIERT",
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
+        },
+        {
+          "key": "254687",
+          "name": "Walt Disney Co",
+          "ticker": "DIS",
+          "sector": "Communication Services",
+          "region": "USA",
+          "value": 4328844.0,
+          "shares": 44975.0,
+          "weight": 0.33,
+          "isEtf": false,
+          "change": "NEU",
+          "changeYtd": "NEU"
         }
       ],
       "prevHoldings": [
-        {
-          "key": "462222",
-          "name": "Ionis Pharmaceuticals Inc",
-          "ticker": "IONS",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 195000612.0,
-          "weight": 15.74,
-          "isEtf": false
-        },
         {
           "key": "N20944",
           "name": "Cnh Industrial NV",
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 186068387.0,
-          "weight": 15.02,
+          "value": 221653938.0,
+          "weight": 17.61,
+          "isEtf": false
+        },
+        {
+          "key": "462222",
+          "name": "Ionis Pharmaceuticals Inc",
+          "ticker": "IONS",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 170876681.0,
+          "weight": 13.57,
           "isEtf": false
         },
         {
@@ -76924,8 +76924,8 @@
           "ticker": "BRK-B",
           "sector": "Financial",
           "region": "USA",
-          "value": 157488965.0,
-          "weight": 12.72,
+          "value": 150089115.0,
+          "weight": 11.92,
           "isEtf": false
         },
         {
@@ -76934,8 +76934,8 @@
           "ticker": "KOF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 112586134.0,
-          "weight": 9.09,
+          "value": 114136036.0,
+          "weight": 9.07,
           "isEtf": false
         },
         {
@@ -76944,18 +76944,8 @@
           "ticker": "GOOGL",
           "sector": "Communication Services",
           "region": "USA",
-          "value": 62462593.0,
-          "weight": 5.04,
-          "isEtf": false
-        },
-        {
-          "key": "949746",
-          "name": "Wells Fargo & Company",
-          "ticker": "WFC",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 52133004.0,
-          "weight": 4.21,
+          "value": 57034938.0,
+          "weight": 4.53,
           "isEtf": false
         },
         {
@@ -76964,8 +76954,18 @@
           "ticker": "JNJ",
           "sector": "Healthcare",
           "region": "USA",
-          "value": 48855721.0,
-          "weight": 3.94,
+          "value": 53652136.0,
+          "weight": 4.26,
+          "isEtf": false
+        },
+        {
+          "key": "949746",
+          "name": "Wells Fargo & Company",
+          "ticker": "WFC",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 41072391.0,
+          "weight": 3.26,
           "isEtf": false
         },
         {
@@ -76974,18 +76974,8 @@
           "ticker": "ALV",
           "sector": "Sonstige",
           "region": "–",
-          "value": 47589679.0,
-          "weight": 3.84,
-          "isEtf": false
-        },
-        {
-          "key": "31428X",
-          "name": "Fedex Corp",
-          "ticker": "FDX",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 32568098.0,
-          "weight": 2.63,
+          "value": 40338535.0,
+          "weight": 3.2,
           "isEtf": false
         },
         {
@@ -76994,8 +76984,18 @@
           "ticker": "NVST",
           "sector": "Sonstige",
           "region": "–",
-          "value": 31334759.0,
-          "weight": 2.53,
+          "value": 36451134.0,
+          "weight": 2.9,
+          "isEtf": false
+        },
+        {
+          "key": "31428X",
+          "name": "Fedex Corp",
+          "ticker": "FDX",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 26369786.0,
+          "weight": 2.09,
           "isEtf": false
         },
         {
@@ -77004,38 +77004,8 @@
           "ticker": "TFC",
           "sector": "Sonstige",
           "region": "–",
-          "value": 27663894.0,
-          "weight": 2.23,
-          "isEtf": false
-        },
-        {
-          "key": "025816",
-          "name": "American Express Co",
-          "ticker": "AXP",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 23895810.0,
-          "weight": 1.93,
-          "isEtf": false
-        },
-        {
-          "key": "023586",
-          "name": "U-haul Holding CO - Non Voting",
-          "ticker": "UHAL/B",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 21790983.0,
-          "weight": 1.76,
-          "isEtf": false
-        },
-        {
-          "key": "060505",
-          "name": "Bank Of America Corp",
-          "ticker": "BAC",
-          "sector": "Financial",
-          "region": "USA",
-          "value": 20595410.0,
-          "weight": 1.66,
+          "value": 25625287.0,
+          "weight": 2.04,
           "isEtf": false
         },
         {
@@ -77044,8 +77014,28 @@
           "ticker": "UNF",
           "sector": "Sonstige",
           "region": "–",
-          "value": 19687181.0,
-          "weight": 1.59,
+          "value": 25579407.0,
+          "weight": 2.03,
+          "isEtf": false
+        },
+        {
+          "key": "023586",
+          "name": "U-haul Holding CO - Non Voting",
+          "ticker": "UHAL/B",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 20697040.0,
+          "weight": 1.64,
+          "isEtf": false
+        },
+        {
+          "key": "025816",
+          "name": "American Express Co",
+          "ticker": "AXP",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 19051703.0,
+          "weight": 1.51,
           "isEtf": false
         },
         {
@@ -77054,8 +77044,18 @@
           "ticker": "AZO",
           "sector": "Sonstige",
           "region": "–",
-          "value": 18972051.0,
-          "weight": 1.53,
+          "value": 18696012.0,
+          "weight": 1.49,
+          "isEtf": false
+        },
+        {
+          "key": "92532F",
+          "name": "Vertex Pharmaceuticals Inc / Ma",
+          "ticker": "VRTX",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 18034411.0,
+          "weight": 1.43,
           "isEtf": false
         },
         {
@@ -77065,17 +77065,17 @@
           "sector": "Sonstige",
           "region": "–",
           "value": 18013688.0,
-          "weight": 1.45,
+          "weight": 1.43,
           "isEtf": false
         },
         {
-          "key": "92532F",
-          "name": "Vertex Pharmaceuticals Inc / Ma",
-          "ticker": "VRTX",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 17748137.0,
-          "weight": 1.43,
+          "key": "060505",
+          "name": "Bank Of America Corp",
+          "ticker": "BAC",
+          "sector": "Financial",
+          "region": "USA",
+          "value": 17807108.0,
+          "weight": 1.41,
           "isEtf": false
         },
         {
@@ -77084,17 +77084,17 @@
           "ticker": "BNY",
           "sector": "Sonstige",
           "region": "–",
-          "value": 14789053.0,
-          "weight": 1.19,
+          "value": 12925332.0,
+          "weight": 1.03,
           "isEtf": false
         },
         {
-          "key": "25243Q",
-          "name": "Diageo PLC",
-          "ticker": "DEO",
+          "key": "G50871",
+          "name": "Jazz Pharmaceuticals PLC",
+          "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 11198536.0,
+          "value": 11382511.0,
           "weight": 0.9,
           "isEtf": false
         },
@@ -77104,18 +77104,8 @@
           "ticker": "NVS",
           "sector": "Sonstige",
           "region": "–",
-          "value": 10327152.0,
-          "weight": 0.83,
-          "isEtf": false
-        },
-        {
-          "key": "902973",
-          "name": "US Bancorp De",
-          "ticker": "USB",
-          "sector": "Sonstige",
-          "region": "–",
-          "value": 9912580.0,
-          "weight": 0.8,
+          "value": 10891839.0,
+          "weight": 0.87,
           "isEtf": false
         },
         {
@@ -77124,8 +77114,28 @@
           "ticker": "",
           "sector": "Sonstige",
           "region": "–",
-          "value": 8837588.0,
-          "weight": 0.71,
+          "value": 10699521.0,
+          "weight": 0.85,
+          "isEtf": false
+        },
+        {
+          "key": "902973",
+          "name": "US Bancorp De",
+          "ticker": "USB",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 9582738.0,
+          "weight": 0.76,
+          "isEtf": false
+        },
+        {
+          "key": "25243Q",
+          "name": "Diageo PLC",
+          "ticker": "DEO",
+          "sector": "Sonstige",
+          "region": "–",
+          "value": 9396409.0,
+          "weight": 0.75,
           "isEtf": false
         },
         {
@@ -77134,18 +77144,8 @@
           "ticker": "UNP",
           "sector": "Industrials",
           "region": "USA",
-          "value": 4637966.0,
+          "value": 4654665.0,
           "weight": 0.37,
-          "isEtf": false
-        },
-        {
-          "key": "17275R",
-          "name": "Cisco Systems, Inc.",
-          "ticker": "CSCO",
-          "sector": "Technology",
-          "region": "USA",
-          "value": 4318918.0,
-          "weight": 0.35,
           "isEtf": false
         }
       ],
@@ -77401,8 +77401,28 @@
           "isEtf": false
         }
       ],
-      "sold": [],
-      "soldYtd": [],
+      "sold": [
+        {
+          "key": "81211K",
+          "name": "Sealed Air Corporation",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 18013688.0,
+          "prevWeight": 1.43
+        }
+      ],
+      "soldYtd": [
+        {
+          "key": "81211K",
+          "name": "Sealed Air Corporation",
+          "ticker": "",
+          "sector": "Sonstige",
+          "region": "–",
+          "prevValue": 18013688.0,
+          "prevWeight": 1.45
+        }
+      ],
       "quartersHist": [
         {
           "d": "2019-12-31",
@@ -79637,6 +79657,92 @@
               "v": 26369786,
               "s": 74035,
               "w": 2.09
+            }
+          ]
+        },
+        {
+          "d": "2026-06-30",
+          "total": 1319974933,
+          "top": [
+            {
+              "k": "N20944",
+              "n": "Cnh Industrial NV",
+              "t": "",
+              "v": 225901366,
+              "s": 20115883,
+              "w": 17.11
+            },
+            {
+              "k": "462222",
+              "n": "Ionis Pharmaceuticals Inc",
+              "t": "IONS",
+              "v": 180805859,
+              "s": 2280311,
+              "w": 13.7
+            },
+            {
+              "k": "084670",
+              "n": "Berkshire Hathaway Inc",
+              "t": "BRK-B",
+              "v": 156684974,
+              "s": 97769,
+              "w": 11.87
+            },
+            {
+              "k": "191241",
+              "n": "Coca Cola Femsa Sab De Cv",
+              "t": "KOF",
+              "v": 123310563,
+              "s": 1160570,
+              "w": 9.34
+            },
+            {
+              "k": "478160",
+              "n": "Johnson & Johnson",
+              "t": "JNJ",
+              "v": 51211527,
+              "s": 201644,
+              "w": 3.88
+            },
+            {
+              "k": "02079K",
+              "n": "Alphabet Inc.",
+              "t": "GOOGL",
+              "v": 50489948,
+              "s": 141282,
+              "w": 3.83
+            },
+            {
+              "k": "052800",
+              "n": "Autoliv Inc",
+              "t": "ALV",
+              "v": 44529587,
+              "s": 383314,
+              "w": 3.37
+            },
+            {
+              "k": "949746",
+              "n": "Wells Fargo & Company",
+              "t": "WFC",
+              "v": 41072989,
+              "s": 497011,
+              "w": 3.11
+            },
+            {
+              "k": "98978V",
+              "n": "Zoetis Inc.",
+              "t": "ZTS",
+              "v": 39958184,
+              "s": 556056,
+              "w": 3.03
+            },
+            {
+              "k": "29415F",
+              "n": "Envista Holdings Corp",
+              "t": "NVST",
+              "v": 37818785,
+              "s": 1435248,
+              "w": 2.87
             }
           ]
         }
@@ -127972,10 +128078,10 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 4.53,
-          "value": 57034938.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "weight": 3.83,
+          "value": 50489948.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
           "person": "Daniel Loeb",
@@ -127992,7 +128098,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 56878093815.0,
+      "combinedValue": 56871548825.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -128531,8 +128637,8 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 11.92,
-          "value": 150089115.0,
+          "weight": 11.87,
+          "value": 156684974.0,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
         },
@@ -128558,7 +128664,7 @@
           "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 10987698248.0,
+      "combinedValue": 10994294107.0,
       "countPrev": 9,
       "countDelta": 0,
       "countYtd": 9,
@@ -129064,49 +129170,6 @@
       "countDeltaYtd": 1
     },
     {
-      "key": "31428X",
-      "name": "Fedex Corp",
-      "ticker": "FDX",
-      "sector": "Sonstige",
-      "region": "–",
-      "count": 4,
-      "investors": [
-        {
-          "person": "Dodge & Cox",
-          "weight": 1.95,
-          "value": 3555904735.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Gates Foundation",
-          "weight": 2.68,
-          "value": 849262057.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "person": "Mason Hawkins",
-          "weight": 4.34,
-          "value": 88152769.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        },
-        {
-          "person": "Tweedy Browne",
-          "weight": 2.09,
-          "value": 26369786.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        }
-      ],
-      "combinedValue": 4519689347.0,
-      "countPrev": 4,
-      "countDelta": 0,
-      "countYtd": 4,
-      "countDeltaYtd": 0
-    },
-    {
       "key": "866966",
       "name": "Sunbelt Rentals Holdings, Inc.",
       "ticker": "SUNB",
@@ -129234,6 +129297,42 @@
       "countDelta": 1,
       "countYtd": 3,
       "countDeltaYtd": 1
+    },
+    {
+      "key": "060505",
+      "name": "Bank Of America Corp",
+      "ticker": "BAC",
+      "sector": "Financial",
+      "region": "USA",
+      "count": 3,
+      "investors": [
+        {
+          "person": "Warren Buffett",
+          "weight": 9.52,
+          "value": 25039178044.0,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
+        },
+        {
+          "person": "Li Lu",
+          "weight": 4.57,
+          "value": 146151866.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "person": "Tweedy Browne",
+          "weight": 1.57,
+          "value": 20784936.0,
+          "change": "GEHALTEN",
+          "changeYtd": "REDUZIERT"
+        }
+      ],
+      "combinedValue": 25206114846.0,
+      "countPrev": 2,
+      "countDelta": 1,
+      "countYtd": 3,
+      "countDeltaYtd": 0
     },
     {
       "key": "674599",
@@ -129378,6 +129477,42 @@
       "countDelta": 2,
       "countYtd": 1,
       "countDeltaYtd": 2
+    },
+    {
+      "key": "31428X",
+      "name": "Fedex Corp",
+      "ticker": "FDX",
+      "sector": "Sonstige",
+      "region": "–",
+      "count": 3,
+      "investors": [
+        {
+          "person": "Dodge & Cox",
+          "weight": 1.95,
+          "value": 3555904735.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        },
+        {
+          "person": "Gates Foundation",
+          "weight": 2.68,
+          "value": 849262057.0,
+          "change": "GEHALTEN",
+          "changeYtd": "GEHALTEN"
+        },
+        {
+          "person": "Mason Hawkins",
+          "weight": 4.34,
+          "value": 88152769.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
+        }
+      ],
+      "combinedValue": 4493319561.0,
+      "countPrev": 4,
+      "countDelta": -1,
+      "countYtd": 4,
+      "countDeltaYtd": -1
     },
     {
       "key": "09857L",
@@ -129583,13 +129718,13 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 4.26,
-          "value": 53652136.0,
+          "weight": 3.88,
+          "value": 51211527.0,
           "change": "REDUZIERT",
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 2003244831.0,
+      "combinedValue": 2000804222.0,
       "countPrev": 3,
       "countDelta": 0,
       "countYtd": 3,
@@ -129828,46 +129963,17 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 1.51,
-          "value": 19051703.0,
-          "change": "REDUZIERT",
+          "weight": 1.61,
+          "value": 21214702.0,
+          "change": "GEHALTEN",
           "changeYtd": "REDUZIERT"
         }
       ],
-      "combinedValue": 45878256239.0,
+      "combinedValue": 45880419238.0,
       "countPrev": 2,
       "countDelta": 0,
       "countYtd": 2,
       "countDeltaYtd": 0
-    },
-    {
-      "key": "060505",
-      "name": "Bank Of America Corp",
-      "ticker": "BAC",
-      "sector": "Financial",
-      "region": "USA",
-      "count": 2,
-      "investors": [
-        {
-          "person": "Warren Buffett",
-          "weight": 9.52,
-          "value": 25039178044.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
-        },
-        {
-          "person": "Li Lu",
-          "weight": 4.57,
-          "value": 146151866.0,
-          "change": "REDUZIERT",
-          "changeYtd": "REDUZIERT"
-        }
-      ],
-      "combinedValue": 25185329910.0,
-      "countPrev": 3,
-      "countDelta": -1,
-      "countYtd": 3,
-      "countDeltaYtd": -1
     },
     {
       "key": "75513E",
@@ -130652,10 +130758,10 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 4.53,
-          "value": 57034938.0,
-          "change": "GEHALTEN",
-          "changeYtd": "GEHALTEN"
+          "weight": 3.83,
+          "value": 50489948.0,
+          "change": "REDUZIERT",
+          "changeYtd": "REDUZIERT"
         },
         {
           "person": "Daniel Loeb",
@@ -130672,7 +130778,7 @@
           "changeYtd": "GEHALTEN"
         }
       ],
-      "combinedValue": 56878093815.0,
+      "combinedValue": 56871548825.0,
       "countPrev": 24,
       "countDelta": -2,
       "countYtd": 24,
@@ -131211,8 +131317,8 @@
         },
         {
           "person": "Tweedy Browne",
-          "weight": 11.92,
-          "value": 150089115.0,
+          "weight": 11.87,
+          "value": 156684974.0,
           "change": "GEHALTEN",
           "changeYtd": "GEHALTEN"
         },
@@ -131238,7 +131344,7 @@
           "changeYtd": "AUFGESTOCKT"
         }
       ],
-      "combinedValue": 10987698248.0,
+      "combinedValue": 10994294107.0,
       "countPrev": 9,
       "countDelta": 0,
       "countYtd": 9,
@@ -135996,20 +136102,20 @@
       "quarter": "2026-06-30",
       "ranking": [
         {
+          "key": "02079K",
+          "name": "Alphabet Inc.",
+          "ticker": "GOOGL",
+          "sector": "Communication Services",
+          "count": 3,
+          "price": 357.37
+        },
+        {
           "key": "67066G",
           "name": "Nvidia Corp",
           "ticker": "NVDA",
           "sector": "Technology",
           "count": 2,
           "price": 200.09
-        },
-        {
-          "key": "02079K",
-          "name": "Alphabet Inc.",
-          "ticker": "GOOGL",
-          "sector": "Communication Services",
-          "count": 2,
-          "price": 357.37
         },
         {
           "key": "023135",
@@ -136159,284 +136265,284 @@
     }
   ],
   "prices": {
-    "UBER": {
-      "price": 70.47,
-      "asOf": "2026-08-07"
-    },
-    "GE": {
-      "price": 374.55,
-      "asOf": "2026-08-07"
-    },
-    "BKNG": {
-      "price": 207.39,
-      "asOf": "2026-08-07"
-    },
-    "FDX": {
-      "price": 315.87,
-      "asOf": "2026-08-07"
-    },
-    "MA": {
-      "price": 575.95,
-      "asOf": "2026-08-07"
-    },
-    "WMT": {
-      "price": 112.07,
-      "asOf": "2026-08-07"
-    },
-    "JPM": {
-      "price": 356.3,
-      "asOf": "2026-08-07"
-    },
-    "JD": {
-      "price": 32.81,
-      "asOf": "2026-08-07"
-    },
-    "JNJ": {
-      "price": 256.98,
-      "asOf": "2026-08-07"
-    },
-    "DHI": {
-      "price": 146.01,
-      "asOf": "2026-08-07"
-    },
-    "CRM": {
-      "price": 186.77,
-      "asOf": "2026-08-07"
-    },
-    "LRCX": {
-      "price": 305.77,
-      "asOf": "2026-08-07"
-    },
-    "CPNG": {
-      "price": 16.35,
-      "asOf": "2026-08-07"
-    },
-    "PYPL": {
-      "price": 59.78,
-      "asOf": "2026-08-07"
-    },
-    "AMAT": {
-      "price": 527.48,
-      "asOf": "2026-08-07"
-    },
-    "BABA": {
-      "price": 126.81,
-      "asOf": "2026-08-07"
-    },
-    "LLY": {
-      "price": 1191.94,
-      "asOf": "2026-08-07"
-    },
-    "FISV": {
-      "price": 54.11,
-      "asOf": "2026-08-07"
-    },
-    "SCHW": {
-      "price": 107.66,
-      "asOf": "2026-08-07"
-    },
-    "ADBE": {
-      "price": 260.24,
-      "asOf": "2026-08-07"
-    },
-    "PDD": {
-      "price": 90.85,
-      "asOf": "2026-08-07"
-    },
-    "SPOT": {
-      "price": 475.07,
-      "asOf": "2026-08-07"
-    },
-    "QCOM": {
-      "price": 160.39,
-      "asOf": "2026-08-07"
-    },
-    "UNH": {
-      "price": 403.97,
-      "asOf": "2026-08-07"
-    },
-    "DHR": {
-      "price": 199.98,
-      "asOf": "2026-08-07"
-    },
-    "C": {
-      "price": 133.82,
-      "asOf": "2026-08-07"
-    },
-    "GM": {
-      "price": 86.94,
-      "asOf": "2026-08-07"
-    },
-    "KHC": {
-      "price": 24.96,
-      "asOf": "2026-08-07"
-    },
-    "KO": {
-      "price": 86.85,
-      "asOf": "2026-08-07"
-    },
-    "NFLX": {
-      "price": 73.69,
-      "asOf": "2026-08-07"
-    },
-    "AVGO": {
-      "price": 420.56,
-      "asOf": "2026-08-07"
-    },
-    "APH": {
-      "price": 170.61,
-      "asOf": "2026-08-07"
-    },
-    "CHTR": {
-      "price": 157.44,
-      "asOf": "2026-08-07"
-    },
-    "CAT": {
-      "price": 856.96,
-      "asOf": "2026-08-07"
-    },
-    "AMD": {
-      "price": 489.28,
-      "asOf": "2026-08-07"
-    },
-    "PM": {
-      "price": 188.05,
-      "asOf": "2026-08-07"
-    },
-    "OXY": {
-      "price": 56.04,
-      "asOf": "2026-08-07"
-    },
-    "AAPL": {
-      "price": 312.41,
-      "asOf": "2026-08-07"
-    },
-    "TMUS": {
-      "price": 179.97,
-      "asOf": "2026-08-07"
-    },
-    "PCG": {
-      "price": 17.0,
-      "asOf": "2026-08-07"
-    },
-    "ORCL": {
-      "price": 143.47,
-      "asOf": "2026-08-07"
-    },
-    "ASML": {
-      "price": 1704.37,
-      "asOf": "2026-08-07"
-    },
-    "AXP": {
-      "price": 342.6,
-      "asOf": "2026-08-07"
-    },
-    "BAC": {
-      "price": 63.0,
-      "asOf": "2026-08-07"
-    },
-    "MRK": {
-      "price": 128.37,
-      "asOf": "2026-08-07"
-    },
-    "MU": {
-      "price": 881.47,
-      "asOf": "2026-08-07"
-    },
-    "MSFT": {
-      "price": 499.86,
-      "asOf": "2026-08-07"
-    },
-    "DIS": {
-      "price": 104.68,
-      "asOf": "2026-08-07"
-    },
-    "MCO": {
-      "price": 473.13,
-      "asOf": "2026-08-07"
-    },
-    "COF": {
-      "price": 220.0,
-      "asOf": "2026-08-07"
-    },
-    "NVDA": {
-      "price": 218.99,
-      "asOf": "2026-08-07"
-    },
-    "GOOGL": {
-      "price": 357.75,
-      "asOf": "2026-08-07"
-    },
     "SUNB": {
-      "price": 80.92,
-      "asOf": "2026-08-07"
-    },
-    "TSM": {
-      "price": 418.2,
-      "asOf": "2026-08-07"
-    },
-    "CSGP": {
-      "price": 29.58,
-      "asOf": "2026-08-07"
-    },
-    "WFC": {
-      "price": 87.59,
-      "asOf": "2026-08-07"
-    },
-    "V": {
-      "price": 370.47,
-      "asOf": "2026-08-07"
-    },
-    "GOOG": {
-      "price": 356.62,
-      "asOf": "2026-08-07"
+      "price": 81.08,
+      "asOf": "2026-08-08"
     },
     "META": {
-      "price": 589.9,
-      "asOf": "2026-08-07"
+      "price": 592.1,
+      "asOf": "2026-08-08"
     },
-    "AMZN": {
-      "price": 272.26,
-      "asOf": "2026-08-07"
+    "GOOGL": {
+      "price": 354.3,
+      "asOf": "2026-08-08"
     },
-    "TDG": {
-      "price": 1262.07,
-      "asOf": "2026-08-07"
+    "ORCL": {
+      "price": 147.02,
+      "asOf": "2026-08-08"
+    },
+    "MSFT": {
+      "price": 499.99,
+      "asOf": "2026-08-08"
+    },
+    "PYPL": {
+      "price": 59.07,
+      "asOf": "2026-08-08"
+    },
+    "FISV": {
+      "price": 52.41,
+      "asOf": "2026-08-08"
+    },
+    "CPNG": {
+      "price": 16.23,
+      "asOf": "2026-08-08"
+    },
+    "PDD": {
+      "price": 91.76,
+      "asOf": "2026-08-08"
+    },
+    "V": {
+      "price": 362.5,
+      "asOf": "2026-08-08"
     },
     "VMC": {
-      "price": 281.63,
-      "asOf": "2026-08-07"
+      "price": 284.69,
+      "asOf": "2026-08-08"
     },
-    "BRK-B": {
-      "price": 524.61,
-      "asOf": "2026-08-07"
+    "APH": {
+      "price": 169.18,
+      "asOf": "2026-08-08"
     },
-    "VST": {
-      "price": 141.38,
-      "asOf": "2026-08-07"
+    "MU": {
+      "price": 877.57,
+      "asOf": "2026-08-08"
+    },
+    "MCO": {
+      "price": 477.75,
+      "asOf": "2026-08-08"
+    },
+    "SPOT": {
+      "price": 488.14,
+      "asOf": "2026-08-08"
+    },
+    "DHR": {
+      "price": 204.76,
+      "asOf": "2026-08-08"
     },
     "BN": {
-      "price": 43.98,
-      "asOf": "2026-08-07"
+      "price": 44.08,
+      "asOf": "2026-08-08"
     },
     "MDLN": {
-      "price": 34.51,
-      "asOf": "2026-08-07"
+      "price": 35.23,
+      "asOf": "2026-08-08"
     },
-    "MS": {
-      "price": 213.75,
-      "asOf": "2026-08-07"
+    "PCG": {
+      "price": 17.46,
+      "asOf": "2026-08-08"
+    },
+    "LLY": {
+      "price": 1185.71,
+      "asOf": "2026-08-08"
+    },
+    "GOOG": {
+      "price": 353.47,
+      "asOf": "2026-08-08"
     },
     "GS": {
-      "price": 1032.58,
-      "asOf": "2026-08-07"
+      "price": 1039.61,
+      "asOf": "2026-08-08"
+    },
+    "JNJ": {
+      "price": 259.24,
+      "asOf": "2026-08-08"
+    },
+    "AMD": {
+      "price": 483.36,
+      "asOf": "2026-08-08"
+    },
+    "WFC": {
+      "price": 87.25,
+      "asOf": "2026-08-08"
+    },
+    "ADBE": {
+      "price": 265.21,
+      "asOf": "2026-08-08"
+    },
+    "NVDA": {
+      "price": 223.96,
+      "asOf": "2026-08-08"
+    },
+    "CSGP": {
+      "price": 30.24,
+      "asOf": "2026-08-08"
+    },
+    "DHI": {
+      "price": 151.08,
+      "asOf": "2026-08-08"
+    },
+    "MS": {
+      "price": 216.33,
+      "asOf": "2026-08-08"
+    },
+    "JD": {
+      "price": 32.97,
+      "asOf": "2026-08-08"
+    },
+    "SCHW": {
+      "price": 107.6,
+      "asOf": "2026-08-08"
+    },
+    "FDX": {
+      "price": 318.57,
+      "asOf": "2026-08-08"
+    },
+    "GE": {
+      "price": 370.08,
+      "asOf": "2026-08-08"
+    },
+    "UBER": {
+      "price": 75.02,
+      "asOf": "2026-08-08"
+    },
+    "TMUS": {
+      "price": 177.19,
+      "asOf": "2026-08-08"
+    },
+    "AMZN": {
+      "price": 274.48,
+      "asOf": "2026-08-08"
+    },
+    "MA": {
+      "price": 562.95,
+      "asOf": "2026-08-08"
+    },
+    "DIS": {
+      "price": 104.91,
+      "asOf": "2026-08-08"
+    },
+    "BKNG": {
+      "price": 214.42,
+      "asOf": "2026-08-08"
+    },
+    "KHC": {
+      "price": 25.32,
+      "asOf": "2026-08-08"
+    },
+    "ASML": {
+      "price": 1740.99,
+      "asOf": "2026-08-08"
+    },
+    "C": {
+      "price": 135.0,
+      "asOf": "2026-08-08"
+    },
+    "AAPL": {
+      "price": 313.33,
+      "asOf": "2026-08-08"
+    },
+    "AXP": {
+      "price": 340.91,
+      "asOf": "2026-08-08"
+    },
+    "MRK": {
+      "price": 128.58,
+      "asOf": "2026-08-08"
+    },
+    "PM": {
+      "price": 189.57,
+      "asOf": "2026-08-08"
+    },
+    "BRK-B": {
+      "price": 521.8,
+      "asOf": "2026-08-08"
+    },
+    "AMAT": {
+      "price": 539.14,
+      "asOf": "2026-08-08"
+    },
+    "COF": {
+      "price": 217.76,
+      "asOf": "2026-08-08"
+    },
+    "LRCX": {
+      "price": 311.35,
+      "asOf": "2026-08-08"
+    },
+    "KO": {
+      "price": 87.05,
+      "asOf": "2026-08-08"
+    },
+    "NFLX": {
+      "price": 74.14,
+      "asOf": "2026-08-08"
+    },
+    "GM": {
+      "price": 87.58,
+      "asOf": "2026-08-08"
+    },
+    "BAC": {
+      "price": 63.17,
+      "asOf": "2026-08-08"
+    },
+    "CHTR": {
+      "price": 152.57,
+      "asOf": "2026-08-08"
+    },
+    "UNH": {
+      "price": 407.08,
+      "asOf": "2026-08-08"
+    },
+    "WMT": {
+      "price": 111.85,
+      "asOf": "2026-08-08"
+    },
+    "TDG": {
+      "price": 1225.25,
+      "asOf": "2026-08-08"
+    },
+    "BABA": {
+      "price": 128.41,
+      "asOf": "2026-08-08"
+    },
+    "CAT": {
+      "price": 842.19,
+      "asOf": "2026-08-08"
+    },
+    "JPM": {
+      "price": 357.52,
+      "asOf": "2026-08-08"
+    },
+    "CRM": {
+      "price": 192.74,
+      "asOf": "2026-08-08"
+    },
+    "AVGO": {
+      "price": 427.76,
+      "asOf": "2026-08-08"
+    },
+    "OXY": {
+      "price": 55.91,
+      "asOf": "2026-08-08"
+    },
+    "QCOM": {
+      "price": 167.86,
+      "asOf": "2026-08-08"
+    },
+    "TSM": {
+      "price": 420.04,
+      "asOf": "2026-08-08"
     },
     "CMCSA": {
-      "price": 25.17,
-      "asOf": "2026-08-07"
+      "price": 25.36,
+      "asOf": "2026-08-08"
+    },
+    "VST": {
+      "price": 140.59,
+      "asOf": "2026-08-08"
     }
   },
-  "pricesAsOf": "2026-08-07",
+  "pricesAsOf": "2026-08-08",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -136468,8 +136574,8 @@
         "2026-03-31": 6528.52,
         "2026-06-30": 7499.36
       },
-      "current": 7709.96,
-      "currentAsOf": "2026-08-06"
+      "current": 7757.64,
+      "currentAsOf": "2026-08-07"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -136501,8 +136607,8 @@
         "2026-03-31": 23740.19,
         "2026-06-30": 30276.35
       },
-      "current": 29373.33,
-      "currentAsOf": "2026-08-06"
+      "current": 29722.3,
+      "currentAsOf": "2026-08-07"
     }
   },
   "quarterPrices": {
@@ -146820,6 +146926,16 @@
         "coverage": 33.9,
         "basis": "portfolio",
         "totalUsd": 1258817374
+      },
+      {
+        "from": "2026-03-31",
+        "to": "2026-06-30",
+        "flowUsd": -5159002,
+        "flowPct": -0.41,
+        "ret": 5.27,
+        "coverage": 61.6,
+        "basis": "portfolio",
+        "totalUsd": 1319974933
       }
     ],
     "Wallace Weitz": [
