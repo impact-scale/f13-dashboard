@@ -1146,6 +1146,22 @@ def main():
     # Vergleichsindizes (S&P 500, Nasdaq 100) für den Backtest
     benchmarks = fetch_benchmarks([h["quarter"] for h in history])
 
+    # EUR/USD-Wechselkurs (für den Investment-Rechner: Stückzahl aus €-Betrag)
+    eurusd = None
+    try:
+        _u = ("https://query1.finance.yahoo.com/v8/finance/chart/"
+              "EURUSD=X?interval=1d&range=1d")
+        _j = json.loads(urllib.request.urlopen(
+            urllib.request.Request(_u, headers={"User-Agent": "Mozilla/5.0"}),
+            timeout=20).read())
+        _px = _j["chart"]["result"][0]["meta"].get("regularMarketPrice")
+        if _px:
+            eurusd = {"rate": round(float(_px), 4),
+                      "asOf": datetime.now(timezone.utc).strftime("%Y-%m-%d")}
+            print(f"  EUR/USD: {eurusd['rate']}")
+    except Exception as _e:
+        print(f"  EUR/USD nicht geladen ({_e}).")
+
     # Cash-Bestände (echt, börsennotierte Vehikel) + N-PORT-Cash-Quoten
     # (echt, Publikumsfonds) + Netto-Flow-Proxy (alle)
     print("Cash-Bestände & Netto-Flow-Proxy ...")
@@ -1159,7 +1175,7 @@ def main():
         "investors": investors_out,
         "ranking": ranking[:60], "f13": ranking[:TOP_N],
         "history": history, "prices": price_out, "pricesAsOf": price_asof,
-        "benchmarks": benchmarks, "quarterPrices": phist,
+        "benchmarks": benchmarks, "quarterPrices": phist, "eurusd": eurusd,
         "cash": cash, "nportCash": nport_cash, "flows": flows, "errors": errors,
     }
     (BASE_DIR / "f13_data.json").write_text(

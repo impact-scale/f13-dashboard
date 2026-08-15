@@ -133,6 +133,26 @@ def fmt_money(v):
     return f"{m:.0f} Mio $"
 
 
+def de_num(x, dec=2):
+    """Deutsches Zahlenformat: 1234.5 -> '1.234,50'."""
+    return f"{x:,.{dec}f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
+
+@st.cache_data(ttl=3600)
+def get_eurusd():
+    """EUR→USD-Wechselkurs von Yahoo (1h gecacht). Fallback 1.08 bei Fehler."""
+    import urllib.request
+    try:
+        url = ("https://query1.finance.yahoo.com/v8/finance/chart/"
+               "EURUSD=X?interval=1d&range=1d")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        j = json.loads(urllib.request.urlopen(req, timeout=10).read())
+        px = j["chart"]["result"][0]["meta"].get("regularMarketPrice")
+        return float(px) if px else 1.08
+    except Exception:
+        return 1.08
+
+
 PIE_COLORS = ["#C9A84C", "#0D2238", "#8899AA", "#5a7a9a", "#a8863a",
               "#3d5a75", "#c0b088", "#6b8caa", "#8a6d2f", "#d4c9b0"]
 
@@ -317,6 +337,10 @@ generated = generated.astimezone(TZ_BERLIN) if TZ_BERLIN else generated.astimezo
 quarter = data["investors"][0]["reportDate"] if data["investors"] else "–"
 n_ok = len(data["investors"])
 n_err = len(data.get("errors", []))
+# EUR/USD: bevorzugt aus dem täglichen Datenlauf, sonst live (gecacht)
+_fx = data.get("eurusd") or {}
+EURUSD = _fx.get("rate") or get_eurusd()
+EURUSD_ASOF = _fx.get("asOf")
 
 # ─── Sidebar-Filter ───────────────────────────────────────────────────────────
 
@@ -400,6 +424,7 @@ st.markdown(
     f'<span class="importdot"></span>'
     f'<b>Investoren aktiv:</b>&nbsp; {len(selected)} / {n_ok}'
     f'&nbsp;·&nbsp; <b>Stand:</b> {generated.strftime("%d.%m.%Y · %H:%M Uhr %Z")}'
+    f'&nbsp;·&nbsp; <b>EUR/USD:</b> {de_num(EURUSD, 4)}'
     f'{f"&nbsp;·&nbsp; {n_err} mit Fehler" if n_err else ""}'
     f'&nbsp;·&nbsp; Quelle: SEC EDGAR (13F-HR)'
     f'&nbsp;<a href="https://www.sec.gov/edgar/search/#/forms=13F-HR" target="_blank" '
@@ -539,6 +564,9 @@ if page == "🔄 Veränderungen":
         movers = [r for r in ranking if r.get(dkey, 0) != 0]
         gainers = sorted([r for r in movers if r[dkey] > 0], key=lambda x: -x[dkey])
         losers = sorted([r for r in movers if r[dkey] < 0], key=lambda x: x[dkey])
+        def _full_height(n):
+            # Höhe so setzen, dass alle Zeilen ohne Scrollbalken sichtbar sind
+            return 38 + 35 * max(n, 1)
         mc1, mc2 = st.columns(2)
         with mc1:
             st.markdown("**🟢 Gewinnt Investoren**")
@@ -546,14 +574,16 @@ if page == "🔄 Veränderungen":
                 "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
                 "Jetzt": r["count"], "Δ": f"+{r[dkey]}",
             } for r in gainers]) if gainers else pd.DataFrame({"—": ["keine"]}),
-                hide_index=True, use_container_width=True)
+                hide_index=True, use_container_width=True,
+                height=_full_height(len(gainers)))
         with mc2:
             st.markdown("**🔴 Verliert Investoren**")
             st.dataframe(pd.DataFrame([{
                 "Ticker": r.get("ticker") or "–", "Aktie": r["name"],
                 "Jetzt": r["count"], "Δ": str(r[dkey]),
             } for r in losers]) if losers else pd.DataFrame({"—": ["keine"]}),
-                hide_index=True, use_container_width=True)
+                hide_index=True, use_container_width=True,
+                height=_full_height(len(losers)))
 
         st.markdown("---")
         st.markdown("### Käufe & Verkäufe je Investor")
@@ -995,23 +1025,35 @@ if page == "🧮 Investment-Rechner":
                     unsafe_allow_html=True)
         st.write("")
 
+        prices = data.get("prices", {})
         calc_rows = []
         for i, t in enumerate(titles):
             row = {"Nr.": i + 1, "Ticker": t.get("ticker") or "–", "Aktie": t["name"]}
             if is_conviction:  # Konsens treibt nur bei Conviction die Gewichtung
                 row["Konsens"] = f"{t['count']} / {len(selected)}"
             row["Gewicht"] = f"{weights[i]*100:.2f} %"
-            row["Betrag"] = f"{amounts[i]:,.0f} €".replace(",", ".")
+            row["Betrag"] = f"{de_num(amounts[i], 0)} €"
+            px = prices.get(t.get("ticker", ""), {}).get("price")
+            if px:
+                shares = amounts[i] * EURUSD / px  # € → $ umrechnen, dann / Kurs
+                row["Kurs"] = f"{de_num(px)} $"
+                row["Anzahl Aktien"] = de_num(shares)
+            else:
+                row["Kurs"] = "–"
+                row["Anzahl Aktien"] = "–"
             calc_rows.append(row)
         df_calc = pd.DataFrame(calc_rows)
         st.dataframe(df_calc, use_container_width=True, hide_index=True,
-                     height=min(620, 45 + 35 * n))
+                     height=min(760, 45 + 35 * n))
         tag = "equal" if method.startswith("Equal") else "conviction"
         st.download_button("⬇ Kaufliste als CSV",
                            df_calc.to_csv(index=False).encode("utf-8"),
                            f"F13-Kaufliste_{tag}_{quarter}.csv", "text/csv")
-        st.caption("13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, "
-                   "kein Echtzeit-Kaufsignal. Keine Anlageberatung.")
+        st.caption(f"Anzahl Aktien = Betrag (€ → $ zu {de_num(EURUSD, 4)}) ÷ aktueller "
+                   f"Kurs; Bruchstücke sind bei vielen Brokern handelbar, sonst abrunden. "
+                   f"Kurse Stand {EURUSD_ASOF or (data.get('pricesAsOf') or '–')}. "
+                   f"13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, kein "
+                   f"Echtzeit-Kaufsignal. Keine Anlageberatung.")
 
 # --- Tab 4: Struktur ---
 if page == "🧩 Struktur":
