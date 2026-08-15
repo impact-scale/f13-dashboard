@@ -1738,28 +1738,28 @@ if page == "🔁 Rebalancing":
         target_q = st.session_state.reb_target
 
         METHODS = ["Equal Weight", "Conviction (Profi)"]
-        r4, r4b, r5 = st.columns([2, 2, 1])
+        lock_amt = st.checkbox(
+            "Zielbetrag = Basisbetrag", value=True, key="reb_lock",
+            help="Aktiv: das Zielvolumen entspricht dem Investitionsbetrag Basisquartal. "
+                 "Deaktivieren, um beim Rebalancing auf- oder abzustocken — dann den "
+                 "Investitionsbetrag Zielquartal frei eingeben (z. B. halber Depotwert "
+                 "für minus 50 %).")
+        r4, r4b, r5 = st.columns(3)
         invest0 = r4.number_input(
             "Investitionsbetrag Basisquartal (€)", min_value=0, value=15000, step=500,
             help="Der Betrag, den du zum Basisquartal investiert hast/hättest. Er wird "
                  "gemäß Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs "
                  "in Stück umgerechnet (Vorbelegung). Kaufkurs und Stück sind darunter "
                  "je Titel überschreibbar.")
-        same_amt = r4b.checkbox(
-            "Zielbetrag = Basisbetrag", value=True,
-            help="Aktiv: Zielvolumen = Investitionsbetrag Basisquartal. Deaktivieren, um "
-                 "beim Rebalancing auf- oder abzustocken (Zielbetrag frei eingeben, "
-                 "z. B. Halbierung).")
-        if same_amt:
-            invest_target = float(invest0)
-            r4b.caption(f"→ Investitionsbetrag Zielquartal: {de_num(invest0, 0)} €")
-        else:
-            invest_target = float(r4b.number_input(
-                "Investitionsbetrag Zielquartal (€)", min_value=0, value=int(invest0),
-                step=500, key="reb_target_eur",
-                help="Gewünschtes Depotvolumen nach dem Rebalancing. Größer = Aufstockung, "
-                     "kleiner = Entnahme. Für minus 50 % die Hälfte des heutigen "
-                     "Depotwerts eintragen (siehe Zusammenfassung unten)."))
+        st.session_state.setdefault("reb_target_eur", 15000)
+        if lock_amt:
+            st.session_state["reb_target_eur"] = int(invest0)
+        invest_target = float(r4b.number_input(
+            "Investitionsbetrag Zielquartal (€)", min_value=0, step=500,
+            disabled=lock_amt, key="reb_target_eur",
+            help="Gewünschtes Depotvolumen nach dem Rebalancing. Größer = Aufstockung, "
+                 "kleiner = Entnahme. Für minus 50 % die Hälfte des heutigen Depotwerts "
+                 "eintragen (siehe Zusammenfassung unten)."))
         n_rb = r5.number_input("Anzahl Titel", 5, 30, int(data["topN"]), 1,
                                key="reb_n")
         m1, m2 = st.columns([1, 1])
