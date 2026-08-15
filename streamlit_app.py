@@ -1740,17 +1740,26 @@ if page == "🔁 Rebalancing":
         METHODS = ["Equal Weight", "Conviction (Profi)"]
         r4, r4b, r5 = st.columns([2, 2, 1])
         invest0 = r4.number_input(
-            "Investitionsbetrag für Strategie (€)", min_value=0, value=15000, step=500,
-            help="Der Betrag, den du in die Strategie investiert hast/hättest. Er wird "
+            "Investitionsbetrag Basisquartal (€)", min_value=0, value=15000, step=500,
+            help="Der Betrag, den du zum Basisquartal investiert hast/hättest. Er wird "
                  "gemäß Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs "
                  "in Stück umgerechnet (Vorbelegung). Kaufkurs und Stück sind darunter "
                  "je Titel überschreibbar.")
-        aufstock = r4b.number_input(
-            "Aufstockung / Nachkauf beim Rebalancing (€)", value=0, step=500,
-            help="Zusätzliches Kapital, das du beim Rebalancing mit investierst "
-                 "(negativ = Entnahme). Beispiel: Basis 100.000 €, heute 120.000 € wert, "
-                 "Aufstockung 30.000 € → auf 150.000 € umgeschichtet. Die Ziel-Gewichtung "
-                 "wird auf Depotwert + Aufstockung gelegt.")
+        same_amt = r4b.checkbox(
+            "Zielbetrag = Basisbetrag", value=True,
+            help="Aktiv: Zielvolumen = Investitionsbetrag Basisquartal. Deaktivieren, um "
+                 "beim Rebalancing auf- oder abzustocken (Zielbetrag frei eingeben, "
+                 "z. B. Halbierung).")
+        if same_amt:
+            invest_target = float(invest0)
+            r4b.caption(f"→ Investitionsbetrag Zielquartal: {de_num(invest0, 0)} €")
+        else:
+            invest_target = float(r4b.number_input(
+                "Investitionsbetrag Zielquartal (€)", min_value=0, value=int(invest0),
+                step=500, key="reb_target_eur",
+                help="Gewünschtes Depotvolumen nach dem Rebalancing. Größer = Aufstockung, "
+                     "kleiner = Entnahme. Für minus 50 % die Hälfte des heutigen "
+                     "Depotwerts eintragen (siehe Zusammenfassung unten)."))
         n_rb = r5.number_input("Anzahl Titel", 5, 30, int(data["topN"]), 1,
                                key="reb_n")
         m1, m2 = st.columns([1, 1])
@@ -1843,8 +1852,9 @@ if page == "🔁 Rebalancing":
                 d["wn"], d["name"] = w, e["name"]
 
             depot_now = sum(d["val_now"] for d in info.values() if d["ok"])
-            target_total = max(depot_now + aufstock, 0.0)  # Zielvolumen nach Nachkauf
-            eps_eur = max(target_total * 0.005, 1.0)  # Toleranz „Halten" (€)
+            target_total = max(invest_target, 0.0)     # Zielvolumen (absolut)
+            aufstock = target_total - depot_now        # implizite Auf-/Abstockung
+            eps_eur = max(target_total * 0.005, 1.0)   # Toleranz „Halten" (€)
 
             rows, n_out, n_in, n_adj = [], 0, 0, 0
             buy_sum = sell_sum = 0.0
@@ -1895,12 +1905,15 @@ if page == "🔁 Rebalancing":
                           else f"{method_base} → {method_target}")
             growth = (depot_now / invest0 - 1) * 100 if invest0 else 0
             gcol = "#5fbf7f" if growth >= 0 else "#d9776a"
-            auf_html = ""
-            if abs(aufstock) >= 1:
+            chg_pct = (aufstock / depot_now * 100) if depot_now else 0
+            if abs(aufstock) < 1:
+                auf_html = (f' &nbsp;→ Zielvolumen <b>{de_num(target_total, 0)} €</b> '
+                            f'(reines Rebalancing).')
+            else:
                 verb = "Aufstockung" if aufstock > 0 else "Entnahme"
                 auf_html = (f' &nbsp;{"+" if aufstock > 0 else "−"} {verb} '
-                            f'{de_num(abs(aufstock), 0)} € → Zielvolumen '
-                            f'<b>{de_num(target_total, 0)} €</b>.')
+                            f'{de_num(abs(aufstock), 0)} € ({_sig(chg_pct, 0)} % des '
+                            f'Depotwerts) → Zielvolumen <b>{de_num(target_total, 0)} €</b>.')
             st.markdown(
                 f'<div class="callout"><b>{base_q} → {target_q}</b> '
                 f'({method_txt}, Top {n}): &nbsp; Einsatz {de_num(invest0, 0)} € → '

@@ -157,13 +157,16 @@ Tab beantwortet: **Was raus? Was rein? Was in der Gewichtung ändern? Wie viel S
   `on_change`-Callback `_apply_freq()` setzt `reb_target = base + gap`.
 - **Basisquartal** + **Zielquartal** (aus `history`-Quartalen, frei wählbar; Guard:
   Ziel muss nach Basis liegen).
-- **Investitionsbetrag für Strategie (€)** — der investierte Betrag; verteilt sich
-  gemäß Gewichtung auf die Basisliste und legt die Stückzahlen vor.
-- **Aufstockung / Nachkauf beim Rebalancing (€)** — zusätzliches Kapital, das beim
-  Rebalancing mitinvestiert wird (negativ = Entnahme). `target_total = depot_now +
-  aufstock`; die Ziel-Gewichtung wird auf dieses Zielvolumen gelegt. Summe aller Δ =
-  Aufstockung (Netto-Neuinvestition). Beispiel: Basis 100.000 €, heute 120.000 €,
-  Aufstockung 30.000 € → auf 150.000 € umgeschichtet.
+- **Investitionsbetrag Basisquartal (€)** (`invest0`) — der zum Basisquartal
+  investierte Betrag; verteilt sich gemäß Gewichtung auf die Basisliste und legt die
+  Stückzahlen vor.
+- **Zielbetrag = Basisbetrag** (Checkbox, default an) + **Investitionsbetrag
+  Zielquartal (€)** (`invest_target`) — das **absolute** Depotvolumen nach dem
+  Rebalancing. Bei aktiver Checkbox = Basisbetrag; sonst frei editierbar (default =
+  Basisbetrag). `target_total = invest_target`; die implizite Auf-/Abstockung
+  `aufstock = target_total − depot_now` wird in der Zusammenfassung als Euro **und %
+  des heutigen Depotwerts** ausgewiesen (so lässt sich z. B. „−50 %" exakt treffen:
+  Zielbetrag = halber heutiger Depotwert). Summe aller Δ = `aufstock`.
 - **Anzahl Titel (Top N)**.
 - **Methode getrennt je Quartal:** „Methode Basisquartal" und „Methode neues Quartal",
   jeweils Equal Weight **oder** Conviction. (Erlaubt z. B. Bestand Equal → Ziel Conviction.)
@@ -182,7 +185,7 @@ Tabelle je Basistitel mit **Kaufkurs ($)** und **Stück**, **beide vorbelegt und
 1. **Heutiger Wert je Position** = `Stück × aktueller Kurs ÷ EURUSD` (Kursdrift seit
    Kauf). Basis: Einstandskurs des Basisquartals → aktueller Kurs (`data["prices"]`).
 2. **Heutiger Depotwert** `depot_now` = Σ der bewertbaren Positionswerte;
-   **Zielvolumen** `target_total = depot_now + Aufstockung`.
+   **Zielvolumen** `target_total = invest_target` (absolut eingegeben).
 3. **Ziel-Allokation** = `target_total × Ziel-Gewicht` je Titel.
 4. **Δ Betrag** = Ziel − heutiger Wert; **Δ Stück** = `Δ Betrag × EURUSD ÷ aktueller Kurs`.
    (+ = zukaufen, − = verkaufen.)
