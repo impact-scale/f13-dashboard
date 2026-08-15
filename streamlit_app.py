@@ -453,8 +453,8 @@ def delta_str(d):
 
 
 PAGES = ["📊 F13-Konsensliste", "🔄 Veränderungen", "📈 Verlauf", "🧮 Investment-Rechner",
-         "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen", "🎯 Backtest",
-         "💰 Cash & Flows"]
+         "🔁 Rebalancing", "🧩 Struktur", "👤 Investoren-Details", "🆕 Neue Meldungen",
+         "🎯 Backtest", "💰 Cash & Flows"]
 # Serverseitige Navigation: es wird NUR die gewählte Kategorie gerendert
 # (im Gegensatz zu st.tabs, das alle Inhalte ins DOM legt).
 page = st.radio("Navigation", PAGES, horizontal=True,
@@ -1684,6 +1684,178 @@ if page == "💰 Cash & Flows":
         f'<hr style="border:none;border-top:1.5px solid {GOLD};margin:8px 0 4px;">'
         f'{meth_sections}</div>',
         unsafe_allow_html=True)
+
+# --- Tab: Rebalancing ---
+if page == "🔁 Rebalancing":
+    st.markdown("### Rebalancing — Depot von einem Quartal auf ein anderes umschichten")
+    history = data.get("history", [])
+    prices = data.get("prices", {})
+    # Nur Quartale mit auswertbarer Rangliste, aufsteigend sortiert (alt → neu)
+    q_hist = sorted((h for h in history if h.get("ranking")),
+                    key=lambda h: h["quarter"])
+    quarters_all = [h["quarter"] for h in q_hist]
+    rank_by_q = {h["quarter"]: h["ranking"] for h in q_hist}
+
+    if len(quarters_all) < 2 or not prices:
+        st.info("Für das Rebalancing werden mindestens zwei Meldequartale mit "
+                "Ranglisten sowie aktuelle Kurse benötigt — bitte zuerst "
+                "`python3 f13_update.py` mit aktueller Version ausführen.")
+    else:
+        st.caption("Du hältst die F13-Liste eines **Basisquartals** und möchtest sie "
+                   "auf ein neueres **Zielquartal** umschichten. Die Frequenz "
+                   "(quartalsweise, halbjährlich, jährlich) bestimmt den Abstand — "
+                   "das Zielquartal lässt sich aber frei wählen.")
+
+        FREQ_GAP = {"Quartalsweise": 1, "Halbjährlich": 2, "Jährlich": 4}
+        # Sinnvolle Startwerte (nur beim ersten Rendern): Ziel = neuestes Quartal,
+        # Basis = 4 Quartale davor (jährliches Rebalancing).
+        if "reb_freq" not in st.session_state:
+            st.session_state.reb_freq = "Jährlich"
+        if "reb_target" not in st.session_state:
+            st.session_state.reb_target = quarters_all[-1]
+        if "reb_base" not in st.session_state:
+            st.session_state.reb_base = quarters_all[max(0, len(quarters_all) - 5)]
+
+        def _apply_freq():
+            gap = FREQ_GAP[st.session_state.reb_freq]
+            bi = quarters_all.index(st.session_state.reb_base)
+            st.session_state.reb_target = quarters_all[min(len(quarters_all) - 1,
+                                                           bi + gap)]
+
+        r1, r2, r3 = st.columns([2, 2, 2])
+        r1.radio("Rebalancing-Frequenz", list(FREQ_GAP), key="reb_freq",
+                 on_change=_apply_freq,
+                 help="Setzt das Zielquartal auf Basis + 1 / 2 / 4 Quartale. "
+                      "Danach frei anpassbar.")
+        r2.selectbox("Basisquartal (aktueller Bestand)", quarters_all,
+                     key="reb_base", on_change=_apply_freq,
+                     help="Stand der F13-Liste, die du derzeit hältst.")
+        r3.selectbox("Zielquartal (gewünschter Berichtsmonat)", quarters_all,
+                     key="reb_target",
+                     help="Stand der F13-Liste, auf die du umschichten möchtest.")
+
+        base_q = st.session_state.reb_base
+        target_q = st.session_state.reb_target
+
+        METHODS = ["Equal Weight", "Conviction (Profi)"]
+        r4, r5 = st.columns([1, 1])
+        pf_value = r4.number_input("Portfoliowert (€)", min_value=0, value=15000,
+                                   step=500,
+                                   help="Gesamtwert des Depots, das umgeschichtet wird.")
+        n_rb = r5.number_input("Anzahl Titel (Top N)", 5, 30, int(data["topN"]), 1,
+                               key="reb_n")
+        m1, m2 = st.columns([1, 1])
+        method_base = m1.radio("Methode Basisquartal (aktueller Bestand)", METHODS,
+                               horizontal=True, key="reb_method_base",
+                               help="Wie ist dein derzeitiger Bestand gewichtet?")
+        method_target = m2.radio("Methode neues Quartal (Rebalancing-Ziel)", METHODS,
+                                 horizontal=True, key="reb_method_target",
+                                 help="Wie soll das umgeschichtete Depot gewichtet sein?")
+
+        bi, ti = quarters_all.index(base_q), quarters_all.index(target_q)
+        if ti <= bi:
+            st.warning("Das Zielquartal muss **nach** dem Basisquartal liegen. "
+                       "Bitte ein späteres Zielquartal (oder früheres Basisquartal) "
+                       "wählen.")
+        else:
+            n = int(n_rb)
+            base_list = rank_by_q[base_q][:n]
+            target_list = rank_by_q[target_q][:n]
+            w_base = compute_weights(method_base, base_list)
+            w_target = compute_weights(method_target, target_list)
+
+            def _tk(e):  # stabiler Schlüssel je Titel
+                return e.get("ticker") or e.get("key") or e.get("name")
+
+            # Alt-/Neu-Gewichte und Namen je Titel sammeln
+            info = {}
+            for e, w in zip(base_list, w_base):
+                info.setdefault(_tk(e), {"name": e["name"], "ticker": e.get("ticker"),
+                                         "wa": 0.0, "wn": 0.0})["wa"] = w
+            for e, w in zip(target_list, w_target):
+                d = info.setdefault(_tk(e), {"name": e["name"], "ticker": e.get("ticker"),
+                                             "wa": 0.0, "wn": 0.0})
+                d["wn"] = w
+                d["name"] = e["name"]  # Zielname bevorzugen (aktueller)
+
+            EPS = 0.005  # 0,5 %-Punkte Toleranz für "Halten"
+            rows, n_out, n_in, n_adj = [], 0, 0, 0
+            buy_sum = sell_sum = 0.0
+            for tk, d in info.items():
+                wa, wn = d["wa"], d["wn"]
+                amt_a, amt_n = pf_value * wa, pf_value * wn
+                d_amt = amt_n - amt_a
+                if wa == 0:
+                    status, n_in = "🟢 Kaufen", n_in + 1
+                elif wn == 0:
+                    status, n_out = "🔴 Verkaufen", n_out + 1
+                elif abs(wn - wa) <= EPS:
+                    status = "▪ Halten"
+                elif wn > wa:
+                    status, n_adj = "🔼 Aufstocken", n_adj + 1
+                else:
+                    status, n_adj = "🔽 Reduzieren", n_adj + 1
+                px = prices.get(tk, {}).get("price")
+                if px:
+                    d_shares = d_amt * EURUSD / px  # € → $, dann / Kurs
+                    shares_txt = f"{de_num(d_shares)}" if abs(d_shares) >= 0.005 else "0"
+                    kurs_txt = f"{de_num(px)} $"
+                else:
+                    shares_txt, kurs_txt = "–", "–"
+                if d_amt > 0:
+                    buy_sum += d_amt
+                elif d_amt < 0:
+                    sell_sum += -d_amt
+                rows.append({
+                    "Aktion": status,
+                    "Ticker": tk if d.get("ticker") else "–",
+                    "Aktie": d["name"],
+                    "Gewicht alt": f"{wa*100:.1f} %",
+                    "Gewicht neu": f"{wn*100:.1f} %",
+                    "Δ Betrag (€)": f"{'+' if d_amt >= 0 else '−'}{de_num(abs(d_amt), 0)}",
+                    "Kurs": kurs_txt,
+                    "Δ Stück": (f"{'+' if not shares_txt.startswith('-') and shares_txt != '0' else ''}"
+                                f"{shares_txt}" if shares_txt not in ("–", "0")
+                                else shares_txt),
+                    "_sort": (0 if wn == 0 else 2 if wa == 0 else 1, -abs(d_amt)),
+                })
+            rows.sort(key=lambda r: r.pop("_sort"))
+
+            # Zusammenfassung
+            method_txt = (method_base if method_base == method_target
+                          else f"{method_base} → {method_target}")
+            st.markdown(
+                f'<div class="callout"><b>{base_q} → {target_q}</b> '
+                f'({method_txt}, Top {n}, {de_num(pf_value, 0)} €): &nbsp;'
+                f'<span style="color:#d9776a;font-weight:700;">🔴 {n_out} raus</span> &nbsp;·&nbsp; '
+                f'<span style="color:#5fbf7f;font-weight:700;">🟢 {n_in} rein</span> &nbsp;·&nbsp; '
+                f'<span style="color:{GOLD};font-weight:700;">🔁 {n_adj} umgewichtet</span>. &nbsp;'
+                f'Umschichtungsvolumen ca. <b>{de_num(max(buy_sum, sell_sum), 0)} €</b> '
+                f'({de_num((max(buy_sum, sell_sum) / pf_value * 100) if pf_value else 0, 1)} % '
+                f'des Depots).</div>'.replace(",", "."),
+                unsafe_allow_html=True)
+            st.write("")
+
+            df_rb = pd.DataFrame(rows)
+
+            def _full_height(k):
+                return 45 + 35 * max(k, 1)
+            st.dataframe(df_rb, use_container_width=True, hide_index=True,
+                         height=min(900, _full_height(len(rows))))
+            st.download_button(
+                "⬇ Rebalancing-Plan als CSV",
+                df_rb.to_csv(index=False).encode("utf-8"),
+                f"F13-Rebalancing_{base_q}_zu_{target_q}.csv", "text/csv")
+            st.caption(
+                f"Δ Stück = Veränderung der Positionsgröße zu aktuellen Kursen "
+                f"(€ → $ zu {de_num(EURUSD, 4)}); + = zukaufen, − = verkaufen, "
+                f"Bruchstücke bei vielen Brokern handelbar. Basis- und Zielquartal "
+                f"lassen sich getrennt gewichten (Equal Weight oder Conviction); bei "
+                f"beidseitig Equal Weight bleiben gehaltene Titel unverändert und nur "
+                f"Ab-/Zugänge werden gehandelt. Kurse Stand "
+                f"{EURUSD_ASOF or (data.get('pricesAsOf') or '–')}. "
+                f"13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, kein "
+                f"Echtzeit-Kaufsignal. Keine Anlageberatung.")
 
 st.markdown('<hr class="goldbar">', unsafe_allow_html=True)
 
