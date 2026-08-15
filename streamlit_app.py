@@ -1739,9 +1739,11 @@ if page == "🔁 Rebalancing":
 
         METHODS = ["Equal Weight", "Conviction (Profi)"]
         r4, r5 = st.columns([1, 1])
-        pf_value = r4.number_input("Portfoliowert (€)", min_value=0, value=15000,
-                                   step=500,
-                                   help="Gesamtwert des Depots, das umgeschichtet wird.")
+        invest0 = r4.number_input(
+            "Vorbelegungs-Summe (€)", min_value=0, value=15000, step=500,
+            help="Nur zur Vorbelegung der Stückzahlen: dieser Betrag wird gemäß "
+                 "Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs in "
+                 "Stück umgerechnet. Kaufkurs und Stück sind darunter überschreibbar.")
         n_rb = r5.number_input("Anzahl Titel (Top N)", 5, 30, int(data["topN"]), 1,
                                key="reb_n")
         m1, m2 = st.columns([1, 1])
@@ -1767,92 +1769,155 @@ if page == "🔁 Rebalancing":
             def _tk(e):  # stabiler Schlüssel je Titel
                 return e.get("ticker") or e.get("key") or e.get("name")
 
-            # Alt-/Neu-Gewichte und Namen je Titel sammeln
-            info = {}
-            for e, w in zip(base_list, w_base):
-                info.setdefault(_tk(e), {"name": e["name"], "ticker": e.get("ticker"),
-                                         "wa": 0.0, "wn": 0.0})["wa"] = w
-            for e, w in zip(target_list, w_target):
-                d = info.setdefault(_tk(e), {"name": e["name"], "ticker": e.get("ticker"),
-                                             "wa": 0.0, "wn": 0.0})
-                d["wn"] = w
-                d["name"] = e["name"]  # Zielname bevorzugen (aktueller)
+            def _cur_px(tk):
+                return prices.get(tk, {}).get("price")
 
-            EPS = 0.005  # 0,5 %-Punkte Toleranz für "Halten"
+            def _plausible(p0, pn):  # schützt vor Aktienklassen-/Einheiten-Fehlern
+                return bool(p0 and pn and 0.02 <= (pn / p0) <= 50)
+
+            def _sig(x, dec=2):  # vorzeichenbehaftet, deutsches Format
+                if x is None:
+                    return "–"
+                if abs(x) < (0.5 if dec == 0 else 0.5 / 10 ** dec):
+                    return "0"
+                return f"{'+' if x > 0 else '−'}{de_num(abs(x), dec)}"
+
+            # --- Editierbarer Basisbestand: Kaufkurs UND Stück vorbelegt ---
+            st.markdown("#### Dein Basisbestand (Basisquartal)")
+            st.caption("Vorbelegt aus der Vorbelegungs-Summe zum Schlusskurs des "
+                       "Basisquartals (Stand der Liste) und der gewählten Gewichtung. "
+                       "**Kaufkurs ($)** und **Stück** kannst du je Titel überschreiben, "
+                       "falls du zu einem anderen Kurs oder in anderer Menge gekauft hast "
+                       "— die Stück-Spalte ist maßgeblich für den heutigen Wert.")
+            edit_df = pd.DataFrame([{
+                "Ticker": e.get("ticker") or "–",
+                "Aktie": e["name"],
+                "Kaufkurs ($)": round(e["price"], 2) if e.get("price") else None,
+                "Stück": (round(invest0 * w * EURUSD / e["price"], 4)
+                          if e.get("price") else None),
+            } for e, w in zip(base_list, w_base)])
+            edited = st.data_editor(
+                edit_df, hide_index=True, use_container_width=True,
+                disabled=["Ticker", "Aktie"],
+                column_config={
+                    "Kaufkurs ($)": st.column_config.NumberColumn(
+                        format="%.2f $", min_value=0.0, help="Dein Einstandskurs je Aktie."),
+                    "Stück": st.column_config.NumberColumn(
+                        format="%.4f", min_value=0.0,
+                        help="Gekaufte Stückzahl (aus Vorbelegung; überschreibbar)."),
+                },
+                height=min(560, 45 + 35 * max(len(base_list), 1)), key="reb_editor")
+            buy_vals = list(edited["Kaufkurs ($)"])
+            shr_vals = list(edited["Stück"])
+
+            # --- Basisbestand → heutiger Wert je Position (Kursdrift) ---
+            info, missing = {}, []
+            for i, (e, w) in enumerate(zip(base_list, w_base)):
+                tk = _tk(e)
+                p0 = buy_vals[i] if (i < len(buy_vals) and buy_vals[i]) else e.get("price")
+                shares = shr_vals[i] if (i < len(shr_vals) and shr_vals[i]) else 0.0
+                pn = _cur_px(tk)
+                d = info.setdefault(tk, {"name": e["name"], "ticker": e.get("ticker"),
+                                         "in_base": False, "wn": 0.0, "p0": p0,
+                                         "pn": pn, "shares": 0.0, "val_now": 0.0,
+                                         "ok": False})
+                d["in_base"], d["p0"], d["pn"], d["shares"] = True, p0, pn, shares
+                if pn and shares:
+                    d["val_now"] = shares * pn / EURUSD    # heutiger Wert (€)
+                    d["ok"] = True
+                elif not pn:
+                    missing.append(e["name"])
+            for e, w in zip(target_list, w_target):
+                tk = _tk(e)
+                d = info.setdefault(tk, {"name": e["name"], "ticker": e.get("ticker"),
+                                         "in_base": False, "wn": 0.0,
+                                         "p0": e.get("price"), "pn": _cur_px(tk),
+                                         "shares": 0.0, "val_now": 0.0, "ok": False})
+                d["wn"], d["name"] = w, e["name"]
+
+            depot_now = sum(d["val_now"] for d in info.values() if d["ok"])
+            eps_eur = max(depot_now * 0.005, 1.0)  # Toleranz „Halten" (€)
+
             rows, n_out, n_in, n_adj = [], 0, 0, 0
             buy_sum = sell_sum = 0.0
             for tk, d in info.items():
-                wa, wn = d["wa"], d["wn"]
-                amt_a, amt_n = pf_value * wa, pf_value * wn
-                d_amt = amt_n - amt_a
-                if wa == 0:
+                val_now = d["val_now"] if d["ok"] else 0.0
+                target_eur = depot_now * d["wn"]
+                d_amt = target_eur - val_now
+                in_target = d["wn"] > 0
+                if not d["in_base"]:
                     status, n_in = "🟢 Kaufen", n_in + 1
-                elif wn == 0:
+                elif not in_target:
                     status, n_out = "🔴 Verkaufen", n_out + 1
-                elif abs(wn - wa) <= EPS:
+                elif abs(d_amt) <= eps_eur:
                     status = "▪ Halten"
-                elif wn > wa:
+                elif d_amt > 0:
                     status, n_adj = "🔼 Aufstocken", n_adj + 1
                 else:
                     status, n_adj = "🔽 Reduzieren", n_adj + 1
-                px = prices.get(tk, {}).get("price")
-                if px:
-                    d_shares = d_amt * EURUSD / px  # € → $, dann / Kurs
-                    shares_txt = f"{de_num(d_shares)}" if abs(d_shares) >= 0.005 else "0"
-                    kurs_txt = f"{de_num(px)} $"
-                else:
-                    shares_txt, kurs_txt = "–", "–"
+                pn = d["pn"]
+                have_px = bool(pn) and (d["ok"] or not d["in_base"])
+                d_shares = (d_amt * EURUSD / pn) if have_px else None
                 if d_amt > 0:
                     buy_sum += d_amt
                 elif d_amt < 0:
                     sell_sum += -d_amt
+                w_alt = (val_now / depot_now) if depot_now else 0.0
                 rows.append({
                     "Aktion": status,
                     "Ticker": tk if d.get("ticker") else "–",
                     "Aktie": d["name"],
-                    "Gewicht alt": f"{wa*100:.1f} %",
-                    "Gewicht neu": f"{wn*100:.1f} %",
-                    "Δ Betrag (€)": f"{'+' if d_amt >= 0 else '−'}{de_num(abs(d_amt), 0)}",
-                    "Kurs": kurs_txt,
-                    "Δ Stück": (f"{'+' if not shares_txt.startswith('-') and shares_txt != '0' else ''}"
-                                f"{shares_txt}" if shares_txt not in ("–", "0")
-                                else shares_txt),
-                    "_sort": (0 if wn == 0 else 2 if wa == 0 else 1, -abs(d_amt)),
+                    "Kurs damals": f"{de_num(d['p0'])} $" if d["p0"] else "–",
+                    "Kurs heute": f"{de_num(pn)} $" if pn else "–",
+                    "Stück alt": (de_num(d["shares"], 4) if d["in_base"] and d["shares"]
+                                  else ("0" if d["in_base"] else "–")),
+                    "Gewicht alt": f"{w_alt*100:.1f} %" if d["in_base"] else "–",
+                    "Gewicht neu": f"{d['wn']*100:.1f} %" if in_target else "–",
+                    "Wert heute (€)": de_num(val_now, 0) if (d["ok"] or not d["in_base"]) else "–",
+                    "Ziel (€)": de_num(target_eur, 0),
+                    "Δ Betrag (€)": _sig(d_amt, 0),
+                    "Δ Stück": _sig(d_shares),
+                    "_sort": (0 if not in_target else 2 if not d["in_base"] else 1,
+                              -abs(d_amt)),
                 })
             rows.sort(key=lambda r: r.pop("_sort"))
 
             # Zusammenfassung
             method_txt = (method_base if method_base == method_target
                           else f"{method_base} → {method_target}")
+            growth = (depot_now / invest0 - 1) * 100 if invest0 else 0
+            gcol = "#5fbf7f" if growth >= 0 else "#d9776a"
+            turn = max(buy_sum, sell_sum)
             st.markdown(
                 f'<div class="callout"><b>{base_q} → {target_q}</b> '
-                f'({method_txt}, Top {n}, {de_num(pf_value, 0)} €): &nbsp;'
-                f'<span style="color:#d9776a;font-weight:700;">🔴 {n_out} raus</span> &nbsp;·&nbsp; '
-                f'<span style="color:#5fbf7f;font-weight:700;">🟢 {n_in} rein</span> &nbsp;·&nbsp; '
-                f'<span style="color:{GOLD};font-weight:700;">🔁 {n_adj} umgewichtet</span>. &nbsp;'
-                f'Umschichtungsvolumen ca. <b>{de_num(max(buy_sum, sell_sum), 0)} €</b> '
-                f'({de_num((max(buy_sum, sell_sum) / pf_value * 100) if pf_value else 0, 1)} % '
-                f'des Depots).</div>'.replace(",", "."),
-                unsafe_allow_html=True)
+                f'({method_txt}, Top {n}): &nbsp; Einsatz {de_num(invest0, 0)} € → '
+                f'heutiger Depotwert <b>{de_num(depot_now, 0)} €</b> '
+                f'(<span style="color:{gcol};font-weight:700;">{_sig(growth, 1)} %</span>). '
+                f'&nbsp; <span style="color:#d9776a;font-weight:700;">🔴 {n_out} raus</span> · '
+                f'<span style="color:#5fbf7f;font-weight:700;">🟢 {n_in} rein</span> · '
+                f'<span style="color:{GOLD};font-weight:700;">🔁 {n_adj} umgewichtet</span>. '
+                f'&nbsp; Umschichtungsvolumen ca. <b>{de_num(turn, 0)} €</b> '
+                f'({de_num((turn / depot_now * 100) if depot_now else 0, 1)} % des '
+                f'Depots).</div>', unsafe_allow_html=True)
+            if missing:
+                st.caption("⚠ Ohne verwertbaren Kurs (nicht im Depotwert): "
+                           + ", ".join(missing) + ".")
             st.write("")
 
             df_rb = pd.DataFrame(rows)
-
-            def _full_height(k):
-                return 45 + 35 * max(k, 1)
             st.dataframe(df_rb, use_container_width=True, hide_index=True,
-                         height=min(900, _full_height(len(rows))))
+                         height=min(900, 45 + 35 * max(len(rows), 1)))
             st.download_button(
                 "⬇ Rebalancing-Plan als CSV",
                 df_rb.to_csv(index=False).encode("utf-8"),
                 f"F13-Rebalancing_{base_q}_zu_{target_q}.csv", "text/csv")
             st.caption(
-                f"Δ Stück = Veränderung der Positionsgröße zu aktuellen Kursen "
-                f"(€ → $ zu {de_num(EURUSD, 4)}); + = zukaufen, − = verkaufen, "
-                f"Bruchstücke bei vielen Brokern handelbar. Basis- und Zielquartal "
-                f"lassen sich getrennt gewichten (Equal Weight oder Conviction); bei "
-                f"beidseitig Equal Weight bleiben gehaltene Titel unverändert und nur "
-                f"Ab-/Zugänge werden gehandelt. Kurse Stand "
+                f"Rechenweg: Stückzahlen aus deinem Einstandskurs (Basisquartal, "
+                f"überschreibbar) → heutiger Wert je Position zum aktuellen Kurs "
+                f"(Kursdrift) → Ziel-Gewichtung auf den heutigen Depotwert. "
+                f"Δ Stück = zu handelnde Stücke zum aktuellen Kurs (€ → $ zu "
+                f"{de_num(EURUSD, 4)}); + = zukaufen, − = verkaufen, Bruchstücke bei "
+                f"vielen Brokern handelbar. Kurse Stand "
                 f"{EURUSD_ASOF or (data.get('pricesAsOf') or '–')}. "
                 f"13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, kein "
                 f"Echtzeit-Kaufsignal. Keine Anlageberatung.")
