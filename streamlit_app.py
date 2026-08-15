@@ -1738,14 +1738,20 @@ if page == "🔁 Rebalancing":
         target_q = st.session_state.reb_target
 
         METHODS = ["Equal Weight", "Conviction (Profi)"]
-        r4, r5 = st.columns([1, 1])
+        r4, r4b, r5 = st.columns([2, 2, 1])
         invest0 = r4.number_input(
             "Investitionsbetrag für Strategie (€)", min_value=0, value=15000, step=500,
             help="Der Betrag, den du in die Strategie investiert hast/hättest. Er wird "
                  "gemäß Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs "
                  "in Stück umgerechnet (Vorbelegung). Kaufkurs und Stück sind darunter "
                  "je Titel überschreibbar.")
-        n_rb = r5.number_input("Anzahl Titel (Top N)", 5, 30, int(data["topN"]), 1,
+        aufstock = r4b.number_input(
+            "Aufstockung / Nachkauf beim Rebalancing (€)", value=0, step=500,
+            help="Zusätzliches Kapital, das du beim Rebalancing mit investierst "
+                 "(negativ = Entnahme). Beispiel: Basis 100.000 €, heute 120.000 € wert, "
+                 "Aufstockung 30.000 € → auf 150.000 € umgeschichtet. Die Ziel-Gewichtung "
+                 "wird auf Depotwert + Aufstockung gelegt.")
+        n_rb = r5.number_input("Anzahl Titel", 5, 30, int(data["topN"]), 1,
                                key="reb_n")
         m1, m2 = st.columns([1, 1])
         method_base = m1.radio("Methode Basisquartal (aktueller Bestand)", METHODS,
@@ -1837,13 +1843,14 @@ if page == "🔁 Rebalancing":
                 d["wn"], d["name"] = w, e["name"]
 
             depot_now = sum(d["val_now"] for d in info.values() if d["ok"])
-            eps_eur = max(depot_now * 0.005, 1.0)  # Toleranz „Halten" (€)
+            target_total = max(depot_now + aufstock, 0.0)  # Zielvolumen nach Nachkauf
+            eps_eur = max(target_total * 0.005, 1.0)  # Toleranz „Halten" (€)
 
             rows, n_out, n_in, n_adj = [], 0, 0, 0
             buy_sum = sell_sum = 0.0
             for tk, d in info.items():
                 val_now = d["val_now"] if d["ok"] else 0.0
-                target_eur = depot_now * d["wn"]
+                target_eur = target_total * d["wn"]
                 d_amt = target_eur - val_now
                 in_target = d["wn"] > 0
                 if not d["in_base"]:
@@ -1888,18 +1895,25 @@ if page == "🔁 Rebalancing":
                           else f"{method_base} → {method_target}")
             growth = (depot_now / invest0 - 1) * 100 if invest0 else 0
             gcol = "#5fbf7f" if growth >= 0 else "#d9776a"
-            turn = max(buy_sum, sell_sum)
+            auf_html = ""
+            if abs(aufstock) >= 1:
+                verb = "Aufstockung" if aufstock > 0 else "Entnahme"
+                auf_html = (f' &nbsp;{"+" if aufstock > 0 else "−"} {verb} '
+                            f'{de_num(abs(aufstock), 0)} € → Zielvolumen '
+                            f'<b>{de_num(target_total, 0)} €</b>.')
             st.markdown(
                 f'<div class="callout"><b>{base_q} → {target_q}</b> '
                 f'({method_txt}, Top {n}): &nbsp; Einsatz {de_num(invest0, 0)} € → '
                 f'heutiger Depotwert <b>{de_num(depot_now, 0)} €</b> '
-                f'(<span style="color:{gcol};font-weight:700;">{_sig(growth, 1)} %</span>). '
-                f'&nbsp; <span style="color:#d9776a;font-weight:700;">🔴 {n_out} raus</span> · '
+                f'(<span style="color:{gcol};font-weight:700;">{_sig(growth, 1)} %</span>).'
+                f'{auf_html}'
+                f'<br><span style="color:#d9776a;font-weight:700;">🔴 {n_out} raus</span> · '
                 f'<span style="color:#5fbf7f;font-weight:700;">🟢 {n_in} rein</span> · '
-                f'<span style="color:{GOLD};font-weight:700;">🔁 {n_adj} umgewichtet</span>. '
-                f'&nbsp; Umschichtungsvolumen ca. <b>{de_num(turn, 0)} €</b> '
-                f'({de_num((turn / depot_now * 100) if depot_now else 0, 1)} % des '
-                f'Depots).</div>', unsafe_allow_html=True)
+                f'<span style="color:{GOLD};font-weight:700;">🔁 {n_adj} umgewichtet</span> '
+                f'&nbsp;→&nbsp; Käufe <b style="color:#5fbf7f;">{de_num(buy_sum, 0)} €</b> · '
+                f'Verkäufe <b style="color:#d9776a;">{de_num(sell_sum, 0)} €</b> '
+                f'(netto {_sig(buy_sum - sell_sum, 0)} €).</div>',
+                unsafe_allow_html=True)
             if missing:
                 st.caption("⚠ Ohne verwertbaren Kurs (nicht im Depotwert): "
                            + ", ".join(missing) + ".")

@@ -159,6 +159,11 @@ Tab beantwortet: **Was raus? Was rein? Was in der Gewichtung ändern? Wie viel S
   Ziel muss nach Basis liegen).
 - **Investitionsbetrag für Strategie (€)** — der investierte Betrag; verteilt sich
   gemäß Gewichtung auf die Basisliste und legt die Stückzahlen vor.
+- **Aufstockung / Nachkauf beim Rebalancing (€)** — zusätzliches Kapital, das beim
+  Rebalancing mitinvestiert wird (negativ = Entnahme). `target_total = depot_now +
+  aufstock`; die Ziel-Gewichtung wird auf dieses Zielvolumen gelegt. Summe aller Δ =
+  Aufstockung (Netto-Neuinvestition). Beispiel: Basis 100.000 €, heute 120.000 €,
+  Aufstockung 30.000 € → auf 150.000 € umgeschichtet.
 - **Anzahl Titel (Top N)**.
 - **Methode getrennt je Quartal:** „Methode Basisquartal" und „Methode neues Quartal",
   jeweils Equal Weight **oder** Conviction. (Erlaubt z. B. Bestand Equal → Ziel Conviction.)
@@ -176,8 +181,9 @@ Tabelle je Basistitel mit **Kaufkurs ($)** und **Stück**, **beide vorbelegt und
 ### Rechenmodell (drift-bewusst — vom Nutzer so gewünscht)
 1. **Heutiger Wert je Position** = `Stück × aktueller Kurs ÷ EURUSD` (Kursdrift seit
    Kauf). Basis: Einstandskurs des Basisquartals → aktueller Kurs (`data["prices"]`).
-2. **Heutiger Depotwert** `depot_now` = Σ der bewertbaren Positionswerte.
-3. **Ziel-Allokation** = `depot_now × Ziel-Gewicht` je Titel.
+2. **Heutiger Depotwert** `depot_now` = Σ der bewertbaren Positionswerte;
+   **Zielvolumen** `target_total = depot_now + Aufstockung`.
+3. **Ziel-Allokation** = `target_total × Ziel-Gewicht` je Titel.
 4. **Δ Betrag** = Ziel − heutiger Wert; **Δ Stück** = `Δ Betrag × EURUSD ÷ aktueller Kurs`.
    (+ = zukaufen, − = verkaufen.)
 
