@@ -1740,10 +1740,11 @@ if page == "🔁 Rebalancing":
         METHODS = ["Equal Weight", "Conviction (Profi)"]
         r4, r5 = st.columns([1, 1])
         invest0 = r4.number_input(
-            "Vorbelegungs-Summe (€)", min_value=0, value=15000, step=500,
-            help="Nur zur Vorbelegung der Stückzahlen: dieser Betrag wird gemäß "
-                 "Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs in "
-                 "Stück umgerechnet. Kaufkurs und Stück sind darunter überschreibbar.")
+            "Investitionsbetrag für Strategie (€)", min_value=0, value=15000, step=500,
+            help="Der Betrag, den du in die Strategie investiert hast/hättest. Er wird "
+                 "gemäß Gewichtung auf die Basisliste verteilt und zum Basisquartals-Kurs "
+                 "in Stück umgerechnet (Vorbelegung). Kaufkurs und Stück sind darunter "
+                 "je Titel überschreibbar.")
         n_rb = r5.number_input("Anzahl Titel (Top N)", 5, 30, int(data["topN"]), 1,
                                key="reb_n")
         m1, m2 = st.columns([1, 1])
@@ -1784,7 +1785,7 @@ if page == "🔁 Rebalancing":
 
             # --- Editierbarer Basisbestand: Kaufkurs UND Stück vorbelegt ---
             st.markdown("#### Dein Basisbestand (Basisquartal)")
-            st.caption("Vorbelegt aus der Vorbelegungs-Summe zum Schlusskurs des "
+            st.caption("Vorbelegt aus dem Investitionsbetrag zum Schlusskurs des "
                        "Basisquartals (Stand der Liste) und der gewählten Gewichtung. "
                        "**Kaufkurs ($)** und **Stück** kannst du je Titel überschreiben, "
                        "falls du zu einem anderen Kurs oder in anderer Menge gekauft hast "
