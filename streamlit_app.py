@@ -199,7 +199,8 @@ def df_to_excel(df, sheet="F13-Liste"):
     return buf.getvalue()
 
 
-def f13_to_pdf(df, meta_lines):
+def f13_to_pdf(df, meta_lines, title="F13-Konsensliste",
+               tag_text="F13-LISTE · SUPER-INVESTOREN"):
     """F13-Liste als CI-gestyltes PDF (reportlab)."""
     from reportlab.lib import colors
     from reportlab.lib.pagesizes import A4
@@ -223,8 +224,8 @@ def f13_to_pdf(df, meta_lines):
                          fontName="Courier-Bold", fontSize=8, spaceAfter=10)
     meta = ParagraphStyle("meta", parent=styles["Normal"], textColor=slate,
                           fontName="Courier", fontSize=8, leading=12)
-    story = [Paragraph("F13-LISTE · SUPER-INVESTOREN", tag),
-             Paragraph("F13-Konsensliste", h1)]
+    story = [Paragraph(tag_text, tag),
+             Paragraph(title, h1)]
     for ln in meta_lines:
         story.append(Paragraph(ln, meta))
     story.append(Spacer(1, 8*mm))
@@ -983,10 +984,18 @@ if page == "🧮 Investment-Rechner":
              "die mehr Investoren halten.")
     is_conviction = method.startswith("Conviction")
 
-    ic1, ic2 = st.columns([1, 2])
+    ic0, ic1, ic2 = st.columns([1, 1, 2])
+    with ic0:
+        cur = st.radio(
+            "Währung", ["Euro (€)", "US-Dollar ($)"], horizontal=True,
+            key="calc_cur",
+            help="Währung deines Investitionsvolumens. Bei US-Dollar entfällt die "
+                 "EUR/USD-Umrechnung fürs Volumen; die Kurse stehen ohnehin in $.")
+    in_usd = cur.startswith("US")
+    sym = "$" if in_usd else "€"
     with ic1:
         capital = st.number_input(
-            "Investitionsvolumen (€)", min_value=0, value=15000, step=500,
+            f"Investitionsvolumen ({sym})", min_value=0, value=15000, step=500,
             help="Betrag eingeben — die Verteilung berechnet sich sofort neu.")
     with ic2:
         n_titles = st.number_input(
@@ -1013,16 +1022,15 @@ if page == "🧮 Investment-Rechner":
         amounts = [capital * w for w in weights]
 
         if method.startswith("Equal"):
-            summary = (f"Bei <b>{capital:,.0f} €</b> auf <b>{n}</b> Aktien "
-                       f"gleichgewichtet → <b>ca. {capital/n:,.0f} €</b> pro Aktie "
-                       f"({100/n:.2f} % je Position).")
+            summary = (f"Bei <b>{de_num(capital, 0)} {sym}</b> auf <b>{n}</b> Aktien "
+                       f"gleichgewichtet → <b>ca. {de_num(capital/n, 0)} {sym}</b> pro "
+                       f"Aktie ({de_num(100/n)} % je Position).")
         else:
             wmin, wmax = min(weights) * 100, max(weights) * 100
-            summary = (f"Bei <b>{capital:,.0f} €</b> auf <b>{n}</b> Aktien nach "
-                       f"Überzeugung gewichtet → Gewichte von <b>{wmin:.1f} %</b> "
-                       f"(schwächster) bis <b>{wmax:.1f} %</b> (stärkster Titel).")
-        st.markdown(f'<div class="callout">{summary}</div>'.replace(",", "."),
-                    unsafe_allow_html=True)
+            summary = (f"Bei <b>{de_num(capital, 0)} {sym}</b> auf <b>{n}</b> Aktien nach "
+                       f"Überzeugung gewichtet → Gewichte von <b>{de_num(wmin, 1)} %</b> "
+                       f"(schwächster) bis <b>{de_num(wmax, 1)} %</b> (stärkster Titel).")
+        st.markdown(f'<div class="callout">{summary}</div>', unsafe_allow_html=True)
         st.write("")
 
         prices = data.get("prices", {})
@@ -1031,13 +1039,14 @@ if page == "🧮 Investment-Rechner":
             row = {"Nr.": i + 1, "Ticker": t.get("ticker") or "–", "Aktie": t["name"]}
             if is_conviction:  # Konsens treibt nur bei Conviction die Gewichtung
                 row["Konsens"] = f"{t['count']} / {len(selected)}"
-            row["Gewicht"] = f"{weights[i]*100:.2f} %"
-            row["Betrag"] = f"{de_num(amounts[i], 0)} €"
+            row["Gewicht"] = f"{de_num(weights[i]*100)} %"
+            row["Betrag"] = f"{de_num(amounts[i], 0)} {sym}"
             px = prices.get(t.get("ticker", ""), {}).get("price")
             if px:
-                shares = amounts[i] * EURUSD / px  # € → $ umrechnen, dann / Kurs
+                # Volumen in $ (bei € umrechnen), dann / Kurs
+                amt_usd = amounts[i] if in_usd else amounts[i] * EURUSD
                 row["Kurs"] = f"{de_num(px)} $"
-                row["Anzahl Aktien"] = de_num(shares)
+                row["Anzahl Aktien"] = de_num(amt_usd / px)
             else:
                 row["Kurs"] = "–"
                 row["Anzahl Aktien"] = "–"
@@ -1045,13 +1054,34 @@ if page == "🧮 Investment-Rechner":
         df_calc = pd.DataFrame(calc_rows)
         st.dataframe(df_calc, use_container_width=True, hide_index=True,
                      height=min(760, 45 + 35 * n))
+
         tag = "equal" if method.startswith("Equal") else "conviction"
-        st.download_button("⬇ Kaufliste als CSV",
-                           df_calc.to_csv(index=False).encode("utf-8"),
-                           f"F13-Kaufliste_{tag}_{quarter}.csv", "text/csv")
-        st.caption(f"Anzahl Aktien = Betrag (€ → $ zu {de_num(EURUSD, 4)}) ÷ aktueller "
-                   f"Kurs; Bruchstücke sind bei vielen Brokern handelbar, sonst abrunden. "
-                   f"Kurse Stand {EURUSD_ASOF or (data.get('pricesAsOf') or '–')}. "
+        cur_tag = "usd" if in_usd else "eur"
+        fname_calc = f"F13-Kaufliste_{tag}_{cur_tag}_{quarter}"
+        ex1, ex2 = st.columns(2)
+        ex1.download_button("⬇ Kaufliste als CSV",
+                            df_calc.to_csv(index=False).encode("utf-8"),
+                            f"{fname_calc}.csv", "text/csv", use_container_width=True)
+        try:
+            meta_calc = [
+                f"Gewichtung: {method}",
+                f"Investitionsvolumen: {de_num(capital, 0)} {sym}  ·  Titel: {n}",
+                f"Meldequartal: {quarter}  ·  EUR/USD: {de_num(EURUSD, 4)} "
+                f"(Stand {EURUSD_ASOF or (data.get('pricesAsOf') or '–')})",
+                f"Stand Datenimport: {generated.strftime('%d.%m.%Y %H:%M')}",
+            ]
+            ex2.download_button(
+                "⬇ Kaufliste als PDF",
+                f13_to_pdf(df_calc, meta_calc, title="Investment-Rechner — Kaufliste",
+                           tag_text="F13-LISTE · INVESTMENT-RECHNER"),
+                f"{fname_calc}.pdf", "application/pdf", use_container_width=True)
+        except Exception:
+            ex2.caption("PDF: reportlab fehlt")
+        conv = (f"Anzahl Aktien = Betrag ÷ aktueller Kurs" if in_usd else
+                f"Anzahl Aktien = Betrag (€ → $ zu {de_num(EURUSD, 4)}) ÷ aktueller Kurs")
+        st.caption(f"{conv}; Bruchstücke sind bei vielen Brokern handelbar, sonst "
+                   f"abrunden. Kurse Stand "
+                   f"{EURUSD_ASOF or (data.get('pricesAsOf') or '–')}. "
                    f"13F-Daten sind bis zu 45 Tage alt (Quartalslag) und ein Signal, kein "
                    f"Echtzeit-Kaufsignal. Keine Anlageberatung.")
 

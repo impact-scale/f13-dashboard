@@ -131,7 +131,10 @@ Reines Python-Standardbibliothek (kein pip nötig), damit es überall läuft. Ab
    via voller Höhe) + Käufe/Verkäufe je Investor mit Filter.
 3. **📈 Verlauf** — Zeitreihe der Konsens-Ränge über die Quartale.
 4. **🧮 Investment-Rechner** — Kapital + Titelzahl → Verteilung nach Equal/Conviction,
-   mit **Kurs** + **Anzahl Aktien** (Betrag € → $ via `EURUSD` ÷ Kurs). CSV-Export.
+   mit **Kurs** + **Anzahl Aktien**. **Währungsumschalter €/$** (`in_usd`): bei € wird
+   das Volumen via `EURUSD` in $ umgerechnet, bei $ direkt verteilt; Kurse stehen
+   immer in $. Export als **CSV und PDF** (`f13_to_pdf(df, meta, title=…, tag_text=…)`,
+   generalisiert — Default-Titel bleibt „F13-Konsensliste").
 5. **🔁 Rebalancing** — **siehe Abschnitt 5 (Kernfeature dieser Session).**
 6. **🧩 Struktur** — Sektor-/Region-Donuts der F13-Liste (Klumpenrisiko).
 7. **👤 Investoren-Details** — Drilldown je Investor.
