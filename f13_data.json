@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T06:40:44.607775+00:00",
+  "generatedAt": "2026-08-19T06:40:55.639390+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 27,
@@ -1175,7 +1175,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 7853532000,
               "s": 132459618,
@@ -1269,7 +1269,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 4563233000,
               "s": 132459618,
@@ -1347,7 +1347,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 4858836000,
               "s": 131961832,
@@ -1425,7 +1425,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 4730833000,
               "s": 131961832,
@@ -1519,7 +1519,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 6109721000,
               "s": 131137998,
@@ -1605,7 +1605,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 7172993000,
               "s": 129687084,
@@ -1691,7 +1691,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 7342802000,
               "s": 128888906,
@@ -1777,7 +1777,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 7514279000,
               "s": 126417887,
@@ -1863,7 +1863,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 7100894000,
               "s": 126417887,
@@ -1957,7 +1957,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 6719111000,
               "s": 126417887,
@@ -2043,7 +2043,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 5513432000,
               "s": 119805135,
@@ -6933,7 +6933,7 @@
       "top": [
         {
           "key": "68634K",
-          "name": "Orla Mining Ltd.",
+          "name": "Orla Mining Ltd",
           "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
@@ -7130,7 +7130,7 @@
       "holdings": [
         {
           "key": "68634K",
-          "name": "Orla Mining Ltd.",
+          "name": "Orla Mining Ltd",
           "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
@@ -7457,7 +7457,7 @@
       "prevHoldings": [
         {
           "key": "68634K",
-          "name": "Orla Mining Ltd.",
+          "name": "Orla Mining Ltd",
           "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
@@ -7709,7 +7709,7 @@
       "ytdHoldings": [
         {
           "key": "68634K",
-          "name": "Orla Mining Ltd.",
+          "name": "Orla Mining Ltd",
           "ticker": "ORLA",
           "sector": "Sonstige",
           "region": "–",
@@ -9032,7 +9032,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 32502000,
               "s": 10219650,
@@ -9110,7 +9110,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 42721953,
               "s": 10719650,
@@ -9172,7 +9172,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 71952271,
               "s": 15383350,
@@ -9250,7 +9250,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 82932319,
               "s": 19916550,
@@ -9336,7 +9336,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 110214818,
               "s": 31108650,
@@ -9422,7 +9422,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 121788286,
               "s": 37697191,
@@ -9484,7 +9484,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 209655182,
               "s": 55655229,
@@ -9570,7 +9570,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 213127781,
               "s": 55655229,
@@ -9656,7 +9656,7 @@
             },
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 225847381,
               "s": 56817229,
@@ -9734,7 +9734,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 310910577,
               "s": 56817229,
@@ -9820,7 +9820,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 527017549,
               "s": 56817229,
@@ -9906,7 +9906,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 559636173,
               "s": 56817229,
@@ -9992,7 +9992,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 610476911,
               "s": 56817229,
@@ -10078,7 +10078,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 423610745,
               "s": 31817229,
@@ -10164,7 +10164,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 501579333,
               "s": 31817229,
@@ -10250,7 +10250,7 @@
           "top": [
             {
               "k": "68634K",
-              "n": "Orla Mining Ltd.",
+              "n": "Orla Mining Ltd",
               "t": "ORLA",
               "v": 568456141,
               "s": 58399504,
@@ -10401,7 +10401,7 @@
         },
         {
           "key": "285512",
-          "name": "Electronic Arts Inc.",
+          "name": "Electronic Arts INC",
           "ticker": "EA",
           "sector": "Sonstige",
           "region": "–",
@@ -10598,7 +10598,7 @@
         },
         {
           "key": "285512",
-          "name": "Electronic Arts Inc.",
+          "name": "Electronic Arts INC",
           "ticker": "EA",
           "sector": "Sonstige",
           "region": "–",
@@ -10883,7 +10883,7 @@
         },
         {
           "key": "285512",
-          "name": "Electronic Arts Inc.",
+          "name": "Electronic Arts INC",
           "ticker": "EA",
           "sector": "Sonstige",
           "region": "–",
@@ -11255,7 +11255,7 @@
         },
         {
           "key": "285512",
-          "name": "Electronic Arts Inc.",
+          "name": "Electronic Arts INC",
           "ticker": "EA",
           "sector": "Sonstige",
           "region": "–",
@@ -13714,7 +13714,7 @@
             },
             {
               "k": "285512",
-              "n": "Electronic Arts Inc.",
+              "n": "Electronic Arts INC",
               "t": "EA",
               "v": 196896219,
               "s": 965793,
@@ -13824,7 +13824,7 @@
             },
             {
               "k": "285512",
-              "n": "Electronic Arts Inc.",
+              "n": "Electronic Arts INC",
               "t": "EA",
               "v": 199091790,
               "s": 970990,
@@ -37817,7 +37817,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38039,7 +38039,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38311,7 +38311,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38609,7 +38609,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 285796000,
               "s": 8295962,
@@ -38687,7 +38687,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 337607000,
               "s": 9169126,
@@ -38789,7 +38789,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 341503000,
               "s": 9525878,
@@ -38843,7 +38843,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 449973000,
               "s": 9658147,
@@ -38913,7 +38913,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 539734000,
               "s": 9758351,
@@ -39007,7 +39007,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 549771000,
               "s": 9650178,
@@ -39101,7 +39101,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 584305000,
               "s": 9830163,
@@ -39187,7 +39187,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 559536000,
               "s": 9961471,
@@ -39273,7 +39273,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 520532000,
               "s": 9793649,
@@ -39351,7 +39351,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 441186000,
               "s": 9586823,
@@ -39445,7 +39445,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 384161000,
               "s": 9527792,
@@ -39523,7 +39523,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 416028497,
               "s": 9539750,
@@ -40681,7 +40681,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 994100630,
               "s": 19113643,
@@ -78749,7 +78749,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -79036,7 +79036,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -79278,7 +79278,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -86056,7 +86056,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -86109,7 +86109,7 @@
       "soldYtd": [
         {
           "key": "902973",
-          "name": "US Bancorp \\De\\",
+          "name": "US Bancorp De",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -99794,7 +99794,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 2431744,
               "s": 73600,
@@ -117209,7 +117209,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1011402986,
               "s": 22626465,
@@ -117295,7 +117295,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1008575046,
               "s": 25404913,
@@ -117341,7 +117341,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1537315013,
               "s": 33617210,
@@ -117435,7 +117435,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1169336217,
               "s": 24447757,
@@ -117513,7 +117513,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1471937054,
               "s": 34863502,
@@ -117631,7 +117631,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp \\De\\",
+              "n": "US Bancorp De",
               "t": "USB",
               "v": 1090046617,
               "s": 24089428,
@@ -139450,260 +139450,260 @@
     }
   ],
   "prices": {
-    "BKNG": {
-      "price": 204.76,
-      "asOf": "2026-08-18"
-    },
-    "KHC": {
-      "price": 24.75,
-      "asOf": "2026-08-18"
-    },
-    "MU": {
-      "price": 1011.75,
-      "asOf": "2026-08-18"
-    },
-    "SPOT": {
-      "price": 492.47,
-      "asOf": "2026-08-18"
-    },
-    "QCOM": {
-      "price": 162.18,
-      "asOf": "2026-08-18"
-    },
-    "TMUS": {
-      "price": 180.12,
-      "asOf": "2026-08-18"
-    },
-    "FDX": {
-      "price": 331.49,
-      "asOf": "2026-08-18"
-    },
-    "SCHW": {
-      "price": 110.58,
-      "asOf": "2026-08-18"
-    },
-    "AXP": {
-      "price": 336.21,
-      "asOf": "2026-08-18"
+    "AAPL": {
+      "price": 310.03,
+      "asOf": "2026-08-19"
     },
     "BN": {
-      "price": 42.75,
-      "asOf": "2026-08-18"
-    },
-    "ADBE": {
-      "price": 254.04,
-      "asOf": "2026-08-18"
-    },
-    "PYPL": {
-      "price": 60.47,
-      "asOf": "2026-08-18"
-    },
-    "UBER": {
-      "price": 74.99,
-      "asOf": "2026-08-18"
-    },
-    "PM": {
-      "price": 184.52,
-      "asOf": "2026-08-18"
-    },
-    "NFLX": {
-      "price": 76.02,
-      "asOf": "2026-08-18"
-    },
-    "MRK": {
-      "price": 135.97,
-      "asOf": "2026-08-18"
-    },
-    "ASML": {
-      "price": 1883.12,
-      "asOf": "2026-08-18"
-    },
-    "JNJ": {
-      "price": 262.37,
-      "asOf": "2026-08-18"
-    },
-    "DIS": {
-      "price": 103.5,
-      "asOf": "2026-08-18"
-    },
-    "VST": {
-      "price": 146.11,
-      "asOf": "2026-08-18"
-    },
-    "CSGP": {
-      "price": 31.35,
-      "asOf": "2026-08-18"
-    },
-    "AMZN": {
-      "price": 261.31,
-      "asOf": "2026-08-18"
-    },
-    "TSM": {
-      "price": 430.97,
-      "asOf": "2026-08-18"
-    },
-    "AMD": {
-      "price": 506.0,
-      "asOf": "2026-08-18"
-    },
-    "LLY": {
-      "price": 1183.16,
-      "asOf": "2026-08-18"
-    },
-    "OXY": {
-      "price": 59.04,
-      "asOf": "2026-08-18"
-    },
-    "GE": {
-      "price": 369.43,
-      "asOf": "2026-08-18"
-    },
-    "WMT": {
-      "price": 114.33,
-      "asOf": "2026-08-18"
-    },
-    "DHI": {
-      "price": 148.34,
-      "asOf": "2026-08-18"
-    },
-    "WFC": {
-      "price": 87.54,
-      "asOf": "2026-08-18"
-    },
-    "CPNG": {
-      "price": 15.72,
-      "asOf": "2026-08-18"
-    },
-    "LRCX": {
-      "price": 343.84,
-      "asOf": "2026-08-18"
-    },
-    "META": {
-      "price": 568.97,
-      "asOf": "2026-08-18"
-    },
-    "TDG": {
-      "price": 1237.82,
-      "asOf": "2026-08-18"
-    },
-    "MCO": {
-      "price": 477.17,
-      "asOf": "2026-08-18"
-    },
-    "V": {
-      "price": 358.84,
-      "asOf": "2026-08-18"
-    },
-    "BABA": {
-      "price": 124.71,
-      "asOf": "2026-08-18"
-    },
-    "JPM": {
-      "price": 360.96,
-      "asOf": "2026-08-18"
-    },
-    "AAPL": {
-      "price": 305.59,
-      "asOf": "2026-08-18"
-    },
-    "JD": {
-      "price": 28.5,
-      "asOf": "2026-08-18"
-    },
-    "DHR": {
-      "price": 202.63,
-      "asOf": "2026-08-18"
-    },
-    "COF": {
-      "price": 221.45,
-      "asOf": "2026-08-18"
-    },
-    "KO": {
-      "price": 86.98,
-      "asOf": "2026-08-18"
-    },
-    "BRK-B": {
-      "price": 498.23,
-      "asOf": "2026-08-18"
-    },
-    "ORCL": {
-      "price": 146.65,
-      "asOf": "2026-08-18"
-    },
-    "CHTR": {
-      "price": 144.1,
-      "asOf": "2026-08-18"
-    },
-    "PDD": {
-      "price": 86.94,
-      "asOf": "2026-08-18"
+      "price": 42.13,
+      "asOf": "2026-08-19"
     },
     "AMAT": {
-      "price": 535.31,
-      "asOf": "2026-08-18"
-    },
-    "UNH": {
-      "price": 395.62,
-      "asOf": "2026-08-18"
-    },
-    "MSFT": {
-      "price": 480.35,
-      "asOf": "2026-08-18"
-    },
-    "PCG": {
-      "price": 17.5,
-      "asOf": "2026-08-18"
-    },
-    "BAC": {
-      "price": 63.89,
-      "asOf": "2026-08-18"
-    },
-    "CMCSA": {
-      "price": 25.57,
-      "asOf": "2026-08-18"
-    },
-    "GOOG": {
-      "price": 341.45,
-      "asOf": "2026-08-18"
+      "price": 514.33,
+      "asOf": "2026-08-19"
     },
     "AVGO": {
-      "price": 392.43,
-      "asOf": "2026-08-18"
+      "price": 380.0,
+      "asOf": "2026-08-19"
     },
-    "GM": {
-      "price": 84.37,
-      "asOf": "2026-08-18"
-    },
-    "FISV": {
-      "price": 52.21,
-      "asOf": "2026-08-18"
-    },
-    "CRM": {
-      "price": 190.97,
-      "asOf": "2026-08-18"
-    },
-    "MA": {
-      "price": 562.26,
-      "asOf": "2026-08-18"
+    "V": {
+      "price": 364.25,
+      "asOf": "2026-08-19"
     },
     "GOOGL": {
-      "price": 344.0,
-      "asOf": "2026-08-18"
+      "price": 344.2,
+      "asOf": "2026-08-19"
     },
-    "SUNB": {
-      "price": 83.14,
-      "asOf": "2026-08-18"
+    "BAC": {
+      "price": 64.23,
+      "asOf": "2026-08-19"
     },
-    "ET": {
-      "price": 20.94,
-      "asOf": "2026-08-18"
+    "OXY": {
+      "price": 59.8,
+      "asOf": "2026-08-19"
+    },
+    "FISV": {
+      "price": 51.72,
+      "asOf": "2026-08-19"
+    },
+    "BKNG": {
+      "price": 208.25,
+      "asOf": "2026-08-19"
+    },
+    "META": {
+      "price": 543.67,
+      "asOf": "2026-08-19"
+    },
+    "MA": {
+      "price": 574.31,
+      "asOf": "2026-08-19"
+    },
+    "PM": {
+      "price": 187.62,
+      "asOf": "2026-08-19"
+    },
+    "TMUS": {
+      "price": 182.75,
+      "asOf": "2026-08-19"
     },
     "NVDA": {
-      "price": 225.01,
-      "asOf": "2026-08-18"
+      "price": 219.74,
+      "asOf": "2026-08-19"
+    },
+    "AMZN": {
+      "price": 259.45,
+      "asOf": "2026-08-19"
+    },
+    "KHC": {
+      "price": 24.82,
+      "asOf": "2026-08-19"
+    },
+    "CPNG": {
+      "price": 15.58,
+      "asOf": "2026-08-19"
+    },
+    "LLY": {
+      "price": 1225.73,
+      "asOf": "2026-08-19"
+    },
+    "ET": {
+      "price": 21.42,
+      "asOf": "2026-08-19"
+    },
+    "MCO": {
+      "price": 485.79,
+      "asOf": "2026-08-19"
+    },
+    "JPM": {
+      "price": 363.25,
+      "asOf": "2026-08-19"
+    },
+    "JD": {
+      "price": 28.82,
+      "asOf": "2026-08-19"
+    },
+    "BRK-B": {
+      "price": 502.96,
+      "asOf": "2026-08-19"
+    },
+    "ADBE": {
+      "price": 263.14,
+      "asOf": "2026-08-19"
+    },
+    "DHR": {
+      "price": 199.58,
+      "asOf": "2026-08-19"
+    },
+    "PCG": {
+      "price": 17.82,
+      "asOf": "2026-08-19"
+    },
+    "ASML": {
+      "price": 1802.98,
+      "asOf": "2026-08-19"
+    },
+    "COF": {
+      "price": 221.47,
+      "asOf": "2026-08-19"
+    },
+    "KO": {
+      "price": 88.82,
+      "asOf": "2026-08-19"
+    },
+    "PYPL": {
+      "price": 60.43,
+      "asOf": "2026-08-19"
+    },
+    "MSFT": {
+      "price": 481.63,
+      "asOf": "2026-08-19"
+    },
+    "ORCL": {
+      "price": 142.79,
+      "asOf": "2026-08-19"
+    },
+    "GE": {
+      "price": 375.09,
+      "asOf": "2026-08-19"
+    },
+    "CSGP": {
+      "price": 31.38,
+      "asOf": "2026-08-19"
+    },
+    "BABA": {
+      "price": 128.15,
+      "asOf": "2026-08-19"
+    },
+    "DIS": {
+      "price": 103.95,
+      "asOf": "2026-08-19"
+    },
+    "UBER": {
+      "price": 74.66,
+      "asOf": "2026-08-19"
+    },
+    "MU": {
+      "price": 940.76,
+      "asOf": "2026-08-19"
+    },
+    "TSM": {
+      "price": 413.41,
+      "asOf": "2026-08-19"
+    },
+    "DHI": {
+      "price": 145.68,
+      "asOf": "2026-08-19"
+    },
+    "PDD": {
+      "price": 87.27,
+      "asOf": "2026-08-19"
+    },
+    "CMCSA": {
+      "price": 26.2,
+      "asOf": "2026-08-19"
+    },
+    "LRCX": {
+      "price": 327.92,
+      "asOf": "2026-08-19"
+    },
+    "AXP": {
+      "price": 338.52,
+      "asOf": "2026-08-19"
+    },
+    "SUNB": {
+      "price": 78.8,
+      "asOf": "2026-08-19"
+    },
+    "WFC": {
+      "price": 87.4,
+      "asOf": "2026-08-19"
+    },
+    "SCHW": {
+      "price": 111.68,
+      "asOf": "2026-08-19"
+    },
+    "NFLX": {
+      "price": 77.77,
+      "asOf": "2026-08-19"
+    },
+    "GM": {
+      "price": 83.71,
+      "asOf": "2026-08-19"
+    },
+    "MRK": {
+      "price": 135.17,
+      "asOf": "2026-08-19"
+    },
+    "CHTR": {
+      "price": 148.35,
+      "asOf": "2026-08-19"
+    },
+    "UNH": {
+      "price": 393.93,
+      "asOf": "2026-08-19"
+    },
+    "CRM": {
+      "price": 196.14,
+      "asOf": "2026-08-19"
+    },
+    "WMT": {
+      "price": 115.2,
+      "asOf": "2026-08-19"
+    },
+    "JNJ": {
+      "price": 271.11,
+      "asOf": "2026-08-19"
+    },
+    "TDG": {
+      "price": 1233.78,
+      "asOf": "2026-08-19"
+    },
+    "FDX": {
+      "price": 328.38,
+      "asOf": "2026-08-19"
+    },
+    "VST": {
+      "price": 140.52,
+      "asOf": "2026-08-19"
+    },
+    "GOOG": {
+      "price": 341.28,
+      "asOf": "2026-08-19"
+    },
+    "SPOT": {
+      "price": 516.28,
+      "asOf": "2026-08-19"
+    },
+    "QCOM": {
+      "price": 160.19,
+      "asOf": "2026-08-19"
+    },
+    "AMD": {
+      "price": 484.39,
+      "asOf": "2026-08-19"
     }
   },
-  "pricesAsOf": "2026-08-18",
+  "pricesAsOf": "2026-08-19",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -139735,8 +139735,8 @@
         "2026-03-31": 6528.52,
         "2026-06-30": 7499.36
       },
-      "current": 7785.76,
-      "currentAsOf": "2026-08-14"
+      "current": 7745.06,
+      "currentAsOf": "2026-08-17"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -139768,8 +139768,8 @@
         "2026-03-31": 23740.19,
         "2026-06-30": 30276.35
       },
-      "current": 30046.14,
-      "currentAsOf": "2026-08-14"
+      "current": 29995.38,
+      "currentAsOf": "2026-08-17"
     }
   },
   "quarterPrices": {
@@ -141737,8 +141737,8 @@
     }
   },
   "eurusd": {
-    "rate": 1.1573,
-    "asOf": "2026-08-18"
+    "rate": 1.16,
+    "asOf": "2026-08-19"
   },
   "cash": {
     "Warren Buffett": {
