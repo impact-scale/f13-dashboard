@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T06:42:51.092137+00:00",
+  "generatedAt": "2026-08-22T06:37:33.866452+00:00",
   "topN": 15,
   "storeN": 25,
   "quartersLoaded": 27,
@@ -1175,7 +1175,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7853532000,
               "s": 132459618,
@@ -1269,7 +1269,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4563233000,
               "s": 132459618,
@@ -1347,7 +1347,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4858836000,
               "s": 131961832,
@@ -1425,7 +1425,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 4730833000,
               "s": 131961832,
@@ -1519,7 +1519,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 6109721000,
               "s": 131137998,
@@ -1605,7 +1605,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7172993000,
               "s": 129687084,
@@ -1691,7 +1691,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7342802000,
               "s": 128888906,
@@ -1777,7 +1777,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7514279000,
               "s": 126417887,
@@ -1863,7 +1863,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 7100894000,
               "s": 126417887,
@@ -1957,7 +1957,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 6719111000,
               "s": 126417887,
@@ -2043,7 +2043,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 5513432000,
               "s": 119805135,
@@ -10466,7 +10466,7 @@
         },
         {
           "key": "025537",
-          "name": "American Elec Pwr CO INC",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -10663,7 +10663,7 @@
         },
         {
           "key": "025537",
-          "name": "American Elec Pwr CO INC",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -13410,7 +13410,7 @@
             },
             {
               "k": "025537",
-              "n": "American Elec Pwr CO INC",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 96043959,
               "s": 878960,
@@ -13864,7 +13864,7 @@
             },
             {
               "k": "025537",
-              "n": "American Elec Pwr CO INC",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 105070080,
               "s": 768000,
@@ -24279,7 +24279,7 @@
         },
         {
           "key": "025537",
-          "name": "American Electric Power Company",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -24437,7 +24437,7 @@
         },
         {
           "key": "025537",
-          "name": "American Electric Power Company",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -24525,7 +24525,7 @@
         },
         {
           "key": "025537",
-          "name": "American Electric Power Company",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -24667,7 +24667,7 @@
         },
         {
           "key": "025537",
-          "name": "American Electric Power Company",
+          "name": "American Electric Power Co Inc",
           "ticker": "AEP",
           "sector": "Sonstige",
           "region": "–",
@@ -26175,7 +26175,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 97894,
               "s": 1205300,
@@ -26347,7 +26347,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 105753022,
               "s": 1205300,
@@ -26425,7 +26425,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 123663780,
               "s": 1205300,
@@ -26519,7 +26519,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 111164819,
               "s": 1205300,
@@ -26605,7 +26605,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 131703131,
               "s": 1205300,
@@ -26691,7 +26691,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 125061928,
               "s": 1205300,
@@ -26777,7 +26777,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 135596250,
               "s": 1205300,
@@ -26863,7 +26863,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 138983143,
               "s": 1205300,
@@ -26933,7 +26933,7 @@
             },
             {
               "k": "025537",
-              "n": "American Electric Power Company",
+              "n": "American Electric Power Co Inc",
               "t": "AEP",
               "v": 157990724,
               "s": 1205300,
@@ -37817,7 +37817,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38039,7 +38039,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38311,7 +38311,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -38609,7 +38609,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 285796000,
               "s": 8295962,
@@ -38687,7 +38687,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 337607000,
               "s": 9169126,
@@ -38789,7 +38789,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 341503000,
               "s": 9525878,
@@ -38843,7 +38843,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 449973000,
               "s": 9658147,
@@ -38913,7 +38913,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 539734000,
               "s": 9758351,
@@ -39007,7 +39007,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 549771000,
               "s": 9650178,
@@ -39101,7 +39101,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 584305000,
               "s": 9830163,
@@ -39187,7 +39187,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 559536000,
               "s": 9961471,
@@ -39273,7 +39273,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 520532000,
               "s": 9793649,
@@ -39351,7 +39351,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 441186000,
               "s": 9586823,
@@ -39445,7 +39445,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 384161000,
               "s": 9527792,
@@ -39523,7 +39523,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 416028497,
               "s": 9539750,
@@ -40681,7 +40681,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 994100630,
               "s": 19113643,
@@ -78749,7 +78749,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -79036,7 +79036,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -79278,7 +79278,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -86056,7 +86056,7 @@
         },
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -86109,7 +86109,7 @@
       "soldYtd": [
         {
           "key": "902973",
-          "name": "US Bancorp De",
+          "name": "US Bancorp \\De\\",
           "ticker": "USB",
           "sector": "Sonstige",
           "region": "–",
@@ -99794,7 +99794,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 2431744,
               "s": 73600,
@@ -117209,7 +117209,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1011402986,
               "s": 22626465,
@@ -117295,7 +117295,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1008575046,
               "s": 25404913,
@@ -117341,7 +117341,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1537315013,
               "s": 33617210,
@@ -117435,7 +117435,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1169336217,
               "s": 24447757,
@@ -117513,7 +117513,7 @@
           "top": [
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1471937054,
               "s": 34863502,
@@ -117631,7 +117631,7 @@
             },
             {
               "k": "902973",
-              "n": "US Bancorp De",
+              "n": "US Bancorp \\De\\",
               "t": "USB",
               "v": 1090046617,
               "s": 24089428,
@@ -139450,260 +139450,260 @@
     }
   ],
   "prices": {
+    "GOOG": {
+      "price": 341.75,
+      "asOf": "2026-08-22"
+    },
+    "AMD": {
+      "price": 473.25,
+      "asOf": "2026-08-22"
+    },
     "GOOGL": {
-      "price": 340.67,
-      "asOf": "2026-08-21"
+      "price": 344.82,
+      "asOf": "2026-08-22"
     },
-    "ORCL": {
-      "price": 142.07,
-      "asOf": "2026-08-21"
-    },
-    "SPOT": {
-      "price": 533.13,
-      "asOf": "2026-08-21"
-    },
-    "AAPL": {
-      "price": 311.3,
-      "asOf": "2026-08-21"
+    "CRM": {
+      "price": 209.17,
+      "asOf": "2026-08-22"
     },
     "TDG": {
-      "price": 1180.4,
-      "asOf": "2026-08-21"
+      "price": 1200.35,
+      "asOf": "2026-08-22"
     },
     "MRK": {
-      "price": 148.99,
-      "asOf": "2026-08-21"
+      "price": 152.55,
+      "asOf": "2026-08-22"
     },
     "PDD": {
-      "price": 89.52,
-      "asOf": "2026-08-21"
+      "price": 88.38,
+      "asOf": "2026-08-22"
     },
-    "ET": {
-      "price": 21.21,
-      "asOf": "2026-08-21"
+    "SUNB": {
+      "price": 76.88,
+      "asOf": "2026-08-22"
     },
     "ASML": {
-      "price": 1750.31,
-      "asOf": "2026-08-21"
+      "price": 1763.76,
+      "asOf": "2026-08-22"
+    },
+    "ET": {
+      "price": 21.19,
+      "asOf": "2026-08-22"
+    },
+    "WMT": {
+      "price": 103.7,
+      "asOf": "2026-08-22"
+    },
+    "UNH": {
+      "price": 390.11,
+      "asOf": "2026-08-22"
+    },
+    "VST": {
+      "price": 136.21,
+      "asOf": "2026-08-22"
     },
     "CHTR": {
-      "price": 147.76,
-      "asOf": "2026-08-21"
+      "price": 150.17,
+      "asOf": "2026-08-22"
+    },
+    "MSFT": {
+      "price": 483.24,
+      "asOf": "2026-08-22"
+    },
+    "BAC": {
+      "price": 61.69,
+      "asOf": "2026-08-22"
+    },
+    "ADBE": {
+      "price": 275.3,
+      "asOf": "2026-08-22"
+    },
+    "LRCX": {
+      "price": 314.0,
+      "asOf": "2026-08-22"
+    },
+    "CMCSA": {
+      "price": 26.85,
+      "asOf": "2026-08-22"
+    },
+    "DHR": {
+      "price": 218.85,
+      "asOf": "2026-08-22"
+    },
+    "KHC": {
+      "price": 25.58,
+      "asOf": "2026-08-22"
+    },
+    "PCG": {
+      "price": 17.6,
+      "asOf": "2026-08-22"
+    },
+    "AVGO": {
+      "price": 368.45,
+      "asOf": "2026-08-22"
+    },
+    "MCO": {
+      "price": 503.32,
+      "asOf": "2026-08-22"
+    },
+    "BRK-B": {
+      "price": 495.82,
+      "asOf": "2026-08-22"
+    },
+    "JD": {
+      "price": 29.37,
+      "asOf": "2026-08-22"
+    },
+    "GE": {
+      "price": 348.37,
+      "asOf": "2026-08-22"
+    },
+    "BKNG": {
+      "price": 209.62,
+      "asOf": "2026-08-22"
+    },
+    "PM": {
+      "price": 188.23,
+      "asOf": "2026-08-22"
+    },
+    "NFLX": {
+      "price": 79.59,
+      "asOf": "2026-08-22"
+    },
+    "WFC": {
+      "price": 83.84,
+      "asOf": "2026-08-22"
+    },
+    "AAPL": {
+      "price": 309.35,
+      "asOf": "2026-08-22"
+    },
+    "TMUS": {
+      "price": 183.04,
+      "asOf": "2026-08-22"
+    },
+    "MA": {
+      "price": 580.63,
+      "asOf": "2026-08-22"
+    },
+    "KO": {
+      "price": 91.1,
+      "asOf": "2026-08-22"
+    },
+    "AXP": {
+      "price": 336.0,
+      "asOf": "2026-08-22"
+    },
+    "DIS": {
+      "price": 107.78,
+      "asOf": "2026-08-22"
+    },
+    "JNJ": {
+      "price": 270.24,
+      "asOf": "2026-08-22"
+    },
+    "DHI": {
+      "price": 148.35,
+      "asOf": "2026-08-22"
+    },
+    "AMAT": {
+      "price": 492.32,
+      "asOf": "2026-08-22"
+    },
+    "BN": {
+      "price": 41.69,
+      "asOf": "2026-08-22"
     },
     "CSGP": {
       "price": 32.26,
-      "asOf": "2026-08-21"
-    },
-    "TSM": {
-      "price": 416.0,
-      "asOf": "2026-08-21"
-    },
-    "PYPL": {
-      "price": 62.3,
-      "asOf": "2026-08-21"
-    },
-    "AMD": {
-      "price": 469.45,
-      "asOf": "2026-08-21"
-    },
-    "DIS": {
-      "price": 107.32,
-      "asOf": "2026-08-21"
-    },
-    "CPNG": {
-      "price": 16.26,
-      "asOf": "2026-08-21"
-    },
-    "GOOG": {
-      "price": 338.2,
-      "asOf": "2026-08-21"
-    },
-    "KHC": {
-      "price": 25.57,
-      "asOf": "2026-08-21"
-    },
-    "TMUS": {
-      "price": 181.22,
-      "asOf": "2026-08-21"
-    },
-    "JD": {
-      "price": 29.41,
-      "asOf": "2026-08-21"
-    },
-    "CMCSA": {
-      "price": 26.42,
-      "asOf": "2026-08-21"
-    },
-    "BKNG": {
-      "price": 209.87,
-      "asOf": "2026-08-21"
-    },
-    "BABA": {
-      "price": 130.53,
-      "asOf": "2026-08-21"
-    },
-    "ADBE": {
-      "price": 272.22,
-      "asOf": "2026-08-21"
-    },
-    "WMT": {
-      "price": 103.84,
-      "asOf": "2026-08-21"
-    },
-    "JNJ": {
-      "price": 267.37,
-      "asOf": "2026-08-21"
-    },
-    "MCO": {
-      "price": 498.77,
-      "asOf": "2026-08-21"
-    },
-    "GE": {
-      "price": 344.64,
-      "asOf": "2026-08-21"
-    },
-    "MU": {
-      "price": 974.33,
-      "asOf": "2026-08-21"
-    },
-    "PCG": {
-      "price": 17.96,
-      "asOf": "2026-08-21"
-    },
-    "CRM": {
-      "price": 205.43,
-      "asOf": "2026-08-21"
-    },
-    "BN": {
-      "price": 41.37,
-      "asOf": "2026-08-21"
-    },
-    "UNH": {
-      "price": 384.85,
-      "asOf": "2026-08-21"
-    },
-    "LLY": {
-      "price": 1244.4,
-      "asOf": "2026-08-21"
-    },
-    "COF": {
-      "price": 212.48,
-      "asOf": "2026-08-21"
-    },
-    "JPM": {
-      "price": 351.55,
-      "asOf": "2026-08-21"
-    },
-    "SUNB": {
-      "price": 77.1,
-      "asOf": "2026-08-21"
-    },
-    "AMAT": {
-      "price": 496.21,
-      "asOf": "2026-08-21"
-    },
-    "MSFT": {
-      "price": 481.15,
-      "asOf": "2026-08-21"
-    },
-    "MA": {
-      "price": 573.85,
-      "asOf": "2026-08-21"
-    },
-    "PM": {
-      "price": 191.52,
-      "asOf": "2026-08-21"
-    },
-    "META": {
-      "price": 545.83,
-      "asOf": "2026-08-21"
-    },
-    "DHI": {
-      "price": 147.33,
-      "asOf": "2026-08-21"
-    },
-    "LRCX": {
-      "price": 310.53,
-      "asOf": "2026-08-21"
-    },
-    "FDX": {
-      "price": 326.04,
-      "asOf": "2026-08-21"
-    },
-    "SCHW": {
-      "price": 109.79,
-      "asOf": "2026-08-21"
-    },
-    "QCOM": {
-      "price": 160.74,
-      "asOf": "2026-08-21"
-    },
-    "AXP": {
-      "price": 331.15,
-      "asOf": "2026-08-21"
-    },
-    "AVGO": {
-      "price": 364.03,
-      "asOf": "2026-08-21"
-    },
-    "FISV": {
-      "price": 51.38,
-      "asOf": "2026-08-21"
+      "asOf": "2026-08-22"
     },
     "NVDA": {
-      "price": 216.85,
-      "asOf": "2026-08-21"
+      "price": 214.72,
+      "asOf": "2026-08-22"
     },
-    "V": {
-      "price": 365.73,
-      "asOf": "2026-08-21"
+    "CPNG": {
+      "price": 16.45,
+      "asOf": "2026-08-22"
     },
-    "NFLX": {
-      "price": 80.14,
-      "asOf": "2026-08-21"
+    "ORCL": {
+      "price": 146.47,
+      "asOf": "2026-08-22"
     },
-    "OXY": {
-      "price": 61.52,
-      "asOf": "2026-08-21"
-    },
-    "BRK-B": {
-      "price": 496.86,
-      "asOf": "2026-08-21"
-    },
-    "VST": {
-      "price": 138.94,
-      "asOf": "2026-08-21"
+    "LLY": {
+      "price": 1255.4,
+      "asOf": "2026-08-22"
     },
     "AMZN": {
-      "price": 260.11,
-      "asOf": "2026-08-21"
+      "price": 258.63,
+      "asOf": "2026-08-22"
     },
-    "UBER": {
-      "price": 78.55,
-      "asOf": "2026-08-21"
+    "SCHW": {
+      "price": 112.3,
+      "asOf": "2026-08-22"
     },
     "GM": {
-      "price": 86.15,
-      "asOf": "2026-08-21"
+      "price": 87.93,
+      "asOf": "2026-08-22"
     },
-    "BAC": {
-      "price": 61.86,
-      "asOf": "2026-08-21"
+    "OXY": {
+      "price": 61.3,
+      "asOf": "2026-08-22"
     },
-    "WFC": {
-      "price": 83.7,
-      "asOf": "2026-08-21"
+    "META": {
+      "price": 549.9,
+      "asOf": "2026-08-22"
     },
-    "DHR": {
-      "price": 215.91,
-      "asOf": "2026-08-21"
+    "SPOT": {
+      "price": 533.72,
+      "asOf": "2026-08-22"
     },
-    "KO": {
-      "price": 90.5,
-      "asOf": "2026-08-21"
+    "UBER": {
+      "price": 78.8,
+      "asOf": "2026-08-22"
+    },
+    "FDX": {
+      "price": 325.08,
+      "asOf": "2026-08-22"
+    },
+    "COF": {
+      "price": 217.91,
+      "asOf": "2026-08-22"
+    },
+    "FISV": {
+      "price": 52.58,
+      "asOf": "2026-08-22"
+    },
+    "BABA": {
+      "price": 119.34,
+      "asOf": "2026-08-22"
+    },
+    "V": {
+      "price": 371.04,
+      "asOf": "2026-08-22"
+    },
+    "MU": {
+      "price": 966.78,
+      "asOf": "2026-08-22"
+    },
+    "TSM": {
+      "price": 418.95,
+      "asOf": "2026-08-22"
+    },
+    "PYPL": {
+      "price": 61.55,
+      "asOf": "2026-08-22"
+    },
+    "QCOM": {
+      "price": 160.75,
+      "asOf": "2026-08-22"
+    },
+    "JPM": {
+      "price": 351.58,
+      "asOf": "2026-08-22"
     }
   },
-  "pricesAsOf": "2026-08-21",
+  "pricesAsOf": "2026-08-22",
   "benchmarks": {
     "S&P 500": {
       "quarters": {
@@ -139735,8 +139735,8 @@
         "2026-03-31": 6528.52,
         "2026-06-30": 7499.36
       },
-      "current": 7641.16,
-      "currentAsOf": "2026-08-20"
+      "current": 7674.37,
+      "currentAsOf": "2026-08-21"
     },
     "Nasdaq 100": {
       "quarters": {
@@ -139768,8 +139768,8 @@
         "2026-03-31": 23740.19,
         "2026-06-30": 30276.35
       },
-      "current": 29213.16,
-      "currentAsOf": "2026-08-20"
+      "current": 29308.86,
+      "currentAsOf": "2026-08-21"
     }
   },
   "quarterPrices": {
@@ -141737,8 +141737,8 @@
     }
   },
   "eurusd": {
-    "rate": 1.1697,
-    "asOf": "2026-08-21"
+    "rate": 1.1678,
+    "asOf": "2026-08-22"
   },
   "cash": {
     "Warren Buffett": {
@@ -142773,6 +142773,11 @@
           "d": "2026-03-31",
           "cashPct": 6.73,
           "netAssets": 4130979026
+        },
+        {
+          "d": "2026-06-30",
+          "cashPct": 6.62,
+          "netAssets": 4257844466
         }
       ]
     },
